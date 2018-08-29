@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalVariableEntities>
+   <description></description>
+   <name>PROD</name>
+   <tag></tag>
+   <defaultProfile>false</defaultProfile>
+   <GlobalVariableEntity>
+      <description>Production Env</description>
+      <initValue>'https://portal.guardanthealth.com/'</initValue>
+      <name>portalUrl</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'http://10.4.80.105:8080/ghlims/logon.jsp'</initValue>
+      <name>limsUrl</name>
+   </GlobalVariableEntity>
+</GlobalVariableEntities>
