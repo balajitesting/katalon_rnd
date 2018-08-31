@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestSuiteEntity>
+   <description></description>
+   <name>DCOTestSuite</name>
+   <tag></tag>
+   <isRerun>false</isRerun>
+   <mailRecipient>gxu@guardanthealth.com;</mailRecipient>
+   <numberOfRerun>0</numberOfRerun>
+   <pageLoadTimeout>30</pageLoadTimeout>
+   <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
+   <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
+   <testSuiteGuid>f1c2c51b-24b6-4e12-a789-ffa7bde82915</testSuiteGuid>
+   <testCaseLink>
+      <guid>bb3f440e-72dc-41b1-862c-735f7fa39730</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/DCO/DCOAllRequest</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>6ac0c9d8-cf1b-493e-925f-f4718fcb291d</id>
+         <iterationEntity>
+            <iterationType>ALL</iterationType>
+            <value></value>
+         </iterationEntity>
+         <testDataId>Data Files/dataCreateReportViewOnPortal</testDataId>
+      </testDataLink>
+      <variableLink>
+         <testDataLinkId>6ac0c9d8-cf1b-493e-925f-f4718fcb291d</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>A_Number</value>
+         <variableId>ebcd972b-b34f-4797-8908-fb5d6047ddf3</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>6ac0c9d8-cf1b-493e-925f-f4718fcb291d</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>ReportStatus</value>
+         <variableId>c3f22a91-2379-4dab-aa3f-0b680d3eb46f</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>6ac0c9d8-cf1b-493e-925f-f4718fcb291d</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>RunTest</value>
+         <variableId>04fc2a5e-2d7f-43b2-a461-3c8745ef2202</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>c748e0c7-fcab-4394-8e29-d7d7e26660e0</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/DCO/DCOCancelReport</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>b7807801-c75d-4513-8340-e9fac996fd15</id>
+         <iterationEntity>
+            <iterationType>ALL</iterationType>
+            <value></value>
+         </iterationEntity>
+         <testDataId>Data Files/dataCreateReportViewOnPortal</testDataId>
+      </testDataLink>
+      <variableLink>
+         <testDataLinkId>b7807801-c75d-4513-8340-e9fac996fd15</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>A_Number</value>
+         <variableId>06b0afc2-fb69-452e-be72-5d81b7581ce3</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>b7807801-c75d-4513-8340-e9fac996fd15</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>ReportStatus</value>
+         <variableId>23e1b4b6-584f-4ae8-b26b-dc56425666e0</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>b7807801-c75d-4513-8340-e9fac996fd15</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>RunTest</value>
+         <variableId>919bcab1-b19a-460a-ab0a-b443681b9a7d</variableId>
+      </variableLink>
+   </testCaseLink>
+</TestSuiteEntity>

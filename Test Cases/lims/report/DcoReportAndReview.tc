@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>DcoReportAndReview</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>5d65907e-0422-45b9-a6e9-7250c0974e30</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>462df381-5521-44f8-a792-1f02de10d358</id>
+      <masked>false</masked>
+      <name>A_Number</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>9419bf3c-641a-4d1a-ac22-4008b241a847</id>
+      <masked>false</masked>
+      <name>ReportStatus</name>
+   </variable>
+</TestCaseEntity>
