@@ -3,7 +3,7 @@
    <description></description>
    <name>ent-web-automation</name>
    <tag></tag>
-   <UUID>e64a690a-7b95-413d-99e3-2c083482da82</UUID>
+   <UUID>337e2474-4582-40a4-b26e-9f158f2829b1</UUID>
    <migratedVersion>5.4.0</migratedVersion>
    <pageLoadTimeout>0</pageLoadTimeout>
 </Project>
