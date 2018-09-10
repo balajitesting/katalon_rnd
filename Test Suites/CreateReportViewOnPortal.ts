@@ -4,7 +4,7 @@
    <name>CreateReportViewOnPortal</name>
    <tag></tag>
    <isRerun>false</isRerun>
-   <lastRun>2018-08-30T18:41:49</lastRun>
+   <lastRun>2018-09-07T12:54:37</lastRun>
    <mailRecipient></mailRecipient>
    <numberOfRerun>0</numberOfRerun>
    <pageLoadTimeout>30</pageLoadTimeout>
@@ -15,7 +15,7 @@
       <guid>ea476938-fc8b-4276-b90b-b0801057e39c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/lims/report/DcoCreateReportAndReview</testCaseId>
+      <testCaseId>Test Cases/lims/report/CreatedAmendReportLdClsReviewtTest</testCaseId>
       <testDataLink>
          <combinationType>ONE</combinationType>
          <id>475ad5a2-9948-4390-8874-ed6fc03023e4</id>
@@ -42,6 +42,6 @@
       <guid>1897087d-7d0f-438d-b0d2-1a95bb2199b5</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/portal/DownloadAndViewReport</testCaseId>
+      <testCaseId>Test Cases/portal/DownloadReportAndViewInPortal</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
