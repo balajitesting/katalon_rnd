@@ -4,3 +4,5 @@
 
 2. Git integration: https://www.katalon.com/resources-center/tutorials/git-integration-introduction/ 
    or you can do it through git commandline in your usual way.
+   
+3. Checkout: https://guardanthealth.atlassian.net/wiki/spaces/ES/pages/696156172/Test+Automation+and+Tools
