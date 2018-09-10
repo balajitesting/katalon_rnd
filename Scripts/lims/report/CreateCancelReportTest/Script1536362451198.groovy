@@ -20,14 +20,24 @@ import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.gh.PDFCompare as PDFCompare
-import gh.core.Properties as Properties
-import gh.core.PDFCompare as PDFCompare
+import com.gh.core.Properties as Properties
+import com.gh.core.PDFCompare as PDFCompare
 
 
-WebUI.callTestCase(findTestCase('DCO/DCOAllRequest'), [('A_Number') : A_Number, ('ReportStatus') : ReportStatus, ('RunTest') : RunTest], 
-    FailureHandling.STOP_ON_FAILURE)
+String A_Number = 'A60204'
+String ReportStatus = 'Cancelled'
 
-CustomKeywords.'lims.service.Logon.logon'('CLIAUserReporting', '5Ed5CIkj9UQfaMZXAkDVaQ==')
+CustomKeywords.'com.gh.lims.Common.logon'('Cliacls', '5xx1bkCcAlw=')
+
+CustomKeywords.'com.gh.lims.Requests.searchRequest'(A_Number)
+
+WebUI.click(findTestObject('LIMS/DCO/Request/td_Save'))
+
+CustomKeywords.'com.gh.lims.Requests.cancelReport'(A_Number)
+
+WebUI.closeBrowser()
+
+CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserReporting', '5xx1bkCcAlw=')
 
 WebUI.click(findTestObject('LIMS/DCO/Reporting/td_Cancel Request'))
 
@@ -49,18 +59,27 @@ WebUI.click(findTestObject('LIMS/DCO/Reporting/Page_CNV/div_Release Report'))
 
 Thread.sleep(1000)
 
+//WebUI.switchToWindowTitle('Info')
+
 WebUI.click(findTestObject('LIMS/DCO/Reporting/button_OK_2'))
+
+WebUI.click(findTestObject('LIMS/logout/img'))
+
+WebUI.closeBrowser()
 
 String filename = ((A_Number + '_') + ReportStatus) + '_report.pdf'
 
-String file1 = CustomKeywords.'gh.core.Properties.getGetPDFBaseDir'() + filename
+String file1 = CustomKeywords.'com.gh.core.Properties.getGetPDFBaseDir'() + filename
 
-String file2 = CustomKeywords.'gh.core.Properties.getGetPDFDownloadDir'() + filename
+String file2 = CustomKeywords.'com.gh.core.Properties.getGetPDFDownloadDir'() + filename
 
-if (CustomKeywords.'gh.core.PDFCompare.compareAndSave'(file1, file2)) {
+if (CustomKeywords.'com.gh.core.PDFCompare.compareAndSave'(file1, file2)) {
     println('PDF Match!')
 } else {
     println('Unmatched pdf found!')
 }
 
-WebUI.closeBrowser()
+
+
+
+

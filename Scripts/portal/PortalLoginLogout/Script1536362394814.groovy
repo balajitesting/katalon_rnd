@@ -21,14 +21,9 @@ import internal.GlobalVariable as GlobalVariable
 
 CustomKeywords.'com.gh.portal.Common.logon'('sqa_viewas@gmail.com', 'Pa22word')
 
-WebUI.setText(findTestObject('Portal/Page_Guardant Health/input_view-as__search-bar'), 'Fidler')
+WebUI.click(findTestObject('Portal/SignOut/i_fa fa-chevron-down admin-men'))
 
-WebUI.click(findTestObject('Portal/Page_Guardant Health/span_Fidler Mary'))
-
-WebUI.click(findTestObject('Portal/Page_Guardant Health/a_fa fa-download request__data'))
-
-WebUI.click(findTestObject('Portal/Page_Guardant Health/a_Report Only'))
-
-Thread.sleep(10000)
+WebUI.click(findTestObject('Portal/SignOut/a_Sign Out'))
 
 WebUI.closeBrowser()
+
