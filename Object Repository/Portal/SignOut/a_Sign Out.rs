@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_Sign Out</name>
+   <tag></tag>
+   <elementGuidId>63974a19-da23-475f-8a5e-a8b467a067ec</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@id='dashboard']</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>id(&quot;main-content&quot;)/div[@class=&quot;admin-header&quot;]/div[@class=&quot;container&quot;]/div[@class=&quot;col-xs-3 admin-nav-right&quot;]/div[@class=&quot;menu-user-container admin-menu-user-container hidden-xs open&quot;]/ul[@class=&quot;dropdown-menu admin-dropdown-menu&quot;]/li[@class=&quot;menu-sign-out&quot;]/a[1][count(. | //a[@href = '/sign_out' and (text() = 'Sign Out' or . = 'Sign Out')]) = count(//a[@href = '/sign_out' and (text() = 'Sign Out' or . = 'Sign Out')])]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>rel</name>
+      <type>Main</type>
+      <value>nofollow</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-method</name>
+      <type>Main</type>
+      <value>post</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>/sign_out</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Sign Out</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;main-content&quot;)/div[@class=&quot;admin-header&quot;]/div[@class=&quot;container&quot;]/div[@class=&quot;col-xs-3 admin-nav-right&quot;]/div[@class=&quot;menu-user-container admin-menu-user-container hidden-xs open&quot;]/ul[@class=&quot;dropdown-menu admin-dropdown-menu&quot;]/li[@class=&quot;menu-sign-out&quot;]/a[1]</value>
+   </webElementProperties>
+</WebElementEntity>
