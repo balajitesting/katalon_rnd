@@ -89,6 +89,8 @@ WebUI.waitForElementVisible(findTestObject('LIMS/DCO/Reporting/Page_Edit GHRepor
 
 WebUI.click(findTestObject('LIMS/DCO/Reporting/Page_Edit GHReportInfo/button_OK_rel_rep'))
 
+WebUI.click(findTestObject('LIMS/logout/img'))
+
 WebUI.closeBrowser()
 
 Thread.sleep(2000)

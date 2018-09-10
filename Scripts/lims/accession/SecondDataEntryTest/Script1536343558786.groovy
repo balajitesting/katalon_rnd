@@ -25,7 +25,7 @@ import internal.GlobalVariable as GlobalVariable
 
 //String aNumber = 'A0119534'
 
-String aNumber = WebUI.callTestCase(findTestCase('lims/accession/EnterDE1DataFields'), [:], FailureHandling.STOP_ON_FAILURE)
+String aNumber = WebUI.callTestCase(findTestCase('lims/accession/AcessionClinicalDataEntryTest'), [:], FailureHandling.STOP_ON_FAILURE)
 
 Thread.sleep(1000)
 
@@ -94,6 +94,8 @@ WebUI.click(findTestObject('LIMS/DE2/Page_Iteration/table_Patient Contact Permis
 WebUI.setText(findTestObject('/LIMS/DE2/Page_Iteration/input_priorgenotypingdetail'), 'Test detail')
 
 WebUI.click(findTestObject('LIMS/DE1/Page_Iteration/input_isprogrssingonrx'))
+
+WebUI.click(findTestObject('LIMS/logout/img'))
 
 WebUI.closeBrowser()
 
