@@ -22,6 +22,19 @@ import WebUiBuiltInKeywords as WebUI
 
 public class Requests {
 
+	String RequestId
+	String ReportStatus
+
+	@Keyword
+	def setRequestId(String requestId) {
+		RequestId = requestId;
+	}
+
+	@Keyword
+	def getRequestId() {
+		return RequestId
+	}
+
 	@Keyword
 	def cancelReport(RequestId){
 
@@ -38,5 +51,25 @@ public class Requests {
 		WebUI.acceptAlert()
 
 		Thread.sleep(1000)
+	}
+
+
+	@Keyword
+	def searchRequest(requestId){
+		WebUI.click(findTestObject('LIMS/DCO/Request/td_All Requests'))
+
+		WebUI.click(findTestObject('LIMS/DCO/Request/a_GHByRequestId'))
+
+		WebUI.setText(findTestObject('LIMS/DCO/Request/input_GHByRequestId_arg1'), requestId)
+
+		WebUI.click(findTestObject('LIMS/DCO/Request/td_OK'))
+
+		WebUI.click(findTestObject('LIMS/DCO/Request/button_OK'))
+
+		Thread.sleep(2000)
+
+		WebUI.click(findTestObject('LIMS/DCO/Request/div_Edit'))
+
+		//WebUI.click(findTestObject('LIMS/DCO/Request/td_Save'))
 	}
 }

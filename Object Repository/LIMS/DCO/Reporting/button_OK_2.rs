@@ -14,7 +14,7 @@
          <value>id(&quot;dlgBtn0_0&quot;)[count(. | //button[(text() = 'OK' or . = 'OK')]) = count(//button[(text() = 'OK' or . = 'OK')])]</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

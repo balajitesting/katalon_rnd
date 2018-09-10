@@ -21,13 +21,13 @@ import internal.GlobalVariable as GlobalVariable
 
 CustomKeywords.'portal.service.Logon.logon'('sqa_viewas@gmail.com', 'Pa22word')
 
-WebUI.setText(findTestObject('Object Repository/Portal/Page_Guardant Health/input_view-as__search-bar'), 'Fidler')
+WebUI.setText(findTestObject('Portal/SignOut/input_view-as__search-bar'), 'Fidler')
 
-WebUI.click(findTestObject('Object Repository/Portal/Page_Guardant Health/span_Fidler Mary'))
+WebUI.click(findTestObject('Portal/SignOut/span_Fidler Mary'))
 
-WebUI.click(findTestObject('Object Repository/Portal/Page_Guardant Health/a_fa fa-download request__data'))
+WebUI.click(findTestObject('Portal/SignOut/a_fa fa-download request__data'))
 
-WebUI.click(findTestObject('Object Repository/Portal/Page_Guardant Health/a_Report Only'))
+WebUI.click(findTestObject('Portal/SignOut/a_Report Only'))
 
 Thread.sleep(10000)
 
