@@ -5,3 +5,7 @@
 .svn/
 .ent-web-automation
 .project
+Reports
+Report.html
+JUnit_rEPORT.XML
+JSON_Report.json
