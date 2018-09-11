@@ -84,5 +84,4 @@ public class PDFCompare {
 			println('Unmatched pdf found! Check diff file in ' + outFilePath)
 		}
 	}
-	
 }

@@ -57,7 +57,7 @@ WebUI.click(findTestObject('LIMS/DCO/Reporting/button_OK_report'))
 
 WebUI.click(findTestObject('LIMS/DCO/Reporting/Page_CNV/div_Release Report'))
 
-Thread.sleep(2000)
+Thread.sleep(3000)
 
 WebUI.click(findTestObject('LIMS/DCO/Reporting/button_OK_2'))
 
