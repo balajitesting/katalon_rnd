@@ -23,9 +23,9 @@ import com.gh.PDFCompare as PDFCompare
 import com.gh.core.Properties as Properties
 import com.gh.core.PDFCompare as PDFCompare
 
-
-String A_Number = 'A60204'
-String ReportStatus = 'Cancelled'
+'Enable following when run test case only'
+//String A_Number = 'A60204'
+//String ReportStatus = 'Cancelled'
 
 CustomKeywords.'com.gh.lims.Common.logon'('Cliacls', '5xx1bkCcAlw=')
 
