@@ -4,7 +4,7 @@
    <name>LIMS3.5PTL7.1TestSuite</name>
    <tag></tag>
    <isRerun>false</isRerun>
-   <lastRun>2018-09-10T16:16:32</lastRun>
+   <lastRun>2018-09-11T16:05:06</lastRun>
    <mailRecipient></mailRecipient>
    <numberOfRerun>0</numberOfRerun>
    <pageLoadTimeout>30</pageLoadTimeout>
@@ -88,12 +88,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/portal/DownloadReportAndViewInPortal</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>45dfbb5c-25f0-4547-a1ce-0bb853aecb04</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/lims/request/searchRequestCancelReportTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>aa9ca232-7839-49b9-9b97-e393f0a1b6ab</guid>

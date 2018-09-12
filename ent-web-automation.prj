@@ -4,6 +4,10 @@
    <name>ent-web-automation</name>
    <tag></tag>
    <UUID>337e2474-4582-40a4-b26e-9f158f2829b1</UUID>
-   <migratedVersion>5.4.0</migratedVersion>
+   <migratedVersion>5.7.0</migratedVersion>
    <pageLoadTimeout>0</pageLoadTimeout>
+   <sourceContent>
+      <sourceFolderList/>
+      <systemFolderList/>
+   </sourceContent>
 </Project>
