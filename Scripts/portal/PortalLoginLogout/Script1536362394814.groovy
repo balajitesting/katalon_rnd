@@ -21,9 +21,9 @@ import internal.GlobalVariable as GlobalVariable
 
 CustomKeywords.'com.gh.portal.Common.logon'('sqa_viewas@gmail.com', 'Pa22word')
 
-WebUI.click(findTestObject('Portal/SignOut/i_fa fa-chevron-down admin-men'))
+WebUI.click(findTestObject('Portal/Dashboard/i_fa fa-chevron-down admin-men'))
 
-WebUI.click(findTestObject('Portal/SignOut/a_Sign Out'))
+WebUI.click(findTestObject('Portal/Dashboard/a_Sign Out'))
 
 WebUI.closeBrowser()
 

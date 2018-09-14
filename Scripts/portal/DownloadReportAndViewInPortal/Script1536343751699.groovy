@@ -21,19 +21,19 @@ import internal.GlobalVariable as GlobalVariable
 
 CustomKeywords.'com.gh.portal.Common.logon'('sqa_viewas@gmail.com', 'Pa22word')
 
-WebUI.setText(findTestObject('Portal/SignOut/input_view-as__search-bar'), 'Fidler')
+WebUI.setText(findTestObject('Portal/Dashboard/input_view-as__search-bar'), 'Fidler')
 
-WebUI.click(findTestObject('Portal/SignOut/span_Fidler Mary'))
+WebUI.click(findTestObject('Portal/Dashboard/span_Fidler Mary'))
 
-WebUI.click(findTestObject('Portal/SignOut/a_fa fa-download request__data'))
+WebUI.click(findTestObject('Portal/Dashboard/a_fa fa-download request__data'))
 
-WebUI.click(findTestObject('Portal/SignOut/a_Report Only'))
+WebUI.click(findTestObject('Portal/Dashboard/a_Report Only'))
 
-WebUI.switchToWindowUrl('https://portal-sqa.guardanthealth.com/dashboard')
+WebUI.switchToWindowUrl(GlobalVariable.portalUrl + 'dashboard')
 
-WebUI.click(findTestObject('Portal/SignOut/Page_Guardant Health/i_fa fa-chevron-down admin-men'))
+WebUI.click(findTestObject('Portal/Dashboard/Page_Guardant Health/i_fa fa-chevron-down admin-men'))
 
-//WebUI.click(findTestObject('Portal/SignOut/Page_Guardant Health/a_Sign Out'))
+//WebUI.click(findTestObject('Portal/Dashboard/Page_Guardant Health/a_Sign Out'))
 
 WebUI.closeBrowser()
 
