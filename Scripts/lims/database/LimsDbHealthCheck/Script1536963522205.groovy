@@ -28,7 +28,7 @@ String table = "u_ghcnvgene";
 String query = "select count(*) from "+ table+ " where sampleid like '"+ aNumber +"%' and isSupportedCnvGene = '1'";
 
 CustomKeywords.'com.gh.db.LimsOracleDBService.connectDB'(GlobalVariable.oracleDBurl, GlobalVariable.oracleDBuser, GlobalVariable.oracleDBpwd)
-
+println GlobalVariable.oracleDBurl
 ResultSet rs = CustomKeywords.'com.gh.db.LimsOracleDBService.executeQuery'(query)
 
 if(rs.next()) {
