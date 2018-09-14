@@ -16,7 +16,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'10.4.80.106:1521:orclgh'</initValue>
+      <initValue>'10.4.80.104:1521:orclgh'</initValue>
       <name>oracleDBurl</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

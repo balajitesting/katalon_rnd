@@ -22,7 +22,7 @@ import internal.GlobalVariable as GlobalVariable
 
 String A_Number = 'A60204'
 
-CustomKeywords.'com.gh.lims.Common.logon'('Cliacls', '5xx1bkCcAlw=')
+CustomKeywords.'com.gh.lims.Common.logon'('Cliacls', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
 CustomKeywords.'com.gh.lims.Requests.searchRequest'(A_Number)
 
