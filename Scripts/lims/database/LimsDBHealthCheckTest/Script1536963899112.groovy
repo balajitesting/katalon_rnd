@@ -18,8 +18,7 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKeywords
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
-
-
+import junit.framework.Assert
 import internal.GlobalVariable as GlobalVariable
 import java.sql.ResultSet
 
@@ -35,7 +34,7 @@ if(rs.next()) {
 	
   String s = rs.getString(1);
   println 'Data fetched from DB: ' + s
-  
+  Assert.assertNotNull(s)
 }
 
 while (rs.next()) {
