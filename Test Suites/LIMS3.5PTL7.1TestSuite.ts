@@ -4,7 +4,7 @@
    <name>LIMS3.5PTL7.1TestSuite</name>
    <tag></tag>
    <isRerun>false</isRerun>
-   <lastRun>2018-09-11T16:05:06</lastRun>
+   <lastRun>2018-09-14T13:45:19</lastRun>
    <mailRecipient></mailRecipient>
    <numberOfRerun>0</numberOfRerun>
    <pageLoadTimeout>30</pageLoadTimeout>
@@ -12,16 +12,16 @@
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <testSuiteGuid>c93d4558-0733-43bc-84c3-6a160c2c4312</testSuiteGuid>
    <testCaseLink>
+      <guid>58f26970-fb53-41cb-8049-bbc36ce1d83d</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/lims/database/LimsDBHealthCheckTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>adb45284-818c-4143-b438-e4d11d9b0a3c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/lims/LimsLoginLogout</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>8d63641a-d651-4417-8d5c-50b9fdee1956</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/lims/accession/AcessionClinicalDataEntryTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>464a22df-8440-4c45-bd92-949311bf6362</guid>
@@ -100,5 +100,11 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/portal/PortalLoginLogout</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>8d63641a-d651-4417-8d5c-50b9fdee1956</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/lims/accession/AcessionClinicalDataEntryTest</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
