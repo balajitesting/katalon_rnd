@@ -37,68 +37,68 @@ public class LimsDBOperation extends LimsOracleDBService {
 		}
 
 		try {
-            ResultSet rs = executeQuery(query);
-            rs.next();
-            int count = Integer.parseInt(rs.getString(1));
-            //con.close();
-            if (count > 0) {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        } catch (Exception e) {
-			e.printStackTrace();
-		}
-		return false;
-}
-
-
-/*  If TB Review count is more than 1 or IsPositiveReview count is more than 1, return true
- CLS Review for that gene type will show up if it is true.
- Otherwise the flow will not show. 
- **/
-
-public boolean clsReviewQuery(String a_number, String gen_type) {
-
-	String table;
-	String query;
-	
-	switch (gen_type) {
-
-		case "CNV":
-		table = "u_ghcnvgene";
-		query = "select count(*) from "+table+" where sampleid like '"+ a_number+"%' and (ispositivebytumorboardreview = 1 or ispositivebytumorboardreview = 1)";
-		break;
-		case "SNV":
-		table = "u_ghsnv";
-		query = "select count(*) from "+ table + " where sampleid like '" + a_number +"%' and (IsPositiveByReview='1' or IsPositiveByTumorBoardReview='1') and gene in (select genename from u_ghgenepanel where alterationtype ='SNV' and endgenepanelversion = '10000')"
-		+ " and runid = (select runid from u_ghreportinfo where sampleid like '" + a_number +"%' and recordstatus = 'Activating')";
-		break;
-		case "FUSION":
-		table = "u_ghfusion";
-		query = "select count(*) from "+table+" where sampleid like '"+ a_number+"%' and (IsPositiveByReview = '1' or IsPositiveByTumorBoardReview = '1')";
-
-		break;
-		case "INDEL":
-		table = "u_ghindel";
-		query = "select count(*) from "+table+" where sampleid like '"+ a_number+"%' and (ispositivebytumorboardreview = 1 or ispositivebytumorboardreview = 1)";
-		break;
-		default:
-		throw new IllegalArgumentException("Invalid argument " + gen_type);
-	}
-
-	try {
 			ResultSet rs = executeQuery(query);
 			rs.next();
 			int count = Integer.parseInt(rs.getString(1));
 			//con.close();
 			if (count > 0) {
-			return true;
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
+
+
+	/*  If TB Review count is more than 1 or IsPositiveReview count is more than 1, return true
+	 CLS Review for that gene type will show up if it is true.
+	 Otherwise the flow will not show. 
+	 **/
+
+	public boolean clsReviewQuery(String a_number, String gen_type) {
+
+		String table;
+		String query;
+
+		switch (gen_type) {
+
+			case "CNV":
+				table = "u_ghcnvgene";
+				query = "select count(*) from "+table+" where sampleid like '"+ a_number+"%' and (ispositivebytumorboardreview = 1 or ispositivebytumorboardreview = 1)";
+				break;
+			case "SNV":
+				table = "u_ghsnv";
+				query = "select count(*) from "+ table + " where sampleid like '" + a_number +"%' and (IsPositiveByReview='1' or IsPositiveByTumorBoardReview='1') and gene in (select genename from u_ghgenepanel where alterationtype ='SNV' and endgenepanelversion = '10000')"
+				+ " and runid = (select runid from u_ghreportinfo where sampleid like '" + a_number +"%' and recordstatus = 'Activating')";
+				break;
+			case "FUSION":
+				table = "u_ghfusion";
+				query = "select count(*) from "+table+" where sampleid like '"+ a_number+"%' and (IsPositiveByReview = '1' or IsPositiveByTumorBoardReview = '1')";
+
+				break;
+			case "INDEL":
+				table = "u_ghindel";
+				query = "select count(*) from "+table+" where sampleid like '"+ a_number+"%' and (ispositivebytumorboardreview = 1 or ispositivebytumorboardreview = 1)";
+				break;
+			default:
+				throw new IllegalArgumentException("Invalid argument " + gen_type);
+		}
+
+		try {
+			ResultSet rs = executeQuery(query);
+			rs.next();
+			int count = Integer.parseInt(rs.getString(1));
+			//con.close();
+			if (count > 0) {
+				return true;
 			}
 			else {
-			return false;
+				return false;
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
