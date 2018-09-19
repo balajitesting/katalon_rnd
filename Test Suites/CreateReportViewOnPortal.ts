@@ -4,11 +4,7 @@
    <name>CreateReportViewOnPortal</name>
    <tag></tag>
    <isRerun>false</isRerun>
-<<<<<<< Updated upstream
    <lastRun>2018-09-07T12:54:37</lastRun>
-=======
-   <lastRun>2018-09-19T13:17:33</lastRun>
->>>>>>> Stashed changes
    <mailRecipient></mailRecipient>
    <numberOfRerun>0</numberOfRerun>
    <pageLoadTimeout>30</pageLoadTimeout>
