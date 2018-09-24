@@ -57,6 +57,15 @@ class JSHandler {
 			executor.executeScript('arguments[0].click()', element)
 		}
 	}
+	
+	@Keyword
+	def J2Click(TestObject to, int timeout){
+		JCLick(to, timeout)
+
+		Thread.sleep(1000)
+
+		JCLick(to, timeout)
+	}
 
 	/**
 	 * Refresh browser
@@ -81,4 +90,5 @@ class JSHandler {
 		List<WebElement> selectedRows = mailList.findElements(By.xpath("./" + outerTagName + "/tr"))
 		return selectedRows
 	}
+	
 }

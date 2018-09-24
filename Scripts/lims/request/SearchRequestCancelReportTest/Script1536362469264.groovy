@@ -2,6 +2,9 @@ import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
+
+import org.junit.After
+
 import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
 import com.kms.katalon.core.checkpoint.CheckpointFactory as CheckpointFactory
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as MobileBuiltInKeywords
@@ -19,7 +22,6 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKe
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-
 String A_Number = 'A60204'
 
 CustomKeywords.'com.gh.lims.Common.logon'('Cliacls', '5Ed5CIkj9UQfaMZXAkDVaQ==')
@@ -28,10 +30,18 @@ CustomKeywords.'com.gh.lims.Requests.searchRequest'(A_Number)
 
 WebUI.click(findTestObject('LIMS/DCO/Request/td_Save'))
 
-CustomKeywords.'com.gh.lims.Requests.cancelReport'(A_Number)
+WebUI.setEncryptedText(findTestObject('LIMS/DCO/Request/eSign/input_Password_checkpassword'), '5Ed5CIkj9UQfaMZXAkDVaQ==')
+
+WebUI.click(findTestObject('LIMS/DCO/Request/eSign/img'))
+
+WebUI.click(findTestObject('LIMS/DCO/Request/eSign/td_Added comment'))
+
+WebUI.click(findTestObject('LIMS/DCO/Request/eSign/td_OK'))
+
+CustomKeywords.'com.gh.core.JSHandler.J2Click'(findTestObject('LIMS/DCO/Request/Page_All_Requests/img'), 20)
+
+WebUI.acceptAlert()
 
 WebUI.click(findTestObject('LIMS/logout/img'))
 
 WebUI.closeBrowser()
-
-
