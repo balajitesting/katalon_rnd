@@ -40,6 +40,16 @@ public class Common {
 
 		WebUI.click(findTestObject('LIMS/DCO/Reporting/button_Logon'))
 	}
-	
 
+	@Keyword
+	def clickEdit(String orPathToEdit){
+		
+		WebUI.click(findTestObject(orPathToEdit))
+		
+		Thread.sleep(1000)
+		
+		WebUI.click(findTestObject(orPathToEdit))
+	}
+
+	
 }
