@@ -27,7 +27,7 @@ import com.gh.core.PDFCompare as PDFCompare
 //String A_Number = 'A60204'
 //String ReportStatus = 'Cancelled'
 
-CustomKeywords.'com.gh.lims.Common.logon'('Cliacls', '5xx1bkCcAlw=')
+CustomKeywords.'com.gh.lims.Common.logon'('Cliacls', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
 CustomKeywords.'com.gh.lims.Requests.searchRequest'(A_Number)
 
