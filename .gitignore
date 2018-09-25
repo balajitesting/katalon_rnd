@@ -7,6 +7,6 @@
 .project
 Reports
 Report.html
-JUnit_rEPORT.XML
+JUnit_Report.XML
 JSON_Report.json
-Results/download/
+Results
