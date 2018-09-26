@@ -46,10 +46,5 @@ public class Requests {
 		WebUI.click(findTestObject('LIMS/DCO/Request/td_OK'))
 
 		WebUI.click(findTestObject('LIMS/DCO/Request/button_OK'))
-
-		Thread.sleep(2000)
-
-		WebUI.click(findTestObject('LIMS/DCO/Request/div_Edit'))
-
 	}
 }
