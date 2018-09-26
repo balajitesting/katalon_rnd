@@ -37,5 +37,4 @@ public class Report {
 
 		WebUI.click(findTestObject('LIMS/DCO/Reporting/Page_Request List/td_Edit'))
 	}
-
 }
