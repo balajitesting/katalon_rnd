@@ -29,6 +29,8 @@ import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 
 import internal.GlobalVariable as GlobalVariable
 
+WebUI.comment('Run ENTSW-TC-2854')
+
 CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserDagmar', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
 String orDE1 = 'LIMS/DE1/'

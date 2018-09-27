@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>AcessionClinicalDataEntryTest</name>
+   <name>AcessionClinicalRequiredDataEntryTest</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>b5754a91-27ed-474d-b5d0-2747faee5ca8</testCaseGuid>
