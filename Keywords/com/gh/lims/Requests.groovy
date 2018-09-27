@@ -36,25 +36,6 @@ public class Requests {
 	}
 
 	@Keyword
-	def cancelReport(RequestId){
-
-		WebUI.click(findTestObject('LIMS/DCO/Request/td_Save'))
-
-		Thread.sleep(1000)
-
-		WebUI.click(findTestObject('LIMS/DCO/Request/td_Cancel This_Request'))
-
-		WebUI.verifyAlertPresent(20)
-
-		Thread.sleep(1000)
-
-		WebUI.acceptAlert()
-
-		Thread.sleep(1000)
-	}
-
-
-	@Keyword
 	def searchRequest(requestId){
 		WebUI.click(findTestObject('LIMS/DCO/Request/td_All Requests'))
 
@@ -65,11 +46,5 @@ public class Requests {
 		WebUI.click(findTestObject('LIMS/DCO/Request/td_OK'))
 
 		WebUI.click(findTestObject('LIMS/DCO/Request/button_OK'))
-
-		Thread.sleep(2000)
-
-		WebUI.click(findTestObject('LIMS/DCO/Request/div_Edit'))
-
-		//WebUI.click(findTestObject('LIMS/DCO/Request/td_Save'))
 	}
 }

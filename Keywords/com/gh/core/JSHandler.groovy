@@ -58,6 +58,15 @@ class JSHandler {
 		}
 	}
 
+	@Keyword
+	def J2Click(TestObject to, int timeout){
+		JCLick(to, timeout)
+
+		Thread.sleep(1000)
+
+		JCLick(to, timeout)
+	}
+
 	/**
 	 * Refresh browser
 	 */

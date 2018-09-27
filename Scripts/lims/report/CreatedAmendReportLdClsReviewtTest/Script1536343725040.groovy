@@ -19,7 +19,10 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKe
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
+
+'Enable when run this test alone'
 String A_Number = 'A80196'
+String ReportStatus = 'AMENDED'
 
 CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserReporting', '5xx1bkCcAlw=')
 
@@ -44,7 +47,9 @@ WebUI.setText(findTestObject('LIMS/DCO/Reporting/Page_Request List for LD Review
 
 WebUI.click(findTestObject('LIMS/DCO/Reporting/Page_Request List for LD Review/td_OK'))
 
-CustomKeywords.'com.gh.lims.Report.clickBeginWorkflowLdReview'()
+beginWorkFlow = 'LIMS/DCO/Reporting/Page_Request List for CLS Review/td_Begin Workflow'
+
+CustomKeywords.'com.gh.lims.Common.setClick'(beginWorkFlow)
 
 WebUI.click(findTestObject('LIMS/DCO/Reporting/Page_CNV/div_SNV Review'))
 
@@ -74,7 +79,7 @@ WebUI.setText(findTestObject('LIMS/DCO/Reporting/Page_Request List for CLS Revie
 
 WebUI.click(findTestObject('LIMS/DCO/Reporting/Page_Request List for CLS Review/td_OK'))
 
-CustomKeywords.'com.gh.lims.Report.clickBeginWorkflowClsReview'()
+CustomKeywords.'com.gh.lims.Common.setClick'(beginWorkFlow)
 
 WebUI.click(findTestObject('LIMS/DCO/Reporting/Page_CNV/div_SNV Review'))
 
@@ -88,13 +93,9 @@ WebUI.waitForElementVisible(findTestObject('LIMS/DCO/Reporting/Page_Edit GHRepor
 
 WebUI.click(findTestObject('LIMS/DCO/Reporting/Page_Edit GHReportInfo/button_OK_rel_rep'))
 
-Thread.sleep(1000)
-
 WebUI.click(findTestObject('LIMS/logout/img'))
 
 WebUI.closeBrowser()
-
-Thread.sleep(2000)
 
 String filename = ((A_Number + '_') + ReportStatus) + '_report.pdf'
 
