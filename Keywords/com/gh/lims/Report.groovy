@@ -37,24 +37,4 @@ public class Report {
 
 		WebUI.click(findTestObject('LIMS/DCO/Reporting/Page_Request List/td_Edit'))
 	}
-
-	@Keyword
-	def clickBeginWorkflowLdReview(){
-
-		WebUI.click(findTestObject('LIMS/DCO/Reporting/Page_Request List for CLS Review/td_Begin Workflow'))
-
-		Thread.sleep(1000)
-
-		WebUI.click(findTestObject('LIMS/DCO/Reporting/Page_Request List for CLS Review/td_Begin Workflow'))
-	}
-
-	@Keyword
-	def clickBeginWorkflowClsReview(){
-
-		WebUI.click(findTestObject('LIMS/DCO/Reporting/Page_Request List for CLS Review/td_Begin Workflow'))
-
-		Thread.sleep(1000)
-
-		WebUI.click(findTestObject('LIMS/DCO/Reporting/Page_Request List for CLS Review/td_Begin Workflow'))
-	}
 }

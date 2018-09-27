@@ -29,7 +29,7 @@ WebUI.click(findTestObject('Portal/Dashboard/a_fa fa-download request__data'))
 
 WebUI.click(findTestObject('Portal/Dashboard/a_Report Only'))
 
-WebUI.switchToWindowUrl(GlobalVariable.portalUrl + 'dashboard')
+WebUI.switchToWindowUrl(GlobalVariable.portalUrl + '/dashboard')
 
 WebUI.click(findTestObject('Portal/Dashboard/Page_Guardant Health/i_fa fa-chevron-down admin-men'))
 

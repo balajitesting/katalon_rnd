@@ -22,20 +22,13 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.gh.PDFCompare as PDFCompare
 import com.gh.core.Properties as Properties
 import com.gh.core.PDFCompare as PDFCompare
+import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
+
+WebUI.callTestCase(findTestCase('lims/request/SearchRequestCancelReportTest'), [:], FailureHandling.STOP_ON_FAILURE)
 
 'Enable following when run test case only'
-//String A_Number = 'A60204'
-//String ReportStatus = 'Cancelled'
-
-CustomKeywords.'com.gh.lims.Common.logon'('Cliacls', '5xx1bkCcAlw=')
-
-CustomKeywords.'com.gh.lims.Requests.searchRequest'(A_Number)
-
-WebUI.click(findTestObject('LIMS/DCO/Request/td_Save'))
-
-CustomKeywords.'com.gh.lims.Requests.cancelReport'(A_Number)
-
-WebUI.closeBrowser()
+String A_Number = 'A60204'
+String ReportStatus = 'Cancelled'
 
 CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserReporting', '5xx1bkCcAlw=')
 
@@ -45,11 +38,9 @@ WebUI.setText(findTestObject('LIMS/DCO/Reporting/input_searchtext'), A_Number)
 
 WebUI.click(findTestObject('LIMS/DCO/Reporting/button_OK'))
 
-Thread.sleep(1000)
+runWorkflow = 'LIMS/DCO/Reporting/div_Run Workflow'
 
-WebUI.click(findTestObject('LIMS/DCO/Reporting/div_Run Workflow'))
-
-Thread.sleep(2000)
+CustomKeywords.'com.gh.lims.Common.setClick'(runWorkflow)
 
 WebUI.click(findTestObject('LIMS/DCO/Reporting/div_Generate Cancelled_Report'))
 
@@ -73,13 +64,9 @@ String file1 = CustomKeywords.'com.gh.core.Properties.getGetPDFBaseDir'() + file
 
 String file2 = CustomKeywords.'com.gh.core.Properties.getGetPDFDownloadDir'() + filename
 
-if (CustomKeywords.'com.gh.core.PDFCompare.compareAndSave'(file1, file2)) {
-    println('PDF Match!')
-} else {
-    println('Unmatched pdf found!')
-}
+boolean val = CustomKeywords.'com.gh.core.PDFCompare.compareAndSave'(file1, file2)
 
-
+CustomKeywords.'com.gh.core.PDFCompare.display'(val)
 
 
 
