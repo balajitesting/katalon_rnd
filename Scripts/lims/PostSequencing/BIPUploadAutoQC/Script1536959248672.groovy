@@ -15,6 +15,10 @@ import internal.GlobalVariable as GlobalVariable
 
 CustomKeywords.'com.gh.lims.Common.logon'('end_to_end_robot', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
-//CustomKeywords.'com.gh.lims.PostSequence.uploadBIPData'('AHJNCLBCXY')
+CustomKeywords.'com.gh.db.BIP_delete.delete_data'(flowcellID_full)
 
-CustomKeywords.'com.gh.db.BIP_delete.delete_data'('170616_NB501068_0284_AHWCCHBGXY')
+CustomKeywords.'com.gh.lims.PostSequence.uploadBIPData'(flowcellID)
+
+Thread.sleep(10000)
+
+
