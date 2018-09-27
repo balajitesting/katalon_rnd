@@ -60,8 +60,8 @@ class BIP_delete {
 		String portNumber = "1521";
 		String sid = "orclgh";
 		String url = "jdbc:oracle:thin:@" + serverName + ":" + portNumber + ":" + sid;
-		String username = "LABVANTAGE";
-		String password = "qacZhEHG2fI3GQ";
+		String username = GlobalVariable.oracleDBuser;
+		String password = GlobalVariable.oracleDBpwd;
 		Connection con = DriverManager.getConnection(url, username, password);
 
 		Statement st= con.createStatement();
