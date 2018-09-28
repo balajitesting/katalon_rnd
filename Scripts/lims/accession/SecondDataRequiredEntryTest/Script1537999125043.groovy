@@ -23,14 +23,6 @@ WebUI.click(findTestObject('LIMS/DE2/Page_Iteration/td_Second DataEntry'))
 
 CustomKeywords.'com.gh.lims.Acession.searchRequest'(aNumber)
 
-//WebUI.setText(findTestObject('LIMS/DE2/Page_Patient Data Entry List/input_searchtext'), aNumber)
-//
-//WebUI.click(findTestObject('LIMS/DE2/Page_Patient Data Entry List/td_OK'))
-//
-//edit = 'LIMS/DE2/Page_Patient Data Entry List/img'
-//
-//CustomKeywords.'com.gh.lims.Common.setClick'(edit)
-
 WebUI.setText(findTestObject('LIMS/DE2/Page_Iteration/input_patmon'), 'JAN')
 
 WebUI.setText(findTestObject('LIMS/DE1/Page_Iteration/input_patfname'), 'Katalon')
@@ -43,7 +35,7 @@ WebUI.setText(findTestObject('LIMS/DE2/Page_Iteration/input_patyear'), '1990')
 
 WebUI.click(findTestObject('LIMS/DE2/Page_Iteration/input_patientgender'))
 
-WebUI.click(findTestObject('Object Repository/LIMS/DE2/Page_Iteration/input_Initial Billing Verified'))
+WebUI.click(findTestObject('LIMS/DE2/Page_Iteration/input_Initial Billing Verified'))
 
 WebUI.acceptAlert()
 
