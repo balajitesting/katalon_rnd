@@ -14,6 +14,8 @@ import com.kms.katalon.core.annotation.Keyword
  * @author gxu
  * @date 6/12/2018
  * 
+ * PDF comparison module to compare 2 PDF files pixel by pixel
+ * 
  */
 
 public class PDFCompare {
