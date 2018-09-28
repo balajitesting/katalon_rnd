@@ -18,6 +18,15 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
 import internal.GlobalVariable
 
+/**
+ * 
+ * @author gxu
+ * 
+ * Common customized Keywords in PostSequence page. 
+ * You should use Keyword here to replace generated action.
+ * 
+ */
+
 public class PostSequence {
 
 	@Keyword

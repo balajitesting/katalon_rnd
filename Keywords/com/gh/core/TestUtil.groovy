@@ -6,13 +6,14 @@ import java.text.SimpleDateFormat
 import com.kms.katalon.core.annotation.Keyword
 import com.gh.core.Properties as CustomProperties
 
+/**
+ * @author gxu
+ *
+ * TestUtil class
+ *
+ */
+
 public class TestUtil {
-
-	/**
-	 * @author gxu
-	 * 
-	 */
-
 
 	public static void purgeDirectory(File dir){
 

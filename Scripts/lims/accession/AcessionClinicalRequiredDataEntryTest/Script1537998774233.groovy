@@ -17,6 +17,8 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WSBuiltInKey
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKeywords
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+
+import org.junit.After
 import org.openqa.selenium.By as By
 import org.openqa.selenium.JavascriptExecutor
 import com.kms.katalon.core.webui.common.WebUiCommonHelper
@@ -71,17 +73,17 @@ WebUI.click(findTestObject(orDE1 + 'Page_/input_Search'))
 
 WebUI.click(findTestObject(orDE1 + 'Page_/input_cb'))
 
-WebUI.switchToWindowUrl(GlobalVariable.limsUrl + '/rc?command=page&page=GHMainAccessionSHPHY')
+WebUI.switchToDefaultContent()
 
 WebUI.setText(findTestObject(orDE1 + 'Page_Iteration/input_secsearchstr'), 'sqa')
 
 WebUI.click(findTestObject(orDE1 + 'Page_Iteration/input_searchbuttonsr'))
 
-WebUI.switchToWindowUrl(GlobalVariable.limsUrl + '/rc?command=page&page=GHMainAccessionSHPHY')
+WebUI.switchToDefaultContent()
 
-WebUI.scrollToElement(findTestObject(orDE1 + 'Page_Iteration/input_saveAccession01'), 15)
+WebUI.scrollToElement(findTestObject('LIMS/DE1/Page_Iteration/input_saveAccession01'), 15)
 
-CustomKeywords.'com.gh.core.JSHandler.JCLick'(findTestObject(orDE1 + 'Page_Iteration/input_saveAccession01'), 15)
+CustomKeywords.'com.gh.core.JSHandler.JClick'(findTestObject('LIMS/DE1/Page_Iteration/input_saveAccession01'), 15)
 
 aNumber = WebUI.getAttribute(findTestObject(orDE1 + 'Page_Iteration/input_requestid'), 'value')
 

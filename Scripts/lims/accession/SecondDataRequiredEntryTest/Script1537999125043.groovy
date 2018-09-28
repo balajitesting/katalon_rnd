@@ -21,13 +21,15 @@ CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserDagmar', '5Ed5CIkj9UQfaMZXAkD
 
 WebUI.click(findTestObject('LIMS/DE2/Page_Iteration/td_Second DataEntry'))
 
-WebUI.setText(findTestObject('LIMS/DE2/Page_Patient Data Entry List/input_searchtext'), aNumber)
+CustomKeywords.'com.gh.lims.Acession.searchRequest'(aNumber)
 
-WebUI.click(findTestObject('LIMS/DE2/Page_Patient Data Entry List/td_OK'))
-
-edit = 'LIMS/DE2/Page_Patient Data Entry List/img'
-
-CustomKeywords.'com.gh.lims.Common.setClick'(edit)
+//WebUI.setText(findTestObject('LIMS/DE2/Page_Patient Data Entry List/input_searchtext'), aNumber)
+//
+//WebUI.click(findTestObject('LIMS/DE2/Page_Patient Data Entry List/td_OK'))
+//
+//edit = 'LIMS/DE2/Page_Patient Data Entry List/img'
+//
+//CustomKeywords.'com.gh.lims.Common.setClick'(edit)
 
 WebUI.setText(findTestObject('LIMS/DE2/Page_Iteration/input_patmon'), 'JAN')
 
@@ -39,7 +41,15 @@ WebUI.setText(findTestObject('LIMS/DE2/Page_Iteration/input_patday'), '11')
 
 WebUI.setText(findTestObject('LIMS/DE2/Page_Iteration/input_patyear'), '1990')
 
+WebUI.click(findTestObject('LIMS/DE2/Page_Iteration/input_patientgender'))
+
+WebUI.click(findTestObject('Object Repository/LIMS/DE2/Page_Iteration/input_Initial Billing Verified'))
+
+WebUI.acceptAlert()
+
 WebUI.click(findTestObject('LIMS/logout/img'))
 
 WebUI.closeBrowser()
+
+return aNumber
 
