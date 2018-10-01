@@ -18,27 +18,17 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
 import internal.GlobalVariable
 
-/**
- * 
- * @author gxu
- * 
- * Common customized Keywords in PostSequence page. 
- * You should use Keyword here to replace generated action.
- * 
- */
-
-public class PostSequence {
+public class Acession {
 
 	@Keyword
-	def uploadBIPData(flowcellId){
+	def searchRequest(requestId){
 
-		WebUI.click(findTestObject('Object Repository/LIMS/PostSequencing/Page_Iteration/td_BIP Upload'))
+		WebUI.setText(findTestObject('LIMS/DE2/Page_Patient Data Entry List/input_searchtext'), aNumber)
 
-		WebUI.click(findTestObject('Object Repository/LIMS/PostSequencing/Page_GHFlowcell List/div_Upload BIP_Data'))
+		WebUI.click(findTestObject('LIMS/DE2/Page_Patient Data Entry List/td_OK'))
 
-		WebUI.setText(findTestObject('Object Repository/LIMS/PostSequencing/Page_GHFlowcell List/input_Flowcell Id_prompt_arg1'),
-				flowcellId)
+		def edit = 'LIMS/DE2/Page_Patient Data Entry List/img'
 
-		WebUI.click(findTestObject('Object Repository/LIMS/PostSequencing/Page_GHFlowcell List/td_OK'))
+		Common.setClick(edit)
 	}
 }

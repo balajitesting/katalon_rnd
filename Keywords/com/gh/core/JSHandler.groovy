@@ -40,12 +40,14 @@ import com.kms.katalon.core.webui.exception.WebElementNotFoundException
 /**
  * @author gxu
  * 
+ * JavaScript Handler class to handle some challenge actions. 
+ * 
  */
 
 class JSHandler {
 
 	@Keyword
-	def JCLick(TestObject to, int timeout) {
+	def static JClick(TestObject to, int timeout) {
 
 		try {
 			WebUI.click(to)
@@ -59,19 +61,19 @@ class JSHandler {
 	}
 
 	@Keyword
-	def J2Click(TestObject to, int timeout){
-		JCLick(to, timeout)
+	def static J2Click(TestObject to, int timeout){
+		JClick(to, timeout)
 
 		Thread.sleep(1000)
 
-		JCLick(to, timeout)
+		JClick(to, timeout)
 	}
 
 	/**
 	 * Refresh browser
 	 */
 	@Keyword
-	def refreshBrowser() {
+	def static refreshBrowser() {
 		KeywordUtil.logInfo("Refreshing")
 		WebDriver webDriver = DriverFactory.getWebDriver()
 		webDriver.navigate().refresh()
@@ -85,7 +87,7 @@ class JSHandler {
 	 * @return All rows inside HTML table
 	 */
 	@Keyword
-	def List<WebElement> getHtmlTableRows(TestObject table, String outerTagName) {
+	def static List<WebElement> getHtmlTableRows(TestObject table, String outerTagName) {
 		WebElement mailList = WebUiBuiltInKeywords.findWebElement(table)
 		List<WebElement> selectedRows = mailList.findElements(By.xpath("./" + outerTagName + "/tr"))
 		return selectedRows

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>SecondDataRequiredEntryTest</name>
+   <tag></tag>
+   <comment>Run: ENTSW-TC-2963</comment>
+   <testCaseGuid>288fe5f6-598d-4ec4-a9a5-9800fcdc9beb</testCaseGuid>
+</TestCaseEntity>
