@@ -27,6 +27,15 @@ import MobileBuiltInKeywords as Mobile
 import WSBuiltInKeywords as WS
 import WebUiBuiltInKeywords as WebUI
 
+/**
+ *
+ * @author gxu
+ *
+ * Common customized Keywords for all LIMS page.
+ * You should use Keyword here to build your test.
+ *
+ */
+
 public class Common {
 
 	@Keyword
@@ -43,10 +52,13 @@ public class Common {
 		WebUI.click(findTestObject('LIMS/DCO/Reporting/button_Logon'))
 	}
 
+	/**
+	 *  Use setClick for Edit, Begin Workflow, Run Workflow
+	 */
 
 
 	@Keyword
-	def setClick(String orPathToEdit){
+	def static setClick(String orPathToEdit){
 
 		WebUI.click(findTestObject(orPathToEdit))
 
