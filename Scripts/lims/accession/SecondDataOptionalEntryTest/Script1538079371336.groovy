@@ -32,52 +32,52 @@ CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserDagmar', '5Ed5CIkj9UQfaMZXAkD
 
 WebUI.click(findTestObject('LIMS/DE2/Page_Iteration/td_Second DataEntry'))
 
-CustomKeywords.'com.gh.lims.Acession.searchRequest'(aNumber)
-
-WebUI.setText(findTestObject('LIMS/DE2/Page_Iteration/Page_Iteration/input_pataddr1'), '123 Test Drive')
-
-WebUI.setText(findTestObject('LIMS/DE2/Page_Iteration/input_pataddr2'), 'Apt #501')
-
-WebUI.setText(findTestObject('LIMS/DE2/Page_Iteration/input_patcity'), 'Redwood City')
-
-WebUI.click(findTestObject('LIMS/DE2/Page_Iteration/Page_Iteration/img_statelookup'))
-
-WebUI.switchToWindowTitle('')
-
-WebUI.click(findTestObject('LIMS/DE2/Page_/input_cb'))
-
-WebUI.switchToDefaultContent(FailureHandling.STOP_ON_FAILURE)
-
-WebUI.setText(findTestObject('LIMS/DE2/Page_Iteration/input_patzip'), '94040')
-
-WebUI.setText(findTestObject('/LIMS/DE2/Page_Iteration/input_patphone'), '650-123-4567')
-
-WebUI.setText(findTestObject('/LIMS/DE2/Page_Iteration/input_patemail'), 'gxu@guardanthealth.com')
-
-WebUI.setText(findTestObject('LIMS/DE2/Page_Iteration/input_patmrn'), '0123456789')
-
-WebUI.setText(findTestObject('LIMS/DE2/Page_Iteration/input_patcustpatientid'), '0123456789')
-
-WebUI.setText(findTestObject('LIMS/DE2/Page_Iteration/input_treatmentnotes'), 'Notes')
-
-WebUI.setText(findTestObject('LIMS/DE2/Page_Iteration/input_pathreporttype'), 'TestType')
-
-WebUI.click(findTestObject('LIMS/DE2/Page_Iteration/input_patientgender'))
-
-WebUI.setText(findTestObject('LIMS/DE2/Page_Iteration/input_diagnosisdate'), '01/02/2018')
-
-WebUI.setText(findTestObject('LIMS/DE2/Page_Iteration/input_otherdiagnosis'), 'Test')
-
-WebUI.click(findTestObject('LIMS/DE2/Page_Iteration/table_Patient Contact Permissi'))
-
-WebUI.setText(findTestObject('/LIMS/DE2/Page_Iteration/input_priorgenotypingdetail'), 'Test detail')
-
-WebUI.click(findTestObject('LIMS/DE1/Page_Iteration/input_isprogrssingonrx'))
-
-WebUI.click(findTestObject('Object Repository/LIMS/DE2/Page_Iteration/input_Initial Billing Verified'))
-
-WebUI.acceptAlert()
-
-WebUI.click(findTestObject('LIMS/logout/img'))
-
-WebUI.closeBrowser()
+//CustomKeywords.'com.gh.lims.Acession.searchRequest'(aNumber)
+//
+//WebUI.setText(findTestObject('LIMS/DE2/Page_Iteration/input_pataddr1'), '123 Test Drive')
+//
+//WebUI.setText(findTestObject('LIMS/DE2/Page_Iteration/input_pataddr2'), 'Apt #501')
+//
+//WebUI.setText(findTestObject('LIMS/DE2/Page_Iteration/input_patcity'), 'Redwood City')
+//
+//WebUI.click(findTestObject('LIMS/DE2/Page_Iteration/Page_Iteration/img_statelookup'))
+//
+//WebUI.switchToWindowTitle('')
+//
+//WebUI.click(findTestObject('LIMS/DE2/Page_/input_cb'))
+//
+//WebUI.switchToDefaultContent(FailureHandling.STOP_ON_FAILURE)
+//
+//WebUI.setText(findTestObject('LIMS/DE2/Page_Iteration/input_patzip'), '94040')
+//
+//WebUI.setText(findTestObject('/LIMS/DE2/Page_Iteration/input_patphone'), '650-123-4567')
+//
+//WebUI.setText(findTestObject('/LIMS/DE2/Page_Iteration/input_patemail'), 'gxu@guardanthealth.com')
+//
+//WebUI.setText(findTestObject('LIMS/DE2/Page_Iteration/input_patmrn'), '0123456789')
+//
+//WebUI.setText(findTestObject('LIMS/DE2/Page_Iteration/input_patcustpatientid'), '0123456789')
+//
+//WebUI.setText(findTestObject('LIMS/DE2/Page_Iteration/input_treatmentnotes'), 'Notes')
+//
+//WebUI.setText(findTestObject('LIMS/DE2/Page_Iteration/input_pathreporttype'), 'TestType')
+//
+//WebUI.click(findTestObject('LIMS/DE2/Page_Iteration/input_patientgender'))
+//
+//WebUI.setText(findTestObject('LIMS/DE2/Page_Iteration/input_diagnosisdate'), '01/02/2018')
+//
+//WebUI.setText(findTestObject('LIMS/DE2/Page_Iteration/input_otherdiagnosis'), 'Test')
+//
+//WebUI.click(findTestObject('LIMS/DE2/Page_Iteration/table_Patient Contact Permissi'))
+//
+//WebUI.setText(findTestObject('/LIMS/DE2/Page_Iteration/input_priorgenotypingdetail'), 'Test detail')
+//
+//WebUI.click(findTestObject('LIMS/DE1/Page_Iteration/input_isprogrssingonrx'))
+//
+//WebUI.click(findTestObject('Object Repository/LIMS/DE2/Page_Iteration/input_Initial Billing Verified'))
+//
+//WebUI.acceptAlert()
+//
+//WebUI.click(findTestObject('LIMS/logout/img'))
+//
+//WebUI.closeBrowser()

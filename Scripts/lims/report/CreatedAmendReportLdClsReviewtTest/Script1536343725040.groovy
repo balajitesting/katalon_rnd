@@ -24,7 +24,7 @@ import internal.GlobalVariable as GlobalVariable
 String A_Number = 'A80196'
 String ReportStatus = 'AMENDED'
 
-CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserReporting', '5xx1bkCcAlw=')
+CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserReporting', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
 CustomKeywords.'com.gh.lims.Report.searchRequest'(A_Number)
 

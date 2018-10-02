@@ -34,7 +34,7 @@ WebUI.click(findTestObject('LIMS/Problem Resolution/Page_Problem Cases Resolutio
 
 edit = 'LIMS/Problem Resolution/Page_Problem Cases Resolution/div_Edit'
 
-CustomKeywords.'com.gh.lims.Common.clickEdit'(edit)
+CustomKeywords.'com.gh.lims.Common.setClick'(edit)
 
 WebUI.switchToFrame(findTestObject('Object Repository/LIMS/Problem Resolution/Page_Problem Cases Resolutionfor A0/iframe'), 10)
 
