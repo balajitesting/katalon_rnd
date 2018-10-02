@@ -15,7 +15,9 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.comment("ENT-6328")
 
-CustomKeywords.'com.gh.lims.Common.logon'('end_to_end_robot', '5Ed5CIkj9UQfaMZXAkDVaQ==')
+//CustomKeywords.'com.gh.lims.Common.logon'('end_to_end_robot', '5Ed5CIkj9UQfaMZXAkDVaQ==')
+CustomKeywords.'com.gh.lims.Common.logon'('cliauserreporting', '5Ed5CIkj9UQfaMZXAkDVaQ==')
+
 //CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserDagmar', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
 CustomKeywords.'com.gh.db.BIP_delete.delete_data'(flowcellID_full)

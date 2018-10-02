@@ -3,7 +3,8 @@
    <description></description>
    <name>BIPUploadAutoQCTest</name>
    <tag></tag>
-   <comment></comment>
+   <comment>ENT-6328
+ENT-6329</comment>
    <testCaseGuid>b9d189eb-9357-41be-a079-21ee99097124</testCaseGuid>
    <variable>
       <defaultValue>'170616_NB501068_0284_AHWCCHBGXY'</defaultValue>
