@@ -20,6 +20,15 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords
 import internal.GlobalVariable
 import WebUiBuiltInKeywords as WebUI
 
+/**
+ * 
+ * @author gxu
+ * 
+ * Common customized Keywords for Reporting. 
+ * You should use Keyword here to replace generated action.
+ *
+ */
+
 public class Report {
 
 	@Keyword
@@ -31,10 +40,9 @@ public class Report {
 
 		WebUI.click(findTestObject('LIMS/DCO/Reporting/Page_Request List/td_OK'))
 
-		WebUI.click(findTestObject('LIMS/DCO/Reporting/Page_Request List/td_Edit'))
+		def edit = 'LIMS/DCO/Reporting/Page_Request List/td_Edit'
 
-		Thread.sleep(1000)
+		Common.setClick(edit)
 
-		WebUI.click(findTestObject('LIMS/DCO/Reporting/Page_Request List/td_Edit'))
 	}
 }

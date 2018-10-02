@@ -20,20 +20,15 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords
 import internal.GlobalVariable
 import WebUiBuiltInKeywords as WebUI
 
+/**
+ * 
+ * @author gxu
+ * 
+ * Common customized Keywords in All Request page. 
+ *
+ */
+
 public class Requests {
-
-	String RequestId
-	String ReportStatus
-
-	@Keyword
-	def setRequestId(String requestId) {
-		RequestId = requestId;
-	}
-
-	@Keyword
-	def getRequestId() {
-		return RequestId
-	}
 
 	@Keyword
 	def searchRequest(requestId){

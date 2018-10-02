@@ -12,7 +12,6 @@ public class Properties {
 
 	private String projDir = RunConfiguration.getProjectDir()
 	private String PDFBASELINE_DIR = RunConfiguration.getProjectDir() + '/Resources/PDFBaseline/'
-	//String PDFDOWNLOAD_DIR = System.getProperty("user.home") + "/Downloads/"
 	String PDFDOWNLOAD_DIR = RunConfiguration.getProjectDir() + "/Results/download/"
 
 
