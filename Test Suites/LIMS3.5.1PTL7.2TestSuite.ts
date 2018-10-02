@@ -18,12 +18,6 @@
       <testCaseId>Test Cases/lims/database/LimsDBHealthCheckTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>37e1c9c1-663d-4d17-a7c3-710e4043ebb6</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/lims/accession/SecondDataRequiredEntryTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>a6b0e06c-597e-4e37-8edb-609c7cdb963a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -91,12 +85,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/lims/accession/AccessionClinicalRequiredDataEntryTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>935f4ca5-0266-4002-915a-4ba9c7c9451a</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/lims/accession/SecondDataOptionalEntryTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>45852526-93e4-49a3-bb1b-167bab385519</guid>
