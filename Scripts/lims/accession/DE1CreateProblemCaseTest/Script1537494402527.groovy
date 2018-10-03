@@ -13,6 +13,8 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
+WebUI.callTestCase(findTestCase('lims/accession/AccessionClinicalRequiredDataEntryTest'), [:], FailureHandling.STOP_ON_FAILURE)
+
 CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserDagmar', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
 String orDE1 = 'LIMS/DE1/'
@@ -41,8 +43,6 @@ WebUI.setText(findTestObject(orDE1 + 'Page_Iteration/input_bloodcolldate'), date
 
 WebUI.setText(findTestObject(orDE1 + 'Page_Iteration/input_noofpages'), '2')
 
-//WebUI.scrollToElement(findTestObject('Object Repository/LIMS/DE1/Page_Iteration/FollowofReasonBtn'))
-
 WebUI.click(findTestObject('Object Repository/LIMS/DE1/Page_Iteration/FollowofReasonBtn'))
 
 WebUI.switchToWindowIndex(1, FailureHandling.STOP_ON_FAILURE)
@@ -65,7 +65,7 @@ WebUI.click(findTestObject(orDE1 + 'Page_/input_Search'))
 
 WebUI.click(findTestObject(orDE1 + 'Page_/input_cb'))
 
-WebUI.switchToWindowUrl(GlobalVariable.limsUrl + '/rc?command=page&page=GHMainAccessionSHPHY')
+WebUI.switchToDefaultContent()
 
 WebUI.setText(findTestObject(orDE1 + 'Page_Iteration/input_secsearchstr'), 'sqa')
 
@@ -75,7 +75,7 @@ WebUI.switchToWindowUrl(GlobalVariable.limsUrl + '/rc?command=page&page=GHMainAc
 
 WebUI.scrollToElement(findTestObject(orDE1 + 'Page_Iteration/input_saveAccession01'), 15)
 
-CustomKeywords.'com.gh.core.JSHandler.JCLick'(findTestObject(orDE1 + 'Page_Iteration/input_saveAccession01'), 15)
+CustomKeywords.'com.gh.core.JSHandler.JClick'(findTestObject('LIMS/DE1/Page_Iteration/input_saveAccession01'), 15)
 
 aNumber = WebUI.getAttribute(findTestObject(orDE1 + 'Page_Iteration/input_requestid'), 'value')
 
@@ -86,3 +86,6 @@ WebUI.click(findTestObject('LIMS/logout/img'))
 WebUI.closeBrowser()
 
 return aNumber
+
+WebUI.callTestCase(findTestCase('lims/accession/AccessionClinicalRequiredDataEntryTest'), [:], FailureHandling.STOP_ON_FAILURE)
+

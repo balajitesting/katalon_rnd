@@ -23,7 +23,7 @@ public class Acession {
 	@Keyword
 	def searchRequest(requestId){
 
-		WebUI.setText(findTestObject('LIMS/DE2/Page_Patient Data Entry List/input_searchtext'), aNumber)
+		WebUI.setText(findTestObject('LIMS/DE2/Page_Patient Data Entry List/input_searchtext'), requestId)
 
 		WebUI.click(findTestObject('LIMS/DE2/Page_Patient Data Entry List/td_OK'))
 
