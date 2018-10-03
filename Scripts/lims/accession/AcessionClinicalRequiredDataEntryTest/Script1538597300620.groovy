@@ -13,17 +13,3 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.comment("ENT-6328")
-
-CustomKeywords.'com.gh.lims.Common.logon'('cliauserreporting', '5Ed5CIkj9UQfaMZXAkDVaQ==')
-
-CustomKeywords.'com.gh.db.BIP_delete.delete_data'(flowcellID_full)
-
-WebUI.comment("ENT-6329")
-
-CustomKeywords.'com.gh.lims.PostSequence.uploadBIPData'(flowcellID)
-
-WebUI.click(findTestObject('LIMS/logout/img'))
-
-WebUI.closeBrowser()
-
