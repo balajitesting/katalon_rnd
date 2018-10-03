@@ -30,7 +30,7 @@ WebUI.callTestCase(findTestCase('lims/request/SearchRequestCancelReportTest'), [
 String A_Number = 'A60204'
 String ReportStatus = 'Cancelled'
 
-CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserReporting', '5xx1bkCcAlw=')
+CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserReporting', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
 WebUI.click(findTestObject('LIMS/DCO/Reporting/td_Cancel Request'))
 

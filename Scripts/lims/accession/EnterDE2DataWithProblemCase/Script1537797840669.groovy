@@ -51,7 +51,7 @@ WebUI.setText(findTestObject('LIMS/DE2/Page_Iteration/input_patday'), '11')
 
 WebUI.setText(findTestObject('LIMS/DE2/Page_Iteration/input_patyear'), '1990')
 
-WebUI.setText(findTestObject('LIMS/DE2/Page_Iteration/Page_Iteration/input_pataddr1'), '123 Test Drive')
+WebUI.setText(findTestObject('LIMS/DE2/Page_Iteration/input_pataddr1'), '123 Test Drive')
 
 WebUI.setText(findTestObject('LIMS/DE2/Page_Iteration/input_pataddr2'), 'Apt #501')
 

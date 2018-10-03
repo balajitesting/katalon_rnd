@@ -13,8 +13,6 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-//WebUI.callTestCase(findTestCase('lims/accession/DE1CreateProblemCaseTest'), [:], FailureHandling.STOP_ON_FAILURE)
-
 String aNumber = WebUI.callTestCase(findTestCase('lims/accession/DE1CreateProblemCaseTest'), [:], FailureHandling.STOP_ON_FAILURE)
 
 CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserDagmar', '5Ed5CIkj9UQfaMZXAkDVaQ==')
@@ -43,7 +41,7 @@ WebUI.setText(findTestObject('LIMS/DE2/Page_Iteration/input_patday'), '11')
 
 WebUI.setText(findTestObject('LIMS/DE2/Page_Iteration/input_patyear'), '1990')
 
-WebUI.setText(findTestObject('LIMS/DE2/Page_Iteration/Page_Iteration/input_pataddr1'), '123 Test Drive')
+WebUI.setText(findTestObject('LIMS/DE2/Page_Iteration/input_pataddr1'), '123 Test Drive')
 
 WebUI.setText(findTestObject('LIMS/DE2/Page_Iteration/input_pataddr2'), 'Apt #501')
 
@@ -55,7 +53,7 @@ WebUI.switchToWindowTitle('')
 
 WebUI.click(findTestObject('LIMS/DE2/Page_/input_cb'))
 
-WebUI.switchToWindowUrl(GlobalVariable.limsUrl + '/rc?command=page&page=MainAccession_P&multisdimode=EditSet&navigatornodeid=EditSet')
+WebUI.switchToDefaultContent()
 
 WebUI.setText(findTestObject('LIMS/DE2/Page_Iteration/input_patzip'), '94040')
 
