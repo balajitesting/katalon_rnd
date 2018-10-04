@@ -6,12 +6,11 @@
    <elementGuidId>c8a8d394-6c9f-4d3b-b024-94dcd6b89560</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value></value>
-      </entry>
-      <entry>
          <key>BASIC</key>
          <value>id(&quot;promptfields_iframe&quot;)[count(. | //*[@ref_element = 'Object Repository/LIMS/PostSequencing/Page_GHFlowcell List/iframe_LABVANTAGE_dlg_frame0']) = count(//*[@ref_element = 'Object Repository/LIMS/PostSequencing/Page_GHFlowcell List/iframe_LABVANTAGE_dlg_frame0'])]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
       </entry>
       <entry>
          <key>XPATH</key>
@@ -88,7 +87,7 @@
       <matchCondition>equals</matchCondition>
       <name>ref_element</name>
       <type>Main</type>
-      <value>Object Repository/LIMS/PostSequencing/Page_GHFlowcell List/iframe_LABVANTAGE_dlg_frame0</value>
+      <value>Object Repository/LIMS/PostSequence/Page_GHFlowcell List/iframe_LABVANTAGE_dlg_frame0</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>

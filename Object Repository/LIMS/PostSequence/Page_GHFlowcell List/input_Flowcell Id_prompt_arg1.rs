@@ -84,7 +84,7 @@
       <matchCondition>equals</matchCondition>
       <name>ref_element</name>
       <type>Main</type>
-      <value>Object Repository/LIMS/PostSequencing/Page_GHFlowcell List/iframe_Your browser does not s</value>
+      <value>Object Repository/LIMS/PostSequence/Page_GHFlowcell List/iframe_Your browser does not s</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>

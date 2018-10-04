@@ -52,7 +52,7 @@
       <matchCondition>equals</matchCondition>
       <name>ref_element</name>
       <type>Main</type>
-      <value>Object Repository/LIMS/PostSequencing/Page_GHFlowcell List/iframe_LABVANTAGE_dlg_frame0</value>
+      <value>Object Repository/LIMS/PostSequence/Page_GHFlowcell List/iframe_LABVANTAGE_dlg_frame0</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
