@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>AcessionClinicalOptionalDataEntryTest</name>
+   <name>DV2RequestsTest</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>a3e43e47-3877-47ff-b83f-efa90f1bf89c</testCaseGuid>
+   <testCaseGuid>bbbc14a1-d69f-413c-a90d-31b81cbb7224</testCaseGuid>
 </TestCaseEntity>

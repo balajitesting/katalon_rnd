@@ -81,6 +81,8 @@ aNumber = WebUI.getAttribute(findTestObject(orDE1 + 'Page_Iteration/input_reques
 
 println(aNumber)
 
+Thread.sleep(1000)
+
 WebUI.click(findTestObject('LIMS/logout/img'))
 
 WebUI.closeBrowser()
