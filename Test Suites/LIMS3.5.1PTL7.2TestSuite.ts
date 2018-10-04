@@ -4,7 +4,7 @@
    <name>LIMS3.5.1PTL7.2TestSuite</name>
    <tag></tag>
    <isRerun>false</isRerun>
-   <lastRun>2018-10-02T12:40:27</lastRun>
+   <lastRun>2018-10-04T10:41:39</lastRun>
    <mailRecipient></mailRecipient>
    <numberOfRerun>0</numberOfRerun>
    <pageLoadTimeout>30</pageLoadTimeout>
@@ -77,7 +77,7 @@
    <testCaseLink>
       <guid>464a22df-8440-4c45-bd92-949311bf6362</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/lims/accession/SecondDataEntryTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
