@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>td_OK</name>
+   <name>td_Return To List</name>
    <tag></tag>
-   <elementGuidId>2074bea4-c8c6-4adb-82bf-914b43ad77e0</elementGuidId>
-   <selectorCollection>
-      <entry>
-         <key>XPATH</key>
-         <value>//button[@id='okbutton']/table/tbody/tr/td[3]</value>
-      </entry>
-   </selectorCollection>
+   <elementGuidId>d977a253-bf7c-4b19-96ef-43077fd5a242</elementGuidId>
    <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
@@ -22,72 +16,52 @@
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>valign</name>
+      <name>class</name>
       <type>Main</type>
-      <value>middle</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>align</name>
-      <type>Main</type>
-      <value>center</value>
+      <value>buttonmargin_thin</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>OK</value>
+      <value>Return To List</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;okbutton&quot;)/table[1]/tbody[1]/tr[1]/td[3]</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>ref_element</name>
-      <type>Main</type>
-      <value>Object Repository/LIMS/PostSequencing/Page_GHFlowcell List/iframe_LABVANTAGE_dlg_frame0</value>
+      <value>id(&quot;ReturnToList&quot;)/tbody[1]/tr[1]/td[@class=&quot;buttonmargin_thin&quot;]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
-      <value>//button[@id='okbutton']/table/tbody/tr/td[3]</value>
+      <value>//table[@id='ReturnToList']/tbody/tr/td</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Enter Flowcell Id'])[1]/following::td[4]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Maintenance'])[1]/following::td[4]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Search Bar'])[1]/following::td[10]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Add Note'])[1]/following::td[6]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Cancel'])[1]/preceding::td[3]</value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)=concat('id(', '&quot;', 'okbutton', '&quot;', ')/table[1]/tbody[1]/tr[1]/td[3]')])[1]/preceding::td[8]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Page Control'])[1]/preceding::td[3]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
-      <value>//button/table/tbody/tr/td[3]</value>
+      <value>//td[7]/table/tbody/tr/td/table/tbody/tr/td</value>
    </webElementXpaths>
 </WebElementEntity>

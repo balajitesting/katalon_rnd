@@ -85,6 +85,8 @@ WebUI.click(findTestObject('Other_OR/DE2/save_btn'))
 
 WebUI.acceptAlert()
 
+Thread.sleep(1000)
+
 WebUI.click(findTestObject('LIMS/logout/img'))
 
 WebUI.closeBrowser()
