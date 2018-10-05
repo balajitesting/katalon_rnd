@@ -38,10 +38,4 @@
          <variableId>bc3554ef-ea3f-429d-8835-ebdde22725f2</variableId>
       </variableLink>
    </testCaseLink>
-   <testCaseLink>
-      <guid>1897087d-7d0f-438d-b0d2-1a95bb2199b5</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/portal/DownloadReportAndViewInPortal</testCaseId>
-   </testCaseLink>
 </TestSuiteEntity>

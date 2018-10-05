@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>DownloadReportAndViewInPortal</name>
+   <name>BIPDataUploadBaseTest</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>c5eba292-0425-421d-98ec-c0f6758d4170</testCaseGuid>
+   <testCaseGuid>73b51a8f-29e1-4f8a-82c1-71bb0856057f</testCaseGuid>
 </TestCaseEntity>
