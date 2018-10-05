@@ -27,7 +27,7 @@
       <guid>c645a7a7-83f2-4e9e-9b60-539e633c06c4</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/lims/postsequence/UploadBIPDataBaseTest</testCaseId>
+      <testCaseId>Test Cases/lims/postsequence/BIPDataUploadBaseTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>aa9ca232-7839-49b9-9b97-e393f0a1b6ab</guid>
@@ -136,5 +136,23 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/portal/PortalLoginLogoutTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>f1e0b4da-9803-4b57-b80c-ecfe9710b3ff</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/lims/request/DataVerificationTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>60b1fdbf-8ba4-4a56-a2b8-1d6f1c0667b6</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/lims/request/DV2RequestsTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>9bf17ac5-76fe-475b-a229-85a4ebfa9549</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/lims/billing/PrimaryInsuranceWithProblemCaseTest</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
