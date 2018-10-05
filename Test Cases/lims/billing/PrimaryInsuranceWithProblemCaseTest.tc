@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>PrimaryInsuranceWithProblemCaseTest</name>
+   <tag></tag>
+   <comment>Run: ENTSW-TC-2863</comment>
+   <testCaseGuid>f945295a-ea6e-47b7-8ce5-b80fd474f4ec</testCaseGuid>
+</TestCaseEntity>

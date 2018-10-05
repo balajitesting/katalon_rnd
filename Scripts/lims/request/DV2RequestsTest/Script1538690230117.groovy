@@ -15,11 +15,10 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.comment('Run: ENTSW-TC-2875')
 
-String aNumber = WebUI.callTestCase(findTestCase('lims/accession/VerifyBillingTest'), [:], FailureHandling.STOP_ON_FAILURE)
+String aNumber = WebUI.callTestCase(findTestCase('lims/billing/PrimaryInsuranceWithProblemCaseTest'), [:], FailureHandling.STOP_ON_FAILURE)
 
-'Enable when run this test alone'
 //String aNumber = 'A0120020'
-
+'Enable when run this test alone'
 CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserDagmar', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
 WebUI.click(findTestObject('Object Repository/LIMS/DV2/Page_Iteration/td_DV-2 Requests'))
@@ -32,8 +31,8 @@ edit = 'LIMS/Problem Resolution/Page_Problem Cases Resolution/div_Edit'
 
 CustomKeywords.'com.gh.lims.Common.setClick'(edit)
 
-WebUI.switchToFrame(findTestObject('Object Repository/LIMS/Problem Resolution/Page_Problem Cases Resolutionfor A0/iframe'),
-	10)
+WebUI.switchToFrame(findTestObject('Object Repository/LIMS/Problem Resolution/Page_Problem Cases Resolutionfor A0/iframe'), 
+    10)
 
 WebUI.click(findTestObject('LIMS/DV2/Page_DV2/input_pr0_u_dv2check'))
 
@@ -53,8 +52,11 @@ WebUI.click(findTestObject('Object Repository/LIMS/DV2/eSign/eSign_OK'))
 
 WebUI.switchToDefaultContent()
 
+Thread.sleep(1000)
+
 WebUI.click(findTestObject('LIMS/logout/img'))
 
 WebUI.closeBrowser()
 
 return aNumber
+

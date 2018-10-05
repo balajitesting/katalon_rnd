@@ -3,6 +3,6 @@
    <description></description>
    <name>DV2RequestsTest</name>
    <tag></tag>
-   <comment></comment>
+   <comment>Run: ENTSW-TC-2875</comment>
    <testCaseGuid>bbbc14a1-d69f-413c-a90d-31b81cbb7224</testCaseGuid>
 </TestCaseEntity>
