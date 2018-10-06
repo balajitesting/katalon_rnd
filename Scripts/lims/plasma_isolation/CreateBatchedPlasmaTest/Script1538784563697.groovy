@@ -18,7 +18,6 @@ WebUI.comment('Run: ENTSW-TC-2877')
 
 //String aNumber = WebUI.callTestCase(findTestCase('lims/accession/VerifyDV2Test'), [:], FailureHandling.STOP_ON_FAILURE)
 
-
 'Enable when run this test alone'
 String sampleID = 'A011245901'
 
