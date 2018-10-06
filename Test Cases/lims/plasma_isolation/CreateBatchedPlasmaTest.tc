@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>PlasmaIsolationTest</name>
+   <name>CreateBatchedPlasmaTest</name>
    <tag></tag>
    <comment>Run: ENTSW-TC-2877</comment>
    <testCaseGuid>a8a75004-f053-4be0-b437-3cabf67bd74d</testCaseGuid>

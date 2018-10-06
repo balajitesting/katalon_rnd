@@ -13,6 +13,7 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
+//Create Batch Plasma
 WebUI.comment('Run: ENTSW-TC-2877')
 
 //String aNumber = WebUI.callTestCase(findTestCase('lims/accession/VerifyDV2Test'), [:], FailureHandling.STOP_ON_FAILURE)
