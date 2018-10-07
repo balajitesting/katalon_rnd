@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>DnaExtractionTest</name>
+   <tag></tag>
+   <comment>ENTSW-TC-2881</comment>
+   <testCaseGuid>ad173017-15c5-4909-973b-2b324f495538</testCaseGuid>
+</TestCaseEntity>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Check-in</name>
+   <name>batched checkbox</name>
    <tag></tag>
-   <elementGuidId>cce50706-8dee-49cc-a81d-0a6de8935b37</elementGuidId>
+   <elementGuidId>68579f70-b94b-4d4c-bc7e-cbc0b5f26863</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//img[@title='Check In ']</value>
+         <value>//*[@id=&quot;A011245901&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
