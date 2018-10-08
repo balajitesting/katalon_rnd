@@ -39,13 +39,12 @@ WebUI.click(findTestObject('Object Repository/LIMS/plasmaIsolation/Page_Batched 
 WebUI.switchToFrame(findTestObject('Object Repository/LIMS/plasmaIsolation/Page_Plasma Tube List/iframe'), 2, FailureHandling.CONTINUE_ON_FAILURE)
 
 Thread.sleep(1000)
+
 WebUI.click(findTestObject('Object Repository/LIMS/plasmaIsolation/Page_Batched Plasma Tube List/batched checkbox'))
 
 WebUI.switchToDefaultContent()
 
-
 WebUI.click(findTestObject('Object Repository/LIMS/plasmaIsolation/Page_Batched Plasma Tube List/div_Tubes Verified'))
-
 
 WebUI.switchToFrame(findTestObject('Object Repository/LIMS/plasmaIsolation/Page_Plasma Tube List/iframe'), 2)
 
@@ -59,7 +58,6 @@ WebUI.click(findTestObject('Object Repository/LIMS/plasmaIsolation/Page_Batched 
 WebUI.waitForElementPresent(findTestObject('Object Repository/LIMS/plasmaIsolation/Page_Batched Plasma Tube List/button_OK'),  2)
 
 WebUI.click(findTestObject('Object Repository/LIMS/plasmaIsolation/Page_Batched Plasma Tube List/button_OK'))
-
 
 WebUI.waitForElementPresent(findTestObject('Object Repository/LIMS/logout/img'), 10)
 

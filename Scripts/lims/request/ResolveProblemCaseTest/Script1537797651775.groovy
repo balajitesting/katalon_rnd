@@ -36,26 +36,32 @@ edit = 'LIMS/Problem Resolution/Page_Problem Cases Resolution/div_Edit'
 
 CustomKeywords.'com.gh.lims.Common.setClick'(edit)
 
-WebUI.switchToFrame(findTestObject('Object Repository/LIMS/Problem Resolution/Page_Problem Cases Resolutionfor A0/iframe'), 10)
+WebUI.switchToFrame(findTestObject('LIMS/Problem Resolution/Sub_eSign/iframe'), 10)
 
-WebUI.selectOptionByValue(findTestObject('LIMS/Problem Resolution/Page_Problem Cases Resolutionfor A0/select_ActiveResolvedNA'), 
+WebUI.selectOptionByValue(findTestObject('LIMS/Problem Resolution/Sub_eSign/select_ActiveResolvedNA'), 
     'Resolved', true)
 
 WebUI.switchToDefaultContent()
 
-WebUI.click(findTestObject('LIMS/Problem Resolution/Page_Problem Cases Resolutionfor A0/img'))
+WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/img'))
 
-WebUI.switchToFrame(findTestObject('Object Repository/LIMS/Problem Resolution/Page_Problem Cases Resolutionfor A0/eSign_Frame'), 10)
+WebUI.switchToFrame(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Frame'), 10)
 
-WebUI.setText(findTestObject('Object Repository/LIMS/Problem Resolution/Page_Problem Cases Resolutionfor A0/eSign_Password'), 'abcd1234')
+WebUI.setText(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Password'), 'abcd1234')
 
-WebUI.click(findTestObject('Object Repository/LIMS/Problem Resolution/Page_Problem Cases Resolutionfor A0/eSign_Dropdown_Btn'))
+WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Dropdown_Btn'))
 
-WebUI.click(findTestObject('Object Repository/LIMS/Problem Resolution/Page_Problem Cases Resolutionfor A0/eSign_Select_Reason'))
+WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Select_Reason'))
 
-WebUI.click(findTestObject('Object Repository/LIMS/Problem Resolution/Page_Problem Cases Resolutionfor A0/eSign_OK'))
+WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_OK'))
 
-Thread.sleep(1000)
+WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/img'))
+
+rtl = 'LIMS/Problem Resolution/returnToList/div_Return To List'
+
+CustomKeywords.'com.gh.lims.Common.setClick'(rtl)
+
+WebUI.waitForElementPresent(findTestObject('LIMS/logout/img'), 15)
 
 WebUI.click(findTestObject('LIMS/logout/img'))
 

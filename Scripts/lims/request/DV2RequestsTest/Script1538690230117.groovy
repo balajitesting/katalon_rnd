@@ -31,14 +31,14 @@ edit = 'LIMS/Problem Resolution/Page_Problem Cases Resolution/div_Edit'
 
 CustomKeywords.'com.gh.lims.Common.setClick'(edit)
 
-WebUI.switchToFrame(findTestObject('Object Repository/LIMS/Problem Resolution/Page_Problem Cases Resolutionfor A0/iframe'), 
+WebUI.switchToFrame(findTestObject('LIMS/Problem Resolution/Sub_eSign/iframe'), 
     10)
 
 WebUI.click(findTestObject('LIMS/DV2/Page_DV2/input_pr0_u_dv2check'))
 
 WebUI.switchToDefaultContent()
 
-WebUI.click(findTestObject('Object Repository/LIMS/Problem Resolution/Page_Problem Cases Resolutionfor A0/img'))
+WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/img'))
 
 WebUI.switchToFrame(findTestObject('Object Repository/LIMS/DV2/eSign/iFrame'), 10)
 
@@ -52,7 +52,7 @@ WebUI.click(findTestObject('Object Repository/LIMS/DV2/eSign/eSign_OK'))
 
 WebUI.switchToDefaultContent()
 
-Thread.sleep(1000)
+WebUI.waitForElementPresent(findTestObject('Object Repository/LIMS/logout/img'), 15)
 
 WebUI.click(findTestObject('LIMS/logout/img'))
 

@@ -85,7 +85,7 @@ WebUI.click(findTestObject('Other_OR/DE2/save_btn'))
 
 WebUI.acceptAlert()
 
-Thread.sleep(1000)
+WebUI.waitForElementPresent(findTestObject('Object Repository/LIMS/logout/img'), 15)
 
 WebUI.click(findTestObject('LIMS/logout/img'))
 

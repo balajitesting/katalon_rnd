@@ -16,7 +16,7 @@ import internal.GlobalVariable as GlobalVariable
 //Create Batch Plasma
 WebUI.comment('Run: ENTSW-TC-2877')
 
-//String aNumber = WebUI.callTestCase(findTestCase('lims/accession/VerifyDV2Test'), [:], FailureHandling.STOP_ON_FAILURE)
+//String aNumber = WebUI.callTestCase(findTestCase('lims/accession/DV2RequestsTest'), [:], FailureHandling.STOP_ON_FAILURE)
 
 'Enable when run this test alone'
 String sampleID = 'A011245901'
@@ -24,6 +24,7 @@ String sampleID = 'A011245901'
 CustomKeywords.'com.gh.db.ResetSampleStatus.reset'(sampleID, 'Ready for Plasma Isolation')
 
 CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserDagmar', '5Ed5CIkj9UQfaMZXAkDVaQ==')
+
 WebUI.click(findTestObject('Object Repository/LIMS/plasmaIsolation/Page_Iteration/td_sitemap_TramStopSelCell'))
 
 WebUI.setText(findTestObject('Object Repository/LIMS/plasmaIsolation/Page_Plasma Tube List/input_searchtext'), sampleID)
