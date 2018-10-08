@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//input[@id = 'headerselector' and @type = 'checkbox' and @name = 'admin09192018_1group1' and @ref_element = 'Object Repository/Plasma_Isolation/Page_Batched Plasma Tube List/iframe_Your browser does not s']</value>
+         <value>//input[@id = 'headerselector' and @type = 'checkbox' and @name = 'admin09192018_1group1']</value>
       </entry>
       <entry>
          <key>XPATH</key>

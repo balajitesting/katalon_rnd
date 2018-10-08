@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>PlasmaIsolationCompleteTest</name>
+   <tag></tag>
+   <comment>Run: ENTSW-TC-2878 , ENTSW-TC-2879</comment>
+   <testCaseGuid>2b11caca-64d8-4741-ade3-790e97c67f0e</testCaseGuid>
+</TestCaseEntity>
