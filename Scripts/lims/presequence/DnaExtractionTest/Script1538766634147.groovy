@@ -13,30 +13,35 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-//Create Batch Plasma
-WebUI.comment('Run: ENTSW-TC-2877')
 
-//String aNumber = WebUI.callTestCase(findTestCase('lims/accession/VerifyDV2Test'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.comment('ENTSW-TC-2881')
+
+//String sampleID = WebUI.callTestCase(findTestCase('lims/accession/BatchedPlasmaTest'), [:], FailureHandling.STOP_ON_FAILURE)
 
 'Enable when run this test alone'
-String sampleID = 'A011245901'
+String sampleID = 'A010001401'
+CustomKeywords.'com.gh.db.ResetSampleStatus.reset'(sampleID, 'Ready for DNA Extraction')
 
-CustomKeywords.'com.gh.db.ResetSampleStatus.reset'(sampleID, 'Ready for Plasma Isolation')
 
 CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserDagmar', '5Ed5CIkj9UQfaMZXAkDVaQ==')
-WebUI.click(findTestObject('Object Repository/LIMS/plasmaIsolation/Page_Iteration/td_sitemap_TramStopSelCell'))
 
-WebUI.setText(findTestObject('Object Repository/LIMS/plasmaIsolation/Page_Plasma Tube List/input_searchtext'), sampleID)
+WebUI.click(findTestObject('Object Repository/LIMS/dnaExtraction/Page_Iteration/td_Failed Fax List_sitemap_Tra'))
 
-WebUI.click(findTestObject('Object Repository/LIMS/plasmaIsolation/Page_Plasma Tube List/td_OK'))
+WebUI.setText(findTestObject('Object Repository/LIMS/dnaExtraction/Page_Ready For DNA Extraction/input_Search_searchtext'), 
+    sampleID)
 
-WebUI.switchToFrame(findTestObject('Object Repository/LIMS/plasmaIsolation/Page_Plasma Tube List/iframe'), 2, FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('Object Repository/LIMS/dnaExtraction/Page_Ready For DNA Extraction/td_OK'))
 
-WebUI.click(findTestObject('Object Repository/LIMS/plasmaIsolation/Page_Plasma Tube List/input_group1'))
+WebUI.switchToFrame(findTestObject('LIMS/dnaExtraction/Page_Ready For DNA Extraction/iframe'), 2)
+
+WebUI.click(findTestObject('Object Repository/LIMS/dnaExtraction/Page_Ready For DNA Extraction/input_Sample StatusReady for D'))
 
 WebUI.switchToDefaultContent()
 
-WebUI.click(findTestObject('Object Repository/LIMS/plasmaIsolation/Page_Plasma Tube List/div_Create PlasmaBatch'))
+WebUI.verifyElementClickable(findTestObject('Object Repository/LIMS/dnaExtraction/Page_Ready For DNA Extraction/div_Generate Accession_ID_CSV'), 
+    FailureHandling.STOP_ON_FAILURE)
+
+WebUI.click(findTestObject('Object Repository/LIMS/dnaExtraction/Page_Ready For DNA Extraction/div_Generate Accession_ID_CSV'))
 
 WebUI.waitForElementPresent(findTestObject('Object Repository/LIMS/logout/img'), 10)
 
