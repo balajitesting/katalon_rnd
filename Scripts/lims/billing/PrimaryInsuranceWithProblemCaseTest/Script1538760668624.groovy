@@ -63,7 +63,7 @@ WebUI.setText(findTestObject('Object Repository/LIMS/Billing/Page_Iteration/inpu
 
 WebUI.click(findTestObject('Object Repository/LIMS/Billing/Page_Iteration/input_saveAccession02'))
 
-Thread.sleep(1000)
+WebUI.waitForElementPresent(findTestObject('Object Repository/LIMS/logout/img'), 15)
 
 WebUI.click(findTestObject('LIMS/logout/img'))
 

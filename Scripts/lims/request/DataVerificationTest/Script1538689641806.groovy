@@ -2,6 +2,9 @@ import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
+
+import org.junit.After
+
 import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
 import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
@@ -34,14 +37,14 @@ edit = 'LIMS/Problem Resolution/Page_Problem Cases Resolution/div_Edit'
 
 CustomKeywords.'com.gh.lims.Common.setClick'(edit)
 
-WebUI.switchToFrame(findTestObject('Object Repository/LIMS/Problem Resolution/Page_Problem Cases Resolutionfor A0/iframe'),
+WebUI.switchToFrame(findTestObject('LIMS/Problem Resolution/Sub_eSign/iframe'),
 	10)
 
 WebUI.click(findTestObject('LIMS/DV1/Page_DV Check/input_pr0_u_dvcheck'))
 
 WebUI.switchToDefaultContent()
 
-WebUI.click(findTestObject('Object Repository/LIMS/Problem Resolution/Page_Problem Cases Resolutionfor A0/img'))
+WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/img'))
 
 WebUI.switchToFrame(findTestObject('Object Repository/LIMS/DV1/eSign/iFrame'), 10)
 
@@ -55,9 +58,7 @@ WebUI.click(findTestObject('Object Repository/LIMS/DV1/eSign/eSign_OK'))
 
 WebUI.switchToDefaultContent()
 
-Thread.sleep(1000)
-
-WebUI.click(findTestObject('LIMS/logout/img'))
+CustomKeywords.'com.gh.core.JSHandler.JClick'(findTestObject('LIMS/logout/img'), 10)
 
 WebUI.closeBrowser()
 

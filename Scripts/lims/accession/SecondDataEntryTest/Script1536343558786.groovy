@@ -95,6 +95,8 @@ WebUI.setText(findTestObject('/LIMS/DE2/Page_Iteration/input_priorgenotypingdeta
 
 WebUI.click(findTestObject('LIMS/DE1/Page_Iteration/input_isprogrssingonrx'))
 
+WebUI.waitForElementPresent(findTestObject('Object Repository/LIMS/logout/img'), 15)
+
 WebUI.click(findTestObject('LIMS/logout/img'))
 
 WebUI.closeBrowser()
