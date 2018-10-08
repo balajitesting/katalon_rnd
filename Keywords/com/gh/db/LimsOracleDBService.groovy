@@ -52,6 +52,14 @@ public class LimsOracleDBService {
 	}
 
 	@Keyword
+	def execute(String query) {
+		System.out.println(query);
+		Statement stm = connection.createStatement();
+		stm.execute(query);
+		
+	}
+
+	@Keyword
 	def closeDatabaseConnection() {
 
 		if(connection != null && !connection.isClosed()){

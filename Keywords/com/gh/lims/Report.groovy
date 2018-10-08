@@ -43,6 +43,5 @@ public class Report {
 		def edit = 'LIMS/DCO/Reporting/Page_Request List/td_Edit'
 
 		Common.setClick(edit)
-
 	}
 }
