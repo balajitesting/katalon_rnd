@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>DV2RequestsTest</name>
+   <name>DV2RequestsWithProblemCaseTest</name>
    <tag></tag>
    <comment>Run: ENTSW-TC-2875</comment>
    <testCaseGuid>bbbc14a1-d69f-413c-a90d-31b81cbb7224</testCaseGuid>
