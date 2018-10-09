@@ -21,7 +21,7 @@ WebUI.comment('Run: ENTSW-TC-2873')
 String aNumber = WebUI.callTestCase(findTestCase('lims/request/ResolveProblemCaseTest'), [:], FailureHandling.STOP_ON_FAILURE)
 
 'Enable when run this test alone'
-//String aNumber = 'A0120296'
+//String aNumber = 'A0120641'
 
 CustomKeywords.'com.gh.lims.Common.logon'('abaca', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
@@ -57,6 +57,10 @@ WebUI.click(findTestObject('Object Repository/LIMS/DV1/eSign/select_Reason'))
 WebUI.click(findTestObject('Object Repository/LIMS/DV1/eSign/eSign_OK'))
 
 WebUI.switchToDefaultContent()
+
+rtl = 'LIMS/DV1/Page_DV Check/div_Return To List'
+
+CustomKeywords.'com.gh.core.JSHandler.JClick'(findTestObject(rtl), 10)
 
 CustomKeywords.'com.gh.core.JSHandler.JClick'(findTestObject('LIMS/logout/img'), 10)
 

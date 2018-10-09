@@ -4,7 +4,7 @@
    <name>LIMS3.5.1PTL7.2TestSuite</name>
    <tag></tag>
    <isRerun>false</isRerun>
-   <lastRun>2018-10-04T10:41:39</lastRun>
+   <lastRun>2018-10-08T15:55:51</lastRun>
    <mailRecipient></mailRecipient>
    <numberOfRerun>0</numberOfRerun>
    <pageLoadTimeout>30</pageLoadTimeout>
@@ -78,7 +78,7 @@
       <guid>464a22df-8440-4c45-bd92-949311bf6362</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/lims/accession/SecondDataEntryTest</testCaseId>
+      <testCaseId>Test Cases/lims/accession/DE2NoPlasmaHoldTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>cd2740ce-8bdc-441d-82ce-23ba3ab4c49b</guid>
@@ -154,5 +154,41 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/lims/billing/PrimaryInsuranceWithProblemCaseTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>d0fa3fc8-068c-4ef9-b657-6d2a08ef473b</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/lims/presequence/DnaExtractionTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>57c2850e-e983-4c69-8ac1-dd10a0886a7e</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/lims/plasma_isolation/CreateBatchedPlasmaTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>9e7287c5-2b6f-4463-a813-4cb7b9d965da</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/lims/plasma_isolation/PlasmaIsolationCompleteTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>c0f910f1-b277-47ff-9e4c-c7cbc716f0c1</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/lims/postsequence/BIPUploadAutoQCTest</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>fae2bc05-b364-4d60-a3b7-94a038dd1230</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>38d012b4-c78b-4217-9471-22f5434fe13d</variableId>
+      </variableLink>
    </testCaseLink>
 </TestSuiteEntity>

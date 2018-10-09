@@ -13,23 +13,15 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
+WebUI.comment('Run ENTSW-TC-1359, ENTSW-TC-1319, ENTSW-TC-1320, ENTSW-TC-1321, ENTSW-TC-1331, ENTSW-TC-2861')
+
 String aNumber = WebUI.callTestCase(findTestCase('lims/accession/DE1CreateProblemCaseTest'), [:], FailureHandling.STOP_ON_FAILURE)
 
 CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserDagmar', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
 WebUI.click(findTestObject('LIMS/DE2/Page_Iteration/td_Second DataEntry'))
 
-WebUI.setText(findTestObject('LIMS/DE2/Page_Patient Data Entry List/input_searchtext'), aNumber)
-
-Thread.sleep(1000)
-WebUI.click(findTestObject('LIMS/DE2/Page_Patient Data Entry List/td_OK'))
-
-Thread.sleep(1000)
-
-WebUI.verifyElementClickable(findTestObject('Other_OR/Page_Patient Data Entry List/img'))
-
-WebUI.click(findTestObject('Other_OR/Page_Patient Data Entry List/img'))
-Thread.sleep(1000)
+CustomKeywords.'com.gh.lims.Acession.searchRequest'(aNumber)
 
 WebUI.setText(findTestObject('LIMS/DE2/Page_Iteration/input_patmon'), 'JAN')
 
