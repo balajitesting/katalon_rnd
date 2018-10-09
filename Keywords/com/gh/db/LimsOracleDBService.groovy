@@ -58,6 +58,15 @@ public class LimsOracleDBService {
 		stm.execute(query);
 		
 	}
+	
+	@Keyword
+	def executeUpdate(String query) {
+		Statement stm = connection.createStatement();
+		connection.setAutoCommit(false);
+		String value = stm.executeUpdate(query);
+		connection.commit();
+		return Integer.parseInt(value);
+	}
 
 	@Keyword
 	def closeDatabaseConnection() {
