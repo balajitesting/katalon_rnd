@@ -35,14 +35,14 @@ WebUI.click(findTestObject('LIMS/dnaExtraction/Page_Ready For DNA Extraction/Sea
 
 WebUI.switchToFrame(findTestObject('LIMS/dnaExtraction/Page_Ready For DNA Extraction/list_iframe'), 2)
 
-WebUI.click(findTestObject('Object Repository/LIMS/dnaExtraction/Page_Ready For DNA Extraction/input_Sample StatusReady for D'))
+WebUI.click(findTestObject('LIMS/dnaExtraction/Page_Ready For DNA Extraction/samplelist_header_CheckBox'))
 
 WebUI.switchToDefaultContent()
 
-WebUI.verifyElementClickable(findTestObject('Object Repository/LIMS/dnaExtraction/Page_Ready For DNA Extraction/div_Generate Accession_ID_CSV'), 
+WebUI.verifyElementClickable(findTestObject('LIMS/dnaExtraction/Page_Ready For DNA Extraction/Generate Accession_ID_CSV_Button'), 
     FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Object Repository/LIMS/dnaExtraction/Page_Ready For DNA Extraction/div_Generate Accession_ID_CSV'))
+WebUI.click(findTestObject('LIMS/dnaExtraction/Page_Ready For DNA Extraction/Generate Accession_ID_CSV_Button'))
 
 WebUI.waitForElementPresent(findTestObject('Object Repository/LIMS/logout/img'), 10)
 

@@ -27,37 +27,37 @@ String strHeaderCheck
 
 CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserDagmar', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
-WebUI.click(findTestObject('Object Repository/LIMS/plasmaIsolation/Page_Iteration/Batched_plasma_clickdb'))
+WebUI.click(findTestObject('LIMS/Plasma_Isolation/Page_Iteration/Batched_plasma_clickdb'))
 
-WebUI.setText(findTestObject('Object Repository/LIMS/plasmaIsolation/Page_Batched Plasma Tube List/input_searchtext'), sampleID)
+WebUI.setText(findTestObject('LIMS/Plasma_Isolation/Page_Batched Plasma Tube List/input_searchtext'), sampleID)
 
-WebUI.waitForElementClickable(findTestObject('Object Repository/LIMS/plasmaIsolation/Page_Batched Plasma Tube List/td_OK'), 
+WebUI.waitForElementClickable(findTestObject('LIMS/Plasma_Isolation/Page_Batched Plasma Tube List/td_OK'), 
     2)
 
-WebUI.click(findTestObject('Object Repository/LIMS/plasmaIsolation/Page_Batched Plasma Tube List/td_OK'))
+WebUI.click(findTestObject('LIMS/Plasma_Isolation/Page_Batched Plasma Tube List/td_OK'))
 
-WebUI.switchToFrame(findTestObject('Object Repository/LIMS/plasmaIsolation/Page_Plasma Tube List/iframe'), 2, FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.switchToFrame(findTestObject('LIMS/Plasma_Isolation/Page_Plasma Tube List/iframe'), 2, FailureHandling.CONTINUE_ON_FAILURE)
 
 Thread.sleep(1000)
 
-WebUI.click(findTestObject('Object Repository/LIMS/plasmaIsolation/Page_Batched Plasma Tube List/batched checkbox'))
+WebUI.click(findTestObject('LIMS/Plasma_Isolation/Page_Batched Plasma Tube List/batched checkbox'))
 
 WebUI.switchToDefaultContent()
 
-WebUI.click(findTestObject('Object Repository/LIMS/plasmaIsolation/Page_Batched Plasma Tube List/div_Tubes Verified'))
+WebUI.click(findTestObject('LIMS/Plasma_Isolation/Page_Batched Plasma Tube List/div_Tubes Verified'))
 
-WebUI.switchToFrame(findTestObject('Object Repository/LIMS/plasmaIsolation/Page_Plasma Tube List/iframe'), 2)
+WebUI.switchToFrame(findTestObject('LIMS/Plasma_Isolation/Page_Plasma Tube List/iframe'), 2)
 
-WebUI.waitForElementPresent(findTestObject('Object Repository/LIMS/plasmaIsolation/Page_Batched Plasma Tube List/operationSuccessful'), 
+WebUI.waitForElementPresent(findTestObject('LIMS/Plasma_Isolation/Page_Batched Plasma Tube List/operationSuccessful'), 
     5)
 
 WebUI.switchToDefaultContent()
 
-WebUI.click(findTestObject('Object Repository/LIMS/plasmaIsolation/Page_Batched Plasma Tube List/div_Plasma_Isolation Complete'))
+WebUI.click(findTestObject('LIMS/Plasma_Isolation/Page_Batched Plasma Tube List/div_Plasma_Isolation Complete'))
 
-WebUI.waitForElementPresent(findTestObject('Object Repository/LIMS/plasmaIsolation/Page_Batched Plasma Tube List/button_OK'),  2)
+WebUI.waitForElementPresent(findTestObject('LIMS/Plasma_Isolation/Page_Batched Plasma Tube List/button_OK'),  2)
 
-WebUI.click(findTestObject('Object Repository/LIMS/plasmaIsolation/Page_Batched Plasma Tube List/button_OK'))
+WebUI.click(findTestObject('LIMS/Plasma_Isolation/Page_Batched Plasma Tube List/button_OK'))
 
 WebUI.waitForElementPresent(findTestObject('Object Repository/LIMS/logout/img'), 10)
 

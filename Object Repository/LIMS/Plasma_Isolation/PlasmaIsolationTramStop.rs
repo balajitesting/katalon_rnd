@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>td_sitemap_TramStopSelCell</name>
+   <name>PlasmaIsolationTramStop</name>
    <tag></tag>
    <elementGuidId>22e51f9a-8692-47ad-8bfb-e2da81afd44f</elementGuidId>
    <selectorCollection>
