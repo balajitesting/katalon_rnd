@@ -52,7 +52,7 @@ Thread.sleep(4000)
 
 WebUI.click(findTestObject('LIMS/DCO/Reporting/button_OK_2'))
 
-Thread.sleep(1000)
+WebUI.waitForElementPresent(findTestObject('LIMS/logout/img'), 10)
 
 WebUI.click(findTestObject('LIMS/logout/img'))
 
