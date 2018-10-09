@@ -3,8 +3,6 @@ import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 
-import org.junit.After
-
 import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
 import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
@@ -21,7 +19,7 @@ WebUI.comment('Run: ENTSW-TC-2873')
 String aNumber = WebUI.callTestCase(findTestCase('lims/request/ResolveProblemCaseTest'), [:], FailureHandling.STOP_ON_FAILURE)
 
 'Enable when run this test alone'
-//String aNumber = 'A0120641'
+//String aNumber = 'A0120657'
 
 CustomKeywords.'com.gh.lims.Common.logon'('abaca', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
@@ -60,7 +58,11 @@ WebUI.switchToDefaultContent()
 
 rtl = 'LIMS/DV1/Page_DV Check/div_Return To List'
 
-CustomKeywords.'com.gh.core.JSHandler.JClick'(findTestObject(rtl), 10)
+WebUI.waitForElementPresent(findTestObject(rtl), 10)
+
+CustomKeywords.'com.gh.core.JSHandler.J2Click'(findTestObject(rtl), 10)
+
+WebUI.waitForElementPresent(findTestObject('Object Repository/LIMS/logout/img'), 10)
 
 CustomKeywords.'com.gh.core.JSHandler.JClick'(findTestObject('LIMS/logout/img'), 10)
 

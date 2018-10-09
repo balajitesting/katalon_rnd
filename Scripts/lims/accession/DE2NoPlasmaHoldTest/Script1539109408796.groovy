@@ -53,7 +53,7 @@ WebUI.setText(findTestObject('LIMS/DE2/Page_Iteration/input_pataddr2'), 'Apt #50
 
 WebUI.setText(findTestObject('LIMS/DE2/Page_Iteration/input_patcity'), 'Redwood City')
 
-WebUI.click(findTestObject('LIMS/DE2/Page_Iteration/Page_Iteration/img_statelookup'))
+WebUI.click(findTestObject('LIMS/DE2/Page_Iteration/img_statelookup'))
 
 WebUI.switchToWindowTitle('')
 
@@ -87,7 +87,7 @@ WebUI.setText(findTestObject('/LIMS/DE2/Page_Iteration/input_priorgenotypingdeta
 
 WebUI.click(findTestObject('LIMS/DE1/Page_Iteration/input_isprogrssingonrx'))
 
-WebUI.click(findTestObject('Other_OR/DE2/save_btn'))
+WebUI.click(findTestObject('LIMS/DE2/Page_Iteration/save_btn'))
 
 WebUI.acceptAlert()
 

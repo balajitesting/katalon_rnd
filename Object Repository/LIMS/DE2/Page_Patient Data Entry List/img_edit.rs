@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>img</name>
+   <name>img_edit</name>
    <tag></tag>
    <elementGuidId>46eba028-ee1d-4c8e-9703-a2f0aac118aa</elementGuidId>
    <selectorCollection>
