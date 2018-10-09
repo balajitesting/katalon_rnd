@@ -55,89 +55,55 @@ class BIP_delete {
 	 */
 	@Keyword
 	def delete_data(String flowcellid) {
-		Class.forName("oracle.jdbc.driver.OracleDriver");
-		String serverName = "10.4.80.106";
-		String portNumber = "1521";
-		String sid = "orclgh";
-		String url = "jdbc:oracle:thin:@" + serverName + ":" + portNumber + ":" + sid;
-		String username = GlobalVariable.oracleDBuser;
-		String password = GlobalVariable.oracleDBpwd;
-		Connection con = DriverManager.getConnection(url, username, password);
 
-		Statement st= con.createStatement();
 
-		con.setAutoCommit(false);
+		LimsOracleDBService db = new LimsOracleDBService();
+		db.connectDB(GlobalVariable.oracleDBurl, GlobalVariable.oracleDBuser, GlobalVariable.oracleDBpwd);
 
 		String query = "Delete from U_Ghsnv Where Runid = '"+flowcellid+"'";
 		int delete_count = 0;
 		System.out.println(query);
-		//output.write(query+"\n");
-		delete_count = st.executeUpdate(query);
+		delete_count = db.executeUpdate(query);
 		System.out.println("Deleted " + delete_count + " rows");
-		//output.write("Deleted " + delete_count + " rows"+"\n");
-		con.commit();
 
 		query = "Delete from U_Ghcnvgene Where Runid = '"+flowcellid+"'";
 		System.out.println(query);
-		//output.write(query+"\n");
-
-		delete_count = st.executeUpdate(query);
+		delete_count = db.executeUpdate(query);
 		System.out.println("Deleted " + delete_count + " rows");
-		//output.write("Deleted " + delete_count + " rows");
-		con.commit();
 
 		query = "Delete from U_Ghfusion Where Runid = '"+flowcellid+"'";
 		System.out.println(query);
-		//output.write(query+"\n");
-		delete_count = st.executeUpdate(query);
+		delete_count = db.executeUpdate(query);
 		System.out.println("Deleted " + delete_count + " rows");
-		//output.write("Deleted " + delete_count + " rows"+"\n");
-		con.commit();
-
 
 		query = "Delete from U_Ghindel Where Runid = '"+flowcellid+"'";
 		System.out.println(query);
-		delete_count = st.executeUpdate(query);
+		delete_count = db.executeUpdate(query);
 		System.out.println("Deleted " + delete_count + " rows");
-		con.commit();
-
 
 		query = "Delete from U_Ghreportinfo Where Runid = '"+flowcellid+"'";
 		System.out.println(query);
-		//output.write(query+"\n");
-		delete_count = st.executeUpdate(query);
+		delete_count = db.executeUpdate(query);
 		System.out.println("Deleted " + delete_count + " rows");
-		//output.write("Deleted " + delete_count + " rows"+"\n");
-		con.commit();
 
 		query = "Delete from u_ghboard Where Runid = '"+flowcellid+"'";
 		System.out.println(query);
-		//output.write(query+"\n");
-		delete_count = st.executeUpdate(query);
+		delete_count = db.executeUpdate(query);
 		System.out.println("Deleted " + delete_count + " rows");
-		//output.write("Deleted " + delete_count + " rows"+"\n");
-		con.commit();
 
 		query = "Delete from u_ghlod Where Runid = '"+flowcellid+"'";
 		System.out.println(query);
-		//output.write(query+"\n");
-		delete_count = st.executeUpdate(query);
+		delete_count = db.executeUpdate(query);
 		System.out.println("Deleted " + delete_count + " rows");
-		//output.write("Deleted " + delete_count + " rows"+"\n");
-		con.commit();
 
 		query = "Delete from U_GHMIRATIELIGIBILITY Where Runid = '"+flowcellid+"'";
 		System.out.println(query);
-		//output.write(query+"\n");
-		delete_count = st.executeUpdate(query);
+		delete_count = db.executeUpdate(query);
 		System.out.println("Deleted " + delete_count + " rows");
-		//output.write("Deleted " + delete_count + " rows"+"\n");
-		con.commit();
 
 
 		String [] temp = flowcellid.split("_");
-		if (temp.length != 4)
-		{
+		if (temp.length != 4) {
 			System.out.println("Invalid flowcellid");
 			System.out.println(flowcellid);
 			System.exit(1);
@@ -147,31 +113,18 @@ class BIP_delete {
 		//
 		query = "Delete from u_ghcontrolqc where flowcellid ='"+temp[3]+"'";
 		System.out.println(query);
-		//output.write(query+"\n");
-		delete_count = st.executeUpdate(query);
+		delete_count = db.executeUpdate(query);
 		System.out.println("Deleted " + delete_count + " rows");
-		//output.write("Deleted " + delete_count + " rows"+"\n");
-		con.commit();
 		//
 		query = "Delete from u_ghsampleqcmetrics Where flowcellid ='"+temp[3]+"'";
 		System.out.println(query);
-		//output.write(query+"\n");
-		delete_count = st.executeUpdate(query);
+		delete_count = db.executeUpdate(query);
 		System.out.println("Deleted " + delete_count + " rows");
-		//output.write("Deleted " + delete_count + " rows"+"\n");
-		con.commit();
-
-		//
 
 		query = "Delete from u_ghflowcell where u_ghflowcellid ='"+temp[3]+"'";
 		System.out.println(query);
-		//output.write(query+"\n");
-		delete_count = st.executeUpdate(query);
+		delete_count = db.executeUpdate(query);
 		System.out.println("Deleted " + delete_count + " rows");
-		//output.write("Deleted " + delete_count + " rows"+"\n");
-		con.commit();
 
-		con.close();
 	}
-
 }

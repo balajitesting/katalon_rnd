@@ -7,14 +7,14 @@
 ENT-6329</comment>
    <testCaseGuid>b9d189eb-9357-41be-a079-21ee99097124</testCaseGuid>
    <variable>
-      <defaultValue>'170616_NB501068_0284_AHWCCHBGXY'</defaultValue>
+      <defaultValue>'180430_NB551146_0095_AH7NK7BGX5'</defaultValue>
       <description></description>
       <id>fae2bc05-b364-4d60-a3b7-94a038dd1230</id>
       <masked>false</masked>
       <name>flowcellID_full</name>
    </variable>
    <variable>
-      <defaultValue>'HWCCHBGXY'</defaultValue>
+      <defaultValue>'H7NK7BGX5'</defaultValue>
       <description></description>
       <id>38d012b4-c78b-4217-9471-22f5434fe13d</id>
       <masked>false</masked>
