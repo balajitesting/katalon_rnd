@@ -76,7 +76,6 @@ class ResetRequestStatus {
 	@Keyword
 	def reset(String requestID, String status) {
 
-
 		LimsOracleDBService db = new LimsOracleDBService();
 		db.connectDB(GlobalVariable.oracleDBurl, GlobalVariable.oracleDBuser, GlobalVariable.oracleDBpwd);
 

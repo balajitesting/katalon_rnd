@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>td_Failed Fax List_sitemap_Tra</name>
+   <name>SeqQC Auto TramStop</name>
    <tag></tag>
-   <elementGuidId>97517f93-c766-47b0-9942-352c1101ff4e</elementGuidId>
+   <elementGuidId>69f74142-dca1-4d4c-b49c-78425207dcd9</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//td[contains(text(),'DNA Extraction')]</value>
+         <value>//table[@id='seqqcautopass_node']/tbody/tr/td</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -45,42 +45,42 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;samplesdna_node&quot;)/tbody[1]/tr[1]/td[@class=&quot;sitemap_TramStopSelCell&quot;]</value>
+      <value>id(&quot;seqqcautopass_node&quot;)/tbody[1]/tr[1]/td[@class=&quot;sitemap_TramStopSelCell&quot;]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
-      <value>//table[@id='samplesdna_node']/tbody/tr/td</value>
+      <value>//table[@id='seqqcautopass_node']/tbody/tr/td</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Failed Fax List'])[2]/following::td[10]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='SeqQC Manual'])[2]/following::td[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='All Requests'])[5]/following::td[13]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='BIP Upload'])[2]/following::td[5]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='DNA Extraction'])[2]/preceding::td[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='SeqQC AutoPass'])[2]/preceding::td[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='In Lab'])[2]/preceding::td[3]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='TB Review'])[2]/preceding::td[3]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
-      <value>//tr[8]/td[2]/table/tbody/tr/td/table/tbody/tr/td</value>
+      <value>//td[3]/table/tbody/tr/td</value>
    </webElementXpaths>
 </WebElementEntity>

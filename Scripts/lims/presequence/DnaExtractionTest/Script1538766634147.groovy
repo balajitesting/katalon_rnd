@@ -26,14 +26,14 @@ CustomKeywords.'com.gh.db.ResetSampleStatus.reset'(sampleID, 'Ready for DNA Extr
 
 CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserDagmar', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
-WebUI.click(findTestObject('Object Repository/LIMS/dnaExtraction/Page_Iteration/td_Failed Fax List_sitemap_Tra'))
+WebUI.click(findTestObject('LIMS/dnaExtraction/DNAExtractionTramStop'))
 
-WebUI.setText(findTestObject('Object Repository/LIMS/dnaExtraction/Page_Ready For DNA Extraction/input_Search_searchtext'), 
+WebUI.setText(findTestObject('LIMS/dnaExtraction/Page_Ready For DNA Extraction/Search_Textbox'), 
     sampleID)
 
-WebUI.click(findTestObject('Object Repository/LIMS/dnaExtraction/Page_Ready For DNA Extraction/td_OK'))
+WebUI.click(findTestObject('LIMS/dnaExtraction/Page_Ready For DNA Extraction/Search_OK_Button'))
 
-WebUI.switchToFrame(findTestObject('LIMS/dnaExtraction/Page_Ready For DNA Extraction/iframe'), 2)
+WebUI.switchToFrame(findTestObject('LIMS/dnaExtraction/Page_Ready For DNA Extraction/list_iframe'), 2)
 
 WebUI.click(findTestObject('Object Repository/LIMS/dnaExtraction/Page_Ready For DNA Extraction/input_Sample StatusReady for D'))
 

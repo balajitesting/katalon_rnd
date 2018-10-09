@@ -22,9 +22,9 @@ String flowcellID = WebUI.callTestCase(findTestCase('lims/postsequence/BIPUpload
 
 CustomKeywords.'com.gh.lims.Common.logon'('cliauserreporting', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
-WebUI.click(findTestObject('Object Repository/LIMS/PostSequence/SeqQCAutoPass/td_SeqQC Manual_sitemap_TramSt'))
+WebUI.click(findTestObject('LIMS/PostSequence/SeqQC Auto TramStop'))
 
-WebUI.setText(findTestObject('Object Repository/LIMS/PostSequence/SeqQCAutoPass/input_Search_searchtext'), flowcellID)
+WebUI.setText(findTestObject('LIMS/PostSequence/Page_SeqQCAutoPass/Search_Textbox'), flowcellID)
 
-WebUI.click(findTestObject('Object Repository/LIMS/PostSequence/SeqQCAutoPass/td_OK'))
+WebUI.click(findTestObject('LIMS/PostSequence/Page_SeqQCAutoPass/Search_OK_Button'))
 
