@@ -4,7 +4,7 @@
    <name>LIMS3.5.1PTL7.2TestSuite</name>
    <tag></tag>
    <isRerun>false</isRerun>
-   <lastRun>2018-10-08T15:55:51</lastRun>
+   <lastRun>2018-10-09T15:30:50</lastRun>
    <mailRecipient></mailRecipient>
    <numberOfRerun>0</numberOfRerun>
    <pageLoadTimeout>30</pageLoadTimeout>
