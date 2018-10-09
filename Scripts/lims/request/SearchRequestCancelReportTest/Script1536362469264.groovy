@@ -29,7 +29,6 @@ CustomKeywords.'com.gh.lims.Common.logon'('Cliacls', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 CustomKeywords.'com.gh.lims.Requests.searchRequest'(A_Number)
 
 orEdit = 'LIMS/DCO/Request/div_Edit'
-//CustomKeywords.'com.gh.lims.Common.clickEdit'(orEdit)
 
 CustomKeywords.'com.gh.lims.Common.setClick'(orEdit)
 
@@ -47,7 +46,7 @@ CustomKeywords.'com.gh.core.JSHandler.J2Click'(findTestObject('LIMS/DCO/Request/
 
 WebUI.acceptAlert()
 
-Thread.sleep(1000)
+WebUI.waitForElementPresent(findTestObject('LIMS/logout/img'), 10)
 
 WebUI.click(findTestObject('LIMS/logout/img'))
 
