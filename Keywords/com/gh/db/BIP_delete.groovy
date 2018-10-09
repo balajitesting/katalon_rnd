@@ -153,7 +153,7 @@ class BIP_delete {
 		//output.write("Deleted " + delete_count + " rows"+"\n");
 		con.commit();
 		//
-		query = "Delete from u_ghsampleqcmetrics Where flowcellid ='"+temp[3]+"'";
+		query = "delete from u_ghsampleqcmetrics Where flowcellid ='"+temp[3]+"'";
 		System.out.println(query);
 		//output.write(query+"\n");
 		delete_count = st.executeUpdate(query);
@@ -163,7 +163,7 @@ class BIP_delete {
 
 		//
 
-		query = "Delete from u_ghflowcell where u_ghflowcellid ='"+temp[3]+"'";
+		query = "delete from u_ghflowcell where u_ghflowcellid ='"+temp[3]+"'";
 		System.out.println(query);
 		//output.write(query+"\n");
 		delete_count = st.executeUpdate(query);
@@ -171,7 +171,43 @@ class BIP_delete {
 		//output.write("Deleted " + delete_count + " rows"+"\n");
 		con.commit();
 
+
+
+		query = "delete from u_ghsampleqc Where Runid = '"+flowcellid+"'";
+		System.out.println(query);
+		//output.write(query+"\n");
+		delete_count = st.executeUpdate(query);
+		System.out.println("Deleted " + delete_count + " rows");
+		//output.write("Deleted " + delete_count + " rows"+"\n");
+		con.commit();
+
+		query = "delete from u_ghsamplecoverage Where Runid = '"+flowcellid+"'";
+		System.out.println(query);
+		//output.write(query+"\n");
+		delete_count = st.executeUpdate(query);
+		System.out.println("Deleted " + delete_count + " rows");
+		//output.write("Deleted " + delete_count + " rows"+"\n");
+		con.commit();
+
+		query = "delete from u_ghtmb Where Runid = '"+flowcellid+"'";
+		System.out.println(query);
+		//output.write(query+"\n");
+		delete_count = st.executeUpdate(query);
+		System.out.println("Deleted " + delete_count + " rows");
+		//output.write("Deleted " + delete_count + " rows"+"\n");
+		con.commit();
+
+		query = "delete from u_ghmsi where runid like '"+flowcellid+"'";
+		System.out.println(query);
+		//output.write(query+"\n");
+		delete_count = st.executeUpdate(query);
+		System.out.println("Deleted " + delete_count + " rows");
+		//output.write("Deleted " + delete_count + " rows"+"\n");
+		con.commit();
+
+
 		con.close();
+
 	}
 
 }

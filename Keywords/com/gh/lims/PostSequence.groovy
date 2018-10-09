@@ -40,5 +40,7 @@ public class PostSequence {
 				flowcellId)
 
 		WebUI.click(findTestObject('LIMS/PostSequence/Page_GHFlowcell List/td_OK'))
+
+		Thread.sleep(50000)
 	}
 }

@@ -13,17 +13,18 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.comment("ENT-6328")
+WebUI.comment('ENT-6481')
+
+String flowcellID_full = '180628_NB501054_0437_AHMN5YBGX5';
+
+String flowcellID = WebUI.callTestCase(findTestCase('lims/postsequence/BIPUploadTest'), [('flowcellID_full') : flowcellID_full], 
+    FailureHandling.STOP_ON_FAILURE)
 
 CustomKeywords.'com.gh.lims.Common.logon'('cliauserreporting', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
-CustomKeywords.'com.gh.db.BIP_delete.delete_data'(flowcellID_full)
+WebUI.click(findTestObject('Object Repository/LIMS/PostSequence/SeqQCAutoPass/td_SeqQC Manual_sitemap_TramSt'))
 
-WebUI.comment("ENT-6329")
+WebUI.setText(findTestObject('Object Repository/LIMS/PostSequence/SeqQCAutoPass/input_Search_searchtext'), flowcellID)
 
-CustomKeywords.'com.gh.lims.PostSequence.uploadBIPData'(flowcellID)
-
-WebUI.click(findTestObject('LIMS/logout/img'))
-
-WebUI.closeBrowser()
+WebUI.click(findTestObject('Object Repository/LIMS/PostSequence/SeqQCAutoPass/td_OK'))
 
