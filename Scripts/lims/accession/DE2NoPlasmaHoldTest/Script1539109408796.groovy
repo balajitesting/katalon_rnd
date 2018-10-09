@@ -22,28 +22,20 @@ import org.junit.After as After
 import org.openqa.selenium.Keys as Keys
 import org.openqa.selenium.WebElement as WebElement
 import internal.GlobalVariable as GlobalVariable
+import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
 
+WebUI.comment('Run ENTSW-TC-1359, ENTSW-TC-1320, ENTSW-TC-1321, ENTSW-TC-2862')
+
+'Enable when run standalone'
 //String aNumber = 'A0119534'
 
-String aNumber = WebUI.callTestCase(findTestCase('lims/accession/AcessionClinicalDataEntryTest'), [:], FailureHandling.STOP_ON_FAILURE)
-
-Thread.sleep(1000)
+String aNumber = WebUI.callTestCase(findTestCase('lims/accession/AccessionClinicalRequiredDataEntryTest'), [:], FailureHandling.STOP_ON_FAILURE)
 
 CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserDagmar', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
 WebUI.click(findTestObject('LIMS/DE2/Page_Iteration/td_Second DataEntry'))
 
-WebUI.setText(findTestObject('LIMS/DE2/Page_Patient Data Entry List/input_searchtext'), aNumber)
-
-WebUI.click(findTestObject('LIMS/DE2/Page_Patient Data Entry List/td_OK'))
-
-WebUI.verifyElementClickable(findTestObject('LIMS/DE2/Page_Patient Data Entry List/img'))
-
-WebUI.click(findTestObject('LIMS/DE2/Page_Patient Data Entry List/img'))
-
-Thread.sleep(1000)
-
-WebUI.click(findTestObject('LIMS/DE2/Page_Patient Data Entry List/img'))
+CustomKeywords.'com.gh.lims.Acession.searchRequest'(aNumber)
 
 WebUI.setText(findTestObject('LIMS/DE2/Page_Iteration/input_patmon'), 'JAN')
 
@@ -67,7 +59,7 @@ WebUI.switchToWindowTitle('')
 
 WebUI.click(findTestObject('LIMS/DE2/Page_/input_cb'))
 
-WebUI.switchToWindowUrl(GlobalVariable.limsUrl + '/rc?command=page&page=MainAccession_P&multisdimode=EditSet&navigatornodeid=EditSet')
+WebUI.switchToDefaultContent()
 
 WebUI.setText(findTestObject('LIMS/DE2/Page_Iteration/input_patzip'), '94040')
 
@@ -94,6 +86,10 @@ WebUI.click(findTestObject('LIMS/DE2/Page_Iteration/table_Patient Contact Permis
 WebUI.setText(findTestObject('/LIMS/DE2/Page_Iteration/input_priorgenotypingdetail'), 'Test detail')
 
 WebUI.click(findTestObject('LIMS/DE1/Page_Iteration/input_isprogrssingonrx'))
+
+WebUI.click(findTestObject('Other_OR/DE2/save_btn'))
+
+WebUI.acceptAlert()
 
 WebUI.waitForElementPresent(findTestObject('Object Repository/LIMS/logout/img'), 15)
 
