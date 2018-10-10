@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>operationSuccessful</name>
+   <name>Batched_PlasmaTramStop</name>
    <tag></tag>
-   <elementGuidId>af9b0f74-7cc2-4540-b258-e1acdf3ed059</elementGuidId>
+   <elementGuidId>84bbf2ee-7a2b-4df4-9e18-273c26e8757d</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//table[@id=&quot;__ruleErrorTable&quot;]//td[text()='Operation Successful']</value>
+         <value>//*[@id=&quot;PlasmaExtractionComplete_node&quot;]/tbody/tr[1]/td</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

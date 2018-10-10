@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>StorageSearch</name>
+   <name>operationSuccessful Text</name>
    <tag></tag>
-   <elementGuidId>779afd40-731a-4d2a-af4b-08f772fbbe5b</elementGuidId>
+   <elementGuidId>af9b0f74-7cc2-4540-b258-e1acdf3ed059</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//img[@id='targetstorageuniturl_img']</value>
+         <value>//table[@id=&quot;__ruleErrorTable&quot;]//td[text()='Operation Successful']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

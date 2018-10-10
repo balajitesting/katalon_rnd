@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>a_Batched Plasma</name>
+   <name>Search_Textbox</name>
    <tag></tag>
-   <elementGuidId>fb9cf198-488d-4024-ba93-e094b89d1996</elementGuidId>
+   <elementGuidId>601a2160-f5a7-413f-9128-a8aa8ab2001d</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
@@ -11,55 +11,41 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>a</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>onmouseover</name>
-      <type>Main</type>
-      <value>__menubar.ribbonMouseOver(this)</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>onmouseout</name>
-      <type>Main</type>
-      <value>__menubar.ribbonMouseOut(this)</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>href</name>
-      <type>Main</type>
-      <value>javascript:sapphire.userConfig.set('genericlayout_lastlinktab','plasmaisolation');sapphire.userConfig.set('genericlayout_lastlinkmenu','PlasmaExtractionComplete');navigateTo('rc?command=page&amp;page=GH_BatchedPlasmaSampleList', 'Y')</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>id</name>
-      <type>Main</type>
-      <value>layout_menulink3</value>
+      <value>input</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>ribbon_menu_textns</value>
+      <value>search_inputfield</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>text</name>
+      <name>id</name>
       <type>Main</type>
-      <value>Batched Plasma</value>
+      <value>searchtext</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>type</name>
+      <type>Main</type>
+      <value>text</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>onkeydown</name>
+      <type>Main</type>
+      <value>if ( event.keyCode == 13 ) javascript:openBasic();</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;layout_menulink3&quot;)</value>
+      <value>id(&quot;searchtext&quot;)</value>
    </webElementProperties>
 </WebElementEntity>

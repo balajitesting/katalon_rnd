@@ -15,16 +15,44 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.comment('ENT-6481')
 
-String flowcellID_full = '180628_NB501054_0437_AHMN5YBGX5';
+String flowcellID_full = '180628_NB501054_0437_AHMN5YBGX5'
 
-String flowcellID = WebUI.callTestCase(findTestCase('lims/postsequence/BIPUploadTest'), [('flowcellID_full') : flowcellID_full], 
+String flowcellID = 'HMN5YBGX5'
+
+flowcellID = WebUI.callTestCase(findTestCase('lims/postsequence/BIPUploadTest'), [('flowcellID_full') : flowcellID_full], 
     FailureHandling.STOP_ON_FAILURE)
 
 CustomKeywords.'com.gh.lims.Common.logon'('cliauserreporting', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
-WebUI.click(findTestObject('LIMS/PostSequence/SeqQC Auto TramStop'))
 
-WebUI.setText(findTestObject('LIMS/PostSequence/Page_SeqQCAutoPass/Search_Textbox'), flowcellID)
+WebUI.waitForElementClickable(findTestObject('Object Repository/LIMS/PostSequence/SeqQC Auto TramStop'), 5)
+WebUI.click(findTestObject('Object Repository/LIMS/PostSequence/SeqQC Auto TramStop'))
 
-WebUI.click(findTestObject('LIMS/PostSequence/Page_SeqQCAutoPass/Search_OK_Button'))
+WebUI.setText(findTestObject('Object Repository/LIMS/PostSequence/Page_SeqQCAutoPass/Search_Textbox'), flowcellID)
+
+WebUI.click(findTestObject('Object Repository/LIMS/PostSequence/Page_SeqQCAutoPass/Search_OK_Button'))
+
+WebUI.waitForPageLoad(4);
+
+WebUI.waitForElementClickable(findTestObject('Object Repository/LIMS/PostSequence/Page_SeqQCAutoPass/Seq_QC Auto_Pass_Proceed_Button'), 5)
+WebUI.click(findTestObject('Object Repository/LIMS/PostSequence/Page_SeqQCAutoPass/Seq_QC Auto_Pass_Proceed_Button'))
+
+WebUI.waitForPageLoad(4);
+
+WebUI.waitForElementClickable(findTestObject('Object Repository/LIMS/PostSequence/Page_SeqQCAutoPass/VerifySave_Button'), 5)
+WebUI.click(findTestObject('Object Repository/LIMS/PostSequence/Page_SeqQCAutoPass/VerifySave_Button'))
+
+WebUI.waitForPageLoad(30);
+
+WebUI.waitForElementVisible(findTestObject('Object Repository/LIMS/PostSequence/Page_SeqQCAutoPass/Popup/OK_Button'), 30)
+WebUI.waitForElementClickable(findTestObject('Object Repository/LIMS/PostSequence/Page_SeqQCAutoPass/Popup/OK_Button'), 30)
+WebUI.click(findTestObject('Object Repository/LIMS/PostSequence/Page_SeqQCAutoPass/Popup/OK_Button'))
+
+WebUI.click(findTestObject('LIMS/logout/img'))
+
+WebUI.closeBrowser()
+
+return flowcellID
+
+
 

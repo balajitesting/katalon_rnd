@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>input_group1</name>
+   <name>list_header_CheckBox</name>
    <tag></tag>
    <elementGuidId>7b24fd9b-7976-4e6c-9c8b-da76648d2a62</elementGuidId>
    <selectorCollection>

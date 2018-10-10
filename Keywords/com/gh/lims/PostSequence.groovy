@@ -41,6 +41,6 @@ public class PostSequence {
 
 		WebUI.click(findTestObject('LIMS/PostSequence/Page_BIPUpload/Popup_BIPUpload/OK_Button'))
 
-		Thread.sleep(52000)
+		Thread.sleep(55000)
 	}
 }

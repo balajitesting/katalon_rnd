@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>img</name>
+   <name>Search_OK_Button</name>
    <tag></tag>
-   <elementGuidId>b11e68df-94bd-44be-b2fd-a93a2d0b0574</elementGuidId>
+   <elementGuidId>b9b52399-a727-4a87-ac70-e28507636f3c</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
@@ -11,48 +11,34 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>img</value>
+      <value>td</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>width</name>
+      <name>valign</name>
       <type>Main</type>
-      <value>32</value>
+      <value>middle</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>height</name>
+      <name>align</name>
       <type>Main</type>
-      <value>32</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>border</name>
-      <type>Main</type>
-      <value>0</value>
+      <value>center</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>src</name>
+      <name>text</name>
       <type>Main</type>
-      <value>WEB-CORE/images/png32/AutoFile.png</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>title</name>
-      <type>Main</type>
-      <value>Auto File </value>
+      <value>OK</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;AutoFile&quot;)/tbody[1]/tr[1]/td[@class=&quot;buttonmargin_thin&quot;]/table[1]/tbody[1]/tr[1]/td[1]/img[1]</value>
+      <value>id(&quot;search_contentbar0&quot;)/table[@class=&quot;search_table&quot;]/tbody[1]/tr[1]/td[3]/button[@class=&quot;button_smalltext&quot;]/table[1]/tbody[1]/tr[1]/td[1]</value>
    </webElementProperties>
 </WebElementEntity>

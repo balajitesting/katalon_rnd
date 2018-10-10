@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>div_Tubes Verified</name>
+   <name>Tubes Verified Button</name>
    <tag></tag>
    <elementGuidId>443ccf8b-4b71-4769-8dc6-de5ec4e802d2</elementGuidId>
    <selectorCollection>

@@ -1,79 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>img_tn_SU-0000087083</name>
+   <name>list_iframe</name>
    <tag></tag>
-   <elementGuidId>d007f0ac-1bd6-491c-a590-9a40631bbaba</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <elementGuidId>bb68e0d2-c1ba-4cb8-b9e2-5527767136ce</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//iframe[@id = 'list_iframe' and @name = 'list_iframe' and @src = 'rc?command=page&amp;page=GH_SampleList&amp;command=page&amp;_iframename=list&amp;__crc=crc_1537340945554' and (text() = 'Your browser does not support iframes!' or . = 'Your browser does not support iframes!')]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//iframe[@name ='list_iframe']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>img</value>
+      <value>iframe</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
-      <value>tn_SU-0000087083</value>
+      <value>list_iframe</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>name</name>
+      <type>Main</type>
+      <value>list_iframe</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>src</name>
       <type>Main</type>
-      <value>WEB-OPAL/images/plus16.gif</value>
+      <value>rc?command=page&amp;page=GH_SampleList&amp;command=page&amp;_iframename=list&amp;__crc=crc_1537340945554</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>onclick</name>
+      <name>frameborder</name>
       <type>Main</type>
-      <value>treelist_en( this )</value>
+      <value>0</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>cc</name>
+      <name>width</name>
       <type>Main</type>
-      <value>7</value>
+      <value>100%</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>dataloaded</name>
+      <name>height</name>
       <type>Main</type>
-      <value>N</value>
+      <value>100%</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>datalevel</name>
+      <name>text</name>
       <type>Main</type>
-      <value>1</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>datakeyid1</name>
-      <type>Main</type>
-      <value>SU-0000087083</value>
+      <value>Your browser does not support iframes!</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;tn_SU-0000087083&quot;)</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>ref_element</name>
-      <type>Main</type>
-      <value>Object Repository/Plasma_Isolation/Page_File Sample(s)/iframe_Your browser does not s (1)</value>
+      <value>id(&quot;list_iframe&quot;)</value>
    </webElementProperties>
 </WebElementEntity>

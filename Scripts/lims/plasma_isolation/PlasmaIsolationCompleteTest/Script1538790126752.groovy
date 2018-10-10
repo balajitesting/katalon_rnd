@@ -15,11 +15,11 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.comment('Run: ENTSW-TC-2878 , ENTSW-TC-2879')
 
-String sampleID = WebUI.callTestCase(findTestCase('lims/plasma_isolation/CreateBatchedPlasmaTest'), [:], FailureHandling.STOP_ON_FAILURE)
+//String sampleID = WebUI.callTestCase(findTestCase('lims/plasma_isolation/CreateBatchedPlasmaTest'), [:], FailureHandling.STOP_ON_FAILURE)
 
 'Enable when run this test alone'	
-//String sampleID = 'A011245901'
-//CustomKeywords.'com.gh.db.ResetSampleStatus.reset'(sampleID, 'Batched For Plasma Isolation')
+String sampleID = 'A011245901'
+CustomKeywords.'com.gh.db.ResetSampleStatus.reset'(sampleID, 'Batched For Plasma Isolation')
 
 
 String strCheck
@@ -27,41 +27,42 @@ String strHeaderCheck
 
 CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserDagmar', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
-WebUI.click(findTestObject('LIMS/Plasma_Isolation/Page_Iteration/Batched_plasma_clickdb'))
+WebUI.click(findTestObject('LIMS/Plasma_Isolation/Batched_PlasmaTramStop'))
 
-WebUI.setText(findTestObject('LIMS/Plasma_Isolation/Page_Batched Plasma Tube List/input_searchtext'), sampleID)
+WebUI.setText(findTestObject('LIMS/Plasma_Isolation/Page_Batched Plasma Tube List/Search_TextBox'), sampleID)
 
-WebUI.waitForElementClickable(findTestObject('LIMS/Plasma_Isolation/Page_Batched Plasma Tube List/td_OK'), 
+WebUI.waitForElementClickable(findTestObject('LIMS/Plasma_Isolation/Page_Batched Plasma Tube List/Search_OK_Button'), 
     2)
 
-WebUI.click(findTestObject('LIMS/Plasma_Isolation/Page_Batched Plasma Tube List/td_OK'))
+WebUI.click(findTestObject('LIMS/Plasma_Isolation/Page_Batched Plasma Tube List/Search_OK_Button'))
 
-WebUI.switchToFrame(findTestObject('LIMS/Plasma_Isolation/Page_Plasma Tube List/iframe'), 2, FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.switchToFrame(findTestObject('Object Repository/LIMS/Plasma_Isolation/Page_Batched Plasma Tube List/list_iframe'), 2, FailureHandling.CONTINUE_ON_FAILURE)
 
 Thread.sleep(1000)
 
-WebUI.click(findTestObject('LIMS/Plasma_Isolation/Page_Batched Plasma Tube List/batched checkbox'))
+WebUI.click(findTestObject('LIMS/Plasma_Isolation/Page_Batched Plasma Tube List/first batched sample checkbox'))
 
 WebUI.switchToDefaultContent()
 
-WebUI.click(findTestObject('LIMS/Plasma_Isolation/Page_Batched Plasma Tube List/div_Tubes Verified'))
+WebUI.click(findTestObject('LIMS/Plasma_Isolation/Page_Batched Plasma Tube List/Tubes Verified Button'))
 
-WebUI.switchToFrame(findTestObject('LIMS/Plasma_Isolation/Page_Plasma Tube List/iframe'), 2)
+WebUI.switchToFrame(findTestObject('LIMS/Plasma_Isolation/Page_Plasma Tube List/list_iframe'), 2)
 
-WebUI.waitForElementPresent(findTestObject('LIMS/Plasma_Isolation/Page_Batched Plasma Tube List/operationSuccessful'), 
+WebUI.waitForElementPresent(findTestObject('LIMS/Plasma_Isolation/Page_Batched Plasma Tube List/operationSuccessful Text'), 
     5)
 
 WebUI.switchToDefaultContent()
 
-WebUI.click(findTestObject('LIMS/Plasma_Isolation/Page_Batched Plasma Tube List/div_Plasma_Isolation Complete'))
+WebUI.click(findTestObject('LIMS/Plasma_Isolation/Page_Batched Plasma Tube List/Plasma_Isolation Complete Button'))
 
-WebUI.waitForElementPresent(findTestObject('LIMS/Plasma_Isolation/Page_Batched Plasma Tube List/button_OK'),  2)
+WebUI.waitForElementPresent(findTestObject('LIMS/Plasma_Isolation/Page_Batched Plasma Tube List/PlasmaIsolationCompletePopup/button_OK'),  2)
 
-WebUI.click(findTestObject('LIMS/Plasma_Isolation/Page_Batched Plasma Tube List/button_OK'))
+WebUI.click(findTestObject('LIMS/Plasma_Isolation/Page_Batched Plasma Tube List/PlasmaIsolationCompletePopup/button_OK'))
 
-WebUI.waitForElementPresent(findTestObject('Object Repository/LIMS/logout/img'), 10)
+//Need a way to ask Katalon to download the file, skip the log out from now. 
 
-WebUI.click(findTestObject('Object Repository/LIMS/logout/img'))
+//WebUI.waitForElementPresent(findTestObject('Object Repository/LIMS/logout/img'), 10)
+//WebUI.click(findTestObject('Object Repository/LIMS/logout/img'))
 
 WebUI.closeBrowser()
 
