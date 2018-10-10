@@ -46,8 +46,6 @@ CustomKeywords.'com.gh.core.JSHandler.J2Click'(findTestObject('LIMS/DCO/Request/
 
 WebUI.acceptAlert()
 
-WebUI.waitForElementPresent(findTestObject('LIMS/logout/img'), 10)
-
-WebUI.click(findTestObject('LIMS/logout/img'))
+CustomKeywords.'com.gh.lims.Common.rtlLogout'()
 
 WebUI.closeBrowser()
