@@ -173,22 +173,4 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/lims/plasma_isolation/PlasmaIsolationCompleteTest</testCaseId>
    </testCaseLink>
-   <testCaseLink>
-      <guid>c0f910f1-b277-47ff-9e4c-c7cbc716f0c1</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/lims/postsequence/BIPUploadAutoQCTest</testCaseId>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>fae2bc05-b364-4d60-a3b7-94a038dd1230</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>38d012b4-c78b-4217-9471-22f5434fe13d</variableId>
-      </variableLink>
-   </testCaseLink>
 </TestSuiteEntity>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>list_header_CheckBox</name>
+   <tag></tag>
+   <elementGuidId>7b24fd9b-7976-4e6c-9c8b-da76648d2a62</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>id(&quot;headerselector&quot;)[count(. | //input[@id = 'headerselector' and @type = 'checkbox' and @name = 'group1' and @ref_element = 'Object Repository/Plasma_Isolation/Page_Plasma Tube List/iframe_Your browser does not s']) = count(//input[@id = 'headerselector' and @type = 'checkbox' and @name = 'group1' and @ref_element = 'Object Repository/Plasma_Isolation/Page_Plasma Tube List/iframe_Your browser does not s'])]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//input[@id='headerselector']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>input</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>headerselector</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>type</name>
+      <type>Main</type>
+      <value>checkbox</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>name</name>
+      <type>Main</type>
+      <value>group1</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>onclick</name>
+      <type>Main</type>
+      <value>setallfor( 'group1data', this.checked );</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;headerselector&quot;)</value>
+   </webElementProperties>
+</WebElementEntity>

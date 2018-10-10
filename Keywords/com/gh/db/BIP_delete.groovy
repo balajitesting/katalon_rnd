@@ -110,18 +110,38 @@ class BIP_delete {
 		}
 		temp[3] = temp[3].substring(1, temp[3].length());
 
-		//
+		
 		query = "Delete from u_ghcontrolqc where flowcellid ='"+temp[3]+"'";
 		System.out.println(query);
 		delete_count = db.executeUpdate(query);
 		System.out.println("Deleted " + delete_count + " rows");
-		//
-		query = "Delete from u_ghsampleqcmetrics Where flowcellid ='"+temp[3]+"'";
+		
+		query = "delete from u_ghsampleqcmetrics Where flowcellid ='"+temp[3]+"'";
 		System.out.println(query);
 		delete_count = db.executeUpdate(query);
 		System.out.println("Deleted " + delete_count + " rows");
 
-		query = "Delete from u_ghflowcell where u_ghflowcellid ='"+temp[3]+"'";
+		query = "delete from u_ghflowcell where u_ghflowcellid ='"+temp[3]+"'";
+		System.out.println(query);
+		delete_count = db.executeUpdate(query);
+		System.out.println("Deleted " + delete_count + " rows");
+
+		query = "delete from u_ghsampleqc Where Runid = '"+flowcellid+"'";
+		System.out.println(query);
+		delete_count = db.executeUpdate(query);
+		System.out.println("Deleted " + delete_count + " rows");
+
+		query = "delete from u_ghsamplecoverage Where Runid = '"+flowcellid+"'";
+		System.out.println(query);
+		delete_count = db.executeUpdate(query);
+		System.out.println("Deleted " + delete_count + " rows");
+
+		query = "delete from u_ghtmb Where Runid = '"+flowcellid+"'";
+		System.out.println(query);
+		delete_count = db.executeUpdate(query);
+		System.out.println("Deleted " + delete_count + " rows");
+
+		query = "delete from u_ghmsi where runid like '"+flowcellid+"'";
 		System.out.println(query);
 		delete_count = db.executeUpdate(query);
 		System.out.println("Deleted " + delete_count + " rows");

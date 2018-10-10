@@ -25,19 +25,19 @@ CustomKeywords.'com.gh.db.ResetSampleStatus.reset'(sampleID, 'Ready for Plasma I
 
 CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserDagmar', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
-WebUI.click(findTestObject('Object Repository/LIMS/plasmaIsolation/Page_Iteration/td_sitemap_TramStopSelCell'))
+WebUI.click(findTestObject('LIMS/Plasma_Isolation/PlasmaIsolationTramStop'))
 
-WebUI.setText(findTestObject('Object Repository/LIMS/plasmaIsolation/Page_Plasma Tube List/input_searchtext'), sampleID)
+WebUI.setText(findTestObject('LIMS/Plasma_Isolation/Page_Plasma Tube List/Search_Textbox'), sampleID)
 
-WebUI.click(findTestObject('Object Repository/LIMS/plasmaIsolation/Page_Plasma Tube List/td_OK'))
+WebUI.click(findTestObject('LIMS/Plasma_Isolation/Page_Plasma Tube List/Search_OK_Button'))
 
-WebUI.switchToFrame(findTestObject('Object Repository/LIMS/plasmaIsolation/Page_Plasma Tube List/iframe'), 2, FailureHandling.STOP_ON_FAILURE)
+WebUI.switchToFrame(findTestObject('LIMS/Plasma_Isolation/Page_Plasma Tube List/list_iframe'), 2, FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Object Repository/LIMS/plasmaIsolation/Page_Plasma Tube List/input_group1'))
+WebUI.click(findTestObject('LIMS/Plasma_Isolation/Page_Plasma Tube List/list_header_CheckBox'))
 
 WebUI.switchToDefaultContent()
 
-WebUI.click(findTestObject('Object Repository/LIMS/plasmaIsolation/Page_Plasma Tube List/div_Create PlasmaBatch'))
+WebUI.click(findTestObject('LIMS/Plasma_Isolation/Page_Plasma Tube List/Create PlasmaBatch Button'))
 
 WebUI.waitForElementPresent(findTestObject('Object Repository/LIMS/logout/img'), 10)
 

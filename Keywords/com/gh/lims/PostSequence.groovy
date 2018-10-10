@@ -32,13 +32,15 @@ public class PostSequence {
 	@Keyword
 	def uploadBIPData(flowcellId){
 
-		WebUI.click(findTestObject('LIMS/PostSequence/Page_Iteration/td_BIP Upload'))
+		WebUI.click(findTestObject('LIMS/PostSequence/BIPUploadTramStop'))
 
-		WebUI.click(findTestObject('LIMS/PostSequence/Page_GHFlowcell List/div_Upload BIP_Data'))
+		WebUI.click(findTestObject('Object Repository/LIMS/PostSequence/Page_BIPUpload/Upload BIP_Data Button'))
 
-		WebUI.setText(findTestObject('LIMS/PostSequence/Page_GHFlowcell List/input_Flowcell Id_prompt_arg1'),
+		WebUI.setText(findTestObject('LIMS/PostSequence/Page_BIPUpload/Popup_BIPUpload/Flowcell ID Textbox'),
 				flowcellId)
 
-		WebUI.click(findTestObject('LIMS/PostSequence/Page_GHFlowcell List/td_OK'))
+		WebUI.click(findTestObject('LIMS/PostSequence/Page_BIPUpload/Popup_BIPUpload/OK_Button'))
+
+		Thread.sleep(55000)
 	}
 }

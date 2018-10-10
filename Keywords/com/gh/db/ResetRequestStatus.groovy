@@ -46,36 +46,40 @@ import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webui.exception.WebElementNotFoundException
 
 
-class ResetSampleStatus {
+class ResetRequestStatus {
 
 
 	/**
-	 *  valid status
+	 * Click element
+	 * @param to Katalon test object
 	 * 
-	 Batched For Plasma Isolation
-	 Failed
-	 Redo Samples
+	 * Valid status update value
+	 * 
+	 *  Sent To Nof1
+	 Pending Clinical Diagnosis
 	 Ready for Plasma Isolation
-	 Analytics in progress
-	 Ready for DNA Extraction
-	 Freezer
-	 Sample Archive
-	 blank
-	 Depleted
+	 Redo Samples
+	 CLS Review and Release Report
+	 Sequencing QC
+	 Hold Report Review
+	 TB Review BIP Data
+	 Ready for Release Report
+	 Pending Queue
+	 LD Review BIP Data
+	 Released
 	 Closed
-	 Ready for IVD Report Generation and Release
+	 Ready for Generate Report
 	 Ready for IVD Review
-	 ReadyForDNAExtraction
-	 Waiting for Pool
-	 * 
+	 Ready for IVD Report Generation and Release
+	 Generate and Release Cancelled Report
 	 */
 	@Keyword
-	def reset(String sampleID, String status) {
+	def reset(String requestID, String status) {
 
 		LimsOracleDBService db = new LimsOracleDBService();
 		db.connectDB(GlobalVariable.oracleDBurl, GlobalVariable.oracleDBuser, GlobalVariable.oracleDBpwd);
 
-		String query = "update s_sample set u_ghsamplestatus = '"+status+"' where s_sampleid = '"+sampleID+"'";
+		String query = "update s_request set u_ghrequeststatus = '"+status+"' where s_requestid = '"+requestID+"'";
 		db.execute(query);
 	}
 }
