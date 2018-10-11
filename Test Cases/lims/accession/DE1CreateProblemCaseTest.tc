@@ -3,6 +3,6 @@
    <description></description>
    <name>DE1CreateProblemCaseTest</name>
    <tag></tag>
-   <comment></comment>
+   <comment>Run ENTSW-TC-2959, ENTSW-TC-2959</comment>
    <testCaseGuid>c93ec625-493e-4243-9114-d0fea147b244</testCaseGuid>
 </TestCaseEntity>

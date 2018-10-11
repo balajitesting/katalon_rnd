@@ -23,6 +23,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
 String A_Number = 'A60204'
+//String A_Number = 'A126043'
 
 CustomKeywords.'com.gh.lims.Common.logon'('Cliacls', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 

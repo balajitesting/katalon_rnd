@@ -74,11 +74,11 @@ public class Common {
 
 	@Keyword
 	def rtlLogout(){
-		
+
 		setClick('LIMS/Problem Resolution/returnToList/div_Return To List')
-		
+
 		WebUI.waitForElementPresent(findTestObject('LIMS/logout/img'), 15)
-		
+
 		WebUI.click(findTestObject('LIMS/logout/img'))
 	}
 }
