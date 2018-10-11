@@ -13,7 +13,7 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-//Finish TB review workflow
+//Validation1: Finish TB review workflow
 WebUI.comment('Run: ENT-6483')
 
 CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserReporting', '5Ed5CIkj9UQfaMZXAkDVaQ==')
@@ -52,7 +52,7 @@ WebUI.click(findTestObject('LIMS/PostSequence/TBReview/CompleteTBReview/popupTex
 
 WebUI.click(findTestObject('LIMS/PostSequence/TBReview/CompleteTBReview/buttonOK'))
 
-//Status will get change to Ready of nof1
+//Validation 2: Status will get change to Ready of nof1
 
 WebUI.click(findTestObject('LIMS/Header/img_AllTram'))
 
