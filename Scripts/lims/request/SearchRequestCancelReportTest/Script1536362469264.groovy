@@ -23,6 +23,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
 String A_Number = 'A60204'
+//String A_Number = 'A126043'
 
 CustomKeywords.'com.gh.lims.Common.logon'('Cliacls', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
@@ -46,8 +47,6 @@ CustomKeywords.'com.gh.core.JSHandler.J2Click'(findTestObject('LIMS/DCO/Request/
 
 WebUI.acceptAlert()
 
-WebUI.waitForElementPresent(findTestObject('LIMS/logout/img'), 10)
-
-WebUI.click(findTestObject('LIMS/logout/img'))
+CustomKeywords.'com.gh.lims.Common.rtlLogout'()
 
 WebUI.closeBrowser()

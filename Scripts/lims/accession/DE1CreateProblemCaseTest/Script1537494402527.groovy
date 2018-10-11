@@ -73,7 +73,9 @@ WebUI.setText(findTestObject(orDE1 + 'Page_Iteration/input_secsearchstr'), 'sqa'
 
 WebUI.click(findTestObject(orDE1 + 'Page_Iteration/input_searchbuttonsr'))
 
-WebUI.switchToWindowUrl(GlobalVariable.limsUrl + '/rc?command=page&page=GHMainAccessionSHPHY')
+//WebUI.switchToWindowUrl(GlobalVariable.limsUrl + '/rc?command=page&page=GHMainAccessionSHPHY')
+
+WebUI.switchToDefaultContent()
 
 WebUI.scrollToElement(findTestObject(orDE1 + 'Page_Iteration/input_saveAccession01'), 15)
 

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>LIMS3.5.1PTL7.2TestSuite</name>
+   <name>LIMS3.6PTL7.2TestSuite</name>
    <tag></tag>
    <isRerun>false</isRerun>
-   <lastRun>2018-10-09T15:30:50</lastRun>
+   <lastRun>2018-10-10T17:02:40</lastRun>
    <mailRecipient></mailRecipient>
    <numberOfRerun>0</numberOfRerun>
    <pageLoadTimeout>30</pageLoadTimeout>
@@ -32,7 +32,7 @@
    <testCaseLink>
       <guid>aa9ca232-7839-49b9-9b97-e393f0a1b6ab</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/lims/request/SearchRequestCancelReportTest</testCaseId>
    </testCaseLink>
    <testCaseLink>

@@ -27,7 +27,9 @@ import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as Cucumber
 WebUI.callTestCase(findTestCase('lims/request/SearchRequestCancelReportTest'), [:], FailureHandling.STOP_ON_FAILURE)
 
 'Enable following when run test case only'
+
 String A_Number = 'A60204'
+
 String ReportStatus = 'Cancelled'
 
 CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserReporting', '5Ed5CIkj9UQfaMZXAkDVaQ==')
