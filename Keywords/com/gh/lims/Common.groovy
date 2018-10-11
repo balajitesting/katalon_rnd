@@ -54,7 +54,7 @@ public class Common {
 	}
 
 	/**
-	 *  Use setClick for Edit, Begin Workflow, Run Workflow
+	 *  Use setClick for Edit, Begin Workflow, Run Workflow, auto_QC_Pass, Verify&Save
 	 */
 
 
