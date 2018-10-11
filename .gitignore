@@ -11,3 +11,4 @@ JUnit_Report.XML
 JSON_Report.json
 Results
 Object Repository/*/.meta
+settings/internal/com.kms.katalon.integration.analytics.properties
