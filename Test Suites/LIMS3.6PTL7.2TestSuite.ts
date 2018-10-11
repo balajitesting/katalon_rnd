@@ -173,4 +173,10 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/lims/plasma_isolation/PlasmaIsolationCompleteTest</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>7b32ead0-d795-4f8d-89ce-f868335e147f</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/lims/postsequence/BIPAutoQCTest</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>
