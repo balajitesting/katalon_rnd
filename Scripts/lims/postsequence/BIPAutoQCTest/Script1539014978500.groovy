@@ -34,13 +34,15 @@ WebUI.click(findTestObject('Object Repository/LIMS/PostSequence/Page_SeqQCAutoPa
 
 WebUI.waitForPageLoad(4);
 
-WebUI.waitForElementClickable(findTestObject('Object Repository/LIMS/PostSequence/Page_SeqQCAutoPass/Seq_QC Auto_Pass_Proceed_Button'), 5)
-WebUI.click(findTestObject('Object Repository/LIMS/PostSequence/Page_SeqQCAutoPass/Seq_QC Auto_Pass_Proceed_Button'))
+auto_QC = 'LIMS/PostSequence/Page_SeqQCAutoPass/Seq_QC Auto_Pass_Proceed_Button'
+
+CustomKeywords.'com.gh.lims.Common.setClick'(auto_QC)
 
 WebUI.waitForPageLoad(4);
 
-WebUI.waitForElementClickable(findTestObject('Object Repository/LIMS/PostSequence/Page_SeqQCAutoPass/VerifySave_Button'), 5)
-WebUI.click(findTestObject('Object Repository/LIMS/PostSequence/Page_SeqQCAutoPass/VerifySave_Button'))
+vSave = 'LIMS/PostSequence/Page_SeqQCAutoPass/VerifySave_Button'
+
+CustomKeywords.'com.gh.lims.Common.setClick'(vSave)
 
 WebUI.waitForPageLoad(30);
 
@@ -53,6 +55,7 @@ WebUI.click(findTestObject('LIMS/logout/img'))
 WebUI.closeBrowser()
 
 return flowcellID
+
 
 
 
