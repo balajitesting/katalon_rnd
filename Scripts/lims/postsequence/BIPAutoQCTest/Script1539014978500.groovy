@@ -25,8 +25,8 @@ flowcellID = WebUI.callTestCase(findTestCase('lims/postsequence/BIPUploadTest'),
 CustomKeywords.'com.gh.lims.Common.logon'('cliauserreporting', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
 
-WebUI.waitForElementClickable(findTestObject('Object Repository/LIMS/PostSequence/SeqQC Auto TramStop'), 5)
-WebUI.click(findTestObject('Object Repository/LIMS/PostSequence/SeqQC Auto TramStop'))
+WebUI.waitForElementClickable(findTestObject('LIMS/PostSequence/SeqQC Auto TramStop'), 5)
+WebUI.click(findTestObject('LIMS/PostSequence/SeqQC Auto TramStop'))
 
 WebUI.setText(findTestObject('Object Repository/LIMS/PostSequence/Page_SeqQCAutoPass/Search_Textbox'), flowcellID)
 
