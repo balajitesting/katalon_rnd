@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>td_SentToNof1</name>
+   <name>td_RequestStatus</name>
    <tag></tag>
    <elementGuidId>eea63a14-7f8b-488b-bbe4-30e843c9e201</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//td[contains(text(), 'Sent')][1]</value>
+         <value>//td[@id='u_ghrequeststatus'][1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

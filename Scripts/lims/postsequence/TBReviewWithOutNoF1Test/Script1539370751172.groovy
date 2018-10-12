@@ -14,11 +14,11 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
 //Validation1: Finish TB review workflow
-WebUI.comment('Run: ENT-6483')
+WebUI.comment('Run: ENT-6484')
 
 CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserReporting', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
-String requestID = 'A30101'
+String requestID = 'A80080'
 
 CustomKeywords.'com.gh.db.ResetRequestStatus.reset'(requestID, 'TB Review BIP Data')
 
@@ -68,7 +68,7 @@ Thread.sleep(3000) //Wait command is not working properly. Hence, implemented th
 
 WebUI.switchToFrame(findTestObject('LIMS/Requests/AllRequests/list_iFrame'), 3)
 
-assert WebUI.getText(findTestObject('LIMS/Requests/AllRequests/td_RequestStatus')).contains("Sent") == true
+assert WebUI.getText(findTestObject('LIMS/Requests/AllRequests/td_RequestStatus')).contains("CLS Review and Release Report") == true
 
 WebUI.closeBrowser()
 
