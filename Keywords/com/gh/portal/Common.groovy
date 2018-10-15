@@ -40,20 +40,6 @@ public class Common {
 
 		WebUI.click(findTestObject('Portal/button_SIGN IN'))
 	}
-	
-	@Keyword
-	def valLogon(String usr, String pwd){
-
-		WebUI.openBrowser('')
-
-		WebUI.navigateToUrl('https://portal-val.guardanthealth.com')
-
-		WebUI.setText(findTestObject('Portal/input_sessionemail'), usr)
-
-		WebUI.setText(findTestObject('Portal/input_sessionpassword'), pwd)
-
-		WebUI.click(findTestObject('Portal/button_SIGN IN'))
-	}
 
 	@Keyword
 	def mailTrapLogin(String usr, String pwd){

@@ -6,11 +6,11 @@
    <elementGuidId>c59fb253-4149-411d-a53d-ffd283889be1</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//input[@id='accept_terms']</value>
+         <key>CSS</key>
       </entry>
       <entry>
-         <key>CSS</key>
+         <key>XPATH</key>
+         <value>//input[@id='accept_terms']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

@@ -24,9 +24,9 @@ String strLastName = 'Joes' + CustomKeywords.'com.gh.core.TestUtil.getRandom'()
 
 String strEmailAddress = ('Nonportal' + CustomKeywords.'com.gh.core.TestUtil.getRandom'()) + '@gmail.com'
 
-CustomKeywords.'com.gh.portal.Common.valLogon'('venkat.mamillapelli@gmail.com', 'Pa22word')
+CustomKeywords.'com.gh.portal.Common.logon'('venkat.mamillapelli@gmail.com', 'Pa22word')
 
-WebUI.setText(findTestObject('Portal/page_guardanthealth/inputpatientname'), 'karnosh')
+WebUI.setText(findTestObject('Portal/page_guardanthealth/inputpatientname'), 'Clint')
 
 WebUI.click(findTestObject('Portal/page_guardanthealth/searchpatientname'))
 
@@ -64,51 +64,51 @@ WebUI.closeBrowser()
 
 CustomKeywords.'com.gh.portal.Common.mailTrapLogin'('bkotta@guardanthealth.com', 'Balu@1981')
 
-WebUI.click(findTestObject('Portal/page_inboxesmailtrap/spanportal'))
+WebUI.click(findTestObject('Portal/page_mailtrap/page_inboxesmailtrap/spanportal'))
 
-WebUI.setText(findTestObject('Portal/page_portalmailtrap/inputemail'), strEmailAddress)
+WebUI.setText(findTestObject('Portal/page_mailtrap/page_portalmailtrap/inputemail'), strEmailAddress)
 
-WebUI.verifyElementClickable(findTestObject('Portal/page_portalmailtrap/patientmenu'))
+WebUI.verifyElementClickable(findTestObject('Portal/page_mailtrap/page_portalmailtrap/patientmenu'))
 
-WebUI.click(findTestObject('Portal/page_portalmailtrap/patientmenu'))
+WebUI.click(findTestObject('Portal/page_mailtrap/page_portalmailtrap/patientmenu'))
 
 WebUI.click(findTestObject('Portal/page_mailtrap/safeemailtestingpage/externallink'))
 
 WebUI.switchToWindowIndex(1)
 
-WebUI.click(findTestObject('Portal/page_portalmailtrap/sharepatientreportbutton'))
+WebUI.click(findTestObject('Portal/page_mailtrap/page_portalmailtrap/sharepatientreportbutton'))
 
 WebUI.switchToWindowIndex(2)
 
-WebUI.click(findTestObject('Portal/page_mailconfirmationpage/nextbutton'))
+WebUI.click(findTestObject('Portal/page_mailtrap/page_mailconfirmationpage/nextbutton'))
 
-WebUI.setText(findTestObject('Portal/page_mailconfirmationpage/userpassword'), 'Abcd1234')
+WebUI.setText(findTestObject('Portal/page_mailtrap/page_mailconfirmationpage/userpassword'), 'Abcd1234')
 
-WebUI.click(findTestObject('Portal/page_mailconfirmationpage/accepterm'))
+WebUI.click(findTestObject('Portal/page_mailtrap/page_mailconfirmationpage/accepterm'))
 
-WebUI.click(findTestObject('Portal/page_mailconfirmationpage/portalaccountbutton'))
+WebUI.click(findTestObject('Portal/page_mailtrap/page_mailconfirmationpage/portalaccountbutton'))
 
 WebUI.waitForPageLoad(10)
 
-WebUI.click(findTestObject('Portal/page_mailconfirmationpage/acceptcheckbox'))
+WebUI.click(findTestObject('Portal/page_mailtrap/page_mailconfirmationpage/acceptcheckbox'))
 
-WebUI.click(findTestObject('Portal/page_mailconfirmationpage/buttonacceptinvitation'))
+WebUI.click(findTestObject('Portal/page_mailtrap/page_mailconfirmationpage/buttonacceptinvitation'))
 
-WebUI.verifyElementPresent(findTestObject('Portal/page_mailconfirmationpage/searchguestpatientname'), 5)
+WebUI.verifyElementPresent(findTestObject('Portal/page_mailtrap/page_mailconfirmationpage/searchguestpatientname'), 5)
 
-WebUI.verifyElementPresent(findTestObject('Portal/page_mailconfirmationpage/reportstableview'), 5)
+WebUI.verifyElementPresent(findTestObject('Portal/page_mailtrap/page_mailconfirmationpage/reportstableview'), 5)
 
-WebUI.verifyElementPresent(findTestObject('Portal/page_mailconfirmationpage/csvdownloadlink'), 5)
+WebUI.verifyElementPresent(findTestObject('Portal/page_mailtrap/page_mailconfirmationpage/csvdownloadlink'), 5)
 
-WebUI.setText(findTestObject('Portal/page_mailconfirmationpage/searchguestpatientname'), 'karnosh')
+WebUI.setText(findTestObject('Portal/page_mailtrap/page_mailconfirmationpage/searchguestpatientname'), 'Clint')
 
 WebUI.waitForElementClickable(findTestObject('Portal/page_guardanthealth/searchpatientname'), 5)
 
 WebUI.click(findTestObject('Portal/page_guardanthealth/searchpatientname'))
 
-String strActPatient = WebUI.getText(findTestObject('Portal/page_mailconfirmationpage/verifypatientname'))
+String strActPatient = WebUI.getText(findTestObject('Portal/page_mailtrap/page_mailconfirmationpage/verifypatientname'))
 
-Assert.assertEquals(strActPatient, 'KARNOSH, LINDA', 'Mismatch in PatientName')
+Assert.assertEquals(strActPatient, 'LOVEMAN, CLINT', 'Mismatch in PatientName')
 
 WebUI.waitForPageLoad(10)
 

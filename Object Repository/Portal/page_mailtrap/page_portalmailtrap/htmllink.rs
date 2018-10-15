@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>reportstableview</name>
+   <name>htmllink</name>
    <tag></tag>
-   <elementGuidId>6289bf47-2f9a-4c92-89ae-43c1255a80d4</elementGuidId>
+   <elementGuidId>de7aed8e-fb52-42ee-8be2-17e1e8955819</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//a[@class='dashboard__tableview-link']</value>
+         <value>//a[@class='tab-item current']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
