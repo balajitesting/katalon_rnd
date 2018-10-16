@@ -110,12 +110,12 @@ class BIP_delete {
 		}
 		temp[3] = temp[3].substring(1, temp[3].length());
 
-		
+
 		query = "Delete from u_ghcontrolqc where flowcellid ='"+temp[3]+"'";
 		System.out.println(query);
 		delete_count = db.executeUpdate(query);
 		System.out.println("Deleted " + delete_count + " rows");
-		
+
 		query = "delete from u_ghsampleqcmetrics Where flowcellid ='"+temp[3]+"'";
 		System.out.println(query);
 		delete_count = db.executeUpdate(query);
@@ -145,6 +145,5 @@ class BIP_delete {
 		System.out.println(query);
 		delete_count = db.executeUpdate(query);
 		System.out.println("Deleted " + delete_count + " rows");
-
 	}
 }
