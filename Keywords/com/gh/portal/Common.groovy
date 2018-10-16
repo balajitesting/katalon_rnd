@@ -40,4 +40,20 @@ public class Common {
 
 		WebUI.click(findTestObject('Portal/button_SIGN IN'))
 	}
+
+	@Keyword
+	def mailTrapLogin(String usr, String pwd){
+
+		WebUI.openBrowser('')
+
+		WebUI.navigateToUrl('https://mailtrap.io')
+
+		WebUI.click(findTestObject('Portal/page_mailtrap/mailtraploginbutton/loginbutton'))
+
+		WebUI.setText(findTestObject('Portal/page_mailtrap/safeemailtestingpage/mailtrapemail'),usr)
+
+		WebUI.setText(findTestObject('Portal/page_mailtrap/safeemailtestingpage/mailtrapuserpassword'),pwd)
+
+		WebUI.click(findTestObject('Portal/page_mailtrap/safeemailtestingpage/signinbutton'))
+	}
 }
