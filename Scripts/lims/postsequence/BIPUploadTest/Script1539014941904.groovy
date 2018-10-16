@@ -17,7 +17,7 @@ WebUI.comment('ENT-6328')
 System.out.println("flowcellID_full " + flowcellID_full);
 CustomKeywords.'com.gh.lims.Common.logon'('cliauserreporting', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 //Manual QC
-//String flowcellID_full = '170802_NB551146_0005_VV34GMBGX2'  
+//String flowcellID_full = '170616_NB501068_0284_AHWCCHBGXY'  
 //Auto QC
 //String flowcellID_full = '180430_NB551146_0095_AH7NK7BGX5'
 CustomKeywords.'com.gh.db.BIP_delete.delete_data'(flowcellID_full)

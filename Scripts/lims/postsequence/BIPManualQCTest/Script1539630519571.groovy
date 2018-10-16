@@ -13,49 +13,47 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.comment('ENT-6481')
+WebUI.comment('ENT-6482')
 
-String flowcellID_full = '180628_NB501054_0437_AHMN5YBGX5'
+String flowcellID_full = '170616_NB501068_0284_AHWCCHBGXY'
 
-String flowcellID = 'HMN5YBGX5'
+String flowcellID = 'HWCCHBGXY'
 
 flowcellID = WebUI.callTestCase(findTestCase('lims/postsequence/BIPUploadTest'), [('flowcellID_full') : flowcellID_full], 
     FailureHandling.STOP_ON_FAILURE)
 
+CustomKeywords.'com.gh.db.ResetFlowCellStatus.reset'(flowcellID, 'ManualSeqQC')
+
 CustomKeywords.'com.gh.lims.Common.logon'('cliauserreporting', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
+WebUI.waitForPageLoad(4)
 
-WebUI.waitForElementClickable(findTestObject('LIMS/PostSequence/SeqQC Auto TramStop'), 5)
-WebUI.click(findTestObject('LIMS/PostSequence/SeqQC Auto TramStop'))
+WebUI.waitForElementClickable(findTestObject('Object Repository/LIMS/PostSequence/SeqQC_ManualTramStop'), 5)
 
-WebUI.setText(findTestObject('Object Repository/LIMS/PostSequence/Page_SeqQCAutoPass/Search_Textbox'), flowcellID)
+WebUI.click(findTestObject('Object Repository/LIMS/PostSequence/SeqQC_ManualTramStop'))
 
-WebUI.click(findTestObject('Object Repository/LIMS/PostSequence/Page_SeqQCAutoPass/Search_OK_Button'))
+WebUI.setText(findTestObject('Object Repository/LIMS/PostSequence/Page_SeqQCManualPass/Search_Textbox'), flowcellID)
 
-WebUI.waitForPageLoad(4);
+WebUI.click(findTestObject('Object Repository/LIMS/PostSequence/Page_SeqQCManualPass/Search_OK_Button'))
 
-auto_QC = 'LIMS/PostSequence/Page_SeqQCAutoPass/Seq_QC Auto_Pass_Proceed_Button'
+WebUI.waitForPageLoad(4)
 
-CustomKeywords.'com.gh.lims.Common.setClick'(auto_QC)
+CustomKeywords.'com.gh.lims.Common.setClick'('Object Repository/LIMS/PostSequence/Page_SeqQCAutoPass/SingleClick_SeqQCButton')
 
-WebUI.waitForPageLoad(4);
+WebUI.waitForPageLoad(4)
 
-vSave = 'LIMS/PostSequence/Page_SeqQCAutoPass/VerifySave_Button'
+WebUI.waitForElementVisible(findTestObject('Object Repository/LIMS/PostSequence/Page_SeqQCAutoPass/Verify_SaveButton'), 30)
+WebUI.waitForElementClickable(findTestObject('Object Repository/LIMS/PostSequence/Page_SeqQCAutoPass/Verify_SaveButton'), 30)
+CustomKeywords.'com.gh.lims.Common.setClick'('Object Repository/LIMS/PostSequence/Page_SeqQCAutoPass/Verify_SaveButton')
 
-CustomKeywords.'com.gh.lims.Common.setClick'(vSave)
-
-WebUI.waitForPageLoad(30);
+WebUI.waitForPageLoad(4)
 
 WebUI.waitForElementVisible(findTestObject('Object Repository/LIMS/PostSequence/Page_SeqQCAutoPass/Popup/OK_Button'), 30)
 WebUI.waitForElementClickable(findTestObject('Object Repository/LIMS/PostSequence/Page_SeqQCAutoPass/Popup/OK_Button'), 30)
 WebUI.click(findTestObject('Object Repository/LIMS/PostSequence/Page_SeqQCAutoPass/Popup/OK_Button'))
 
+WebUI.waitForPageLoad(4)
 WebUI.click(findTestObject('LIMS/logout/img'))
-
 WebUI.closeBrowser()
-
-return flowcellID
-
-
 
 
