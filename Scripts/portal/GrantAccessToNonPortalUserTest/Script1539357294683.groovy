@@ -26,7 +26,7 @@ String strEmailAddress = ('Nonportal' + CustomKeywords.'com.gh.core.TestUtil.get
 
 CustomKeywords.'com.gh.portal.Common.logon'('venkat.mamillapelli@gmail.com', 'Pa22word')
 
-WebUI.setText(findTestObject('Portal/page_guardanthealth/inputpatientname'), 'Clint')
+WebUI.setText(findTestObject('Portal/page_guardanthealth/inputpatientname'), 'LINDA')
 
 WebUI.click(findTestObject('Portal/page_guardanthealth/searchpatientname'))
 
@@ -100,7 +100,7 @@ WebUI.verifyElementPresent(findTestObject('Portal/page_mailtrap/page_mailconfirm
 
 WebUI.verifyElementPresent(findTestObject('Portal/page_mailtrap/page_mailconfirmationpage/csvdownloadlink'), 5)
 
-WebUI.setText(findTestObject('Portal/page_mailtrap/page_mailconfirmationpage/searchguestpatientname'), 'Clint')
+WebUI.setText(findTestObject('Portal/page_mailtrap/page_mailconfirmationpage/searchguestpatientname'), 'LINDA')
 
 WebUI.waitForElementClickable(findTestObject('Portal/page_guardanthealth/searchpatientname'), 5)
 
@@ -108,7 +108,7 @@ WebUI.click(findTestObject('Portal/page_guardanthealth/searchpatientname'))
 
 String strActPatient = WebUI.getText(findTestObject('Portal/page_mailtrap/page_mailconfirmationpage/verifypatientname'))
 
-Assert.assertEquals(strActPatient, 'LOVEMAN, CLINT', 'Mismatch in PatientName')
+Assert.assertEquals(strActPatient, 'FORTIER, LINDA', 'Mismatch in PatientName')
 
 WebUI.waitForPageLoad(10)
 

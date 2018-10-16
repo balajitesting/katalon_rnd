@@ -3,6 +3,6 @@
    <description></description>
    <name>GrantAccessToNonPortalUserTest</name>
    <tag></tag>
-   <comment></comment>
+   <comment>Run: ENTSW-TC-3029</comment>
    <testCaseGuid>d71e8667-fc7d-4445-8860-bc408990d9ca</testCaseGuid>
 </TestCaseEntity>
