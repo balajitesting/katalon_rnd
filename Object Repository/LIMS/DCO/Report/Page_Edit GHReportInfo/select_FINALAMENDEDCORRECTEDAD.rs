@@ -67,6 +67,6 @@
       <matchCondition>equals</matchCondition>
       <name>ref_element</name>
       <type>Main</type>
-      <value>Object Repository/LIMS/DCO/Reporting/Page_Edit GHReportInfo/iframe_Your browser does not s</value>
+      <value>Object Repository/LIMS/DCO/Report/Page_Edit GHReportInfo/iframe_Your browser does not s</value>
    </webElementProperties>
 </WebElementEntity>

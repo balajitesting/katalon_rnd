@@ -6,11 +6,11 @@
    <elementGuidId>461f2049-06ba-499b-b6bd-ab177fae7ff1</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-      </entry>
-      <entry>
          <key>BASIC</key>
          <value>id(&quot;pr0_u_ghrequeststatus&quot;)[count(. | //select[@id = 'pr0_u_ghrequeststatus' and @ref_element = 'Object Repository/LIMS/DCO/Reporting/Page_All Requests/iframe_Your browser does not s' and @ref_element_is_shadow_root = 'true']) = count(//select[@id = 'pr0_u_ghrequeststatus' and @ref_element = 'Object Repository/LIMS/DCO/Reporting/Page_All Requests/iframe_Your browser does not s' and @ref_element_is_shadow_root = 'true'])]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -76,6 +76,6 @@
       <matchCondition>equals</matchCondition>
       <name>ref_element</name>
       <type>Main</type>
-      <value>Object Repository/LIMS/DCO/Reporting/Page_All Requests/iframe_Your browser does not s</value>
+      <value>Object Repository/LIMS/DCO/Report/Page_All Requests/iframe_Your browser does not s</value>
    </webElementProperties>
 </WebElementEntity>
