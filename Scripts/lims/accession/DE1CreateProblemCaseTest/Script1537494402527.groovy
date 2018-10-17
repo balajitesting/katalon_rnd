@@ -85,7 +85,7 @@ aNumber = WebUI.getAttribute(findTestObject(orDE1 + 'Page_Iteration/input_reques
 
 println(aNumber)
 
-WebUI.waitForElementPresent(findTestObject('Object Repository/LIMS/logout/img'), 15)
+WebUI.waitForElementPresent(findTestObject('LIMS/logout/img'), 15)
 
 WebUI.click(findTestObject('LIMS/logout/img'))
 

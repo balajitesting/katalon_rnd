@@ -34,13 +34,13 @@ public class Report {
 	@Keyword
 	def searchRequest(requestId){
 
-		WebUI.click(findTestObject('LIMS/DCO/Reporting/Page_Iteration/td_All Requests'))
+		WebUI.click(findTestObject('LIMS/DCO/Report/Page_Iteration/td_All Requests'))
 
-		WebUI.setText(findTestObject('LIMS/DCO/Reporting/Page_Request List/input_searchtext'), requestId)
+		WebUI.setText(findTestObject('LIMS/DCO/Report/Page_Request List/input_searchtext'), requestId)
 
-		WebUI.click(findTestObject('LIMS/DCO/Reporting/Page_Request List/td_OK'))
+		WebUI.click(findTestObject('LIMS/DCO/Report/Page_Request List/td_OK'))
 
-		def edit = 'LIMS/DCO/Reporting/Page_Request List/td_Edit'
+		def edit = 'LIMS/DCO/Report/Page_Request List/td_Edit'
 
 		Common.setClick(edit)
 	}

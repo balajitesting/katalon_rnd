@@ -34,25 +34,25 @@ String ReportStatus = 'Cancelled'
 
 CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserReporting', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
-WebUI.click(findTestObject('LIMS/DCO/Reporting/td_Cancel Request'))
+WebUI.click(findTestObject('LIMS/DCO/Report/td_Cancel Request'))
 
-WebUI.setText(findTestObject('LIMS/DCO/Reporting/input_searchtext'), A_Number)
+WebUI.setText(findTestObject('LIMS/DCO/Report/input_searchtext'), A_Number)
 
-WebUI.click(findTestObject('LIMS/DCO/Reporting/button_OK'))
+WebUI.click(findTestObject('LIMS/DCO/Report/button_OK'))
 
-runWorkflow = 'LIMS/DCO/Reporting/div_Run Workflow'
+runWorkflow = 'LIMS/DCO/Report/div_Run Workflow'
 
 CustomKeywords.'com.gh.lims.Common.setClick'(runWorkflow)
 
-WebUI.click(findTestObject('LIMS/DCO/Reporting/div_Generate Cancelled_Report'))
+WebUI.click(findTestObject('LIMS/DCO/Report/div_Generate Cancelled_Report'))
 
-WebUI.click(findTestObject('LIMS/DCO/Reporting/button_OK_report'))
+WebUI.click(findTestObject('LIMS/DCO/Report/button_OK_report'))
 
-WebUI.click(findTestObject('LIMS/DCO/Reporting/Page_CNV/div_Release Report'))
+WebUI.click(findTestObject('LIMS/DCO/Report/Page_CNV/div_Release Report'))
 
 Thread.sleep(4000)
 
-WebUI.click(findTestObject('LIMS/DCO/Reporting/button_OK_2'))
+WebUI.click(findTestObject('LIMS/DCO/Report/button_OK_2'))
 
 WebUI.waitForElementPresent(findTestObject('LIMS/logout/img'), 10)
 

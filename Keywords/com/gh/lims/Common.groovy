@@ -46,11 +46,11 @@ public class Common {
 
 		WebUI.navigateToUrl(GlobalVariable.limsUrl)
 
-		WebUI.setText(findTestObject('LIMS/DCO/Reporting/input_username'), username)
+		WebUI.setText(findTestObject('LIMS/DCO/Report/input_username'), username)
 
-		WebUI.setEncryptedText(findTestObject('LIMS/DCO/Reporting/input_password'), password)
+		WebUI.setEncryptedText(findTestObject('LIMS/DCO/Report/input_password'), password)
 
-		WebUI.click(findTestObject('LIMS/DCO/Reporting/button_Logon'))
+		WebUI.click(findTestObject('LIMS/DCO/Report/button_Logon'))
 	}
 
 	/**
