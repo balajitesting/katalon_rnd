@@ -23,7 +23,7 @@ CustomKeywords.'com.gh.lims.Common.logon'('abaca', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
 String requestID = 'A0120935'
 
-CustomKeywords.'com.gh.db.ResetRequestStatus.resetBilling'(requestID)
+CustomKeywords.'com.gh.db.LimsDBDataReset.resetBilling'(requestID)
 
 //Search for the RequestId in the Billing Screen
 

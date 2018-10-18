@@ -31,4 +31,17 @@ public class LimsDBDataReset {
 
 		db.execute(query);
 	}
+	
+	@Keyword
+	def resetBilling(String requestID) {
+
+		LimsOracleDBService db = new LimsOracleDBService();
+		db.connectDB(GlobalVariable.oracleDBurl, GlobalVariable.oracleDBuser, GlobalVariable.oracleDBpwd);
+
+		String updateBilling = "update s_request set u_billingverified = null,  u_abnstatus = null, u_releventnsclc = null, u_patientmedstatus = null, u_ispatientbenefitsauth = null where s_requestid = '"+requestID+"'";
+		db.execute(updateBilling);
+
+		String delBilling = "delete from u_ghbilling where  requestid = '"+requestID+"'";
+		db.execute(delBilling);
+	}
 }
