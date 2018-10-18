@@ -1,10 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>select_001  002  003  004  005</name>
+   <name>sec_relation_to_patient</name>
    <tag></tag>
-   <elementGuidId>1d001174-a13e-4c9b-a4d0-6f39de38da13</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <elementGuidId>df4c97c7-f162-45c0-a925-ef7947caa3d5</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//select[@id='relationship_s']</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//select[@id = 'promotioncode' and @name = 'promotioncode' and (text() = '
+				   				  
+								  
+									001
+
+								  
+									002
+
+								  
+									003
+
+								  
+									004
+
+								  
+									005
+
+								  
+									006
+
+								  
+									007
+
+								  
+									008
+
+								  
+									010
+
+								  
+									011
+
+								  
+								' or . = '
+				   				  
+								  
+									001
+
+								  
+									002
+
+								  
+									003
+
+								  
+									004
+
+								  
+									005
+
+								  
+									006
+
+								  
+									007
+
+								  
+									008
+
+								  
+									010
+
+								  
+									011
+
+								  
+								')]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

@@ -82,4 +82,5 @@ class ResetRequestStatus {
 		String query = "update s_request set u_ghrequeststatus = '"+status+"' where s_requestid = '"+requestID+"'";
 		db.execute(query);
 	}
+
 }
