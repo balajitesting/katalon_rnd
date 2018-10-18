@@ -29,9 +29,9 @@ CustomKeywords.'com.gh.db.ResetRequestStatus.resetBilling'(requestID)
 
 WebUI.click(findTestObject('LIMS/DataEntryBilling/Billing/Search/td_dataentrybilling_billing'))
 
-WebUI.setText(findTestObject('Billing List/input_Search_searchtext'), requestID)
+WebUI.setText(findTestObject('LIMS/DataEntryBilling/Billing/Search/input_Search_searchtext'), requestID)
 
-WebUI.click(findTestObject('Billing List/td_OK'))
+WebUI.click(findTestObject('LIMS/DataEntryBilling/Billing/Search/td_OK'))
 
 Thread.sleep(3000) //Wait command is not working properly. Hence, implemented the same.
 
@@ -83,9 +83,9 @@ WebUI.click(findTestObject('LIMS/DataEntryBilling/Billing/EditScreen/input_saveA
 
 //Search Screen to verify the Result
 
-WebUI.setText(findTestObject('Billing List/input_Search_searchtext'), requestID)
+WebUI.setText(findTestObject('LIMS/DataEntryBilling/Billing/Search/input_Search_searchtext'), requestID)
 
-WebUI.click(findTestObject('Billing List/td_OK'))
+WebUI.click(findTestObject('LIMS/DataEntryBilling/Billing/Search/td_OK'))
 
 WebUI.switchToFrame(findTestObject('LIMS/Requests/AllRequests/list_iFrame'), 3)
 
