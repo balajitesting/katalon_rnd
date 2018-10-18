@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>select_001  002  003  004  005</name>
+   <name>promotion_code</name>
    <tag></tag>
    <elementGuidId>1d001174-a13e-4c9b-a4d0-6f39de38da13</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
