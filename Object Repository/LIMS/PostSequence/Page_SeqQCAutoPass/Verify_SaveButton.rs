@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//table[@id='verifysave']/tbody/tr/td/table/tbody/tr/td/img</value>
+         <value>//*[@id=&quot;verifysave&quot;]/tbody/tr/td/table/tbody/tr[1]/td/img</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

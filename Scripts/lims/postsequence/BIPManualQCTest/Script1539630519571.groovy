@@ -42,8 +42,8 @@ CustomKeywords.'com.gh.lims.Common.setClick'('Object Repository/LIMS/PostSequenc
 
 WebUI.waitForPageLoad(4)
 
-WebUI.waitForElementVisible(findTestObject('Object Repository/LIMS/PostSequence/Page_SeqQCAutoPass/Verify_SaveButton'), 30)
-WebUI.waitForElementClickable(findTestObject('Object Repository/LIMS/PostSequence/Page_SeqQCAutoPass/Verify_SaveButton'), 30)
+WebUI.waitForElementVisible(findTestObject('LIMS/PostSequence/Page_SeqQCAutoPass/Verify_SaveButton'), 30)
+WebUI.waitForElementClickable(findTestObject('LIMS/PostSequence/Page_SeqQCAutoPass/Verify_SaveButton'), 30)
 CustomKeywords.'com.gh.lims.Common.setClick'('Object Repository/LIMS/PostSequence/Page_SeqQCAutoPass/Verify_SaveButton')
 
 WebUI.waitForPageLoad(4)

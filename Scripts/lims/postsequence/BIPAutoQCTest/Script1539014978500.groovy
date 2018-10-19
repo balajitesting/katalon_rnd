@@ -34,13 +34,13 @@ WebUI.click(findTestObject('Object Repository/LIMS/PostSequence/Page_SeqQCAutoPa
 
 WebUI.waitForPageLoad(4);
 
-auto_QC = 'LIMS/PostSequence/Page_SeqQCAutoPass/Seq_QC Auto_Pass_Proceed_Button'
+auto_QC = 'Object Repository/LIMS/PostSequence/Page_SeqQCAutoPass/Seq_QC Auto_Pass_Proceed_Button'
 
 CustomKeywords.'com.gh.lims.Common.setClick'(auto_QC)
 
 WebUI.waitForPageLoad(4);
 
-vSave = 'LIMS/PostSequence/Page_SeqQCAutoPass/VerifySave_Button'
+vSave = 'Object Repository/LIMS/PostSequence/Page_SeqQCAutoPass/Verify_SaveButton'
 
 CustomKeywords.'com.gh.lims.Common.setClick'(vSave)
 
