@@ -19,6 +19,14 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable
 
 public class Acession {
+	
+	/**
+	 * 
+	 * @param requestId
+	 * @return
+	 * 
+	 * ToDo:This function shall be renamed as searchAndEditRequest
+	 */
 
 	@Keyword
 	def searchRequest(requestId){

@@ -22,7 +22,7 @@ String aNumber = WebUI.callTestCase(findTestCase('lims/request/DataVerificationW
 
 CustomKeywords.'com.gh.lims.Common.logon'('abaca', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
-WebUI.click(findTestObject('Object Repository/LIMS/Billing/Page_Iteration/td_Billing'))
+WebUI.click(findTestObject('LIMS/DataEntryBilling/Billing/EditScreen/td_Billing'))
 
 WebUI.setText(findTestObject('LIMS/DataEntryBilling/Billing/Search/input_searchtext'), aNumber)
 
