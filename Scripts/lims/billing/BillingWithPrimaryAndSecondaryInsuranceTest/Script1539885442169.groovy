@@ -79,7 +79,7 @@ WebUI.click(findTestObject('LIMS/DataEntryBilling/Billing/EditScreen/payor2'))
 
 WebUI.switchToDefaultContent()
 
-WebUI.click(findTestObject('LIMS/DataEntryBilling/Billing/EditScreen/input_saveAccession02'))
+WebUI.click(findTestObject('LIMS/DataEntryBilling/Billing/EditScreen/input_save'))
 
 //Search Screen to verify the Result
 
