@@ -61,7 +61,7 @@ WebUI.switchToDefaultContent()
 
 WebUI.setText(findTestObject('LIMS/DataEntryBilling/Billing/EditScreen/input_subscriberid_p'), '23145')
 
-WebUI.click(findTestObject('LIMS/DataEntryBilling/Billing/EditScreen/input_saveAccession02'))
+WebUI.click(findTestObject('LIMS/DataEntryBilling/Billing/EditScreen/input_save'))
 
 WebUI.waitForElementPresent(findTestObject('Object Repository/LIMS/logout/img'), 15)
 

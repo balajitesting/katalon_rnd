@@ -68,10 +68,10 @@ WebUI.switchToDefaultContent()
 
 WebUI.setText(findTestObject('LIMS/DataEntryBilling/Billing/EditScreen/input_subscriberid_p'), '23145')
 
-WebUI.selectOptionByValue(findTestObject('LIMS/DataEntryBilling/Billing/EditScreen/sec_relation_to_patient'),
+WebUI.selectOptionByValue(findTestObject('LIMS/DataEntryBilling/Billing/EditScreen/ter_relation_to_patient'),
 	'Self', true)
 
-WebUI.click(findTestObject('LIMS/DataEntryBilling/Billing/EditScreen/secondary_payor'))
+WebUI.click(findTestObject('LIMS/DataEntryBilling/Billing/EditScreen/tertiary_payor'))
 
 WebUI.switchToWindowIndex(1)
 
