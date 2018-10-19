@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>input_Username_username</name>
+   <name>BIPUploadBySampleTramStop</name>
    <tag></tag>
-   <elementGuidId>7988b024-570d-47af-88b0-dd43d882301b</elementGuidId>
+   <elementGuidId>e711add4-9440-47ee-8289-de728c715ac2</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//input[@id='databaseusername']</value>
+         <value>//*[@id=&quot;bipuploadsample_node&quot;]/tbody/tr[1]/td</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -17,90 +17,70 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>input</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>type</name>
-      <type>Main</type>
-      <value>text</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>id</name>
-      <type>Main</type>
-      <value>databaseusername</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>name</name>
-      <type>Main</type>
-      <value>username</value>
+      <value>td</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>maxlength</name>
+      <name>align</name>
       <type>Main</type>
-      <value>40</value>
+      <value>center</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>tabindex</name>
+      <name>valign</name>
       <type>Main</type>
-      <value>1</value>
+      <value>bottom</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>sitemap_TramStopSelCell</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;databaseusername&quot;)</value>
+      <value>id(&quot;bipuploadsample_node&quot;)/tbody[1]/tr[1]/td[@class=&quot;sitemap_TramStopSelCell&quot;]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>xpath:attributes</name>
-      <value>//input[@id='databaseusername']</value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
-      <value>//form[@id='databaselogonform']/table/tbody/tr/td[2]/input</value>
+      <value>//table[@id='bipuploadsample_node']/tbody/tr/td</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Username:'])[1]/following::input[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Reporting Work Queues'])[2]/following::td[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Enter logon details and select a database:'])[1]/following::input[4]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='TB Review'])[2]/following::td[5]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Password:'])[1]/preceding::input[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='BIP Upload By Sample'])[2]/preceding::td[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Database:'])[1]/preceding::input[2]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='LD Review'])[2]/preceding::td[10]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
-      <value>//td[2]/input</value>
+      <value>//tr[3]/td[2]/table/tbody/tr/td[6]/table/tbody/tr/td</value>
    </webElementXpaths>
 </WebElementEntity>

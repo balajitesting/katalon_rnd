@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>input_Subscriber Id_subscriber_5</name>
+   <name>td_OK</name>
    <tag></tag>
-   <elementGuidId>c6e0bae6-5986-4276-b0e5-77593a59d293</elementGuidId>
+   <elementGuidId>96985e58-6a2c-434f-9187-cef294f27b4a</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//input[@id='subscriberid_s']</value>
+         <value>//button[@id='okbutton']/table/tbody/tr/td[3]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -17,90 +17,77 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>input</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>type</name>
-      <type>Main</type>
-      <value>text</value>
+      <value>td</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>tabindex</name>
+      <name>valign</name>
       <type>Main</type>
-      <value>735</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>name</name>
-      <type>Main</type>
-      <value>subscriberid_s</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>id</name>
-      <type>Main</type>
-      <value>subscriberid_s</value>
+      <value>middle</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>size</name>
+      <name>align</name>
       <type>Main</type>
-      <value>25</value>
+      <value>center</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>OK</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;subscriberid_s&quot;)</value>
+      <value>id(&quot;okbutton&quot;)/table[1]/tbody[1]/tr[1]/td[3]</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>ref_element</name>
+      <type>Main</type>
+      <value>Object Repository/LIMS/PostSequence/Page_BipUploadBySample/PopUp/iframe_LABVANTAGE_dlg_frame0</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>xpath:attributes</name>
-      <value>//input[@id='subscriberid_s']</value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
-      <value>//form[@id='m1']/table[2]/tbody/tr[3]/td[2]/table/tbody/tr[5]/td/table/tbody/tr[2]/td[2]/input</value>
+      <value>//button[@id='okbutton']/table/tbody/tr/td[3]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Subscriber Id'])[2]/following::input[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Enter Sample Id'])[1]/following::td[4]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='CompanyName'])[2]/following::input[2]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Search Bar'])[1]/following::td[10]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='GroupNo'])[2]/preceding::input[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Cancel'])[1]/preceding::td[3]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='First Name'])[5]/preceding::input[2]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)=concat('id(', '&quot;', 'okbutton', '&quot;', ')/table[1]/tbody[1]/tr[1]/td[3]')])[1]/preceding::td[8]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
-      <value>//td[2]/table/tbody/tr[5]/td/table/tbody/tr[2]/td[2]/input</value>
+      <value>//button/table/tbody/tr/td[3]</value>
    </webElementXpaths>
 </WebElementEntity>

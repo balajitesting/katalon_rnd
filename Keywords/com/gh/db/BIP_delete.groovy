@@ -146,4 +146,49 @@ class BIP_delete {
 		delete_count = db.executeUpdate(query);
 		System.out.println("Deleted " + delete_count + " rows");
 	}
+
+
+	@Keyword
+	def delete_data_sampleID(String sampleID) {
+
+
+		LimsOracleDBService db = new LimsOracleDBService();
+		db.connectDB(GlobalVariable.oracleDBurl, GlobalVariable.oracleDBuser, GlobalVariable.oracleDBpwd);
+
+		String query = "Delete from U_Ghsnv Where sampleid = '"+sampleID+"'";
+		int delete_count = 0;
+		System.out.println(query);
+		delete_count = db.executeUpdate(query);
+		System.out.println("Deleted " + delete_count + " rows");
+
+		query = "Delete from U_Ghcnvgene Where sampleid = '"+sampleID+"'";
+		delete_count = 0;
+		System.out.println(query);
+		delete_count = db.executeUpdate(query);
+		System.out.println("Deleted " + delete_count + " rows");
+
+		query = "Delete from U_Ghfusion Where sampleid = '"+sampleID+"'";
+		delete_count = 0;
+		System.out.println(query);
+		delete_count = db.executeUpdate(query);
+		System.out.println("Deleted " + delete_count + " rows");
+
+		query = "Delete from U_Ghindel Where sampleid = '"+sampleID+"'";
+		delete_count = 0;
+		System.out.println(query);
+		delete_count = db.executeUpdate(query);
+		System.out.println("Deleted " + delete_count + " rows");
+
+		query = "Delete from U_Ghreportinfo Where sampleid = '"+sampleID+"'";
+		delete_count = 0;
+		System.out.println(query);
+		delete_count = db.executeUpdate(query);
+		System.out.println("Deleted " + delete_count + " rows");
+
+		query = "Delete from u_ghboard Where sampleid = '"+sampleID+"'";
+		delete_count = 0;
+		System.out.println(query);
+		delete_count = db.executeUpdate(query);
+		System.out.println("Deleted " + delete_count + " rows");
+	}
 }

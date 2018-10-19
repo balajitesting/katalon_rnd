@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>BIPUploadBySample</name>
+   <tag></tag>
+   <comment>ENT-6684</comment>
+   <testCaseGuid>3725d55d-8eaa-4532-b537-1192c051a112</testCaseGuid>
+   <variable>
+      <defaultValue>'180430_NB551146_0095_AH7NK7BGX5'</defaultValue>
+      <description></description>
+      <id>7947fbb3-bbd2-4bdf-981e-249be702fe78</id>
+      <masked>false</masked>
+      <name>flowcellID_full</name>
+   </variable>
+</TestCaseEntity>
