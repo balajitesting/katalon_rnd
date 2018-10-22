@@ -15,9 +15,13 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.comment('ENT-6481')
 
-String flowcellID_full = '180628_NB501054_0437_AHMN5YBGX5'
+//String flowcellID_full = '180628_NB501054_0437_AHMN5YBGX5'
 
-String flowcellID = 'HMN5YBGX5'
+//String flowcellID = 'HMN5YBGX5'
+
+String flowcellID_full = '170616_NB501068_0284_AHWCCHBGXY'
+
+String flowcellID = 'HWCCHBGXY'
 
 flowcellID = WebUI.callTestCase(findTestCase('lims/postsequence/BIPUploadTest'), [('flowcellID_full') : flowcellID_full], 
     FailureHandling.STOP_ON_FAILURE)
@@ -34,20 +38,20 @@ WebUI.click(findTestObject('Object Repository/LIMS/PostSequence/Page_SeqQCAutoPa
 
 WebUI.waitForPageLoad(4);
 
-auto_QC = 'LIMS/PostSequence/Page_SeqQCAutoPass/Seq_QC Auto_Pass_Proceed_Button'
+auto_QC = 'Object Repository/LIMS/PostSequence/Page_SeqQCAutoPass/Seq_QC Auto_Pass_Proceed_Button'
 
 CustomKeywords.'com.gh.lims.Common.setClick'(auto_QC)
 
 WebUI.waitForPageLoad(4);
 
-vSave = 'LIMS/PostSequence/Page_SeqQCAutoPass/VerifySave_Button'
+vSave = 'Object Repository/LIMS/PostSequence/Page_SeqQCAutoPass/Verify_SaveButton'
 
 CustomKeywords.'com.gh.lims.Common.setClick'(vSave)
 
-WebUI.waitForPageLoad(30);
+WebUI.waitForPageLoad(60);
 
-WebUI.waitForElementVisible(findTestObject('Object Repository/LIMS/PostSequence/Page_SeqQCAutoPass/Popup/OK_Button'), 30)
-WebUI.waitForElementClickable(findTestObject('Object Repository/LIMS/PostSequence/Page_SeqQCAutoPass/Popup/OK_Button'), 30)
+WebUI.waitForElementVisible(findTestObject('Object Repository/LIMS/PostSequence/Page_SeqQCAutoPass/Popup/OK_Button'), 60)
+WebUI.waitForElementClickable(findTestObject('Object Repository/LIMS/PostSequence/Page_SeqQCAutoPass/Popup/OK_Button'), 60)
 WebUI.click(findTestObject('Object Repository/LIMS/PostSequence/Page_SeqQCAutoPass/Popup/OK_Button'))
 
 WebUI.click(findTestObject('LIMS/logout/img'))

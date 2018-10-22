@@ -19,7 +19,7 @@ WebUI.comment('Run: ENTSW-TC-2878 , ENTSW-TC-2879')
 
 'Enable when run this test alone'	
 String sampleID = 'A011245901'
-CustomKeywords.'com.gh.db.ResetSampleStatus.reset'(sampleID, 'Batched For Plasma Isolation')
+CustomKeywords.'com.gh.db.LimsDBDataReset.resetSampleStatus'(sampleID, 'Batched For Plasma Isolation')
 
 
 String strCheck

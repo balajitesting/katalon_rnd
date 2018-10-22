@@ -31,7 +31,7 @@ public class LimsDBDataReset {
 
 		db.execute(query);
 	}
-	
+
 	@Keyword
 	def resetBilling(String requestID) {
 
@@ -44,4 +44,230 @@ public class LimsDBDataReset {
 		String delBilling = "delete from u_ghbilling where  requestid = '"+requestID+"'";
 		db.execute(delBilling);
 	}
+
+	/**
+	 *
+	 * Valid status update value
+	 *
+	 * AutoPass
+	 * ManualSeqQC
+	 */
+	@Keyword
+	def resetFlowCellStatus(String flowcellID, String status) {
+
+		LimsOracleDBService db = new LimsOracleDBService();
+		db.connectDB(GlobalVariable.oracleDBurl, GlobalVariable.oracleDBuser, GlobalVariable.oracleDBpwd);
+
+		String query = "update u_ghflowcell set flowcellstatus = '"+status+"' where u_ghflowcellid = '"+flowcellID+"'";
+		db.execute(query);
+	}
+
+	/**
+	 * Click element
+	 * @param to Katalon test object
+	 *
+	 * Valid status update value
+	 *
+	 *  Sent To Nof1
+	 Pending Clinical Diagnosis
+	 Ready for Plasma Isolation
+	 Redo Samples
+	 CLS Review and Release Report
+	 Sequencing QC
+	 Hold Report Review
+	 TB Review BIP Data
+	 Ready for Release Report
+	 Pending Queue
+	 LD Review BIP Data
+	 Released
+	 Closed
+	 Ready for Generate Report
+	 Ready for IVD Review
+	 Ready for IVD Report Generation and Release
+	 Generate and Release Cancelled Report
+	 */
+	@Keyword
+	def resetRequestStatus(String requestID, String status) {
+
+		LimsOracleDBService db = new LimsOracleDBService();
+		db.connectDB(GlobalVariable.oracleDBurl, GlobalVariable.oracleDBuser, GlobalVariable.oracleDBpwd);
+
+		String query = "update s_request set u_ghrequeststatus = '"+status+"' where s_requestid = '"+requestID+"'";
+		db.execute(query);
+	}
+
+
+	/**
+	 *  valid status
+	 *
+	 Batched For Plasma Isolation
+	 Failed
+	 Redo Samples
+	 Ready for Plasma Isolation
+	 Analytics in progress
+	 Ready for DNA Extraction
+	 Freezer
+	 Sample Archive
+	 blank
+	 Depleted
+	 Closed
+	 Ready for IVD Report Generation and Release
+	 Ready for IVD Review
+	 ReadyForDNAExtraction
+	 Waiting for Pool
+	 *
+	 */
+	@Keyword
+	def resetSampleStatus(String sampleID, String status) {
+
+		LimsOracleDBService db = new LimsOracleDBService();
+		db.connectDB(GlobalVariable.oracleDBurl, GlobalVariable.oracleDBuser, GlobalVariable.oracleDBpwd);
+
+		String query = "update s_sample set u_ghsamplestatus = '"+status+"' where s_sampleid = '"+sampleID+"'";
+		db.execute(query);
+	}
+
+	/**
+	 * Click element
+	 * @param to Katalon test object
+	 */
+	@Keyword
+	def BIP_delete_by_flowcellID(String flowcellid) {
+
+
+		LimsOracleDBService db = new LimsOracleDBService();
+		db.connectDB(GlobalVariable.oracleDBurl, GlobalVariable.oracleDBuser, GlobalVariable.oracleDBpwd);
+
+		String query = "Delete from U_Ghsnv Where Runid = '"+flowcellid+"'";
+		int delete_count = 0;
+		System.out.println(query);
+		delete_count = db.executeUpdate(query);
+		System.out.println("Deleted " + delete_count + " rows");
+
+		query = "Delete from U_Ghcnvgene Where Runid = '"+flowcellid+"'";
+		System.out.println(query);
+		delete_count = db.executeUpdate(query);
+		System.out.println("Deleted " + delete_count + " rows");
+
+		query = "Delete from U_Ghfusion Where Runid = '"+flowcellid+"'";
+		System.out.println(query);
+		delete_count = db.executeUpdate(query);
+		System.out.println("Deleted " + delete_count + " rows");
+
+		query = "Delete from U_Ghindel Where Runid = '"+flowcellid+"'";
+		System.out.println(query);
+		delete_count = db.executeUpdate(query);
+		System.out.println("Deleted " + delete_count + " rows");
+
+		query = "Delete from U_Ghreportinfo Where Runid = '"+flowcellid+"'";
+		System.out.println(query);
+		delete_count = db.executeUpdate(query);
+		System.out.println("Deleted " + delete_count + " rows");
+
+		query = "Delete from u_ghboard Where Runid = '"+flowcellid+"'";
+		System.out.println(query);
+		delete_count = db.executeUpdate(query);
+		System.out.println("Deleted " + delete_count + " rows");
+
+		query = "Delete from u_ghlod Where Runid = '"+flowcellid+"'";
+		System.out.println(query);
+		delete_count = db.executeUpdate(query);
+		System.out.println("Deleted " + delete_count + " rows");
+
+		query = "Delete from U_GHMIRATIELIGIBILITY Where Runid = '"+flowcellid+"'";
+		System.out.println(query);
+		delete_count = db.executeUpdate(query);
+		System.out.println("Deleted " + delete_count + " rows");
+
+
+		String [] temp = flowcellid.split("_");
+		if (temp.length != 4) {
+			System.out.println("Invalid flowcellid");
+			System.out.println(flowcellid);
+			System.exit(1);
+		}
+		temp[3] = temp[3].substring(1, temp[3].length());
+
+
+		query = "Delete from u_ghcontrolqc where flowcellid ='"+temp[3]+"'";
+		System.out.println(query);
+		delete_count = db.executeUpdate(query);
+		System.out.println("Deleted " + delete_count + " rows");
+
+		query = "delete from u_ghsampleqcmetrics Where flowcellid ='"+temp[3]+"'";
+		System.out.println(query);
+		delete_count = db.executeUpdate(query);
+		System.out.println("Deleted " + delete_count + " rows");
+
+		query = "delete from u_ghflowcell where u_ghflowcellid ='"+temp[3]+"'";
+		System.out.println(query);
+		delete_count = db.executeUpdate(query);
+		System.out.println("Deleted " + delete_count + " rows");
+
+		query = "delete from u_ghsampleqc Where Runid = '"+flowcellid+"'";
+		System.out.println(query);
+		delete_count = db.executeUpdate(query);
+		System.out.println("Deleted " + delete_count + " rows");
+
+		query = "delete from u_ghsamplecoverage Where Runid = '"+flowcellid+"'";
+		System.out.println(query);
+		delete_count = db.executeUpdate(query);
+		System.out.println("Deleted " + delete_count + " rows");
+
+		query = "delete from u_ghtmb Where Runid = '"+flowcellid+"'";
+		System.out.println(query);
+		delete_count = db.executeUpdate(query);
+		System.out.println("Deleted " + delete_count + " rows");
+
+		query = "delete from u_ghmsi where runid like '"+flowcellid+"'";
+		System.out.println(query);
+		delete_count = db.executeUpdate(query);
+		System.out.println("Deleted " + delete_count + " rows");
+	}
+	
+	@Keyword
+	def BIP_delete_by_sampleID(String sampleID) {
+
+
+		LimsOracleDBService db = new LimsOracleDBService();
+		db.connectDB(GlobalVariable.oracleDBurl, GlobalVariable.oracleDBuser, GlobalVariable.oracleDBpwd);
+
+		String query = "Delete from U_Ghsnv Where sampleid = '"+sampleID+"'";
+		int delete_count = 0;
+		System.out.println(query);
+		delete_count = db.executeUpdate(query);
+		System.out.println("Deleted " + delete_count + " rows");
+
+		query = "Delete from U_Ghcnvgene Where sampleid = '"+sampleID+"'";
+		delete_count = 0;
+		System.out.println(query);
+		delete_count = db.executeUpdate(query);
+		System.out.println("Deleted " + delete_count + " rows");
+
+		query = "Delete from U_Ghfusion Where sampleid = '"+sampleID+"'";
+		delete_count = 0;
+		System.out.println(query);
+		delete_count = db.executeUpdate(query);
+		System.out.println("Deleted " + delete_count + " rows");
+
+		query = "Delete from U_Ghindel Where sampleid = '"+sampleID+"'";
+		delete_count = 0;
+		System.out.println(query);
+		delete_count = db.executeUpdate(query);
+		System.out.println("Deleted " + delete_count + " rows");
+
+		query = "Delete from U_Ghreportinfo Where sampleid = '"+sampleID+"'";
+		delete_count = 0;
+		System.out.println(query);
+		delete_count = db.executeUpdate(query);
+		System.out.println("Deleted " + delete_count + " rows");
+
+		query = "Delete from u_ghboard Where sampleid = '"+sampleID+"'";
+		delete_count = 0;
+		System.out.println(query);
+		delete_count = db.executeUpdate(query);
+		System.out.println("Deleted " + delete_count + " rows");
+	}
+	
+	
 }
