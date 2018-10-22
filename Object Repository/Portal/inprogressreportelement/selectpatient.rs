@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>searchmail</name>
+   <name>selectpatient</name>
    <tag></tag>
-   <elementGuidId>f272b5ba-ac35-4392-baea-292a36b5d237</elementGuidId>
+   <elementGuidId>7c37fc71-ec7c-4fc6-911c-2deb7fdf9439</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//span[contains(text(),'Sandbox: Updated Guardant360 ')])[1]</value>
+         <value>(//div[@class='portal-user__row-email'])[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

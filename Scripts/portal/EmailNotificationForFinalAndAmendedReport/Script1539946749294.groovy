@@ -17,12 +17,16 @@ String aNumber = 'A0126541'
 
 WebUI.openBrowser('http://52.38.227.56:8025/#')
 
-WebUI.waitForPageLoad(10)
+WebUI.waitForPageLoad(100)
 
 WebUI.setText(findTestObject('Object Repository/Portal/mailhog_element/searchmail'), aNumber)
 
 WebUI.click(findTestObject('Object Repository/Portal/mailhog_element/msgselect'))
 
 WebUI.click(findTestObject('Object Repository/Portal/mailhog_element/mailselection'))
+
+WebUI.scrollToElement(findTestObject('Object Repository/Portal/mailhog_element/searchmail'), 10)
+
+WebUI.click(findTestObject('Object Repository/Portal/mailhog_element/searchmail'))
 
 WebUI.closeBrowser()

@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>searchmail</name>
+   <name>searchpatient</name>
    <tag></tag>
-   <elementGuidId>f272b5ba-ac35-4392-baea-292a36b5d237</elementGuidId>
+   <elementGuidId>cf1e3a91-57d9-41a7-b8b4-e86a3e665ee0</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//span[contains(text(),'Sandbox: Updated Guardant360 ')])[1]</value>
+         <value>//input[@class='view-as__search-bar']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
