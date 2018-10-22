@@ -21,7 +21,7 @@ CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserDagmar', '5Ed5CIkj9UQfaMZXAkD
 
 WebUI.click(findTestObject('LIMS/DE2/Page_Iteration/td_Second DataEntry'))
 
-CustomKeywords.'com.gh.lims.Acession.searchRequest'(aNumber)
+CustomKeywords.'com.gh.lims.Accession.searchRequest'(aNumber)
 
 WebUI.setText(findTestObject('LIMS/DE2/Page_Iteration/input_patmon'), 'JAN')
 
