@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>primary_payor</name>
+   <name>secondary_payor</name>
    <tag></tag>
-   <elementGuidId>672b6b92-8840-42d6-8ffd-d1761e58950a</elementGuidId>
+   <elementGuidId>7457df01-56f6-4bfc-b8ea-5f63abd34e07</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>//input[@name='searchinsurance_t']/parent::td/input[@value='Search Payor']</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>(//*[@id=&quot;1&quot;])[2]</value>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

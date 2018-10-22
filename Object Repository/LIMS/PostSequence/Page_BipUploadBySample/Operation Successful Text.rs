@@ -1,100 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Verify_SaveButton</name>
+   <name>Operation Successful Text</name>
    <tag></tag>
-   <elementGuidId>f15d6fad-bff8-46a6-9ae7-36787d00de3c</elementGuidId>
+   <elementGuidId>df02ef9d-32a1-4883-8f9c-63b9f78815b6</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id=&quot;verifysave&quot;]/tbody/tr/td/table/tbody/tr[1]/td/img</value>
+         <value>//*[@id='__ruleErrorTable']/tbody/tr[2]/td/table/tbody/tr/td[2]</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>id(&quot;__ruleErrorTable&quot;)/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[2][count(. | //*[@ref_element = 'Object Repository/LIMS/PostSequence/Page_BipUploadBySample/list_iframe link Operation Succcesful Text']) = count(//*[@ref_element = 'Object Repository/LIMS/PostSequence/Page_BipUploadBySample/list_iframe link Operation Succcesful Text'])]</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>img</value>
+      <value>td</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>width</name>
+      <name>valign</name>
       <type>Main</type>
-      <value>32</value>
+      <value>top</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>height</name>
+      <name>text</name>
       <type>Main</type>
-      <value>32</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>border</name>
-      <type>Main</type>
-      <value>0</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>src</name>
-      <type>Main</type>
-      <value>WEB-OPAL/images/1rightarrow.png</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>title</name>
-      <type>Main</type>
-      <value>Verify&amp;Save </value>
+      <value>Operation Successful</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;verifysave&quot;)/tbody[1]/tr[1]/td[@class=&quot;buttonmargin_thin&quot;]/table[1]/tbody[1]/tr[1]/td[1]/img[1]</value>
+      <value>id(&quot;__ruleErrorTable&quot;)/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[2]</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>ref_element</name>
+      <type>Main</type>
+      <value>Object Repository/LIMS/PostSequence/Page_BipUploadBySample/list_iframe link Operation Succcesful Text</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
-      <value>//table[@id='verifysave']/tbody/tr/td/table/tbody/tr/td/img</value>
+      <value>//table[@id='__ruleErrorTable']/tbody/tr[2]/td/table/tbody/tr/td[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='LabVantage Solutions, Inc. © 2015'])[1]/following::img[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Information'])[1]/following::td[3]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Verify&amp;Save'])[2]/preceding::img[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Message'])[1]/following::td[5]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='ReturnTo FlowcellList'])[2]/preceding::img[2]</value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:img</name>
-      <value>//img[@title='Verify&amp;Save ']</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)=concat('id(', '&quot;', '__ruleErrorTable', '&quot;', ')/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[2]')])[1]/preceding::td[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
-      <value>//td[5]/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr/td/img</value>
+      <value>//td[2]</value>
    </webElementXpaths>
 </WebElementEntity>

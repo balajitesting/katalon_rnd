@@ -22,7 +22,7 @@ String flowcellID = 'HWCCHBGXY'
 flowcellID = WebUI.callTestCase(findTestCase('lims/postsequence/BIPUploadTest'), [('flowcellID_full') : flowcellID_full], 
     FailureHandling.STOP_ON_FAILURE)
 
-CustomKeywords.'com.gh.db.ResetFlowCellStatus.reset'(flowcellID, 'ManualSeqQC')
+CustomKeywords.'com.gh.db.LimsDBDataReset.resetFlowCellStatus'(flowcellID, 'ManualSeqQC')
 
 CustomKeywords.'com.gh.lims.Common.logon'('cliauserreporting', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
@@ -42,8 +42,8 @@ CustomKeywords.'com.gh.lims.Common.setClick'('Object Repository/LIMS/PostSequenc
 
 WebUI.waitForPageLoad(4)
 
-WebUI.waitForElementVisible(findTestObject('Object Repository/LIMS/PostSequence/Page_SeqQCAutoPass/Verify_SaveButton'), 30)
-WebUI.waitForElementClickable(findTestObject('Object Repository/LIMS/PostSequence/Page_SeqQCAutoPass/Verify_SaveButton'), 30)
+WebUI.waitForElementVisible(findTestObject('LIMS/PostSequence/Page_SeqQCAutoPass/Verify_SaveButton'), 30)
+WebUI.waitForElementClickable(findTestObject('LIMS/PostSequence/Page_SeqQCAutoPass/Verify_SaveButton'), 30)
 CustomKeywords.'com.gh.lims.Common.setClick'('Object Repository/LIMS/PostSequence/Page_SeqQCAutoPass/Verify_SaveButton')
 
 WebUI.waitForPageLoad(4)

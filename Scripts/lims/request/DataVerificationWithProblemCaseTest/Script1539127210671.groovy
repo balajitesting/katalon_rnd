@@ -35,6 +35,10 @@ edit = 'LIMS/Problem Resolution/Page_Problem Cases Resolution/div_Edit'
 
 CustomKeywords.'com.gh.lims.Common.setClick'(edit)
 
+//Thread.sleep(3000)
+
+//WebUI.click(findTestObject('LIMS/Problem Resolution/Page_Problem Cases Resolution/div_Edit')) //Added for test
+
 WebUI.switchToFrame(findTestObject('LIMS/Problem Resolution/Sub_eSign/iframe'),
 	10)
 

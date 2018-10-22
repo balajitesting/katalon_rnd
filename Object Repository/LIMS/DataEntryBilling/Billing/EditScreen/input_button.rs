@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>input_saveAccession02</name>
+   <name>input_button</name>
    <tag></tag>
-   <elementGuidId>0fbf1f7c-7b3f-4162-a200-66a452a15d58</elementGuidId>
+   <elementGuidId>88fe71d5-6641-4db2-9a1c-923c87415f53</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>//input[@type = 'button' and @name = 'saveAccession02' and @id = 'saveAccession02']</value>
-      </entry>
-      <entry>
-         <key>CSS</key>
-      </entry>
-      <entry>
          <key>XPATH</key>
-         <value>//input[@value='Save']</value>
+         <value>(//*[@id=&quot;m1&quot;]//input[@value='Search Payor'])[1]</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//input[@type = 'button']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -31,7 +28,7 @@
       <matchCondition>equals</matchCondition>
       <name>tabindex</name>
       <type>Main</type>
-      <value>-1</value>
+      <value>703</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -45,41 +42,27 @@
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>btnType2</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>name</name>
-      <type>Main</type>
-      <value>saveAccession02</value>
+      <value>button</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>value</name>
       <type>Main</type>
-      <value>Save</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>id</name>
-      <type>Main</type>
-      <value>saveAccession02</value>
+      <value>Search Payor</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>onclick</name>
       <type>Main</type>
-      <value>InsertAndUpdateBilling();</value>
+      <value>getPatientData('primary');SearchInsurance('primary')</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;saveAccession02&quot;)</value>
+      <value>id(&quot;m1&quot;)/table[2]/tbody[1]/tr[3]/td[1]/table[1]/tbody[1]/tr[3]/td[1]/input[@class=&quot;button&quot;]</value>
    </webElementProperties>
 </WebElementEntity>

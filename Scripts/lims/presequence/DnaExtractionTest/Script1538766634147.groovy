@@ -21,7 +21,7 @@ WebUI.comment('ENTSW-TC-2881')
 'Enable when run this test alone'
 String sampleID = 'A010001401'
 
-CustomKeywords.'com.gh.db.ResetSampleStatus.reset'(sampleID, 'Ready for DNA Extraction')
+CustomKeywords.'com.gh.db.LimsDBDataReset.resetSampleStatus'(sampleID, 'Ready for DNA Extraction')
 
 
 CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserDagmar', '5Ed5CIkj9UQfaMZXAkDVaQ==')
