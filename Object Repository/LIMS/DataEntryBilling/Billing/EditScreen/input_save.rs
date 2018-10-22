@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>input_saveAccession02</name>
+   <name>input_save</name>
    <tag></tag>
    <elementGuidId>0fbf1f7c-7b3f-4162-a200-66a452a15d58</elementGuidId>
    <selectorCollection>
