@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>iframe_LABVANTAGE_dlg_frame0</name>
+   <name>iframe_Your browser does not s</name>
    <tag></tag>
-   <elementGuidId>0e9917a3-febb-4b8b-bad7-bd3b241d8824</elementGuidId>
+   <elementGuidId>803a2ab5-c750-4cd5-938c-ba161bea0f50</elementGuidId>
    <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
@@ -16,30 +16,23 @@
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>name</name>
+      <name>id</name>
       <type>Main</type>
-      <value>dlg_frame0</value>
+      <value>promptfields_iframe</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>id</name>
+      <name>name</name>
       <type>Main</type>
-      <value>dlg_frame0</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>dialognumber</name>
-      <type>Main</type>
-      <value>0</value>
+      <value>promptfields_iframe</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>src</name>
       <type>Main</type>
-      <value>rc?command=page&amp;page=GH_PromptSampleId&amp;sdcid=GHBoard&amp;rnd=muF7W</value>
+      <value>rc?command=page&amp;page=GH_PromptSampleId&amp;sdcid=GHBoard&amp;rnd=lGItx&amp;command=page&amp;_iframename=promptfields&amp;__crc=crc_1539988173065</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -65,38 +58,58 @@
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Your browser does not support iframes!</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;dlg_frame0&quot;)</value>
+      <value>id(&quot;promptfields_iframe&quot;)</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>ref_element</name>
+      <type>Main</type>
+      <value>Object Repository/LIMS/PostSequence/Page_BipUploadBySample/PopUp/iframe_LABVANTAGE_dlg_frame1</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
-      <value>//iframe[@id='dlg_frame0']</value>
+      <value>//iframe[@id='promptfields_iframe']</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
-      <value>//td[@id='dlg_content0']/iframe</value>
+      <value>//div[@id='pagebody']/table/tbody/tr/td/table/tbody/tr[4]/td/iframe</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='LABVANTAGE'])[1]/following::iframe[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Cancel'])[1]/following::iframe[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)=concat('id(', '&quot;', 'dlg_frame0', '&quot;', ')')])[1]/following::iframe[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='OK'])[1]/following::iframe[1]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)=concat('id(', '&quot;', 'promptfields_iframe', '&quot;', ')')])[1]/preceding::iframe[3]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
-      <value>//td[2]/table/tbody/tr/td/iframe</value>
+      <value>//td/iframe</value>
    </webElementXpaths>
 </WebElementEntity>

@@ -20,7 +20,7 @@ CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserReporting', '5Ed5CIkj9UQfaMZX
 
 String requestID = 'A80080'
 
-CustomKeywords.'com.gh.db.ResetRequestStatus.reset'(requestID, 'TB Review BIP Data')
+CustomKeywords.'com.gh.db.LimsDBDataReset.resetRequestStatus'(requestID, 'TB Review BIP Data')
 
 WebUI.click(findTestObject('LIMS/PostSequence/TBReview/Search/tab_TBReview'))
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>iframe_LABVANTAGE_dlg_frame0</name>
+   <name>iframe_LABVANTAGE_dlg_frame1</name>
    <tag></tag>
-   <elementGuidId>0e9917a3-febb-4b8b-bad7-bd3b241d8824</elementGuidId>
+   <elementGuidId>ac83984a-b3cf-40d0-8e8e-bb1d64455db7</elementGuidId>
    <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
@@ -18,28 +18,28 @@
       <matchCondition>equals</matchCondition>
       <name>name</name>
       <type>Main</type>
-      <value>dlg_frame0</value>
+      <value>dlg_frame1</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
-      <value>dlg_frame0</value>
+      <value>dlg_frame1</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>dialognumber</name>
       <type>Main</type>
-      <value>0</value>
+      <value>1</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>src</name>
       <type>Main</type>
-      <value>rc?command=page&amp;page=GH_PromptSampleId&amp;sdcid=GHBoard&amp;rnd=muF7W</value>
+      <value>rc?command=page&amp;page=GH_PromptSampleId&amp;sdcid=GHBoard&amp;rnd=lGItx</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -67,19 +67,19 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;dlg_frame0&quot;)</value>
+      <value>id(&quot;dlg_frame1&quot;)</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
-      <value>//iframe[@id='dlg_frame0']</value>
+      <value>//iframe[@id='dlg_frame1']</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
-      <value>//td[@id='dlg_content0']/iframe</value>
+      <value>//td[@id='dlg_content1']/iframe</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -91,7 +91,7 @@
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)=concat('id(', '&quot;', 'dlg_frame0', '&quot;', ')')])[1]/following::iframe[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)=concat('id(', '&quot;', 'dlg_frame1', '&quot;', ')')])[1]/following::iframe[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>

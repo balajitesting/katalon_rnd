@@ -22,7 +22,7 @@ String flowcellID = 'HWCCHBGXY'
 flowcellID = WebUI.callTestCase(findTestCase('lims/postsequence/BIPUploadTest'), [('flowcellID_full') : flowcellID_full], 
     FailureHandling.STOP_ON_FAILURE)
 
-CustomKeywords.'com.gh.db.ResetFlowCellStatus.reset'(flowcellID, 'ManualSeqQC')
+CustomKeywords.'com.gh.db.LimsDBDataReset.resetFlowCellStatus'(flowcellID, 'ManualSeqQC')
 
 CustomKeywords.'com.gh.lims.Common.logon'('cliauserreporting', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 

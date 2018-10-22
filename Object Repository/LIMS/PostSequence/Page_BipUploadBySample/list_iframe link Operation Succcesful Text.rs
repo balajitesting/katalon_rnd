@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>iframe_LABVANTAGE_dlg_frame0</name>
+   <name>list_iframe link Operation Succcesful Text</name>
    <tag></tag>
-   <elementGuidId>0e9917a3-febb-4b8b-bad7-bd3b241d8824</elementGuidId>
+   <elementGuidId>60104e13-5f77-4249-b530-4a0259d14ee3</elementGuidId>
    <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
@@ -16,30 +16,23 @@
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>name</name>
+      <name>id</name>
       <type>Main</type>
-      <value>dlg_frame0</value>
+      <value>list_iframe</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>id</name>
+      <name>name</name>
       <type>Main</type>
-      <value>dlg_frame0</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>dialognumber</name>
-      <type>Main</type>
-      <value>0</value>
+      <value>list_iframe</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>src</name>
       <type>Main</type>
-      <value>rc?command=page&amp;page=GH_PromptSampleId&amp;sdcid=GHBoard&amp;rnd=muF7W</value>
+      <value>rc?command=page&amp;page=GH_BIPUpload_SampleList&amp;command=page&amp;_iframename=list&amp;__crc=crc_1539986913766</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -65,38 +58,45 @@
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Your browser does not support iframes!</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;dlg_frame0&quot;)</value>
+      <value>id(&quot;list_iframe&quot;)</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
-      <value>//iframe[@id='dlg_frame0']</value>
+      <value>//iframe[@id='list_iframe']</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
-      <value>//td[@id='dlg_content0']/iframe</value>
+      <value>//div[@id='contentdiv']/iframe</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='LABVANTAGE'])[1]/following::iframe[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='OK'])[2]/following::iframe[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)=concat('id(', '&quot;', 'dlg_frame0', '&quot;', ')')])[1]/following::iframe[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)=concat('id(', '&quot;', 'list_iframe', '&quot;', ')')])[1]/preceding::iframe[3]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
-      <value>//td[2]/table/tbody/tr/td/iframe</value>
+      <value>//div[2]/iframe</value>
    </webElementXpaths>
 </WebElementEntity>

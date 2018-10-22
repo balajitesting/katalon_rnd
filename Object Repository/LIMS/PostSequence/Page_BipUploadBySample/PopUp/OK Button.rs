@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>td_OK</name>
+   <name>OK Button</name>
    <tag></tag>
    <elementGuidId>96985e58-6a2c-434f-9187-cef294f27b4a</elementGuidId>
    <selectorCollection>

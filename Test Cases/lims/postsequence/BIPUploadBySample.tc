@@ -8,7 +8,7 @@
    <variable>
       <defaultValue>'180430_NB551146_0095_AH7NK7BGX5'</defaultValue>
       <description></description>
-      <id>7947fbb3-bbd2-4bdf-981e-249be702fe78</id>
+      <id>c82c0246-1b71-405a-a5df-cc96f81bcbd2</id>
       <masked>false</masked>
       <name>flowcellID_full</name>
    </variable>
