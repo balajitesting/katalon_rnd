@@ -18,10 +18,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
 import internal.GlobalVariable
 
-<<<<<<< HEAD:Keywords/com/gh/lims/Accession.groovy
 public class Accession {
-=======
-public class Acession {
 	
 	/**
 	 * 
@@ -30,7 +27,6 @@ public class Acession {
 	 * 
 	 * ToDo:This function shall be renamed as searchAndEditRequest
 	 */
->>>>>>> develop:Keywords/com/gh/lims/Acession.groovy
 
 	@Keyword
 	def searchRequest(requestId){
@@ -43,4 +39,5 @@ public class Acession {
 
 		Common.setClick(edit)
 	}
+	
 }
