@@ -4,6 +4,16 @@
    <name>a_CLS Review</name>
    <tag></tag>
    <elementGuidId>6852cdc4-7cb3-4ddc-9f60-0888ce2931a7</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>id(&quot;layout_menulink1&quot;)[count(. | //a[@id = 'layout_menulink1' and (text() = 'CLS Review' or . = 'CLS Review')]) = count(//a[@id = 'layout_menulink1' and (text() = 'CLS Review' or . = 'CLS Review')])]</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
@@ -28,7 +38,7 @@
       <value>__menubar.ribbonMouseOut(this)</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>href</name>
       <type>Main</type>
