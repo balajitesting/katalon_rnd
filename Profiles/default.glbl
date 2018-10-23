@@ -11,7 +11,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://limssqa.ghdna.io/logon.jsp  '</initValue>
+      <initValue>'https://lims-sqa.ghdna.io/logon.jsp  '</initValue>
       <name>limsUrl</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
