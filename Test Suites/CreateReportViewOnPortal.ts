@@ -15,7 +15,7 @@
       <guid>ea476938-fc8b-4276-b90b-b0801057e39c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/lims/report/CreatedAmendReportLdClsReviewtTest</testCaseId>
+      <testCaseId>Test Cases/lims/report/CreateAmendedReportLdClsMsiReviewTest</testCaseId>
       <testDataLink>
          <combinationType>ONE</combinationType>
          <id>475ad5a2-9948-4390-8874-ed6fc03023e4</id>
