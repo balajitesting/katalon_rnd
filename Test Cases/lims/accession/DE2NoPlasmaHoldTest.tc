@@ -3,6 +3,6 @@
    <description></description>
    <name>DE2NoPlasmaHoldTest</name>
    <tag></tag>
-   <comment>ENTSW-TC-1359, ENTSW-TC-1320, ENTSW-TC-1321</comment>
+   <comment>Run ENTSW-TC-1359, ENTSW-TC-1320, ENTSW-TC-1321, ENTSW-TC-2862</comment>
    <testCaseGuid>9763a240-a48d-41eb-8e2d-41dd5b8369a3</testCaseGuid>
 </TestCaseEntity>
