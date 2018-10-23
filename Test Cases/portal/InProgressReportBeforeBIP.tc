@@ -3,6 +3,6 @@
    <description></description>
    <name>InProgressReportBeforeBIP</name>
    <tag></tag>
-   <comment></comment>
+   <comment>Run ENTSW-TC-2959, ENTSW-TC-2959</comment>
    <testCaseGuid>7ef5ccd9-8f46-4d15-8091-c5041c6000ea</testCaseGuid>
 </TestCaseEntity>
