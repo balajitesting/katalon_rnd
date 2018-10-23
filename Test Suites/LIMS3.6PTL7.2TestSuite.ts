@@ -99,6 +99,33 @@
       <testCaseId>Test Cases/lims/request/ResolveProblemCaseTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>e32723f4-a825-48ad-af2c-44b6311ea8b9</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/lims/report/CreateAmendedReportLdClsMsiReviewTest</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>88da6d7d-c39b-435f-b4d5-b9405e990317</id>
+         <iterationEntity>
+            <iterationType>ALL</iterationType>
+            <value></value>
+         </iterationEntity>
+         <testDataId>Data Files/dataCreateReportViewOnPortal</testDataId>
+      </testDataLink>
+      <variableLink>
+         <testDataLinkId>88da6d7d-c39b-435f-b4d5-b9405e990317</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>A_Number</value>
+         <variableId>084cfa0f-318e-4599-babd-6c836cca70e3</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>88da6d7d-c39b-435f-b4d5-b9405e990317</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>ReportStatus</value>
+         <variableId>bc3554ef-ea3f-429d-8835-ebdde22725f2</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
       <guid>75e59248-fc6d-43da-a415-74d031d0c4c2</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

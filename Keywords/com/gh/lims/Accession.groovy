@@ -28,6 +28,14 @@ public class Accession {
 	 * ToDo:This function shall be renamed as searchAndEditRequest
 	 */
 
+	/**
+	 * 
+	 * @param requestId
+	 * @return
+	 * 
+	 * ToDo:This function shall be renamed as searchAndEditRequest
+	 */
+
 	@Keyword
 	def searchRequest(requestId){
 
