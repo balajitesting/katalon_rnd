@@ -107,6 +107,16 @@ public class LimsDBDataReset {
 	}
 	
 	@Keyword
+	def resetDV2Status(String requestID, String status) {
+
+		LimsOracleDBService db = new LimsOracleDBService();
+		db.connectDB(GlobalVariable.oracleDBurl, GlobalVariable.oracleDBuser, GlobalVariable.oracleDBpwd);
+
+		String query = "update s_request set u_dv2check = '"+status+"' where s_requestid = '"+requestID+"'";
+		db.execute(query);
+	}
+	
+	@Keyword
 	def resetProblemCase(String requestID) {
 
 		LimsOracleDBService db = new LimsOracleDBService();
