@@ -224,7 +224,7 @@ public class LimsDBDataReset {
 		delete_count = db.executeUpdate(query);
 		System.out.println("Deleted " + delete_count + " rows");
 	}
-	
+
 	@Keyword
 	def BIP_delete_by_sampleID(String sampleID) {
 
@@ -268,6 +268,4 @@ public class LimsDBDataReset {
 		delete_count = db.executeUpdate(query);
 		System.out.println("Deleted " + delete_count + " rows");
 	}
-	
-	
 }
