@@ -47,6 +47,7 @@ WebUI.waitForElementClickable(findTestObject('Object Repository/LIMS/ResOps Acce
 WebUI.click(findTestObject('Object Repository/LIMS/ResOps Accession/Page_EManifest SingleTube Accession/ProjectID_PopUp/Search OK Button'))
 
 WebUI.switchToFrame(findTestObject('Object Repository/LIMS/ResOps Accession/Page_EManifest SingleTube Accession/ProjectID_PopUp/list_iframe'), 10)
+//Unable to have katalon recognize the object, leave it as request from Grace, will come back to this later.
 //WebUI.waitForElementClickable(findTestObject('Object Repository/LIMS/ResOps Accession/Page_EManifest SingleTube Accession/ProjectID_PopUp/a_GHI_04'), 60)
 //WebU.click(findTestObject('Object Repository/LIMS/ResOps Accession/Page_EManifest SingleTube Accession/ProjectID_PopUp/a_GHI_04'))
 
@@ -104,13 +105,11 @@ wait.until(ExpectedConditions.visibilityOfElementLocated(item));
 wait.until(ExpectedConditions.elementToBeClickable(item));
 driver.findElement(item).click();
 
-//driver.switchTo().defaultContent();
 WebUI.switchToWindowIndex(0);
 WebUI.waitForPageLoad(6);
 
 WebUI.switchToFrame(findTestObject('LIMS/ResOps Accession/Page_EManifest SingleTube Accession/maint_iframe/maint_iframe'), 3)
 
-//
 WebUI.setText(findTestObject('LIMS/ResOps Accession/Page_EManifest SingleTube Accession/maint_iframe/Customer Tube ID TextBox'), '986743493')
 
 Calendar cal1 = Calendar.getInstance();
@@ -132,9 +131,6 @@ WebUI.waitForPageLoad(6);
 Thread.sleep(2000);
 WebUI.waitForElementClickable(findTestObject('Object Repository/LIMS/ResOps Accession/Page_EManifest SingleTube Accession/Create Accession Button'), 30)
 WebUI.click(findTestObject('Object Repository/LIMS/ResOps Accession/Page_EManifest SingleTube Accession/Create Accession Button'))
-
-
-//driver.findElement(By.xpath("//*[@id='accession']/tbody/tr/td/table/tbody/tr[1]/td/img")).click();
  
 item = By.xpath("//button[contains(text(),'OK')]");
 wait = new WebDriverWait(driver, 80);
