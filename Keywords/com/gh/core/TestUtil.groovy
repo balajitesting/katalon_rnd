@@ -72,6 +72,13 @@ public class TestUtil {
 		String barCode = "SQA" +rand.nextInt(9999) + rand.nextInt(999999999);
 		return barCode
 	}
+	
+	@Keyword
+	public static String getSampleID(){
+		Random rand = new Random();
+		String sampleID = 100000000 + rand.nextInt(999999999);			
+		return sampleID
+	}
 
 	@Keyword
 	public static String setDate(){
