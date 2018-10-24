@@ -110,12 +110,7 @@ WebUI.switchToFrame(findTestObject('LIMS/ResOps Accession/Page_EManifest SingleT
 
 WebUI.setText(findTestObject('LIMS/ResOps Accession/Page_EManifest SingleTube Accession/maint_iframe/Customer Tube ID TextBox'), '986743493')
 
-//Calendar cal1 = Calendar.getInstance();
-//SimpleDateFormat ds1 = new SimpleDateFormat("yyyyMMddhhmmss");
-//String sampleID = ds1.format(cal1.getTime());
-
 String sampleID = CustomKeywords.'com.gh.core.TestUtil.getSampleID'()
-
 
 WebUI.setText(findTestObject('LIMS/ResOps Accession/Page_EManifest SingleTube Accession/maint_iframe/Customer Sample ID'), sampleID)
 WebUI.setText(findTestObject('LIMS/ResOps Accession/Page_EManifest SingleTube Accession/maint_iframe/Study ID TextBox'), 'SQATest00')
