@@ -96,6 +96,20 @@ WebUI.waitForElementClickable(findTestObject('Object Repository/LIMS/ResOps Requ
 WebUI.click(findTestObject('Object Repository/LIMS/ResOps Requests/DV/Return To List Button'))
 Thread.sleep(2000);
 WebUI.waitForPageLoad(6);
+
+WebUI.waitForElementClickable(findTestObject('LIMS/ResOps Requests/DV/GHDVResOpsSearch Link'), 30)
+WebUI.click(findTestObject('LIMS/ResOps Requests/DV/GHDVResOpsSearch Link'))
+
+WebUI.setText(findTestObject('Object Repository/LIMS/ResOps Requests/DV/requestID Search TextBox'), requestID)
+WebUI.click(findTestObject('Object Repository/LIMS/ResOps Requests/DV/OK Button'))
+
+WebUI.switchToFrame(findTestObject('Object Repository/LIMS/ResOps Requests/DV/list_iframe/list_iframe'), 10)
+Thread.sleep(2000) //Katalon wait not working
+
+String msg = driver.findElement(By.xpath("//*[@id='sdidiv']/p")).getText();
+
+assert msg.contains("No rows found.") == true;
+driver.switchTo().defaultContent();
 WebUI.waitForElementPresent(findTestObject('Object Repository/LIMS/logout/img'), 15)
 WebUI.click(findTestObject('LIMS/logout/img'))
 WebUI.waitForPageLoad(6);
