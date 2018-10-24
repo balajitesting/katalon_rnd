@@ -68,10 +68,8 @@ WebUI.switchToFrame(findTestObject('LIMS/ResOps Accession/Page_EManifest SingleT
 WebUI.setText(findTestObject('LIMS/ResOps Accession/Page_EManifest SingleTube Accession/maint_iframe/Site Number TextBox'), '95')
 
 //set blood collection date current - 2 days.
-Calendar cal = Calendar.getInstance();
-cal.add(Calendar.DATE, -2);
-SimpleDateFormat ds = new SimpleDateFormat("MM/dd/YYYY");
-String date = ds.format(cal.getTime());
+String date = CustomKeywords.'com.gh.core.TestUtil.setDate'()
+
 driver.findElement(By.xpath("//*[@id=\"pr0_bloodcolldate\"]")).sendKeys(date);
 
 WebUI.setText(findTestObject('LIMS/ResOps Accession/Page_EManifest SingleTube Accession/maint_iframe/Plasma Volume Observed Text Box'), '5')
