@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>DV2WithProblemCaseTest</name>
+   <tag></tag>
+   <comment>Run: ENT-6679</comment>
+   <testCaseGuid>6ed84d17-c7a0-4939-8f46-5cfa03ddba31</testCaseGuid>
+</TestCaseEntity>
