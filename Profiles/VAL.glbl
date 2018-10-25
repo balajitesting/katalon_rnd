@@ -59,4 +59,9 @@
       <initValue>'postgres'</initValue>
       <name>postgreSqlDBpwd</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'10.4.80.158'</initValue>
+      <name>ssh_host</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
