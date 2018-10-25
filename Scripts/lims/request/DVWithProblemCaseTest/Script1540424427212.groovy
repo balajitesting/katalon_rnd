@@ -90,17 +90,23 @@ WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_OK'))
 
 WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/img'))
 
+Thread.sleep(2000); //Wait command is not working properly. Hence, implemented the same.
+
+WebUI.click(findTestObject('Object Repository/LIMS/ResOps Requests/DV/Return To List Button'))
+
+Thread.sleep(1000);
+
 //Validation 2: Verify that the request is moved to PC.
 
 WebUI.click(findTestObject('LIMS/Requests/Problemcases Resolution/tab_ProblemcasesResolution'))
 
-Thread.sleep(3000) //Wait command is not working properly. Hence, implemented the same.
+Thread.sleep(1000) //Wait command is not working properly. Hence, implemented the same.
 
 WebUI.setText(findTestObject('LIMS/PostSequence/TBReview/Search/input_Search_searchtext'), aNumber)
 
 WebUI.click(findTestObject('LIMS/PostSequence/TBReview/Search/td_OK'))
 
-Thread.sleep(3000) //Wait command is not working properly. Hence, implemented the same.
+Thread.sleep(1000) //Wait command is not working properly. Hence, implemented the same.
 
 WebUI.switchToFrame(findTestObject('LIMS/Requests/AllRequests/list_iFrame'), 3)
 
