@@ -16,10 +16,7 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.comment('Run ENT-6485')
 
-/**
- * DE1 TC Execution
- */
-//WebUI.callTestCase(findTestCase('lims/accession/AccessionClinicalRequiredDataEntryTest'), [:], FailureHandling.STOP_ON_FAILURE)
+'DE1 TC Execution'
 CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserDagmar', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
 String orDE1 = 'LIMS/DE1/'
@@ -92,9 +89,7 @@ WebUI.click(findTestObject('LIMS/logout/img'))
 
 WebUI.closeBrowser()
 
-/**
- * DE2 TC Execution 
- */
+'DE2 TC Execution'
 CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserDagmar', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
 WebUI.click(findTestObject('LIMS/DE2/Page_Iteration/td_Second DataEntry'))
@@ -167,14 +162,10 @@ WebUI.click(findTestObject('LIMS/logout/img'))
 
 WebUI.closeBrowser()
 
-/**
- * Verifying in Progress report for created Accession id in portal
- */
-switchToPortal('brian.leylandjones@avera.org', 'Pa22word', aNumber, 300)
+'Verifying in Progress report for created Accession id in portal'
+CustomKeywords.'com.gh.portal.Common.switchToPortal'('brian.leylandjones@avera.org', 'Pa22word', aNumber, 300)
 
-/**
- *  ResolveProblemTestCase Execution
- */
+'ResolveProblemTestCase Execution'
 CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserDagmar', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
 WebUI.click(findTestObject('LIMS/Problem Resolution/Page_Iteration/td_sitemap_TramStopSelCell'))
@@ -218,19 +209,16 @@ WebUI.click(findTestObject('LIMS/logout/img'))
 
 WebUI.closeBrowser()
 
-/**
- * Verifying in Progress report for created Accession id in portal
- */
-switchToPortal('brian.leylandjones@avera.org', 'Pa22word', aNumber, 0)
+'Verifying in Progress report for created Accession id in portal'
+CustomKeywords.'com.gh.portal.Common.switchToPortal'('brian.leylandjones@avera.org', 'Pa22word', aNumber, 0)
 
-/**
- * DataVerificationWithProblemCase Execution
- */
+'DataVerificationWithProblemCase Execution'
 CustomKeywords.'com.gh.lims.Common.logon'('abaca', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
 WebUI.click(findTestObject('Object Repository/LIMS/DV1/Page_Iteration/td_Data Verification'))
 
-
+WebUI.waitForElementPresent(findTestObject('Object Repository/LIMS/DV1/Page_Data Verification Request List/a_GHDVSearch'), 
+    20)
 
 WebUI.click(findTestObject('Object Repository/LIMS/DV1/Page_Data Verification Request List/a_GHDVSearch'))
 
@@ -243,6 +231,8 @@ WebUI.click(findTestObject('Object Repository/LIMS/DV1/Page_Iteration/search_btn
 edit = 'LIMS/Problem Resolution/Page_Problem Cases Resolution/div_Edit'
 
 CustomKeywords.'com.gh.lims.Common.setClick'(edit)
+
+WebUI.waitForElementVisible(findTestObject('LIMS/Problem Resolution/Sub_eSign/iframe'), 10)
 
 WebUI.switchToFrame(findTestObject('LIMS/Problem Resolution/Sub_eSign/iframe'), 10)
 
@@ -276,21 +266,21 @@ CustomKeywords.'com.gh.core.JSHandler.JClick'(findTestObject('LIMS/logout/img'),
 
 WebUI.closeBrowser()
 
-/**
- * Verifying in Progress report for created Accession id in portal
- */
-switchToPortal('brian.leylandjones@avera.org', 'Pa22word', aNumber, 0)
+'Verifying in Progress report for created Accession id in portal'
+CustomKeywords.'com.gh.portal.Common.switchToPortal'('brian.leylandjones@avera.org', 'Pa22word', aNumber, 0)
 
-/**
- * DV2WithProblemCase Execution
- */
+'DV2WithProblemCase Execution'
 CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserDagmar', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
 WebUI.click(findTestObject('Object Repository/LIMS/DV2/Page_Iteration/td_DV-2 Requests'))
 
+WebUI.waitForPageLoad(2)
+
 Thread.sleep(2000)
 
 WebUI.setText(findTestObject('Object Repository/LIMS/DV2/Page_DV2 Request List/input_GHDV2Search_arg1'), aNumber)
+
+WebUI.waitForElementClickable(findTestObject('Object Repository/LIMS/DV2/Page_DV2 Request List/td_OK'), 10)
 
 WebUI.click(findTestObject('Object Repository/LIMS/DV2/Page_DV2 Request List/td_OK'))
 
@@ -324,14 +314,10 @@ CustomKeywords.'com.gh.core.JSHandler.JClick'(findTestObject('LIMS/logout/img'),
 
 WebUI.closeBrowser()
 
-/**
- * Verifying in Progress report for created Accession id in portal
- */
-switchToPortal('brian.leylandjones@avera.org', 'Pa22word', aNumber, 0)
+'Verifying in Progress report for created Accession id in portal'
+CustomKeywords.'com.gh.portal.Common.switchToPortal'('brian.leylandjones@avera.org', 'Pa22word', aNumber, 0)
 
-/**
- * BillingWithProblemCase Execution
- */
+'BillingWithProblemCase Execution'
 CustomKeywords.'com.gh.lims.Common.logon'('abaca', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
 WebUI.click(findTestObject('LIMS/DataEntryBilling/Billing/EditScreen/td_Billing'))
@@ -352,7 +338,6 @@ WebUI.setText(findTestObject('LIMS/DataEntryBilling/Billing/EditScreen/input_icd
 
 WebUI.click(findTestObject('LIMS/DataEntryBilling/Billing/EditScreen/input_billingverified'))
 
-//WebUI.selectOptionByValue(findTestObject('LIMS/DataEntryBilling/Billing/EditScreen/promotion_code'), '001', true)
 WebUI.click(findTestObject('LIMS/DataEntryBilling/Billing/EditScreen/input_abnstatus'))
 
 WebUI.click(findTestObject('LIMS/DataEntryBilling/Billing/EditScreen/input_releventnsclc'))
@@ -379,35 +364,5 @@ WebUI.click(findTestObject('LIMS/logout/img'))
 
 WebUI.closeBrowser()
 
-/**
- * Verifying in Progress report for created Accession id in portal
- */
-switchToPortal('brian.leylandjones@avera.org', 'Pa22word', aNumber, 0) /**
- * Common method to login to portal and verify in progress report
- */
-
-def switchToPortal(String userName, String password, String accessionID, int timeout) {
-    CustomKeywords.'com.gh.portal.Common.logon'(userName, password)
-
-    WebUI.delay(timeout)
-
-    WebUI.waitForElementClickable(findTestObject('Portal/page_inprogressreport/inprogresscircleselect'), 10)
-
-    WebUI.click(findTestObject('Portal/page_inprogressreport/inprogresscircleselect'))
-
-    WebUI.refresh()
-
-    WebUI.waitForPageLoad(5)
-
-    WebUI.setText(findTestObject('Portal/page_inprogressreport/searchid'), accessionID)
-
-    WebUI.click(findTestObject('Portal/page_inprogressreport/selsearch'))
-
-    WebUI.verifyElementPresent(findTestObject('Portal/page_inprogressreport/inprogressimg'), 10)
-
-    WebUI.click(findTestObject('Portal/page_inprogressreport/profilemenu'))
-
-    WebUI.click(findTestObject('Portal/page_inprogressreport/signout'))
-
-    WebUI.closeBrowser()
-}
+'Verifying in Progress report for created Accession id in portal'
+CustomKeywords.'com.gh.portal.Common.switchToPortal'('brian.leylandjones@avera.org', 'Pa22word', aNumber, 0)

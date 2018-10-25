@@ -56,4 +56,31 @@ public class Common {
 
 		WebUI.click(findTestObject('Portal/page_mailtrap/safeemailtestingpage/signinbutton'))
 	}
+	@Keyword
+	def switchToPortal(String usr, String pwd, String accessionID, int timeout) {
+	    
+		logon(usr, pwd)
+	
+		WebUI.delay(timeout)
+	
+		WebUI.waitForElementClickable(findTestObject('Portal/page_inprogressreport/inprogresscircleselect'), 10)
+	
+		WebUI.click(findTestObject('Portal/page_inprogressreport/inprogresscircleselect'))
+	
+		WebUI.refresh()
+	
+		WebUI.waitForPageLoad(5)
+	
+		WebUI.setText(findTestObject('Portal/page_inprogressreport/searchid'), accessionID)
+	
+		WebUI.click(findTestObject('Portal/page_inprogressreport/selsearch'))
+	
+		WebUI.verifyElementPresent(findTestObject('Portal/page_inprogressreport/inprogressimg'), 10)
+	
+		WebUI.click(findTestObject('Portal/page_inprogressreport/profilemenu'))
+	
+		WebUI.click(findTestObject('Portal/page_inprogressreport/signout'))
+	
+		WebUI.closeBrowser()
+	}
 }
