@@ -1,6 +1,6 @@
 # ent-web-automation
 
-1. Install Katalon from: http://download.katalon.com/5.7.0/Katalon_Studio.dmg
+1. Install Katalon from: http://download.katalon.com/5.8.3/Katalon_Studio.dmg
    
 2. Checkout: https://guardanthealth.atlassian.net/wiki/spaces/ES/pages/696156172/Test+Automation+and+Tools
 
