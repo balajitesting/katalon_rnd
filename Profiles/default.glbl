@@ -21,12 +21,12 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'labvantage'</initValue>
+      <initValue>'autouser'</initValue>
       <name>oracleDBuser</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'qacZhEHG2fI3GQ'</initValue>
+      <initValue>'jLx7tfEKdjZvNhs'</initValue>
       <name>oracleDBpwd</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
