@@ -19,7 +19,7 @@ import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 
 WebUI.comment('Run: ENT-6677')
 
-//Reset the aNumber status in DV and ProblemCase
+'Reset the aNumber status in DV and ProblemCase'
 
 String aNumber = 'A0121097'
 
@@ -29,7 +29,7 @@ CustomKeywords.'com.gh.db.LimsDBDataReset.resetProblemCase'(aNumber)
 
 CustomKeywords.'com.gh.lims.Common.logon'('abaca', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
-//Validation 1: Edit a request in DV‌ and add a problem case
+'Validation 1: Edit a request in DV‌ and add a problem case'
 
 WebUI.click(findTestObject('LIMS/Requests/DV1/DV1Request/dv1Tram'))
 
@@ -51,7 +51,7 @@ WebUI.click(findTestObject('LIMS/Requests/DV2/Page_DV2/searchProbCaseIcon'))
 
 WebDriver driver = DriverFactory.getWebDriver()
 
-// Switch to Problem Case Window
+'Switch to Problem Case Window'
 String winHandleBefore = driver.getWindowHandle();
 
 for(String winHandle : driver.getWindowHandles()){
@@ -96,7 +96,7 @@ WebUI.click(findTestObject('Object Repository/LIMS/ResOps Requests/DV/Return To 
 
 Thread.sleep(1000);
 
-//Validation 2: Verify that the request is moved to PC.
+'Validation 2: Verify that the request is moved to PC.'
 
 WebUI.click(findTestObject('LIMS/Requests/Problemcases Resolution/tab_ProblemcasesResolution'))
 
