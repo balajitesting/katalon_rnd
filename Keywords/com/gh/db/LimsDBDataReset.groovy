@@ -95,7 +95,48 @@ public class LimsDBDataReset {
 		String query = "update s_request set u_ghrequeststatus = '"+status+"' where s_requestid = '"+requestID+"'";
 		db.execute(query);
 	}
+	/* valid value for status
+	 * 
+	 * status = '0'
+	 * status = '1'
+	 * 
+	 */
+	@Keyword
+	def resetDVStatus(String requestID, String status) {
 
+		LimsOracleDBService db = new LimsOracleDBService();
+		db.connectDB(GlobalVariable.oracleDBurl, GlobalVariable.oracleDBuser, GlobalVariable.oracleDBpwd);
+
+		String query = "update s_request set u_dvcheck = '"+status+"' where s_requestid = '"+requestID+"'";
+		db.execute(query);
+	}
+	/* valid value for status
+	 *
+	 * status = '0'
+	 * status = '1'
+	 *
+	 */
+	@Keyword
+	def resetDV2Status(String requestID, String status) {
+
+		LimsOracleDBService db = new LimsOracleDBService();
+		db.connectDB(GlobalVariable.oracleDBurl, GlobalVariable.oracleDBuser, GlobalVariable.oracleDBpwd);
+
+		String query = "update s_request set u_dv2check = '"+status+"' where s_requestid = '"+requestID+"'";
+		db.execute(query);
+	}
+	/* 
+	 * It will removed all the problem case associated with the requestID 
+	 */
+	@Keyword
+	def resetProblemCase(String requestID) {
+
+		LimsOracleDBService db = new LimsOracleDBService();
+		db.connectDB(GlobalVariable.oracleDBurl, GlobalVariable.oracleDBuser, GlobalVariable.oracleDBpwd);
+
+		String query = "delete from u_ghreqfollowup where requestid = '"+requestID+"'";
+		db.execute(query);
+	}
 
 	/**
 	 *  valid status
@@ -224,7 +265,7 @@ public class LimsDBDataReset {
 		delete_count = db.executeUpdate(query);
 		System.out.println("Deleted " + delete_count + " rows");
 	}
-	
+
 	@Keyword
 	def BIP_delete_by_sampleID(String sampleID) {
 
@@ -268,6 +309,4 @@ public class LimsDBDataReset {
 		delete_count = db.executeUpdate(query);
 		System.out.println("Deleted " + delete_count + " rows");
 	}
-	
-	
 }

@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>td_DataEntry Accession</name>
+   <name>ProjectID Search</name>
    <tag></tag>
-   <elementGuidId>ac11643c-379b-4d6e-899f-c09faa66b827</elementGuidId>
+   <elementGuidId>3ca57298-217f-48fb-9e57-3d8fca7c5726</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//table[@id='maintable']/tbody/tr[2]/td/table/tbody/tr/td[2]</value>
+         <value>//*[@id=&quot;pr0_projectid_img&quot;]/img</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>id(&quot;pr0_projectid_img&quot;)/img[1][count(. | //img[@title = 'Looking up a Project' and @src = 'WEB-CORE/elements/images/lookup.gif' and @ref_element = 'Object Repository/LIMS/ResOps Accession/Page_EManifest SingleTube Accession/maint_iframe']) = count(//img[@title = 'Looking up a Project' and @src = 'WEB-CORE/elements/images/lookup.gif' and @ref_element = 'Object Repository/LIMS/ResOps Accession/Page_EManifest SingleTube Accession/maint_iframe'])]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -17,86 +21,76 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>td</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>valign</name>
-      <type>Main</type>
-      <value>top</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>align</name>
-      <type>Main</type>
-      <value>center</value>
+      <value>img</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>text</name>
+      <name>title</name>
       <type>Main</type>
-      <value>
-
-                                
-
-                                    
-                                        
-                                        
-                                            
-                                                
-                                                    DataEntry Accession
-                                                
-                                            
-                                        
-                                        
-                                    
-
-                            </value>
+      <value>Looking up a Project</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>border</name>
+      <type>Main</type>
+      <value>0</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>src</name>
+      <type>Main</type>
+      <value>WEB-CORE/elements/images/lookup.gif</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;maintable&quot;)/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[2]</value>
+      <value>id(&quot;pr0_projectid_img&quot;)/img[1]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
-      <value>//table[@id='maintable']/tbody/tr[2]/td/table/tbody/tr/td[2]</value>
+      <value>//a[@id='pr0_projectid_img']/img</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='LabVantage Solutions, Inc. © 2015'])[1]/following::td[10]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Project Id'])[1]/following::img[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Data Verification Request List'])[1]/following::td[11]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Company Name'])[1]/following::img[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Accession Clinical'])[2]/preceding::td[5]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Product'])[1]/preceding::img[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Second DataEntry'])[2]/preceding::td[8]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Panel Version'])[1]/preceding::img[1]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:img</name>
+      <value>//img[@title='Looking up a Project']</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
-      <value>//tr[2]/td/table/tbody/tr/td[2]</value>
+      <value>//a/img</value>
    </webElementXpaths>
 </WebElementEntity>

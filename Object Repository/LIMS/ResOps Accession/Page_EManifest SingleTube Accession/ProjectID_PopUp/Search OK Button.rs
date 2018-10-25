@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>td_Logon</name>
+   <name>Search OK Button</name>
    <tag></tag>
-   <elementGuidId>72922efc-cd7d-4267-82c2-00590e9fb813</elementGuidId>
+   <elementGuidId>02a8c06c-853d-4ff4-8e5a-2635f83259a6</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//button[@id='submitlogin']/table/tbody/tr/td[3]</value>
+         <value>//*[@id=&quot;search_contentbar0&quot;]/table/tbody/tr/td[3]/button/table/tbody/tr/td</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@id=&quot;search_contentbar0&quot;]/table/tbody/tr/td[3]/button/table/tbody/tr/td</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -34,53 +38,47 @@
       <value>center</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Logon</value>
+      <value>OK</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;submitlogin&quot;)/table[1]/tbody[1]/tr[1]/td[3]</value>
+      <value>//*[@id=&quot;search_contentbar0&quot;]/table/tbody/tr/td[3]/button/table/tbody/tr/td</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
-      <value>//button[@id='submitlogin']/table/tbody/tr/td[3]</value>
+      <value>//div[@id='search_contentbar0']/table/tbody/tr/td[3]/button/table/tbody/tr/td</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Database:'])[1]/following::td[5]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Search:'])[1]/following::td[6]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Password:'])[1]/following::td[7]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Search By Query:'])[1]/preceding::td[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Reset'])[1]/preceding::td[3]</value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Forgot Password ?'])[1]/preceding::td[5]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='ActiveProjects'])[1]/preceding::td[3]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
-      <value>//button/table/tbody/tr/td[3]</value>
+      <value>//td[3]/button/table/tbody/tr/td</value>
    </webElementXpaths>
 </WebElementEntity>

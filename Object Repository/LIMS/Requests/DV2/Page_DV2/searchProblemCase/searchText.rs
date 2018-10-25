@@ -1,75 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>a_CLS Review</name>
+   <name>searchText</name>
    <tag></tag>
-   <elementGuidId>6852cdc4-7cb3-4ddc-9f60-0888ce2931a7</elementGuidId>
+   <elementGuidId>cb0b66d1-75ec-40e4-bf8e-a807acff9c16</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value></value>
+         <key>BASIC</key>
+         <value>//input[@type = 'text' and @name = 'bloodcolldate' and @id = 'bloodcolldate']</value>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value>id(&quot;layout_menulink1&quot;)[count(. | //a[@id = 'layout_menulink1' and (text() = 'CLS Review' or . = 'CLS Review')]) = count(//a[@id = 'layout_menulink1' and (text() = 'CLS Review' or . = 'CLS Review')])]</value>
+         <key>XPATH</key>
+         <value>//input[@id='searchtext']</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>a</value>
+      <value>input</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>onmouseover</name>
+      <name>tabindex</name>
       <type>Main</type>
-      <value>__menubar.ribbonMouseOver(this)</value>
+      <value>16</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>onmouseout</name>
+      <name>type</name>
       <type>Main</type>
-      <value>__menubar.ribbonMouseOut(this)</value>
+      <value>text</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>href</name>
+      <name>name</name>
       <type>Main</type>
-      <value>javascript:sapphire.userConfig.set('genericlayout_lastlinktab','reportprep');sapphire.userConfig.set('genericlayout_lastlinkmenu','clsreview');navigateTo('rc?command=page&amp;page=CLSRequestList', 'Y')</value>
+      <value>bloodcolldate</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
-      <value>layout_menulink1</value>
+      <value>bloodcolldate</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>onchange</name>
+      <type>Main</type>
+      <value>checkBLoodCollWithToday(this.value);</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>ribbon_menu_textns</value>
+      <value>hasDatepicker</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>text</name>
-      <type>Main</type>
-      <value>CLS Review</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;layout_menulink1&quot;)</value>
+      <value>id(&quot;bloodcolldate&quot;)</value>
    </webElementProperties>
 </WebElementEntity>
