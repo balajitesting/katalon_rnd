@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>DV2 TramStop</name>
+   <name>GHDV2ResOpsSearch Link</name>
    <tag></tag>
-   <elementGuidId>c0ea8748-5c49-426f-a3bb-c5bdca407a86</elementGuidId>
+   <elementGuidId>e20f6c6e-29d2-4439-88ce-494b71c60409</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id=&quot;dv2check_node&quot;]/tbody/tr[1]/td</value>
+         <value>//*[@id='__scrolldiv_query']/table/tbody/tr/td/a</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -17,70 +17,76 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>td</value>
+      <value>a</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>align</name>
+      <name>href</name>
       <type>Main</type>
-      <value>center</value>
+      <value>javascript:openQuery( 'GHDV2ResOpsSearch' )</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>valign</name>
+      <name>title</name>
       <type>Main</type>
-      <value>bottom</value>
+      <value>GHDV2ResOpsSearch</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>class</name>
+      <name>text</name>
       <type>Main</type>
-      <value>sitemap_TramStopSelCell</value>
+      <value>GHDV2ResOpsSearch</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;dv2check_node&quot;)/tbody[1]/tr[1]/td[@class=&quot;sitemap_TramStopSelCell&quot;]</value>
+      <value>id(&quot;__scrolldiv_query&quot;)/table[1]/tbody[1]/tr[1]/td[1]/a[1]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
-      <value>//table[@id='dv2check_node']/tbody/tr/td</value>
+      <value>//div[@id='__scrolldiv_query']/table/tbody/tr/td/a</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <value>//a[contains(text(),'GHDV2ResOpsSearch')]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='DV'])[2]/following::td[2]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Search By Query:'])[1]/following::a[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Problem Cases'])[2]/following::td[5]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='GHDV2ResOpsSearch'])[2]/preceding::a[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='DV-2'])[2]/preceding::td[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Requestid'])[1]/preceding::a[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='All Requests'])[4]/preceding::td[3]</value>
+      <name>xpath:href</name>
+      <value>//a[contains(@href, &quot;javascript:openQuery( 'GHDV2ResOpsSearch' )&quot;)]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
-      <value>//tr[3]/td[2]/table/tbody/tr/td[3]/table/tbody/tr/td</value>
+      <value>//div/table/tbody/tr/td/a</value>
    </webElementXpaths>
 </WebElementEntity>

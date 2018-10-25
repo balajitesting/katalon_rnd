@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>DV2 TramStop</name>
+   <name>DV2 Verified CheckBox</name>
    <tag></tag>
-   <elementGuidId>c0ea8748-5c49-426f-a3bb-c5bdca407a86</elementGuidId>
+   <elementGuidId>863f0822-2761-462c-9eee-1f4b6c1fdaea</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id=&quot;dv2check_node&quot;]/tbody/tr[1]/td</value>
+         <value>//*[@id=&quot;pr0_u_dv2check_chx&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -17,70 +17,76 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>td</value>
+      <value>input</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>pr0_u_dvcheck_chx</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>type</name>
+      <type>Main</type>
+      <value>checkbox</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>align</name>
+      <name>onclick</name>
       <type>Main</type>
-      <value>center</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>valign</name>
-      <type>Main</type>
-      <value>bottom</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>class</name>
-      <type>Main</type>
-      <value>sitemap_TramStopSelCell</value>
+      <value>setCheckBoxFieldValue('pr0_u_dvcheck','1','0');setCheckBoxValue('pr0_u_dvcheck','1','0');DVChecked();</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;dv2check_node&quot;)/tbody[1]/tr[1]/td[@class=&quot;sitemap_TramStopSelCell&quot;]</value>
+      <value>id(&quot;pr0_u_dvcheck_chx&quot;)</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <value>//input[@id='pr0_u_dvcheck_chx']</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
-      <value>//table[@id='dv2check_node']/tbody/tr/td</value>
+      <value>//table[@id='mainttable_History']/tbody/tr[5]/td[2]/input[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='DV'])[2]/following::td[2]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='DV Verified'])[1]/following::input[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Problem Cases'])[2]/following::td[5]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Verified By'])[1]/following::input[3]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='DV-2'])[2]/preceding::td[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='DV Verified Date'])[1]/preceding::input[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='All Requests'])[4]/preceding::td[3]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Physician'])[1]/preceding::input[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
-      <value>//tr[3]/td[2]/table/tbody/tr/td[3]/table/tbody/tr/td</value>
+      <value>//tr[5]/td[2]/input[2]</value>
    </webElementXpaths>
 </WebElementEntity>

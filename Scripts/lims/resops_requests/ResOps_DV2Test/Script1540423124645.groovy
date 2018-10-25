@@ -30,46 +30,44 @@ WebUI.comment('ENT-2932')
 
 String requestID = 'A0120749';
 
-CustomKeywords.'com.gh.db.LimsDBDataReset.resetDVStatus'(requestID, '0');
+CustomKeywords.'com.gh.db.LimsDBDataReset.resetDVStatus'(requestID, '1');
 CustomKeywords.'com.gh.db.LimsDBDataReset.resetDV2Status'(requestID, '0');
 
-
 CustomKeywords.'com.gh.lims.Common.logon'('ResOpsRhea', '5Ed5CIkj9UQfaMZXAkDVaQ==')
-
-WebUI.click(findTestObject('LIMS/ResOps Requests/DV1 TramStop'))
-
-WebUI.waitForPageLoad(6);
-WebUI.waitForElementClickable(findTestObject('LIMS/ResOps Requests/DV/GHDVResOpsSearch Link'), 30)
-WebUI.click(findTestObject('LIMS/ResOps Requests/DV/GHDVResOpsSearch Link'))
-
-WebUI.setText(findTestObject('Object Repository/LIMS/ResOps Requests/DV/requestID Search TextBox'), requestID)
-WebUI.click(findTestObject('Object Repository/LIMS/ResOps Requests/DV/OK Button'))
-
 WebUI.waitForPageLoad(6);
 
-WebUI.switchToFrame(findTestObject('Object Repository/LIMS/ResOps Requests/DV/list_iframe/list_iframe'), 10)
+WebUI.click(findTestObject('Object Repository/LIMS/ResOps Requests/DV2 TramStop'))
+WebUI.waitForPageLoad(6);
+WebUI.waitForElementClickable(findTestObject('Object Repository/LIMS/ResOps Requests/DV2/GHDV2ResOpsSearch Link'), 30)
+WebUI.click(findTestObject('Object Repository/LIMS/ResOps Requests/DV2/GHDV2ResOpsSearch Link'))
+
+WebUI.setText(findTestObject('Object Repository/LIMS/ResOps Requests/DV2/requestID Search TextBox'), requestID)
+WebUI.click(findTestObject('Object Repository/LIMS/ResOps Requests/DV2/Search OK Button'))
+
+WebUI.waitForPageLoad(6);
+
+WebUI.switchToFrame(findTestObject('Object Repository/LIMS/ResOps Requests/DV2/list_iframe/list_iframe'), 10)
 Thread.sleep(2000) //Katalon wait not working
-WebUI.waitForElementVisible(findTestObject('Object Repository/LIMS/ResOps Requests/DV/list_iframe/Request Type selector Radio Button'), 10)
-WebUI.waitForElementClickable(findTestObject('Object Repository/LIMS/ResOps Requests/DV/list_iframe/Request Type selector Radio Button'), 30)
-WebUI.click(findTestObject('Object Repository/LIMS/ResOps Requests/DV/list_iframe/Request Type selector Radio Button'))
+
+WebUI.waitForElementVisible(findTestObject('Object Repository/LIMS/ResOps Requests/DV2/list_iframe/Request Type selector Radio Button'), 10)
+WebUI.waitForElementClickable(findTestObject('Object Repository/LIMS/ResOps Requests/DV2/list_iframe/Request Type selector Radio Button'), 30)
+WebUI.click(findTestObject('Object Repository/LIMS/ResOps Requests/DV2/list_iframe/Request Type selector Radio Button'))
 
 WebUI.switchToDefaultContent()
-
 WebUI.waitForPageLoad(6);
-WebUI.waitForElementClickable(findTestObject('Object Repository/LIMS/ResOps Requests/DV/OK Button'), 30)
-WebUI.click(findTestObject('Object Repository/LIMS/ResOps Requests/DV/Edit Button'))
 
+WebUI.click(findTestObject('Object Repository/LIMS/ResOps Requests/DV2/Edit Button'))
 WebUI.waitForPageLoad(6);
 Thread.sleep(2000) //Katalon wait not working
+
 //WebUI.waitForElementVisible(findTestObject('Object Repository/LIMS/ResOps Requests/DV/maint_iframe/maint_iframe'), 10)
 //WebUI.switchToFrame(findTestObject('Object Repository/LIMS/ResOps Requests/DV/maint_iframe/maint_iframe'), 10)
-
 WebDriver driver = DriverFactory.getWebDriver();
 driver.switchTo().frame("maint_iframe");
 
-WebUI.waitForElementVisible(findTestObject('Object Repository/LIMS/ResOps Requests/DV/maint_iframe/DV Verified CheckBox'), 10)
-WebUI.waitForElementClickable(findTestObject('Object Repository/LIMS/ResOps Requests/DV/maint_iframe/DV Verified CheckBox'), 30)
-WebUI.click(findTestObject('Object Repository/LIMS/ResOps Requests/DV/maint_iframe/DV Verified CheckBox'))
+WebUI.waitForElementVisible(findTestObject('Object Repository/LIMS/ResOps Requests/DV2/maint_iframe/DV2 Verified CheckBox'), 10)
+WebUI.waitForElementClickable(findTestObject('Object Repository/LIMS/ResOps Requests/DV2/maint_iframe/DV2 Verified CheckBox'), 30)
+WebUI.click(findTestObject('Object Repository/LIMS/ResOps Requests/DV2/maint_iframe/DV2 Verified CheckBox'))
 
 driver.switchTo().defaultContent();
 
@@ -90,19 +88,19 @@ WebUI.switchToDefaultContent()
 WebUI.waitForPageLoad(6);
 Thread.sleep(2000); //Katalon wait not working. 
 
-WebUI.waitForElementPresent(findTestObject('Object Repository/LIMS/ResOps Requests/DV/Return To List Button'), 15)
-WebUI.waitForElementClickable(findTestObject('Object Repository/LIMS/ResOps Requests/DV/Return To List Button'), 30)
-WebUI.click(findTestObject('Object Repository/LIMS/ResOps Requests/DV/Return To List Button'))
+WebUI.waitForElementPresent(findTestObject('Object Repository/LIMS/ResOps Requests/DV2/Return To List Button'), 15)
+WebUI.waitForElementClickable(findTestObject('Object Repository/LIMS/ResOps Requests/DV2/Return To List Button'), 30)
+WebUI.click(findTestObject('Object Repository/LIMS/ResOps Requests/DV2/Return To List Button'))
 Thread.sleep(2000);
 WebUI.waitForPageLoad(6);
 
-WebUI.waitForElementClickable(findTestObject('LIMS/ResOps Requests/DV/GHDVResOpsSearch Link'), 30)
-WebUI.click(findTestObject('LIMS/ResOps Requests/DV/GHDVResOpsSearch Link'))
+WebUI.waitForElementClickable(findTestObject('Object Repository/LIMS/ResOps Requests/DV2/GHDV2ResOpsSearch Link'), 30)
+WebUI.click(findTestObject('Object Repository/LIMS/ResOps Requests/DV2/GHDV2ResOpsSearch Link'))
 
-WebUI.setText(findTestObject('Object Repository/LIMS/ResOps Requests/DV/requestID Search TextBox'), requestID)
-WebUI.click(findTestObject('Object Repository/LIMS/ResOps Requests/DV/OK Button'))
+WebUI.setText(findTestObject('Object Repository/LIMS/ResOps Requests/DV2/requestID Search TextBox'), requestID)
+WebUI.click(findTestObject('Object Repository/LIMS/ResOps Requests/DV2/Search OK Button'))
 
-WebUI.switchToFrame(findTestObject('Object Repository/LIMS/ResOps Requests/DV/list_iframe/list_iframe'), 10)
+WebUI.switchToFrame(findTestObject('Object Repository/LIMS/ResOps Requests/DV2/list_iframe/list_iframe'), 10)
 Thread.sleep(2000) //Katalon wait not working
 
 String msg = driver.findElement(By.xpath("//*[@id='sdidiv']/p")).getText();

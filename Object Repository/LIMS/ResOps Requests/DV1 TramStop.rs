@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>DV2 TramStop</name>
+   <name>DV1 TramStop</name>
    <tag></tag>
-   <elementGuidId>c0ea8748-5c49-426f-a3bb-c5bdca407a86</elementGuidId>
+   <elementGuidId>6347fc64-e6b1-492c-87b3-1711d4c8880b</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id=&quot;dv2check_node&quot;]/tbody/tr[1]/td</value>
+         <value>//*[@id='dvcheck_node']/tbody/tr/td</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -45,42 +45,42 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;dv2check_node&quot;)/tbody[1]/tr[1]/td[@class=&quot;sitemap_TramStopSelCell&quot;]</value>
+      <value>id(&quot;dvcheck_node&quot;)/tbody[1]/tr[1]/td[@class=&quot;sitemap_TramStopSelCell&quot;]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
-      <value>//table[@id='dv2check_node']/tbody/tr/td</value>
+      <value>//table[@id='dvcheck_node']/tbody/tr/td</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='DV'])[2]/following::td[2]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Problem Cases'])[2]/following::td[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Problem Cases'])[2]/following::td[5]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Accessioned Tubes'])[2]/following::td[13]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='DV-2'])[2]/preceding::td[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='DV'])[2]/preceding::td[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='All Requests'])[4]/preceding::td[3]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='DV-2'])[2]/preceding::td[3]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
-      <value>//tr[3]/td[2]/table/tbody/tr/td[3]/table/tbody/tr/td</value>
+      <value>//td/table/tbody/tr[3]/td[2]/table/tbody/tr/td[2]/table/tbody/tr/td</value>
    </webElementXpaths>
 </WebElementEntity>
