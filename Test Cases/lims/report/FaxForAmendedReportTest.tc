@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>FaxReportTest</name>
+   <name>FaxForAmendedReportTest</name>
    <tag></tag>
-   <comment></comment>
+   <comment>Run: ENT-6694</comment>
    <testCaseGuid>950edb12-f724-4150-8519-1fd348c95972</testCaseGuid>
 </TestCaseEntity>
