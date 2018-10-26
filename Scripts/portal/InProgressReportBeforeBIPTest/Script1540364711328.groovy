@@ -286,7 +286,10 @@ WebUI.click(findTestObject('Object Repository/LIMS/DV2/Page_DV2 Request List/td_
 
 edit = 'LIMS/Problem Resolution/Page_Problem Cases Resolution/div_Edit'
 
-CustomKeywords.'com.gh.lims.Common.setClick'(edit)
+//CustomKeywords.'com.gh.lims.Common.setClick'(edit)
+Thread.sleep(3000)
+
+WebUI.click(findTestObject(edit))
 
 WebUI.switchToFrame(findTestObject('LIMS/Problem Resolution/Sub_eSign/iframe'), 10)
 
