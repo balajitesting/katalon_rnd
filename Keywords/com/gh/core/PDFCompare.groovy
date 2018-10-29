@@ -48,17 +48,16 @@ public class PDFCompare {
 		} else {
 			println('Unmatched pdf found! Check diff file in ' + outFilePath)
 		}
-
 	}
 
-	public String getOutFilePath() {
-
-		String pdfDiffRootDir = RunConfiguration.getProjectDir() + "/Results/pdfdiff/"
-
-		File pdfDiffDir = setupDir(pdfDiffRootDir)
-
-		return pdfDiffDir.getPath();
-	}
+//	public String getOutFilePath() {
+//
+//		String pdfDiffRootDir = RunConfiguration.getProjectDir() + "/Results/pdfdiff/"
+//
+//		File pdfDiffDir = setupDir(pdfDiffRootDir)
+//
+//		return pdfDiffDir.getPath();
+//	}
 
 	private File setupDir(String root) {
 
@@ -95,13 +94,13 @@ public class PDFCompare {
 		return dir;
 	}
 
-	@Keyword
-	def display(boolean bool){
-
-		if (bool) {
-			println('PDF Match!')
-		} else {
-			println('Unmatched pdf found! Check diff file in ' + outFilePath)
-		}
-	}
+//	@Keyword
+//	def display(boolean bool){
+//
+//		if (bool) {
+//			println('PDF Match!')
+//		} else {
+//			println('Unmatched pdf found! Check diff file in ' + outFilePath)
+//		}
+//	}
 }

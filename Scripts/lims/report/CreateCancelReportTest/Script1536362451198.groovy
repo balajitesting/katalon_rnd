@@ -50,9 +50,9 @@ WebUI.click(findTestObject('LIMS/DCO/Report/button_OK_report'))
 
 WebUI.click(findTestObject('LIMS/DCO/Report/Page_CNV/div_Release Report'))
 
-Thread.sleep(4000)
+WebUI.waitForElementVisible(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/button_OK_rel_rep'), 120)
 
-WebUI.click(findTestObject('LIMS/DCO/Report/button_OK_2'))
+WebUI.click(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/button_OK_rel_rep'))
 
 WebUI.waitForElementPresent(findTestObject('LIMS/logout/img'), 10)
 
