@@ -59,6 +59,8 @@ public class Common {
 		Thread.sleep(2000)
 
 		logon(usr, pwd)
+		
+		Thread.sleep(2000)
 
 		WebUI.delay(timeout)
 

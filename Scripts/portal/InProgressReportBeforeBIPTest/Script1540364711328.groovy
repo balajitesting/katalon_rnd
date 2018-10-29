@@ -16,6 +16,7 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.comment('Run ENT-6485')
 
+
 'DE1 TC Execution'
 CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserDagmar', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
@@ -189,6 +190,8 @@ WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/img'))
 
 WebUI.switchToFrame(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Frame'), 10)
 
+Thread.sleep(2000)
+
 WebUI.setText(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Password'), 'abcd1234')
 
 WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Dropdown_Btn'))
@@ -210,7 +213,7 @@ WebUI.click(findTestObject('LIMS/logout/img'))
 WebUI.closeBrowser()
 
 'Verifying in Progress report for created Accession id in portal'
-CustomKeywords.'com.gh.portal.Common.switchToPortal'('brian.leylandjones@avera.org', 'Pa22word', aNumber, 0)
+CustomKeywords.'com.gh.portal.Common.switchToPortal'('brian.leylandjones@avera.org', 'Pa22word', aNumber, 3)
 
 'DataVerificationWithProblemCase Execution'
 CustomKeywords.'com.gh.lims.Common.logon'('abaca', '5Ed5CIkj9UQfaMZXAkDVaQ==')
@@ -243,6 +246,8 @@ WebUI.switchToDefaultContent()
 WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/img'))
 
 WebUI.switchToFrame(findTestObject('Object Repository/LIMS/DV1/eSign/iFrame'), 10)
+
+Thread.sleep(2000)
 
 WebUI.setText(findTestObject('Object Repository/LIMS/DV1/eSign/password'), 'abcd1234')
 
@@ -301,6 +306,8 @@ WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/img'))
 
 WebUI.switchToFrame(findTestObject('Object Repository/LIMS/DV2/eSign/iFrame'), 10)
 
+Thread.sleep(2000)
+
 WebUI.setText(findTestObject('Object Repository/LIMS/DV2/eSign/password'), 'abcd1234')
 
 WebUI.click(findTestObject('Object Repository/LIMS/DV2/eSign/dropdown_Btn'))
@@ -310,6 +317,16 @@ WebUI.click(findTestObject('Object Repository/LIMS/DV2/eSign/select_Reason'))
 WebUI.click(findTestObject('Object Repository/LIMS/DV2/eSign/eSign_OK'))
 
 WebUI.switchToDefaultContent()
+
+//Thread.sleep(3000)
+
+//WebUI.click(findTestObject('LIMS/DCO/Report/Page_All Requests/returnToList'))
+
+rtl = 'LIMS/DV1/Page_DV Check/div_Return To List'
+
+WebUI.waitForElementPresent(findTestObject(rtl), 10)
+
+CustomKeywords.'com.gh.core.JSHandler.J2Click'(findTestObject(rtl), 10)
 
 WebUI.waitForElementPresent(findTestObject('Object Repository/LIMS/logout/img'), 10)
 
