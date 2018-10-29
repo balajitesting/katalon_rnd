@@ -95,6 +95,8 @@ assert WebUI.getText(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/aler
 
 WebUI.click(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/button_OK_rel_rep'))
 
+WebUI.maximizeWindow()
+
 WebUI.waitForElementPresent(findTestObject('Object Repository/LIMS/logout/img'), 10)
 
 WebUI.click(findTestObject('LIMS/logout/img'))
