@@ -50,15 +50,6 @@ public class PDFCompare {
 		}
 	}
 
-//	public String getOutFilePath() {
-//
-//		String pdfDiffRootDir = RunConfiguration.getProjectDir() + "/Results/pdfdiff/"
-//
-//		File pdfDiffDir = setupDir(pdfDiffRootDir)
-//
-//		return pdfDiffDir.getPath();
-//	}
-
 	private File setupDir(String root) {
 
 		String date = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
@@ -94,13 +85,4 @@ public class PDFCompare {
 		return dir;
 	}
 
-//	@Keyword
-//	def display(boolean bool){
-//
-//		if (bool) {
-//			println('PDF Match!')
-//		} else {
-//			println('Unmatched pdf found! Check diff file in ' + outFilePath)
-//		}
-//	}
 }
