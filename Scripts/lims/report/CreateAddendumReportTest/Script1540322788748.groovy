@@ -82,3 +82,5 @@ WebUI.waitForElementPresent(findTestObject('LIMS/logout/img'), 10)
 WebUI.click(findTestObject('LIMS/logout/img'))
 
 WebUI.closeBrowser()
+
+CustomKeywords.'com.gh.core.PDFCompare.compareAndSave'(A_Number, ReportStatus)

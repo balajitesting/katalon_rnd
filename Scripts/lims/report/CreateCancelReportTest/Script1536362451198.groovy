@@ -60,15 +60,6 @@ WebUI.click(findTestObject('LIMS/logout/img'))
 
 WebUI.closeBrowser()
 
-String filename = ((A_Number + '_') + ReportStatus) + '_report.pdf'
-
-String file1 = CustomKeywords.'com.gh.core.Properties.getGetPDFBaseDir'() + filename
-
-String file2 = CustomKeywords.'com.gh.core.Properties.getGetPDFDownloadDir'() + filename
-
-boolean val = CustomKeywords.'com.gh.core.PDFCompare.compareAndSave'(file1, file2)
-
-CustomKeywords.'com.gh.core.PDFCompare.display'(val)
-
+CustomKeywords.'com.gh.core.PDFCompare.compareAndSave'(A_Number, ReportStatus)
 
 

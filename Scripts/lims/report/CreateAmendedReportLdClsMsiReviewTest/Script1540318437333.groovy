@@ -91,6 +91,8 @@ WebUI.click(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/td_Release Re
 
 WebUI.waitForElementVisible(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/button_OK_rel_rep'), 120)
 
+assert WebUI.getText(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/alert_msg')).contains('Fax was sent successfully') == true
+
 WebUI.click(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/button_OK_rel_rep'))
 
 WebUI.waitForElementPresent(findTestObject('Object Repository/LIMS/logout/img'), 10)
@@ -99,12 +101,5 @@ WebUI.click(findTestObject('LIMS/logout/img'))
 
 WebUI.closeBrowser()
 
-String filename = ((A_Number + '_') + ReportStatus) + '_report.pdf'
+CustomKeywords.'com.gh.core.PDFCompare.compareAndSave'(A_Number, ReportStatus)
 
-String file1 = CustomKeywords.'com.gh.core.Properties.getGetPDFBaseDir'() + filename
-
-String file2 = CustomKeywords.'com.gh.core.Properties.getGetPDFDownloadDir'() + filename
-
-boolean val = CustomKeywords.'com.gh.core.PDFCompare.compareAndSave'(file1, file2)
-
-CustomKeywords.'com.gh.core.PDFCompare.display'(val)
