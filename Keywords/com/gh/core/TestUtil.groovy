@@ -4,6 +4,9 @@ import java.io.File;
 import java.io.IOException
 import java.text.SimpleDateFormat
 import com.kms.katalon.core.annotation.Keyword
+
+import internal.GlobalVariable
+
 import com.gh.core.Properties as CustomProperties
 
 /**
@@ -72,11 +75,11 @@ public class TestUtil {
 		String barCode = "SQA" +rand.nextInt(9999) + rand.nextInt(999999999);
 		return barCode
 	}
-	
+
 	@Keyword
 	public static String getSampleID(){
 		Random rand = new Random();
-		String sampleID = 100000000 + rand.nextInt(999999999);			
+		String sampleID = 100000000 + rand.nextInt(999999999);
 		return sampleID
 	}
 
@@ -88,4 +91,39 @@ public class TestUtil {
 		String date = ds.format(cal.getTime());
 		return date
 	}
+
+	@Keyword
+	public static boolean check_ssh_host_file_exist(String path) {
+		String s = null;
+
+		try {
+
+			// This only work when you setup your ssh key in the server.
+			Process p = Runtime.getRuntime().exec("ssh -q "+GlobalVariable.ssh_host+" [[ -f \""+path+"\" ]] && echo \"exists\" || echo \"not_exist\";\n");
+
+			BufferedReader stdInput = new BufferedReader(new
+					InputStreamReader(p.getInputStream()));
+
+			BufferedReader stdError = new BufferedReader(new
+					InputStreamReader(p.getErrorStream()));
+
+			// read the output from the command
+			while ((s = stdInput.readLine()) != null) {
+				return s.equals("exists");
+			}
+
+			// read any errors from the attempted command
+			while ((s = stdError.readLine()) != null) {
+				System.out.println(s);
+			}
+
+			System.exit(0);
+		} catch (IOException e) {
+			System.out.println("exception happened - here's what I know: ");
+			e.printStackTrace();
+			System.exit(-1);
+		}
+		return false;
+	}
+
 }
