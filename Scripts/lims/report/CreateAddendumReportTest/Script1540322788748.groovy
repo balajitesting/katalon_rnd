@@ -78,6 +78,8 @@ WebUI.waitForElementVisible(findTestObject('LIMS/DCO/Report/Page_Edit GHReportIn
 
 WebUI.click(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/button_OK_rel_rep'))
 
+WebUI.maximizeWindow()
+
 WebUI.waitForElementPresent(findTestObject('LIMS/logout/img'), 10)
 WebUI.click(findTestObject('LIMS/logout/img'))
 

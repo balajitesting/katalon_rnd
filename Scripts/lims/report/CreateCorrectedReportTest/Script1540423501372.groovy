@@ -93,7 +93,7 @@ WebUI.click(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/button_OK_rel
 
 //WebUI.waitForElementPresent(findTestObject('LIMS/TMP/Page_Request List for CLS Review/img'), 10)
 
-Thread.sleep(3000)
+WebUI.maximizeWindow()
 
 WebUI.click(findTestObject('LIMS/logout/img'))
 
