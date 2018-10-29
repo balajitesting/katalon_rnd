@@ -50,9 +50,9 @@ WebUI.click(findTestObject('LIMS/DCO/Report/button_OK_report'))
 
 WebUI.click(findTestObject('LIMS/DCO/Report/Page_CNV/div_Release Report'))
 
-Thread.sleep(4000)
+WebUI.waitForElementVisible(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/button_OK_rel_rep'), 120)
 
-WebUI.click(findTestObject('LIMS/DCO/Report/button_OK_2'))
+WebUI.click(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/button_OK_rel_rep'))
 
 WebUI.waitForElementPresent(findTestObject('LIMS/logout/img'), 10)
 
@@ -60,15 +60,6 @@ WebUI.click(findTestObject('LIMS/logout/img'))
 
 WebUI.closeBrowser()
 
-String filename = ((A_Number + '_') + ReportStatus) + '_report.pdf'
-
-String file1 = CustomKeywords.'com.gh.core.Properties.getGetPDFBaseDir'() + filename
-
-String file2 = CustomKeywords.'com.gh.core.Properties.getGetPDFDownloadDir'() + filename
-
-boolean val = CustomKeywords.'com.gh.core.PDFCompare.compareAndSave'(file1, file2)
-
-CustomKeywords.'com.gh.core.PDFCompare.display'(val)
-
+CustomKeywords.'com.gh.core.PDFCompare.compareAndSave'(A_Number, ReportStatus)
 
 

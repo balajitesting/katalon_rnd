@@ -10,19 +10,15 @@ import com.kms.katalon.core.configuration.RunConfiguration
 
 public class Properties {
 
-	private String projDir = RunConfiguration.getProjectDir()
-	private String PDFBASELINE_DIR = RunConfiguration.getProjectDir() + '/Resources/PDFBaseline/'
-	String PDFDOWNLOAD_DIR = RunConfiguration.getProjectDir() + "/Results/download/"
-
-
-	@Keyword
-	def String getGetPDFBaseDir() {
+	private static String PDFBASELINE_DIR = RunConfiguration.getProjectDir() + '/Resources/PDFBaseline/'
+	private static String PDFDOWNLOAD_DIR = RunConfiguration.getProjectDir() + "/Results/download/"
+	
+	def static String getPDFBaseDir() {
 		return PDFBASELINE_DIR
 	}
 
 
-	@Keyword
-	def String getGetPDFDownloadDir() {
+	def static String getPDFDownloadDir() {
 		return PDFDOWNLOAD_DIR
 	}
 }

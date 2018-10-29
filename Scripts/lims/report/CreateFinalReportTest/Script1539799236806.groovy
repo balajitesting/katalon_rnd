@@ -13,15 +13,15 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-aNumber = 'A0112848'
+A_Number = 'A0112848'
 
-CustomKeywords.'com.gh.db.LimsDBDataReset.redoFinalReport'(aNumber)
+CustomKeywords.'com.gh.db.LimsDBDataReset.redoFinalReport'(A_Number)
 
 String ReportStatus = 'FINAL'
 
 CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserReporting', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
-CustomKeywords.'com.gh.lims.Report.searchRequest'(aNumber)
+CustomKeywords.'com.gh.lims.Report.searchRequest'(A_Number)
 
 WebUI.waitForElementVisible(findTestObject('LIMS/DCO/Report/Page_All Requests/select_TB Review BIP DataLD Re'), 60)
 
@@ -38,7 +38,7 @@ WebUI.click(findTestObject('LIMS/DCO/Report/Page_All Requests/a_LD Review'))
 
 WebUI.acceptAlert()
 
-WebUI.setText(findTestObject('LIMS/DCO/Report/Page_Request List for LD Review/input_searchtext'), aNumber)
+WebUI.setText(findTestObject('LIMS/DCO/Report/Page_Request List for LD Review/input_searchtext'), A_Number)
 
 WebUI.click(findTestObject('LIMS/DCO/Report/Page_Request List for LD Review/td_OK'))
 
@@ -66,7 +66,7 @@ WebUI.waitForElementPresent(findTestObject('LIMS/DCO/Report/Page_Edit GHReportIn
 
 WebUI.click(findTestObject('LIMS/DCO/Report/Page_Request List for LD Review/a_CLS Review'))
 
-WebUI.setText(findTestObject('LIMS/DCO/Report/Page_Request List for CLS Review/input_Search_searchtext'), aNumber)
+WebUI.setText(findTestObject('LIMS/DCO/Report/Page_Request List for CLS Review/input_Search_searchtext'), A_Number)
 
 WebUI.click(findTestObject('LIMS/DCO/report/Page_Request List for CLS Review/td_OK'))
 
@@ -93,4 +93,6 @@ Thread.sleep(3000)
 WebUI.click(findTestObject('LIMS/logout/img'))
 
 WebUI.closeBrowser()
+
+CustomKeywords.'com.gh.core.PDFCompare.compareAndSave'(A_Number, ReportStatus)
 

@@ -22,16 +22,20 @@ public class PDFCompare {
 
 	private PDFUtil pdfUtil;
 	private File pdfDiffDir;
-	private String outFilePath;
 
 	@Keyword
-	def boolean compareAndSave(String file1, String file2){
+	def compareAndSave(String aNumber, String reportStat){
+
+		String filename = ((aNumber + '_') + reportStat) + '_report.pdf'
+
+		String file1 = Properties.getPDFBaseDir() + filename
+		String file2 = Properties.getPDFDownloadDir() + filename
 
 		String pdfDiffRootDir = RunConfiguration.getProjectDir() + "/Results/pdfdiff/"
 
 		pdfDiffDir = setupDir(pdfDiffRootDir)
 
-		outFilePath = pdfDiffDir.getPath();
+		String outFilePath = pdfDiffDir.getPath();
 
 		pdfUtil = new PDFUtil();
 		pdfUtil.compareAllPages(true)
@@ -39,7 +43,11 @@ public class PDFCompare {
 		pdfUtil.setCompareMode(CompareMode.VISUAL_MODE)
 		pdfUtil.setImageDestinationPath(outFilePath)
 
-		return pdfUtil.compare(file1, file2);
+		if(pdfUtil.compare(file1, file2)){
+			println('PDF Match!')
+		} else {
+			println('Unmatched pdf found! Check diff file in ' + outFilePath)
+		}
 	}
 
 	private File setupDir(String root) {
@@ -77,13 +85,4 @@ public class PDFCompare {
 		return dir;
 	}
 
-	@Keyword
-	def display(boolean bool){
-
-		if (bool) {
-			println('PDF Match!')
-		} else {
-			println('Unmatched pdf found! Check diff file in ' + outFilePath)
-		}
-	}
 }
