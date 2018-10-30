@@ -78,14 +78,13 @@ public class Common {
 
 		WebUI.click(findTestObject('Portal/page_inprogressreport/selectsearch'))
 
-		Thread.sleep(4000)
-		//WebUI.click(findTestObject('Portal/page_inprogressreport/inprogressimg'), 10)
+		Thread.sleep(2000)
 
 		WebUI.click(findTestObject('Portal/page_inprogressreport/test/viewAccessionDetails'))
 
 		assert WebUI.getText(findTestObject('Portal/page_inprogressreport/test/verifyStatus')).contains("In progress") == true
 
-		Thread.sleep(10000)
+		Thread.sleep(2000)
 
 		WebUI.click(findTestObject('Portal/page_inprogressreport/profilemenu'))
 
