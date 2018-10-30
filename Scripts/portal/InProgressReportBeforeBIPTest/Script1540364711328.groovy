@@ -16,6 +16,7 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.comment('Run ENT-6485')
 
+String aNumber = 'A0121190'
 
 'DE1 TC Execution'
 CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserDagmar', '5Ed5CIkj9UQfaMZXAkDVaQ==')

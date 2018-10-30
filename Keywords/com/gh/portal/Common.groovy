@@ -59,7 +59,7 @@ public class Common {
 		Thread.sleep(2000)
 
 		logon(usr, pwd)
-		
+
 		Thread.sleep(2000)
 
 		WebUI.delay(timeout)
@@ -78,7 +78,14 @@ public class Common {
 
 		WebUI.click(findTestObject('Portal/page_inprogressreport/selectsearch'))
 
-		WebUI.verifyElementPresent(findTestObject('Portal/page_inprogressreport/inprogressimg'), 10)
+		Thread.sleep(4000)
+		//WebUI.click(findTestObject('Portal/page_inprogressreport/inprogressimg'), 10)
+
+		WebUI.click(findTestObject('Portal/page_inprogressreport/test/viewAccessionDetails'))
+
+		assert WebUI.getText(findTestObject('Portal/page_inprogressreport/test/verifyStatus')).contains("In progress") == true
+
+		Thread.sleep(10000)
 
 		WebUI.click(findTestObject('Portal/page_inprogressreport/profilemenu'))
 
