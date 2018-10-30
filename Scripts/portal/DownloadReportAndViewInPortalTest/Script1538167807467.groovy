@@ -33,7 +33,9 @@ WebUI.switchToWindowUrl(GlobalVariable.portalUrl + '/dashboard')
 
 WebUI.click(findTestObject('Portal/Dashboard/Page_Guardant Health/i_fa fa-chevron-down admin-men'))
 
-//WebUI.click(findTestObject('Portal/Dashboard/Page_Guardant Health/a_Sign Out'))
+WebUI.verifyElementClickable(findTestObject('Portal/page_guardanthealth/signout'))
+
+WebUI.click(findTestObject('Portal/page_guardanthealth/signout'))
 
 WebUI.closeBrowser()
 
