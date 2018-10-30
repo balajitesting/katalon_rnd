@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>FaxAmendedReportForPrimaryAndSecondaryPhysicianTest</name>
+   <tag></tag>
+   <comment>Run: ENTC-2855</comment>
+   <testCaseGuid>a66b5280-11c7-4329-bf7c-ecde273816d4</testCaseGuid>
+</TestCaseEntity>
