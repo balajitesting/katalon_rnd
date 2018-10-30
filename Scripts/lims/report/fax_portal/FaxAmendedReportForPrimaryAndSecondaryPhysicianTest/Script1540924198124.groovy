@@ -24,7 +24,7 @@ import java.sql.ResultSet
 
 WebUI.comment('Run: ENTC-2855')
 
-String A_Number = 'A80196'
+String A_Number = 'A0100069'
 
 'Get the count of records in Fax table Prior to releasing the report'
 
@@ -32,7 +32,7 @@ String query = "select COUNT(*) as count from U_GHFAX U, S_REQUEST S WHERE U.REQ
 
 int countBeforeRelease = CustomKeywords.'com.gh.db.LimsDBOperation.getCount'(query)
 
-//Validation 1: CLS releases Amended report to primary whose delivery method is "Fax"
+//Validation 1: CLS releases Amended report to primary and secondary whose delivery method is "Fax"
 
 String ReportStatus = 'AMENDED'
 
@@ -97,8 +97,6 @@ WebUI.click(findTestObject('LIMS/DCO/Report/Page_Request List for CLS Review/td_
 
 CustomKeywords.'com.gh.lims.Common.setClick'(beginWorkFlow)
 
-WebUI.click(findTestObject('LIMS/DCO/Report/Page_CNV/div_SNV Review'))
-
 WebUI.click(findTestObject('LIMS/DCO/Report/Page_Request List for CLS Review/td_Fusion Review'))
 
 WebUI.click(findTestObject('LIMS/DCO/Report/Page_INDEL/div_MSI Review'))
@@ -110,6 +108,8 @@ WebUI.waitForElementVisible(findTestObject('LIMS/DCO/Report/Page_Edit GHReportIn
 Thread.sleep(2000) //Wait command is not working properly. Hence, implemented the same.
 
 assert WebUI.getText(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/alert_msg')).contains('Fax was sent successfully') == true
+
+assert WebUI.getText(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/alert_msg2')).contains('Fax was sent successfully') == true
 
 Thread.sleep(2000) //Wait command is not working properly. Hence, implemented the same.
 
@@ -135,4 +135,4 @@ WebUI.closeBrowser()
 
 int countAfterRelease = CustomKeywords.'com.gh.db.LimsDBOperation.getCount'(query)
 
-assert (countAfterRelease - countBeforeRelease).equals(1) 
+assert (countAfterRelease - countBeforeRelease).equals(2) 
