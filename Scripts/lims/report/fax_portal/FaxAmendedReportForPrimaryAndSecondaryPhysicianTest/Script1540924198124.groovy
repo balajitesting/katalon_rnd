@@ -22,7 +22,7 @@ import internal.GlobalVariable as GlobalVariable
 import com.gh.db.LimsOracleDBService
 import java.sql.ResultSet
 
-WebUI.comment('Run: ENTC-2855')
+WebUI.comment('Run: ENTSW-TC-2855')
 
 String A_Number = 'A0100069'
 
