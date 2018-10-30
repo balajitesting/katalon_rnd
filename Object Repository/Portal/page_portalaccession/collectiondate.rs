@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>acceptcheck</name>
+   <name>collectiondate</name>
    <tag></tag>
-   <elementGuidId>56850909-4997-4a3f-8b7a-fa00dc17b408</elementGuidId>
+   <elementGuidId>145eda9c-d48e-4c9c-b58c-be7053c42ad1</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//input[@name='accept_terms'])[2]</value>
+         <value>//div[text()='COLLECTION DATE']//following-sibling::div[@class='content patient-summary-content']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

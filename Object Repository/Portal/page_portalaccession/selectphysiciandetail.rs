@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>acceptcheck</name>
+   <name>selectphysiciandetail</name>
    <tag></tag>
-   <elementGuidId>56850909-4997-4a3f-8b7a-fa00dc17b408</elementGuidId>
+   <elementGuidId>f92455b2-8ec0-47db-9984-5f94f82bfa81</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//input[@name='accept_terms'])[2]</value>
+         <value>(//div[@class='checkbox-text'])[3]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

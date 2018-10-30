@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>acceptcheck</name>
+   <name>permissionstab</name>
    <tag></tag>
-   <elementGuidId>56850909-4997-4a3f-8b7a-fa00dc17b408</elementGuidId>
+   <elementGuidId>44178d88-5650-44e4-8021-212b966c5d2c</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//input[@name='accept_terms'])[2]</value>
+         <value>(//a[text()=' PERMISSIONS'])[2]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

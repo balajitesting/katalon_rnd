@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>acceptcheck</name>
+   <name>txtdate</name>
    <tag></tag>
-   <elementGuidId>56850909-4997-4a3f-8b7a-fa00dc17b408</elementGuidId>
+   <elementGuidId>26edea24-86de-431b-897e-236042e7fcd8</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//input[@name='accept_terms'])[2]</value>
+         <value>(//div[@class='tumor-response-map__svg-container']//child::text())[3]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

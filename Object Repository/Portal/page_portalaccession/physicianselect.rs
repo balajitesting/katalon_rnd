@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>acceptcheck</name>
+   <name>physicianselect</name>
    <tag></tag>
-   <elementGuidId>56850909-4997-4a3f-8b7a-fa00dc17b408</elementGuidId>
+   <elementGuidId>1e09d8a7-0540-47ef-ad53-dedba9b77549</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//input[@name='accept_terms'])[2]</value>
+         <value>//div[@class='portal-user__row']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
