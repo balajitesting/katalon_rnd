@@ -477,8 +477,6 @@ WebUI.closeBrowser()
  boolean phyflag = false
  
  for (int i = 0; i < physicianCount; i++) {
-	 println(physicianNames.get(i).getText())
-	 System.out.println(physicianNames.get(i).getText() + "     " + physicianCount + "    " + i + "     " + strPhysician.toString())
 	 
 	 if (physicianNames.get(i).getText().contains(strPhysician)) {
 		 phyflag = true
