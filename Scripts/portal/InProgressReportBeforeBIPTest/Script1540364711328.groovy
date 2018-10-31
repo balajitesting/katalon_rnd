@@ -14,7 +14,7 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.comment('Run ENT-6485')
+WebUI.comment('Run ENTSW-TC-2912')
 
 String aNumber = 'A0121190'
 
@@ -319,15 +319,13 @@ WebUI.click(findTestObject('Object Repository/LIMS/DV2/eSign/eSign_OK'))
 
 WebUI.switchToDefaultContent()
 
-//Thread.sleep(3000)
-
-//WebUI.click(findTestObject('LIMS/DCO/Report/Page_All Requests/returnToList'))
-
 rtl = 'LIMS/DV1/Page_DV Check/div_Return To List'
 
 WebUI.waitForElementPresent(findTestObject(rtl), 10)
 
 CustomKeywords.'com.gh.core.JSHandler.J2Click'(findTestObject(rtl), 10)
+
+Thread.sleep(2000)
 
 WebUI.waitForElementPresent(findTestObject('Object Repository/LIMS/logout/img'), 10)
 
