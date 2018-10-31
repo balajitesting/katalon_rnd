@@ -257,6 +257,8 @@ WebUI.waitForPageLoad(5)
 
 WebUI.waitForElementClickable(findTestObject('Object Repository/Portal/page_portalaccession/tooglepatientname'), 10)
 
+Thread.sleep(2000)
+
 WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/tooglepatientname'))
 
 WebUI.waitForElementClickable(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'), 20)
@@ -418,7 +420,7 @@ WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/signou
 
 WebUI.closeBrowser()
 
-/*'Step 3:Should see only reports for all physicians that admin granted access'
+'Step 3:Should see only reports for all physicians that admin granted access'
  CustomKeywords.'com.gh.portal.Common.logon'('bejoysitemgr@gmail.com', 'Pa22word')
  
  WebUI.waitForPageLoad(5)
@@ -466,6 +468,8 @@ WebUI.closeBrowser()
  
  WebUI.waitForPageLoad(2000)
  
+ Thread.sleep(2000)
+ 
  List<WebElement> physicianNames = DriverFactory.getWebDriver().findElements(By.xpath('//div[@class=\'requests-list__header__label__name\']'))
  
  physicianCount = physicianNames.size()
@@ -473,18 +477,14 @@ WebUI.closeBrowser()
  boolean phyflag = false
  
  for (int i = 0; i < physicianCount; i++) {
-	 println(physicianNames.get(i).getText())
- 
-	 phyflag = physicianNames.get(i).getText().contains(strPhysician)
- 
-	 println(phyflag)
- 
-	 if (phyflag) {
+	 
+	 if (physicianNames.get(i).getText().contains(strPhysician)) {
+		 phyflag = true
 		 Assert.assertEquals(physicianNames.get(i).getText(), strPhysician)
- 
-		 //        println('contains physician')
 		 break
 	 }
+	 
+	 Thread.sleep(1000)
  }
  
  if (!(phyflag)) {
@@ -492,26 +492,25 @@ WebUI.closeBrowser()
  
 	 List<WebElement> allPhysicians = DriverFactory.getWebDriver().findElements(By.xpath('//div[@class=\'share-index__collaborator__left-col__name\']'))
  
-	 String allPhysicianCount = allPhysicians.size()
+	 int allPhysicianCount = allPhysicians.size()
  
 	 boolean allPhyflag = false
+ 	 for (int j = 1; j < allPhysicianCount; j++) {
+		 println(allPhysicians.get(j).getText())
  
-	 for (i = 0; i < allPhysicianCount; i++) {
-		 println(allPhysicians.get(i).getText())
- 
-		 allPhyflag = strPhysician.contains(allPhysicians.get(i).getText())
+		 allPhyflag = strPhysician.contains(allPhysicians.get(j).getText())
  
 		 println(allPhyflag)
  
 		 if (allPhyflag) {
 			 println('no patient with given physician name')
- 
-			 break
+ 			 break
 		 }
 	 }
  }
+  WebUI.waitForPageLoad(10)
  
- WebUI.waitForPageLoad(10)
+ Thread.sleep(2000)
  
  WebUI.waitForElementClickable(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'), 20)
  
@@ -520,4 +519,3 @@ WebUI.closeBrowser()
  WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/signout'))
  
  WebUI.closeBrowser()
- */
