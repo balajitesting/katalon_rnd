@@ -257,6 +257,8 @@ WebUI.waitForPageLoad(5)
 
 WebUI.waitForElementClickable(findTestObject('Object Repository/Portal/page_portalaccession/tooglepatientname'), 10)
 
+Thread.sleep(2000)
+
 WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/tooglepatientname'))
 
 WebUI.waitForElementClickable(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'), 20)
@@ -466,6 +468,8 @@ WebUI.closeBrowser()
  
  WebUI.waitForPageLoad(2000)
  
+ Thread.sleep(2000)
+ 
  List<WebElement> physicianNames = DriverFactory.getWebDriver().findElements(By.xpath('//div[@class=\'requests-list__header__label__name\']'))
  
  physicianCount = physicianNames.size()
@@ -474,16 +478,17 @@ WebUI.closeBrowser()
  
  for (int i = 0; i < physicianCount; i++) {
 	 println(physicianNames.get(i).getText())
- 
-	 phyflag = physicianNames.get(i).getText().contains(strPhysician)
- 
-	 println(phyflag)
- 
-	 if (phyflag) {
+	 System.out.println(physicianNames.get(i).getText() + "     " + physicianCount + "    " + i + "     " + strPhysician.toString())
+	 
+	 if (physicianNames.get(i).getText().contains(strPhysician)) {
+		 phyflag = true
 		 Assert.assertEquals(physicianNames.get(i).getText(), strPhysician)
 		 break
 	 }
+	 
+	 Thread.sleep(1000)
  }
+ 
  if (!(phyflag)) {
 	 WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/permissionstab'))
  
