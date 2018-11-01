@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>FaxFinalReportForPrimaryPhysicianTest</name>
+   <name>PortalCorrectedReportForPrimaryPhysicianTest</name>
    <tag></tag>
    <comment>Run: ENTSW-TC-2855</comment>
-   <testCaseGuid>46a698a0-883a-4765-9c59-d631a6f698f5</testCaseGuid>
+   <testCaseGuid>496eebe5-420f-4ddb-bb44-2ba2da584e04</testCaseGuid>
 </TestCaseEntity>
