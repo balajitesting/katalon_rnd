@@ -22,13 +22,9 @@ import internal.GlobalVariable as GlobalVariable
 import com.gh.db.LimsOracleDBService
 import java.sql.ResultSet
 
-WebUI.comment('Run: ENTSW-TC-2855')
+WebUI.comment('Run: ENTSW-TC-2898')
 
-String A_Number = 'A0107094'
-
-//A_Number = 'A0112848'
-
-CustomKeywords.'com.gh.db.LimsDBDataReset.redoFinalReport'(A_Number)
+String A_Number = 'A0100253'
 
 'Get the count of records in Fax table Prior to releasing the report'
 
@@ -36,9 +32,9 @@ String query = "select COUNT(*) as count from U_GHFAX U, S_REQUEST S WHERE U.REQ
 
 int countBeforeRelease = CustomKeywords.'com.gh.db.LimsDBOperation.getCount'(query)
 
-//Validation 1: CLS releases Amended report to primary whose delivery method is "Fax"
+//Validation 1: CLS releases Corrected report to primary whose delivery method is "Portal only”.
 
-String ReportStatus = 'FINAL'
+String ReportStatus = 'CORRECTED'
 
 CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserReporting', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
@@ -75,21 +71,17 @@ WebUI.click(findTestObject('LIMS/DCO/Report/Page_CNV/div_SNV Review'))
 
 WebUI.click(findTestObject('LIMS/DCO/Report/Page_SNV/td_Fusion Review'))
 
-Thread.sleep(3000)
-
 WebUI.click(findTestObject('LIMS/DCO/Report/Page_INDEL/faxandportal/div_Indel Review'))
 
 WebUI.click(findTestObject('LIMS/DCO/Report/Page_INDEL/div_MSI Review'))
 
-WebUI.click(findTestObject('LIMS/DCO/Report/Page_MSI/div_Final Review'))
+WebUI.waitForElementVisible(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/select_FINALAMENDEDCORRECTEDAD'), 180)
 
-//WebUI.waitForElementVisible(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/select_FINALAMENDEDCORRECTEDAD'), 180)
+WebUI.selectOptionByValue(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/select_FINALAMENDEDCORRECTEDAD'),
+	ReportStatus, true)
 
-//WebUI.selectOptionByValue(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/select_FINALAMENDEDCORRECTEDAD'),
-//	'FINAL', true)
-
-//WebUI.verifyOptionSelectedByValue(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/select_FINALAMENDEDCORRECTEDAD'), 'FINAL', true,
-//	30)
+WebUI.verifyOptionSelectedByValue(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/select_FINALAMENDEDCORRECTEDAD'), ReportStatus, true,
+	30)
 
 WebUI.click(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/td_Generate Report'))
 
@@ -107,17 +99,7 @@ WebUI.click(findTestObject('LIMS/DCO/Report/Page_Request List for CLS Review/td_
 
 CustomKeywords.'com.gh.lims.Common.setClick'(beginWorkFlow)
 
-//WebUI.click(findTestObject('LIMS/DCO/Report/Page_CNV/div_SNV Review'))
-
 WebUI.click(findTestObject('LIMS/DCO/Report/Page_Request List for CLS Review/td_Fusion Review'))
-
-//WebUI.click(findTestObject('LIMS/DCO/Report/Page_INDEL/div_Indel Review'))
-
-WebUI.click(findTestObject('LIMS/DCO/Report/Page_INDEL/div_MSI Review'))
-
-//WebUI.click(findTestObject('LIMS/DCO/Report/Page_FINAL/div_Final Review'))
-
-WebUI.click(findTestObject('LIMS/DCO/Report/Page_MSI/div_Final Review'))
 
 WebUI.click(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/td_Release Report'))
 
@@ -125,7 +107,10 @@ WebUI.waitForElementVisible(findTestObject('LIMS/DCO/Report/Page_Edit GHReportIn
 
 Thread.sleep(2000) //Wait command is not working properly. Hence, implemented the same.
 
-assert WebUI.getText(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/alert_msg')).contains('Fax was sent successfully') == true
+//Validation 3: Verify that the message is displayed that it has been sent after released in LIMS to Portal
+//Validation 4: Verify fax not sent
+
+assert WebUI.getText(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/alert_msg')).contains('physician deliverymethod is Portal and Send Fax is not required.') == true
 
 Thread.sleep(2000) //Wait command is not working properly. Hence, implemented the same.
 
@@ -147,8 +132,8 @@ assert WebUI.getText(findTestObject('LIMS/DCO/Report/Page_All Requests/reqStatus
 
 WebUI.closeBrowser()
 
-//Validation2: Verify record count in u_ghfax table
+//Validation2: Verify that the record will not be created in the u_ghfax table for the primary physicians with the "FaxStatus" set to "Need Send".
 
 int countAfterRelease = CustomKeywords.'com.gh.db.LimsDBOperation.getCount'(query)
 
-assert (countAfterRelease - countBeforeRelease).equals(1) 
+assert (countAfterRelease - countBeforeRelease).equals(0) 
