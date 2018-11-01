@@ -58,11 +58,13 @@ WebUI.click(findTestObject('LIMS/DCO/Report/Page_MSI/div_Final Review'))
 
 WebUI.click(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/td_Generate Report'))
 
-WebUI.waitForElementVisible(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/button_OK_gen_rep'), 120)
+WebUI.waitForElementVisible(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/button_OK_gen_rep'), 30)
 
 WebUI.click(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/button_OK_gen_rep'))
 
-WebUI.waitForElementPresent(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/button_OK_gen_rep'), 30)
+//WebUI.waitForElementPresent(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/button_OK_gen_rep'), 30)
+
+WebUI.waitForElementPresent(findTestObject('LIMS/DCO/Report/Page_Request List for LD Review/a_CLS Review'), 30)
 
 WebUI.click(findTestObject('LIMS/DCO/Report/Page_Request List for LD Review/a_CLS Review'))
 
@@ -94,3 +96,4 @@ WebUI.closeBrowser()
 
 CustomKeywords.'com.gh.core.PDFCompare.compareAndSave'(A_Number, ReportStatus)
 
+return A_Number

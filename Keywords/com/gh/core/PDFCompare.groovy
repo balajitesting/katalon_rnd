@@ -13,6 +13,7 @@ import com.kms.katalon.core.annotation.Keyword
 /**
  * @author gxu
  * @date 6/12/2018
+ * @date udpated on 11/1/2018
  * 
  * PDF comparison module to compare 2 PDF files pixel by pixel
  * 
@@ -24,12 +25,36 @@ public class PDFCompare {
 	private File pdfDiffDir;
 
 	@Keyword
-	def compareAndSave(String aNumber, String reportStat){
+	def compareAndSave(String aNumber, String reportStat ){
 
 		String filename = ((aNumber + '_') + reportStat) + '_report.pdf'
 
 		String file1 = Properties.getPDFBaseDir() + filename
 		String file2 = Properties.getPDFDownloadDir() + filename
+
+		doCompare(file1, file2)
+	}
+
+	@Keyword
+	def compareAndSave(String aNumber, String reportStat, Integer revision, boolean isLong){
+
+		String basefile = ((aNumber + '_') + reportStat) + '_report.pdf'
+
+		def outFile = ''
+		if (isLong)
+			outFile = 'Guardant360-' + aNumber + '-v' + revision + '-Final.pdf'
+		else
+			outFile = 'Guardant360-' + aNumber + '-v' + revision + '-Final-Additional-Info.pdf'
+
+		println outFile
+
+		String file1 = Properties.getPDFBaseDir() + basefile
+		String file2 = Properties.getPDFDownloadDir() + outFile
+
+		doCompare(file1, file2)
+	}
+
+	private doCompare(String file1, String file2){
 
 		String pdfDiffRootDir = RunConfiguration.getProjectDir() + "/Results/pdfdiff/"
 
@@ -84,5 +109,4 @@ public class PDFCompare {
 
 		return dir;
 	}
-
 }

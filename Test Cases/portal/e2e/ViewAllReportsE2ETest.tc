@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>DownloadReportAndViewInPortalTest</name>
+   <name>ViewAllReportsE2ETest</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>c5eba292-0425-421d-98ec-c0f6758d4170</testCaseGuid>
+   <testCaseGuid>962f68b9-7d01-4cc9-8282-6e582c3c3821</testCaseGuid>
 </TestCaseEntity>
