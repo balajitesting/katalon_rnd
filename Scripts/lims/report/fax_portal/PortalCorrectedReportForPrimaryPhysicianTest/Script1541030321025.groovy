@@ -32,7 +32,7 @@ String query = "select COUNT(*) as count from U_GHFAX U, S_REQUEST S WHERE U.REQ
 
 int countBeforeRelease = CustomKeywords.'com.gh.db.LimsDBOperation.getCount'(query)
 
-//Validation 1: CLS releases Corrected report to primary whose delivery method is "Portal"
+//Validation 1: CLS releases Corrected report to primary whose delivery method is "Portal only”.
 
 String ReportStatus = 'CORRECTED'
 
@@ -107,6 +107,9 @@ WebUI.waitForElementVisible(findTestObject('LIMS/DCO/Report/Page_Edit GHReportIn
 
 Thread.sleep(2000) //Wait command is not working properly. Hence, implemented the same.
 
+//Validation 3: Verify that the message is displayed that it has been sent after released in LIMS to Portal
+//Validation 4: Verify fax not sent
+
 assert WebUI.getText(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/alert_msg')).contains('physician deliverymethod is Portal and Send Fax is not required.') == true
 
 Thread.sleep(2000) //Wait command is not working properly. Hence, implemented the same.
@@ -129,7 +132,7 @@ assert WebUI.getText(findTestObject('LIMS/DCO/Report/Page_All Requests/reqStatus
 
 WebUI.closeBrowser()
 
-//Validation2: Verify record count in u_ghfax table
+//Validation2: Verify that the record will not be created in the u_ghfax table for the primary physicians with the "FaxStatus" set to "Need Send".
 
 int countAfterRelease = CustomKeywords.'com.gh.db.LimsDBOperation.getCount'(query)
 
