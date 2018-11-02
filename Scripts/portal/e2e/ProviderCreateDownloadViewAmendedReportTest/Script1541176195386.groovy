@@ -12,31 +12,28 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
+import org.testng.Assert as Assert
 
-import groovy.json.JsonSlurper
+WebUI.comment('Run: ENTSW-TC-2911 Amended')
 
-WebUI.comment('Run: ENTSW-TC-2911 Final-Additional Information')
-def A_Number = WebUI.callTestCase(findTestCase('lims/report/CreateFinalReportTest'), [:], FailureHandling.STOP_ON_FAILURE)
+def A_Number = WebUI.callTestCase(findTestCase('lims/report/CreateAmendedReportLdClsMsiReviewTest'), [:], FailureHandling.STOP_ON_FAILURE)
 
-String ReportStatus = 'FINAL'
+String ReportStatus = 'AMENDED'
 
-WebUI.delay(120)
+//A_Number = 'A80196'
 
-CustomKeywords.'com.gh.portal.Common.logon'('kimberly.schlesinger@rivhs.com', 'Pa22word')
+WebUI.delay(150)
 
-WebUI.click(findTestObject('Portal/page_guardanthealth/a_Show reports_fa fa-download'))
+CustomKeywords.'com.gh.portal.Common.logon'('mary_fidler@rush.edu', 'Pa22word')
 
-WebUI.click(findTestObject('Portal/Dashboard/a_Report  Additional Informati'))
+WebUI.click(findTestObject('Portal/Dashboard/provider/Amended/Page_Guardant Health/a_Report Only_fa fa-download r'))
+
+WebUI.click(findTestObject('Portal/Dashboard/provider/Amended/Page_Guardant Health/a_Report Only'))
+
+//WebUI.click(findTestObject('Object Repository/Portal/Dashboard/provider/Amended/Page_Guardant Health/a_Show reports_fa fa-download'))
+
+//WebUI.click(findTestObject('Object Repository/Portal/Dashboard/provider/Amended/Page_Guardant Health/a_Report Only_1'))
 
 CustomKeywords.'com.gh.portal.Common.logout'()
 
-CustomKeywords.'com.gh.core.PDFCompare.compareAndSave'(A_Number, ReportStatus)
-
 WebUI.closeBrowser()
-
-def url = '/api/v1.0/guardanthealth/clinical/Report/' + A_Number
-Map response = CustomKeywords.'com.gh.core.HttpClient.doGet'(url)
-
-def revision = response.get("revision")
-def isLong = true
-CustomKeywords.'com.gh.core.PDFCompare.compareAndSave'(A_Number, ReportStatus, revision, isLong)

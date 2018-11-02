@@ -41,9 +41,7 @@ WebUI.click(findTestObject('Portal/Dashboard/provider/Page_Guardant Health/a_VIE
 WebUI.click(findTestObject('Portal/Dashboard/provider/Page_Guardant Health/div_OCT-29-2018 Reported'))
 */
 
-WebUI.click(findTestObject('Object Repository/Portal/Dashboard/logout/Page_Guardant Health/i_PERMISSIONS_fa fa-chevron-do'))
-
-WebUI.click(findTestObject('Object Repository/Portal/Dashboard/logout/Page_Guardant Health/a_Sign Out'))
+CustomKeywords.'com.gh.portal.Common.logout'()
 
 WebUI.closeBrowser()
 
@@ -52,7 +50,7 @@ Map response = CustomKeywords.'com.gh.core.HttpClient.doGet'(url)
 
 def revision = response.get("revision")
 
-Assert.assertTrue(CustomKeywords.'com.gh.core.PDFCompare.isDownloaded'(A_Number, revision, false))
+Assert.assertTrue(CustomKeywords.'com.gh.core.PDFCompare.isDownloaded'(A_Number, ReportStatus, revision, false))
 
 
 

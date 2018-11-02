@@ -92,4 +92,11 @@ public class Common {
 
 		WebUI.closeBrowser()
 	}
+	
+	@Keyword
+	def logout(){
+		WebUI.click(findTestObject('Portal/Dashboard/logout/Page_Guardant Health/i_PERMISSIONS_fa fa-chevron-do'))
+		
+		WebUI.click(findTestObject('Portal/Dashboard/logout/Page_Guardant Health/a_Sign Out'))
+	}
 }

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>ProviderCreateDownloadViewAmendedReportTest</name>
+   <tag></tag>
+   <comment>Run: ENTSW-TC-2911 Amended</comment>
+   <testCaseGuid>14575613-a62c-4edd-86ed-a06e8cb93e42</testCaseGuid>
+</TestCaseEntity>

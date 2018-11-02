@@ -36,7 +36,6 @@ public class HttpClient {
 			url = 'https://clinical-val.k8s.ghdna.io'
 
 		return new URL( url + endpoint).openConnection() as HttpURLConnection
-
 	}
 
 	@Keyword

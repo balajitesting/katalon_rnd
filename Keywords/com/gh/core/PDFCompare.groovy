@@ -51,13 +51,13 @@ public class PDFCompare {
 		return new File(getGH360File(aNumber, revision, isLong)).isFile()
 	}
 
-	private String getGH360File(String aNumber, Integer revision, boolean isLong){
+	private String getGH360File(String aNumber, String reportStat, Integer revision, boolean isLong){
 		def outFile = ''
 
 		if (isLong)
-			outFile = 'Guardant360-' + aNumber + '-v' + revision + '-Final-Additional-Info.pdf'
+			outFile = 'Guardant360-' + aNumber + '-v' + revision + '-' + reportStat +  '-Additional-Info.pdf'
 		else
-			outFile = 'Guardant360-' + aNumber + '-v' + revision + '-Final.pdf'
+			outFile = 'Guardant360-' + aNumber + '-v' + revision + '-' + reportStat + '.pdf'
 
 		return Properties.getPDFDownloadDir() + outFile
 	}

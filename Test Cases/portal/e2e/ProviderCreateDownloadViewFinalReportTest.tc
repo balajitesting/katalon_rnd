@@ -3,6 +3,6 @@
    <description></description>
    <name>ProviderCreateDownloadViewFinalReportTest</name>
    <tag></tag>
-   <comment></comment>
+   <comment>Run: ENTSW-TC-2911 Final Report Only</comment>
    <testCaseGuid>a7dd0864-6f63-4b13-b613-27328c5db244</testCaseGuid>
 </TestCaseEntity>
