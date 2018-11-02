@@ -64,4 +64,9 @@
       <initValue>'10.4.80.158'</initValue>
       <name>ssh_host</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb20uZ3VhcmRhbnRoZWFsdGgiLCJzdWIiOiJsaW1zIiwiaWF0IjoxNTIzNDYwNDQ2LCJleHAiOjE1NDYzMDA3OTl9.dL-B3dRr-kDFOdP0mAF0-aRGOpMgaw4h1OFgGhkhC88'</initValue>
+      <name>token</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

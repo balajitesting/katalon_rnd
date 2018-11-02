@@ -13,26 +13,36 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-import groovy.json.JsonSlurper
 
-WebUI.comment('Run: ENTSW-TC-2911 Final-Additional Information')
+WebUI.comment('Run: ENTSW-TC-2911 Final Report Only')
+
 def A_Number = WebUI.callTestCase(findTestCase('lims/report/CreateFinalReportTest'), [:], FailureHandling.STOP_ON_FAILURE)
 
+//def A_Number = 'A0112848'
 String ReportStatus = 'FINAL'
 
 WebUI.delay(120)
 
 CustomKeywords.'com.gh.portal.Common.logon'('kimberly.schlesinger@rivhs.com', 'Pa22word')
 
-WebUI.click(findTestObject('Portal/page_guardanthealth/a_Show reports_fa fa-download'))
+WebUI.click(findTestObject('Portal/Dashboard/provider/Page_Guardant Health/a_Show reports_fa fa-download'))
 
-WebUI.click(findTestObject('Portal/Dashboard/a_Report  Additional Informati'))
+WebUI.click(findTestObject('Portal/Dashboard/provider/Page_Guardant Health/a_Report Only'))
 
-WebUI.click(findTestObject('Portal/Dashboard/logout/Page_Guardant Health/i_PERMISSIONS_fa fa-chevron-do'))
+/**
 
-WebUI.click(findTestObject('Portal/Dashboard/logout/Page_Guardant Health/a_Sign Out'))
+WebUI.click(findTestObject('Portal/Dashboard/provider/Page_Guardant Health/div_0'))
 
-CustomKeywords.'com.gh.core.PDFCompare.compareAndSave'(A_Number, ReportStatus)
+WebUI.click(findTestObject('Portal/Dashboard/provider/Page_Guardant Health/div_2'))
+
+WebUI.click(findTestObject('Portal/Dashboard/provider/Page_Guardant Health/a_VIEW ALL REPORTS IN TABLE'))
+
+WebUI.click(findTestObject('Portal/Dashboard/provider/Page_Guardant Health/div_OCT-29-2018 Reported'))
+*/
+
+WebUI.click(findTestObject('Object Repository/Portal/Dashboard/logout/Page_Guardant Health/i_PERMISSIONS_fa fa-chevron-do'))
+
+WebUI.click(findTestObject('Object Repository/Portal/Dashboard/logout/Page_Guardant Health/a_Sign Out'))
 
 WebUI.closeBrowser()
 
@@ -40,5 +50,7 @@ def url = '/api/v1.0/guardanthealth/clinical/Report/' + A_Number
 Map response = CustomKeywords.'com.gh.core.HttpClient.doGet'(url)
 
 def revision = response.get("revision")
-def isLong = true
-CustomKeywords.'com.gh.core.PDFCompare.compareAndSave'(A_Number, ReportStatus, revision, isLong)
+CustomKeywords.'com.gh.core.PDFCompare.isDownloaded'(A_Number, revision, false)
+
+
+

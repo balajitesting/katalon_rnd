@@ -22,40 +22,29 @@ import groovy.json.JsonSlurper
 /**
  * 
  * @author gxu
- * @date 11/1/2018
+ * @date 11/01/2018
  */
 
 public class HttpClient {
 
 	private def createHttpConnection(String endpoint){
 		def url = ''
-		def token = ''
 
-		if(GlobalVariable.limsUrl == 'https://portal-sqa.guardanthealth.com'){
-
+		if(GlobalVariable.limsUrl == 'https://portal-sqa.guardanthealth.com')
 			url = 'https://clinical-sqa.k8s.ghdna.io'
-			//token = 'eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb20uZ3VhcmRhbnRoZWFsdGgiLCJzdWIiOiJ0ZXN0IiwiaWF0IjoxNTE0NTE3MTIwLCJleHAiOjE1NDYzMDA3OTl9.C-gB4NzSg1AY4N_FtKiaGbmXJ8I0afFJgIbREkEwj30'
-		}else{
+		else
 			url = 'https://clinical-val.k8s.ghdna.io'
-			//token ='eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb20uZ3VhcmRhbnRoZWFsdGgiLCJzdWIiOiJsaW1zIiwiaWF0IjoxNTIzNDYwNDQ2LCJleHAiOjE1NDYzMDA3OTl9.dL-B3dRr-kDFOdP0mAF0-aRGOpMgaw4h1OFgGhkhC88'
-		}
 
-		def connection = new URL( url + endpoint).openConnection() as HttpURLConnection
+		return new URL( url + endpoint).openConnection() as HttpURLConnection
 
-		return connection
 	}
 
 	@Keyword
 	def doGet(String endpoint){
-		String token = ''
-		if(GlobalVariable.limsUrl == 'https://portal-sqa.guardanthealth.com')
-			token = 'eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb20uZ3VhcmRhbnRoZWFsdGgiLCJzdWIiOiJ0ZXN0IiwiaWF0IjoxNTE0NTE3MTIwLCJleHAiOjE1NDYzMDA3OTl9.C-gB4NzSg1AY4N_FtKiaGbmXJ8I0afFJgIbREkEwj30'
-		else
-			token = 'eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb20uZ3VhcmRhbnRoZWFsdGgiLCJzdWIiOiJsaW1zIiwiaWF0IjoxNTIzNDYwNDQ2LCJleHAiOjE1NDYzMDA3OTl9.dL-B3dRr-kDFOdP0mAF0-aRGOpMgaw4h1OFgGhkhC88'
 
 		HttpURLConnection connection = createHttpConnection(endpoint)
 
-		connection.setRequestProperty( 'Authorization', 'Bearer ' + token)
+		connection.setRequestProperty( 'Authorization', 'Bearer ' + GlobalVariable.token)
 		connection.setRequestProperty( 'Content-type', 'application/json' )
 
 		String resp = connection.inputStream.text
