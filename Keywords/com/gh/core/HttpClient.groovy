@@ -23,7 +23,7 @@ import groovy.json.JsonSlurper
  * 
  * @author gxu
  * @date 11/01/2018
- */
+
 
 public class HttpClient {
 
