@@ -23,7 +23,7 @@ import groovy.json.JsonSlurper
  * 
  * @author gxu
  * @date 11/01/2018
- */
+
 
 public class HttpClient {
 
@@ -36,7 +36,6 @@ public class HttpClient {
 			url = 'https://clinical-val.k8s.ghdna.io'
 
 		return new URL( url + endpoint).openConnection() as HttpURLConnection
-
 	}
 
 	@Keyword

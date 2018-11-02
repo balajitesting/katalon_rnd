@@ -12,10 +12,10 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
-
 import groovy.json.JsonSlurper
 
 WebUI.comment('Run: ENTSW-TC-2911 Final-Additional Information')
+
 def A_Number = WebUI.callTestCase(findTestCase('lims/report/CreateFinalReportTest'), [:], FailureHandling.STOP_ON_FAILURE)
 
 String ReportStatus = 'FINAL'
@@ -41,4 +41,5 @@ Map response = CustomKeywords.'com.gh.core.HttpClient.doGet'(url)
 
 def revision = response.get("revision")
 def isLong = true
+
 CustomKeywords.'com.gh.core.PDFCompare.compareAndSave'(A_Number, ReportStatus, revision, isLong)
