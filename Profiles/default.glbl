@@ -67,6 +67,11 @@
    <GlobalVariableEntity>
       <description></description>
       <initValue>'eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb20uZ3VhcmRhbnRoZWFsdGgiLCJzdWIiOiJ0ZXN0IiwiaWF0IjoxNTE0NTE3MTIwLCJleHAiOjE1NDYzMDA3OTl9.C-gB4NzSg1AY4N_FtKiaGbmXJ8I0afFJgIbREkEwj30'</initValue>
-      <name>token</name>
+      <name>csToken</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://clinical-sqa.k8s.ghdna.io'</initValue>
+      <name>clinicalServiceUrl</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

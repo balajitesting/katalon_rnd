@@ -23,19 +23,15 @@ import groovy.json.JsonSlurper
  * 
  * @author gxu
  * @date 11/01/2018
-
+ * 
+ */
 
 public class HttpClient {
 
 	private def createHttpConnection(String endpoint){
-		def url = ''
-
-		if(GlobalVariable.limsUrl == 'https://portal-sqa.guardanthealth.com')
-			url = 'https://clinical-sqa.k8s.ghdna.io'
-		else
-			url = 'https://clinical-val.k8s.ghdna.io'
-
-		return new URL( url + endpoint).openConnection() as HttpURLConnection
+		
+		return new URL(GlobalVariable.clinicalServiceUrl + endpoint)
+						.openConnection() as HttpURLConnection
 	}
 
 	@Keyword
@@ -43,13 +39,12 @@ public class HttpClient {
 
 		HttpURLConnection connection = createHttpConnection(endpoint)
 
-		connection.setRequestProperty( 'Authorization', 'Bearer ' + GlobalVariable.token)
+		connection.setRequestProperty( 'Authorization', 'Bearer ' + GlobalVariable.csToken)
 		connection.setRequestProperty( 'Content-type', 'application/json' )
 
 		String resp = connection.inputStream.text
 
 		JsonSlurper slurper = new JsonSlurper()
-
 		Map json = slurper.parseText(resp)
 
 		return json
