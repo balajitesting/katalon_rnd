@@ -29,9 +29,9 @@ import groovy.json.JsonSlurper
 public class HttpClient {
 
 	private def createHttpConnection(String endpoint){
-		
+
 		return new URL(GlobalVariable.clinicalServiceUrl + endpoint)
-						.openConnection() as HttpURLConnection
+				.openConnection() as HttpURLConnection
 	}
 
 	@Keyword

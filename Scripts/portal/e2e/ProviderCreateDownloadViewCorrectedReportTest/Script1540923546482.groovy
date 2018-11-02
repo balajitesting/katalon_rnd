@@ -14,32 +14,20 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 import org.testng.Assert
 
+def A_Number = WebUI.callTestCase(findTestCase('lims/report/CreateCorrectedReportTest'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.comment('Run: ENTSW-TC-2911 Final Report Only')
-
-def A_Number = WebUI.callTestCase(findTestCase('lims/report/CreateFinalReportTest'), [:], FailureHandling.STOP_ON_FAILURE)
-
-def A_Number = 'A0112848'
-String ReportStatus = 'FINAL'
+//A_Number = 'A86684' 
+ReportStatus = 'CORRECTED'
 
 WebUI.delay(120)
 
-CustomKeywords.'com.gh.portal.Common.logon'('kimberly.schlesinger@rivhs.com', 'Pa22word')
+CustomKeywords.'com.gh.portal.Common.logon'('chaftj@mskcc.org', 'Pa22word')
 
-WebUI.click(findTestObject('Portal/Dashboard/provider/Page_Guardant Health/a_Show reports_fa fa-download'))
+WebUI.click(findTestObject('Object Repository/Portal/Dashboard/provider/Corrected/Page_Guardant Health/div_LOAD MORE'))
 
-WebUI.click(findTestObject('Portal/Dashboard/provider/Page_Guardant Health/a_Report Only'))
+WebUI.click(findTestObject('Object Repository/Portal/Dashboard/provider/Corrected/Page_Guardant Health/a_Report Only_request__data re'))
 
-/**
-
-WebUI.click(findTestObject('Portal/Dashboard/provider/Page_Guardant Health/div_0'))
-
-WebUI.click(findTestObject('Portal/Dashboard/provider/Page_Guardant Health/div_2'))
-
-WebUI.click(findTestObject('Portal/Dashboard/provider/Page_Guardant Health/a_VIEW ALL REPORTS IN TABLE'))
-
-WebUI.click(findTestObject('Portal/Dashboard/provider/Page_Guardant Health/div_OCT-29-2018 Reported'))
-*/
+WebUI.click(findTestObject('Object Repository/Portal/Dashboard/provider/Corrected/Page_Guardant Health/a_Report  Additional Informati'))
 
 CustomKeywords.'com.gh.portal.Common.logout'()
 
@@ -50,7 +38,4 @@ Map response = CustomKeywords.'com.gh.core.HttpClient.doGet'(url)
 
 def revision = response.get("revision")
 
-Assert.assertTrue(CustomKeywords.'com.gh.core.PDFCompare.isDownloaded'(A_Number, ReportStatus, revision, false))
-
-
-
+Assert.assertTrue(CustomKeywords.'com.gh.core.PDFCompare.isDownloaded'(A_Number, ReportStatus, revision, true))

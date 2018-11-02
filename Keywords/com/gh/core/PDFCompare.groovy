@@ -47,8 +47,8 @@ public class PDFCompare {
 	}
 
 	@Keyword
-	boolean isDownloaded(String aNumber, Integer revision, boolean isLong){
-		return new File(getGH360File(aNumber, revision, isLong)).isFile()
+	boolean isDownloaded(String aNumber, String reportStat, Integer revision, boolean isLong){
+		return new File(getGH360File(aNumber, reportStat, revision, isLong)).isFile()
 	}
 
 	private String getGH360File(String aNumber, String reportStat, Integer revision, boolean isLong){
