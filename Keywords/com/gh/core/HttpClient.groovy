@@ -20,7 +20,7 @@ public class HttpClient {
 	}
 
 	@Keyword
-	def doGet(String endpoint){
+	def static doGet(String endpoint){
 
 		HttpURLConnection connection = createHttpConnection(endpoint)
 

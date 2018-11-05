@@ -16,11 +16,11 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.comment('Run: ENTSW-TC-2911 Addendum')
 
-//def A_Number = WebUI.callTestCase(findTestCase('lims/report/CreateAddendumReportTest'), [:], FailureHandling.STOP_ON_FAILURE)
+def A_Number = WebUI.callTestCase(findTestCase('lims/report/CreateAddendumReportTest'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.delay(180)
 
-def A_Number = 'A90029'
+//def A_Number = 'A90029'
 def ReportStatus = 'ADDENDUM'
 
 CustomKeywords.'com.gh.portal.Common.logon'('chaftj@mskcc.org', 'R9dwWsVuqf0RB1p2unfSZQ==')
