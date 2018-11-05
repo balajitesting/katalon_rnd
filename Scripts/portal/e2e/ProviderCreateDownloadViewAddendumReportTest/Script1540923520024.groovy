@@ -12,36 +12,26 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
-import org.testng.Assert
 
 
-WebUI.comment('Run: ENTSW-TC-2911 Final Report Only')
+WebUI.comment('Run: ENTSW-TC-2911 Addendum')
 
-def A_Number = WebUI.callTestCase(findTestCase('lims/report/CreateFinalReportTest'), [:], FailureHandling.STOP_ON_FAILURE)
+//def A_Number = WebUI.callTestCase(findTestCase('lims/report/CreateAddendumReportTest'), [:], FailureHandling.STOP_ON_FAILURE)
 
-//def A_Number = 'A0112848'
-String ReportStatus = 'FINAL'
+WebUI.delay(180)
 
-WebUI.delay(120)
+def A_Number = 'A90029'
+def ReportStatus = 'ADDENDUM'
 
-CustomKeywords.'com.gh.portal.Common.logon'('kimberly.schlesinger@rivhs.com', 'Pa22word')
+CustomKeywords.'com.gh.portal.Common.logon'('chaftj@mskcc.org', 'R9dwWsVuqf0RB1p2unfSZQ==')
 
-WebUI.click(findTestObject('Portal/Dashboard/provider/Page_Guardant Health/a_Show reports_fa fa-download'))
+WebUI.click(findTestObject('Portal/Dashboard/provider/Addendum/Page_Guardant Health/a_Show reports_fa fa-download'))
 
-WebUI.click(findTestObject('Portal/Dashboard/provider/Page_Guardant Health/a_Report Only'))
-
-/**
-
-WebUI.click(findTestObject('Portal/Dashboard/provider/Page_Guardant Health/div_0'))
-
-WebUI.click(findTestObject('Portal/Dashboard/provider/Page_Guardant Health/div_2'))
-
-WebUI.click(findTestObject('Portal/Dashboard/provider/Page_Guardant Health/a_VIEW ALL REPORTS IN TABLE'))
-
-WebUI.click(findTestObject('Portal/Dashboard/provider/Page_Guardant Health/div_OCT-29-2018 Reported'))
-*/
+WebUI.click(findTestObject('Portal/Dashboard/provider/Addendum/Page_Guardant Health/a_Report  Additional Informati'))
 
 CustomKeywords.'com.gh.portal.Common.logout'()
+
+CustomKeywords.'com.gh.core.PDFCompare.compareAndSave'(A_Number, ReportStatus)
 
 WebUI.closeBrowser()
 
@@ -49,8 +39,7 @@ def url = '/api/v1.0/guardanthealth/clinical/Report/' + A_Number
 Map response = CustomKeywords.'com.gh.core.HttpClient.doGet'(url)
 
 def revision = response.get("revision")
+def isLong = true
 
-Assert.assertTrue(CustomKeywords.'com.gh.core.PDFCompare.isDownloaded'(A_Number, ReportStatus, revision, false))
-
-
+CustomKeywords.'com.gh.core.PDFCompare.compareAndSave'(A_Number, ReportStatus, revision, isLong)
 

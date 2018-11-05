@@ -31,11 +31,12 @@ public class Common {
 
 		WebUI.navigateToUrl(GlobalVariable.portalUrl)
 
-		WebUI.setText(findTestObject('Portal/input_sessionemail'), usr)
+		WebUI.setText(findTestObject('Portal/logon/input_Username_sessionemail'), usr)
 
-		WebUI.setText(findTestObject('Portal/input_sessionpassword'), pwd)
+		WebUI.setEncryptedText(findTestObject('Portal/logon/input_Password_sessionpassword'),
+				pwd)
 
-		WebUI.click(findTestObject('Portal/button_SIGN IN'))
+		WebUI.click(findTestObject('Portal/logon/button_SIGN IN'))
 	}
 
 	@Keyword
@@ -53,6 +54,7 @@ public class Common {
 
 		WebUI.click(findTestObject('Portal/page_mailtrap/safeemailtestingpage/signinbutton'))
 	}
+
 	@Keyword
 	def switchToPortal(String usr, String pwd, String accessionID, int timeout) {
 

@@ -29,6 +29,7 @@ WebUI.callTestCase(findTestCase('lims/request/SearchRequestCancelReportTest'), [
 'Enable following when run test case only'
 
 String A_Number = 'A60204'
+//String A_Number = 'A49000'
 
 String ReportStatus = 'Cancelled'
 

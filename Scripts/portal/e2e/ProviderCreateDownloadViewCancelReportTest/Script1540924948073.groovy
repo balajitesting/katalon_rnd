@@ -13,6 +13,8 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
+import org.testng.Assert
+
 def A_Number = WebUI.callTestCase(findTestCase('lims/report/CreateCancelReportTest'), [:], FailureHandling.STOP_ON_FAILURE)
 
 //A_Number = 'A86684'

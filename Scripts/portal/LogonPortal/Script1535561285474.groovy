@@ -23,13 +23,13 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl('https://portal-val.guardanthealth.com/')
 
-WebUI.setText(findTestObject('Object Repository/Portal/input_sessionemail'), username)
+WebUI.setText(findTestObject('null'), username)
 
-//WebUI.setEncryptedText(findTestObject('Object Repository/Portal/input_sessionpassword'), 'R9dwWsVuqf0RB1p2unfSZQ==')
-//WebUI.click(findTestObject('Object Repository/Portal/button_SIGN IN'))
-WebUI.setText(findTestObject('Object Repository/Portal/input_sessionpassword'), password)
+//WebUI.setEncryptedText(findTestObject('null'), 'R9dwWsVuqf0RB1p2unfSZQ==')
+//WebUI.click(findTestObject('null'))
+WebUI.setText(findTestObject('null'), password)
 
-WebUI.click(findTestObject('Object Repository/Portal/button_SIGN IN'))
+WebUI.click(findTestObject('null'))
 
 WebUI.verifyElementNotPresent(findTestObject('Portal/div_View patients by report st'), 30)
 
