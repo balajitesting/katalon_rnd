@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//button[@id='dlgBtn2_0']</value>
+         <value>//button[@class='dialog_contents_btn']</value>
       </entry>
       <entry>
          <key>BASIC</key>

@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//td[@id='dlg_content2']</value>
+         <value>//td[@id='dlg_content1']</value>
       </entry>
       <entry>
          <key>BASIC</key>

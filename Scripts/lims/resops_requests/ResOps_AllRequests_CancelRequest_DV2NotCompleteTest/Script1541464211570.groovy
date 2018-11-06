@@ -116,7 +116,7 @@ Thread.sleep(2000); //Katalon wait not working.
 
 assert WebUI.getText(findTestObject('LIMS/ResOps Requests/EditRequest/msg_div2Verification')).contains('DV Check not completed') == true
 
-WebUI.click(findTestObject('Object Repository/LIMS/ResOps Requests/DV/Return To List Button'))
+WebUI.click(findTestObject('LIMS/ResOps Requests/EditRequest/btn_div2Verification'))
 
 Thread.sleep(2000); //Katalon wait not working.
 

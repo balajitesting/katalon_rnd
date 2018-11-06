@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//button[@id='dlgBtn2_0']</value>
+         <value>//div[contains(text(), 'Cancel This_Request')]</value>
       </entry>
       <entry>
          <key>BASIC</key>
