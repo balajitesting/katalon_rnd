@@ -18,7 +18,6 @@ def A_Number = WebUI.callTestCase(findTestCase('lims/report/CreateCorrectedRepor
 
 //A_Number = 'A86684' 
 ReportStatus = 'CORRECTED'
-
 WebUI.delay(120)
 
 CustomKeywords.'com.gh.portal.Common.logon'('chaftj@mskcc.org', 'R9dwWsVuqf0RB1p2unfSZQ==')
