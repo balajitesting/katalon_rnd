@@ -17,12 +17,12 @@ import org.testng.Assert
 
 WebUI.comment('Run: ENTSW-TC-2911 Final Report Only')
 
-//def A_Number = WebUI.callTestCase(findTestCase('lims/report/CreateFinalReportTest'), [:], FailureHandling.STOP_ON_FAILURE)
+def A_Number = WebUI.callTestCase(findTestCase('lims/report/CreateFinalReportTest'), [:], FailureHandling.STOP_ON_FAILURE)
 
-def A_Number = 'A0112848'
+//def A_Number = 'A0112848'
 String ReportStatus = 'FINAL'
 
-//WebUI.delay(120)
+WebUI.delay(120)
 
 CustomKeywords.'com.gh.portal.Common.logon'('kimberly.schlesinger@rivhs.com', 'R9dwWsVuqf0RB1p2unfSZQ==')
 
