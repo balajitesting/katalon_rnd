@@ -273,3 +273,233 @@ WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/signou
 
 WebUI.closeBrowser()
 
+'Step 9:Should not be able to see release to patient option for an ineligible patient'
+CustomKeywords.'com.gh.portal.Common.logon'('bejoysitemgr@gmail.com', 'Pa22word')
+
+WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/selectpatient'))
+
+WebUI.waitForPageLoad(5)
+
+shareButton = WebUI.verifyElementVisible(findTestObject('Object Repository/Portal/page_portalaccession/sharepatientreport'))
+
+WebUI.waitForElementPresent(findTestObject('Object Repository/Portal/page_portalaccession/tooglepatientname'), 10)
+
+WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/tooglepatientname'))
+
+String patientAId = WebUI.getText(findTestObject('Object Repository/Portal/page_portalaccession/accessionid'))
+
+println patientAId
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/Portal/page_portalaccession/sharepatientreport'), 10)
+
+WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/sharepatientreport'))
+
+Thread.sleep(2000)
+
+WebUI.setText(findTestObject('Object Repository/Portal/page_portalaccession/fname'), 'Benjamin')
+
+WebUI.setText(findTestObject('Object Repository/Portal/page_portalaccession/lname'), 'Bridges')
+
+WebUI.setText(findTestObject('Object Repository/Portal/page_portalaccession/portalemail'), 'bridgesb@slhs.org')
+
+WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/checkbox'))
+
+WebUI.click(findTestObject('Portal/page_portalaccession/sendtinvitation'))
+
+WebUI.acceptAlert()
+
+Thread.sleep(2000)
+
+WebUI.waitForElementClickable(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'), 20)
+
+WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'))
+
+WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/signout'))
+
+WebUI.closeBrowser()
+
+'Checking for ineligible patient'
+CustomKeywords.'com.gh.portal.Common.logon'('bridgesb@slhs.org', 'Pa22word')
+
+WebUI.waitForPageLoad(5)
+
+if (WebUI.verifyElementPresent(findTestObject('Object Repository/Portal/page_portalaccession/sharermsg'), 5, FailureHandling.OPTIONAL)) {
+	WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/acceptcheck'))
+
+	WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/acceptinvitation'))
+}
+
+WebUI.setText(findTestObject('Object Repository/Portal/page_portalaccession/searchid'), patientAId)
+
+WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/selectsearch'))
+
+Thread.sleep(2000)
+
+if (WebUI.verifyElementPresent(findTestObject('Object Repository/Portal/page_portalaccession/sharepatientreport'), 5, FailureHandling.OPTIONAL)) {
+	println('patient is eligible')
+} else {
+	println('patient is ineligible')
+}
+
+WebUI.waitForElementClickable(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'), 20)
+
+WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'))
+
+WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/signout'))
+
+WebUI.closeBrowser()
+
+'Step 11:Should see a notification on an auto-released patient report page indicating that the report has been auto-released'
+CustomKeywords.'com.gh.portal.Common.logon'('bejoysitemgr@gmail.com', 'Pa22word')
+
+WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/selectpatient'))
+
+WebUI.waitForPageLoad(5)
+
+if (WebUI.waitForElementPresent(findTestObject('Object Repository/Portal/page_portalaccession/notificationmsg'), 10, FailureHandling.OPTIONAL)) {
+    String strmsg = WebUI.getText(findTestObject('Object Repository/Portal/page_portalaccession/notificationmsg'))
+
+    println(strmsg)
+} else {
+    println('Patient is not available for auto released')
+}
+
+Thread.sleep(2000)
+
+WebUI.waitForElementClickable(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'), 20)
+
+WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'))
+
+WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/signout'))
+
+WebUI.closeBrowser()
+
+'Step 2: Should see reports for only their patients and with recent accessioning date and for any previous dates.'
+CustomKeywords.'com.gh.portal.Common.logon'('bejoysitemgr@gmail.com','Pa22word')
+
+WebUI.setText(findTestObject('Object Repository/Portal/page_portalaccession/searchid'), aNumber)
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/Portal/page_portalaccession/selectsearch'), 20)
+
+WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/selectsearch'))
+
+Thread.sleep(2000)
+
+WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/tooglepatientname'))
+
+String collectionDate = WebUI.getText(findTestObject('Object Repository/Portal/page_portalaccession/collectiondate'))
+
+println(collectionDate)
+
+WebUI.waitForPageLoad(10)
+
+WebUI.waitForElementClickable(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'), 20)
+
+WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'))
+
+WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/signout'))
+
+WebUI.closeBrowser()
+
+'Step 3:Should see only reports for all physicians that admin granted access'
+CustomKeywords.'com.gh.portal.Common.logon'('bejoysitemgr@gmail.com', 'Pa22word')
+
+WebUI.waitForPageLoad(5)
+
+WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/grantaccess'))
+
+WebUI.setText(findTestObject('Object Repository/Portal/page_portalaccession/inputemail'), 'bridgesb@slhs.org')
+
+WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/selectallcheck'))
+
+WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/selectphysician'))
+
+String strPhysician = WebUI.getText(findTestObject('Object Repository/Portal/page_portalaccession/selectphysiciandetail'))
+
+println(strPhysician)
+
+WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/checkbox'))
+
+WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/grantaccessbtn'))
+
+Thread.sleep(2000)
+
+WebUI.waitForPageLoad(20)
+
+WebUI.waitForElementVisible(findTestObject('Object Repository/Portal/page_portalaccession/msgconfirm'), 20)
+
+WebUI.waitForElementClickable(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'), 20)
+
+WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'))
+
+WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/signout'))
+
+WebUI.closeBrowser()
+
+'Login with another credential to see the grant invitation of that pysician'
+CustomKeywords.'com.gh.portal.Common.logon'('bridgesb@slhs.org', 'Pa22word')
+
+WebUI.waitForPageLoad(5)
+
+if (WebUI.verifyElementPresent(findTestObject('Object Repository/Portal/page_portalaccession/acceptcheck'), 10, FailureHandling.OPTIONAL)) {
+	WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/acceptcheck'))
+
+	WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/acceptinvitation'))
+}
+
+WebUI.waitForPageLoad(2000)
+
+Thread.sleep(2000)
+
+List<WebElement> physicianNames = DriverFactory.getWebDriver().findElements(By.xpath('//div[@class=\'requests-list__header__label__name\']'))
+
+physicianCount = physicianNames.size()
+
+boolean phyflag = false
+
+for (int i = 0; i < physicianCount; i++) {
+	
+	if (physicianNames.get(i).getText().contains(strPhysician)) {
+		phyflag = true
+		Assert.assertEquals(physicianNames.get(i).getText(), strPhysician)
+		break
+	}
+	
+	Thread.sleep(1000)
+}
+
+if (!(phyflag)) {
+	WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/permissionstab'))
+
+	List<WebElement> allPhysicians = DriverFactory.getWebDriver().findElements(By.xpath('//div[@class=\'share-index__collaborator__left-col__name\']'))
+
+	int allPhysicianCount = allPhysicians.size()
+
+	boolean allPhyflag = false
+	 for (int j = 1; j < allPhysicianCount; j++) {
+		println(allPhysicians.get(j).getText())
+
+		allPhyflag = strPhysician.contains(allPhysicians.get(j).getText())
+
+		println(allPhyflag)
+
+		if (allPhyflag) {
+			println('no patient with given physician name')
+			 break
+		}
+	}
+}
+ WebUI.waitForPageLoad(10)
+
+Thread.sleep(2000)
+
+WebUI.waitForElementClickable(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'), 20)
+
+WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'))
+
+WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/signout'))
+
+WebUI.closeBrowser()
+
+
+
