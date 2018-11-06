@@ -43,3 +43,5 @@ def isLong = true
 
 CustomKeywords.'com.gh.core.PDFCompare.compareAndSave'(A_Number, ReportStatus, revision, isLong)
 
+return A_Number
+

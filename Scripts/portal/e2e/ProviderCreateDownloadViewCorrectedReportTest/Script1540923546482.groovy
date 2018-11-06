@@ -39,3 +39,5 @@ Map response = CustomKeywords.'com.gh.core.HttpClient.doGet'(url)
 def revision = response.get("revision")
 
 Assert.assertTrue(CustomKeywords.'com.gh.core.PDFCompare.isDownloaded'(A_Number, ReportStatus, revision, true))
+
+return A_Number

@@ -46,3 +46,5 @@ WebUI.click(findTestObject('Object Repository/Portal/Dashboard/provider/Correcte
 //def revision = response.get("revision")
 //
 //Assert.assertTrue(CustomKeywords.'com.gh.core.PDFCompare.isDownloaded'(A_Number, ReportStatus, revision, true))
+
+//return A_Number
