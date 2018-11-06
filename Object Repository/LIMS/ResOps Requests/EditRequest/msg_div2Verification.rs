@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>btn_CancelRequest</name>
+   <name>msg_div2Verification</name>
    <tag></tag>
-   <elementGuidId>c76090c3-b129-4504-b65f-f632a1a42392</elementGuidId>
+   <elementGuidId>fe6bc500-8e61-4aa8-86b0-fab47df7620a</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//button[@id='dlgBtn2_0']</value>
+         <value>//td[@id='dlg_content2']</value>
       </entry>
       <entry>
          <key>BASIC</key>
