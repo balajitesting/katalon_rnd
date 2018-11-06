@@ -4,6 +4,16 @@
    <name>div_Release Report</name>
    <tag></tag>
    <elementGuidId>77c043a2-29fa-4db9-ac9e-581bcb09959b</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//div[(text() = 'Release Report' or . = 'Release Report')]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value></value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>

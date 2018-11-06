@@ -112,7 +112,7 @@ WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/signou
 WebUI.closeBrowser()
 
 'Step 6:Should be able to download the CSV for their patients'
-CustomKeywords.'com.gh.portal.Common.logon'('bridgesb@slhs.org', 'Pa22word')
+CustomKeywords.'com.gh.portal.Common.logon'('bridgesb@slhs.org', 'R9dwWsVuqf0RB1p2unfSZQ==')
 
 WebUI.waitForPageLoad(5)
 
@@ -235,7 +235,7 @@ WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/signou
 WebUI.closeBrowser()
 
 'Validation to check that patient present in non portal user'
-CustomKeywords.'com.gh.portal.Common.logon'('nonportaluser2@gmail.com', 'Pa22word')
+CustomKeywords.'com.gh.portal.Common.logon'('nonportaluser2@gmail.com', 'R9dwWsVuqf0RB1p2unfSZQ==')
 
 WebUI.waitForPageLoad(5)
 
@@ -270,7 +270,7 @@ WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/signou
 WebUI.closeBrowser()
 
 'Step 9:Should not be able to see release to patient option for an ineligible patient'
-CustomKeywords.'com.gh.portal.Common.logon'('yan.feng@uhhospitals.org', 'Pa22word')
+CustomKeywords.'com.gh.portal.Common.logon'('yan.feng@uhhospitals.org', 'R9dwWsVuqf0RB1p2unfSZQ==')
 
 WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/selectpatient'))
 
@@ -305,7 +305,7 @@ WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/signou
 WebUI.closeBrowser()
 
 'Checking for ineligible patient'
-CustomKeywords.'com.gh.portal.Common.logon'('bridgesb@slhs.org', 'Pa22word')
+CustomKeywords.'com.gh.portal.Common.logon'('bridgesb@slhs.org', 'R9dwWsVuqf0RB1p2unfSZQ==')
 
 WebUI.waitForPageLoad(5)
 
@@ -336,7 +336,7 @@ WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/signou
 WebUI.closeBrowser()
 
 'Step 11:Should see a notification on an auto-released patient report page indicating that the report has been auto-released'
-CustomKeywords.'com.gh.portal.Common.logon'('tvo@guardanthealth.com', 'Pa22word')
+CustomKeywords.'com.gh.portal.Common.logon'('tvo@guardanthealth.com', 'R9dwWsVuqf0RB1p2unfSZQ==')
 
 WebUI.waitForPageLoad(5)
 
@@ -367,7 +367,7 @@ WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/signou
 WebUI.closeBrowser()
 
 'Step 10: Should be able to revoke access to a grantee'
-CustomKeywords.'com.gh.portal.Common.logon'('bejoysitemgr@gmail.com', 'Pa22word')
+CustomKeywords.'com.gh.portal.Common.logon'('bejoysitemgr@gmail.com', 'R9dwWsVuqf0RB1p2unfSZQ==')
 
 WebUI.waitForPageLoad(5)
 
@@ -421,7 +421,7 @@ WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/signou
 WebUI.closeBrowser()
 
 'Step 3:Should see only reports for all physicians that admin granted access'
- CustomKeywords.'com.gh.portal.Common.logon'('bejoysitemgr@gmail.com', 'Pa22word')
+ CustomKeywords.'com.gh.portal.Common.logon'('bejoysitemgr@gmail.com', 'R9dwWsVuqf0RB1p2unfSZQ==')
  
  WebUI.waitForPageLoad(5)
  
@@ -456,7 +456,7 @@ WebUI.closeBrowser()
  WebUI.closeBrowser()
  
  'Login with another credential to see the grant invitation of that pysician'
- CustomKeywords.'com.gh.portal.Common.logon'('bridgesb@slhs.org', 'Pa22word')
+ CustomKeywords.'com.gh.portal.Common.logon'('bridgesb@slhs.org', 'R9dwWsVuqf0RB1p2unfSZQ==')
  
  WebUI.waitForPageLoad(5)
  

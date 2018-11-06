@@ -19,7 +19,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKe
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-CustomKeywords.'com.gh.portal.Common.logon'('sqa_viewas@gmail.com', 'Pa22word')
+CustomKeywords.'com.gh.portal.Common.logon'('sqa_viewas@gmail.com', 'R9dwWsVuqf0RB1p2unfSZQ==')
 
 WebUI.setText(findTestObject('Portal/Dashboard/input_view-as__search-bar'), 'Fidler')
 

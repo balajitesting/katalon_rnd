@@ -12,25 +12,24 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
-import groovy.json.JsonSlurper
+import org.testng.Assert
 
-WebUI.comment('Run: ENTSW-TC-2911 Final-Additional Information')
+def A_Number = WebUI.callTestCase(findTestCase('lims/report/CreateCorrectedReportTest'), [:], FailureHandling.STOP_ON_FAILURE)
 
-def A_Number = WebUI.callTestCase(findTestCase('lims/report/CreateFinalReportTest'), [:], FailureHandling.STOP_ON_FAILURE)
+//A_Number = 'A86684' 
+ReportStatus = 'CORRECTED'
 
-String ReportStatus = 'FINAL'
+WebUI.delay(120)
 
-WebUI.delay(150)
+CustomKeywords.'com.gh.portal.Common.logon'('chaftj@mskcc.org', 'R9dwWsVuqf0RB1p2unfSZQ==')
 
-CustomKeywords.'com.gh.portal.Common.logon'('kimberly.schlesinger@rivhs.com', 'R9dwWsVuqf0RB1p2unfSZQ==')
+WebUI.click(findTestObject('Object Repository/Portal/Dashboard/provider/Corrected/Page_Guardant Health/div_LOAD MORE'))
 
-WebUI.click(findTestObject('Portal/page_guardanthealth/a_Show reports_fa fa-download'))
+WebUI.click(findTestObject('Object Repository/Portal/Dashboard/provider/Corrected/Page_Guardant Health/a_Report Only_request__data re'))
 
-WebUI.click(findTestObject('Portal/Dashboard/a_Report  Additional Informati'))
+WebUI.click(findTestObject('Object Repository/Portal/Dashboard/provider/Corrected/Page_Guardant Health/a_Report  Additional Informati'))
 
 CustomKeywords.'com.gh.portal.Common.logout'()
-
-CustomKeywords.'com.gh.core.PDFCompare.compareAndSave'(A_Number, ReportStatus)
 
 WebUI.closeBrowser()
 
@@ -38,8 +37,7 @@ def url = '/api/v1.0/guardanthealth/clinical/Report/' + A_Number
 Map response = CustomKeywords.'com.gh.core.HttpClient.doGet'(url)
 
 def revision = response.get("revision")
-def isLong = true
 
-CustomKeywords.'com.gh.core.PDFCompare.compareAndSave'(A_Number, ReportStatus, revision, isLong)
+Assert.assertTrue(CustomKeywords.'com.gh.core.PDFCompare.isDownloaded'(A_Number, ReportStatus, revision, true))
 
 return A_Number

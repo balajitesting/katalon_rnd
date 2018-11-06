@@ -12,21 +12,22 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
-import groovy.json.JsonSlurper
 
-WebUI.comment('Run: ENTSW-TC-2911 Final-Additional Information')
 
-def A_Number = WebUI.callTestCase(findTestCase('lims/report/CreateFinalReportTest'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.comment('Run: ENTSW-TC-2911 Addendum')
 
-String ReportStatus = 'FINAL'
+def A_Number = WebUI.callTestCase(findTestCase('lims/report/CreateAddendumReportTest'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.delay(150)
+WebUI.delay(180)
 
-CustomKeywords.'com.gh.portal.Common.logon'('kimberly.schlesinger@rivhs.com', 'R9dwWsVuqf0RB1p2unfSZQ==')
+//def A_Number = 'A90029'
+def ReportStatus = 'ADDENDUM'
 
-WebUI.click(findTestObject('Portal/page_guardanthealth/a_Show reports_fa fa-download'))
+CustomKeywords.'com.gh.portal.Common.logon'('chaftj@mskcc.org', 'R9dwWsVuqf0RB1p2unfSZQ==')
 
-WebUI.click(findTestObject('Portal/Dashboard/a_Report  Additional Informati'))
+WebUI.click(findTestObject('Portal/Dashboard/provider/Addendum/Page_Guardant Health/a_Show reports_fa fa-download'))
+
+WebUI.click(findTestObject('Portal/Dashboard/provider/Addendum/Page_Guardant Health/a_Report  Additional Informati'))
 
 CustomKeywords.'com.gh.portal.Common.logout'()
 
@@ -43,3 +44,4 @@ def isLong = true
 CustomKeywords.'com.gh.core.PDFCompare.compareAndSave'(A_Number, ReportStatus, revision, isLong)
 
 return A_Number
+

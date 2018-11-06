@@ -24,7 +24,7 @@ String strLastName = 'Joes' + CustomKeywords.'com.gh.core.TestUtil.getRandom'()
 
 String strEmailAddress = ('Nonportal' + CustomKeywords.'com.gh.core.TestUtil.getRandom'()) + '@gmail.com'
 
-CustomKeywords.'com.gh.portal.Common.logon'('venkat.mamillapelli@gmail.com', 'Pa22word')
+CustomKeywords.'com.gh.portal.Common.logon'('venkat.mamillapelli@gmail.com', 'R9dwWsVuqf0RB1p2unfSZQ==')
 
 WebUI.setText(findTestObject('Portal/page_guardanthealth/inputpatientname'), 'LINDA')
 
