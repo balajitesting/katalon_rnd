@@ -24,7 +24,7 @@ String ReportStatus = 'FINAL'
 
 WebUI.delay(120)
 
-CustomKeywords.'com.gh.portal.Common.logon'('kimberly.schlesinger@rivhs.com', 'Pa22word')
+CustomKeywords.'com.gh.portal.Common.logon'('chaftj@mskcc.org', 'R9dwWsVuqf0RB1p2unfSZQ==')
 
 WebUI.click(findTestObject('Portal/Dashboard/provider/Page_Guardant Health/a_Show reports_fa fa-download'))
 

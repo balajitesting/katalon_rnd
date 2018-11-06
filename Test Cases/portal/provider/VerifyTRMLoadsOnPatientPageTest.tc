@@ -3,6 +3,6 @@
    <description></description>
    <name>VerifyTRMLoadsOnPatientPageTest</name>
    <tag></tag>
-   <comment></comment>
+   <comment>Run: ENTSW-TC-3247</comment>
    <testCaseGuid>647eae96-e9b3-4def-9e38-b95f3a87bd9b</testCaseGuid>
 </TestCaseEntity>

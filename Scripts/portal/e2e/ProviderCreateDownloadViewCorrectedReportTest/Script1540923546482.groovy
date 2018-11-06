@@ -21,7 +21,7 @@ ReportStatus = 'CORRECTED'
 
 WebUI.delay(120)
 
-CustomKeywords.'com.gh.portal.Common.logon'('chaftj@mskcc.org', 'Pa22word')
+CustomKeywords.'com.gh.portal.Common.logon'('chaftj@mskcc.org', 'R9dwWsVuqf0RB1p2unfSZQ==')
 
 WebUI.click(findTestObject('Object Repository/Portal/Dashboard/provider/Corrected/Page_Guardant Health/div_LOAD MORE'))
 

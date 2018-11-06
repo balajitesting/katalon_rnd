@@ -16,7 +16,7 @@ import org.testng.Assert as Assert
 
 WebUI.comment('Run: ENTSW-TC-3247')
 
-CustomKeywords.'com.gh.portal.Common.logon'('bridgesb@slhs.org', 'Pa22word')
+CustomKeywords.'com.gh.portal.Common.logon'('bridgesb@slhs.org', 'R9dwWsVuqf0RB1p2unfSZQ==')
 
 WebUI.waitForPageLoad(10)
 
