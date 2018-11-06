@@ -41,7 +41,7 @@ public class PDFCompare {
 		String basefile = ((aNumber + '_') + reportStat) + '_report.pdf'
 
 		String file1 = Properties.getPDFBaseDir() + basefile
-		String file2 = getGH360File(aNumber, revision, isLong)
+		String file2 = getGH360File(aNumber, reportStat, revision, isLong)
 
 		doCompare(file1, file2)
 	}
