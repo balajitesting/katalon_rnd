@@ -22,9 +22,9 @@ String ReportStatus = 'AMENDED'
 
 //A_Number = 'A80196'
 
-WebUI.delay(150)
+//WebUI.delay(150)
 
-CustomKeywords.'com.gh.portal.Common.logon'('chaftj@mskcc.org', 'R9dwWsVuqf0RB1p2unfSZQ==')
+CustomKeywords.'com.gh.portal.Common.logon'('mary_fidler@rush.edu', 'R9dwWsVuqf0RB1p2unfSZQ==')
 
 WebUI.click(findTestObject('Portal/Dashboard/provider/Amended/Page_Guardant Health/a_Report Only_fa fa-download r'))
 
