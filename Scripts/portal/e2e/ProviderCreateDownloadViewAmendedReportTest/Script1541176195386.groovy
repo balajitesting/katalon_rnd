@@ -37,3 +37,11 @@ WebUI.click(findTestObject('Portal/Dashboard/provider/Amended/Page_Guardant Heal
 CustomKeywords.'com.gh.portal.Common.logout'()
 
 WebUI.closeBrowser()
+
+def url = '/api/v1.0/guardanthealth/clinical/Report/' + A_Number
+Map response = CustomKeywords.'com.gh.core.HttpClient.doGet'(url)
+
+def revision = response.get("revision")
+def isLong = true
+
+CustomKeywords.'com.gh.core.PDFCompare.compareAndSave'(A_Number, ReportStatus, revision, isLong)

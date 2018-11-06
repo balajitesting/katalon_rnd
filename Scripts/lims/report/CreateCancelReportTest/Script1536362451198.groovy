@@ -63,4 +63,4 @@ WebUI.closeBrowser()
 
 CustomKeywords.'com.gh.core.PDFCompare.compareAndSave'(A_Number, ReportStatus)
 
-
+return A_Number
