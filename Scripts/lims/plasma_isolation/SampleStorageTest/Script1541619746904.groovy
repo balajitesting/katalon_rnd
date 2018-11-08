@@ -20,10 +20,10 @@ import org.openqa.selenium.By as By
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-//Sample Storage
+//Sample Storage 
 WebUI.comment('Run: ENTSW-TC-2880')
 
-//String aNumber = WebUI.callTestCase(findTestCase('lims/accession/DV2RequestsTest'), [:], FailureHandling.STOP_ON_FAILURE)
+//String aNumber = WebUI.callTestCase(findTestCase('lims/plasma_isolation/PlasmaIsolationCompleteTest'), [:], FailureHandling.STOP_ON_FAILURE)
 
 'Enable when run this test alone'
 String sampleID = 'A011760801'
