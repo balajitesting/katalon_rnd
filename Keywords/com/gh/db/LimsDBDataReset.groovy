@@ -167,6 +167,19 @@ public class LimsDBDataReset {
 		String query = "update s_sample set u_ghsamplestatus = '"+status+"' where s_sampleid = '"+sampleID+"'";
 		db.execute(query);
 	}
+	
+	@Keyword
+	def resetStorageStatus(String sampleID) {
+
+		LimsOracleDBService db = new LimsOracleDBService();
+		db.connectDB(GlobalVariable.oracleDBurl, GlobalVariable.oracleDBuser, GlobalVariable.oracleDBpwd);
+
+		String query1 = "update trackitem set currentstorageunitid = null where linkkeyid1 = '"+sampleID+"'";
+		db.execute(query1);
+		
+		String query2 = "update s_sample set u_ghsamplestatus = 'Sample Archive' where s_sampleid = '"+sampleID+"'";
+		db.execute(query2);
+	}
 
 	/**
 	 * Click element
@@ -174,7 +187,7 @@ public class LimsDBDataReset {
 	 */
 	@Keyword
 	def BIP_delete_by_flowcellID(String flowcellid) {
-
+ 
 
 		LimsOracleDBService db = new LimsOracleDBService();
 		db.connectDB(GlobalVariable.oracleDBurl, GlobalVariable.oracleDBuser, GlobalVariable.oracleDBpwd);
