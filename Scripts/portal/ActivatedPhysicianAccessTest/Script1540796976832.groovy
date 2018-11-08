@@ -132,7 +132,7 @@ WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/profil
 WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/signout'))
 
 'Step 7:Should be able to release a patients report with a portal user email address'
-CustomKeywords.'com.gh.portal.Common.logon'('yan.feng@uhhospitals.org', 'Pa22word')
+CustomKeywords.'com.gh.portal.Common.logon'('yan.feng@uhhospitals.org', 'R9dwWsVuqf0RB1p2unfSZQ==')
 
 WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/selectpatient'))
 
@@ -171,7 +171,7 @@ WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/signou
 WebUI.closeBrowser()
 
 'Validation for portal account that it contains patient of other physician account '
-CustomKeywords.'com.gh.portal.Common.logon'('bridgesb@slhs.org', 'Pa22word')
+CustomKeywords.'com.gh.portal.Common.logon'('bridgesb@slhs.org', 'R9dwWsVuqf0RB1p2unfSZQ==')
 
 WebUI.waitForPageLoad(5)
 
@@ -395,7 +395,7 @@ WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/signou
 WebUI.closeBrowser()
 
 'Step 2: Should see reports for only their patients and with recent accessioning date and for any previous dates.'
-CustomKeywords.'com.gh.portal.Common.logon'('bridgesb@slhs.org', 'Pa22word')
+CustomKeywords.'com.gh.portal.Common.logon'('bridgesb@slhs.org', 'R9dwWsVuqf0RB1p2unfSZQ==')
 
 WebUI.setText(findTestObject('Object Repository/Portal/page_portalaccession/searchid'), aNumber)
 
@@ -522,7 +522,7 @@ WebUI.closeBrowser()
  WebUI.closeBrowser()
  
  'Step 10: Should be able to revoke access to a grantee'
- CustomKeywords.'com.gh.portal.Common.logon'('bejoysitemgr@gmail.com', 'Pa22word')
+ CustomKeywords.'com.gh.portal.Common.logon'('bejoysitemgr@gmail.com', 'R9dwWsVuqf0RB1p2unfSZQ==')
  
  WebUI.waitForPageLoad(5)
  
