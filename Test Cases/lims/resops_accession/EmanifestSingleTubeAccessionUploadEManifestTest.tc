@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>EmanifestSingleTubeAccessionUploadEManifestTest</name>
+   <tag></tag>
+   <comment>ENTSW-TC-2931</comment>
+   <testCaseGuid>b4ba6f28-8387-4251-869a-207db8179d5e</testCaseGuid>
+</TestCaseEntity>

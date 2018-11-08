@@ -74,6 +74,26 @@ public class LimsDBOperation extends LimsOracleDBService {
 		return count;
 	}
 
+	/*
+	 * It will return the first column value
+	 */
+	public String getValue(String query){
+		LimsOracleDBService db = new LimsOracleDBService();
+		db.connectDB(GlobalVariable.oracleDBurl, GlobalVariable.oracleDBuser, GlobalVariable.oracleDBpwd);
+		String value;
+		try{
+			ResultSet rs = executeQuery(query);
+			while(rs.next()){
+				value = rs.getString(1);
+			}
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		System.out.println(value);
+		return value;
+	}
+
 
 	/*  If TB Review count is more than 1 or IsPositiveReview count is more than 1, return true
 	 CLS Review for that gene type will show up if it is true.
