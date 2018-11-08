@@ -78,6 +78,7 @@ WebUI.switchToWindowIndex(1)
 
 WebUI.click(findTestObject('Portal/page_mailtrap/page_portalmailtrap/sharepatientreportbutton'))
 
+WebUI.waitForPageLoad(2)
 WebUI.switchToWindowIndex(2)
 
 WebUI.click(findTestObject('Portal/page_mailtrap/page_mailconfirmationpage/nextbutton'))
@@ -98,6 +99,7 @@ WebUI.verifyElementPresent(findTestObject('Portal/page_mailtrap/page_mailconfirm
 
 WebUI.verifyElementPresent(findTestObject('Portal/page_mailtrap/page_mailconfirmationpage/reportstableview'), 5)
 
+Thread.sleep(1000)
 WebUI.verifyElementPresent(findTestObject('Portal/page_mailtrap/page_mailconfirmationpage/csvdownloadlink'), 5)
 
 WebUI.setText(findTestObject('Portal/page_mailtrap/page_mailconfirmationpage/searchguestpatientname'), 'LINDA')

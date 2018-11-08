@@ -201,7 +201,7 @@ WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/signou
 WebUI.closeBrowser()
 
 'Step 8:Should be able to release a patients report with a non-portal user email address.'
-CustomKeywords.'com.gh.portal.Common.logon'('yan.feng@uhhospitals.org', 'Pa22word')
+CustomKeywords.'com.gh.portal.Common.logon'('yan.feng@uhhospitals.org', 'R9dwWsVuqf0RB1p2unfSZQ==')
 
 WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/selectpatient'))
 

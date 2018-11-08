@@ -93,6 +93,15 @@ public class TestUtil {
 	}
 
 	@Keyword
+	public static String setDate(int offset){
+		Calendar cal = Calendar.getInstance();
+		cal.add(Calendar.DATE, offset);
+		SimpleDateFormat ds = new SimpleDateFormat("MM/dd/YYYY");
+		String date = ds.format(cal.getTime());
+		return date
+	}
+
+	@Keyword
 	public static boolean check_ssh_host_file_exist(String path) {
 		String s = null;
 
