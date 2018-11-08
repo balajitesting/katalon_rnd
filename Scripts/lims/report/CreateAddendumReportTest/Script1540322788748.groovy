@@ -17,7 +17,7 @@ A_Number = 'A90029'
 
 String ReportStatus = 'ADDENDUM'
 
-CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserReporting', '5Ed5CIkj9UQfaMZXAkDVaQ==')
+CustomKeywords.'com.gh.lims.Common.logon'('abaca', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
 CustomKeywords.'com.gh.lims.Report.searchRequest'(A_Number)
 
@@ -86,3 +86,5 @@ WebUI.click(findTestObject('LIMS/logout/img'))
 WebUI.closeBrowser()
 
 CustomKeywords.'com.gh.core.PDFCompare.compareAndSave'(A_Number, ReportStatus)
+
+return A_Number

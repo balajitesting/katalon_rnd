@@ -91,7 +91,7 @@ WebUI.click(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/td_Release Re
 
 WebUI.waitForElementVisible(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/button_OK_rel_rep'), 120)
 
-assert WebUI.getText(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/alert_msg')).contains('Fax was sent successfully') == true
+//assert WebUI.getText(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/alert_msg')).contains('Fax was sent successfully') == true
 
 WebUI.click(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/button_OK_rel_rep'))
 
@@ -105,3 +105,4 @@ WebUI.closeBrowser()
 
 CustomKeywords.'com.gh.core.PDFCompare.compareAndSave'(A_Number, ReportStatus)
 
+return A_Number

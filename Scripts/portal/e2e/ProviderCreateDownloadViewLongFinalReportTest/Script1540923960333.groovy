@@ -12,25 +12,23 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
-
 import groovy.json.JsonSlurper
 
-WebUI.comment('Run: ENTSW-TC-2911 Final')
+WebUI.comment('Run: ENTSW-TC-2911 Final-Additional Information')
+
 def A_Number = WebUI.callTestCase(findTestCase('lims/report/CreateFinalReportTest'), [:], FailureHandling.STOP_ON_FAILURE)
 
 String ReportStatus = 'FINAL'
 
-WebUI.delay(120)
+WebUI.delay(150)
 
-CustomKeywords.'com.gh.portal.Common.logon'('kimberly.schlesinger@rivhs.com', 'Pa22word')
+CustomKeywords.'com.gh.portal.Common.logon'('kimberly.schlesinger@rivhs.com', 'R9dwWsVuqf0RB1p2unfSZQ==')
 
 WebUI.click(findTestObject('Portal/page_guardanthealth/a_Show reports_fa fa-download'))
 
 WebUI.click(findTestObject('Portal/Dashboard/a_Report  Additional Informati'))
 
-WebUI.click(findTestObject('Portal/Dashboard/logout/Page_Guardant Health/i_PERMISSIONS_fa fa-chevron-do'))
-
-WebUI.click(findTestObject('Portal/Dashboard/logout/Page_Guardant Health/a_Sign Out'))
+CustomKeywords.'com.gh.portal.Common.logout'()
 
 CustomKeywords.'com.gh.core.PDFCompare.compareAndSave'(A_Number, ReportStatus)
 
@@ -40,5 +38,8 @@ def url = '/api/v1.0/guardanthealth/clinical/Report/' + A_Number
 Map response = CustomKeywords.'com.gh.core.HttpClient.doGet'(url)
 
 def revision = response.get("revision")
-def isLong = false
+def isLong = true
+
 CustomKeywords.'com.gh.core.PDFCompare.compareAndSave'(A_Number, ReportStatus, revision, isLong)
+
+return A_Number

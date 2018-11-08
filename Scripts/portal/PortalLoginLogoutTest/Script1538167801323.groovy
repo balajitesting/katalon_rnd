@@ -19,7 +19,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKe
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-CustomKeywords.'com.gh.portal.Common.logon'('sqa_viewas@gmail.com', 'Pa22word')
+CustomKeywords.'com.gh.portal.Common.logon'('chaftj@mskcc.org', 'R9dwWsVuqf0RB1p2unfSZQ==')
 
 WebUI.click(findTestObject('Portal/Dashboard/i_fa fa-chevron-down admin-men'))
 

@@ -12,8 +12,8 @@ import com.kms.katalon.core.annotation.Keyword
 
 /**
  * @author gxu
- * @date 6/12/2018
- * @date udpated on 11/1/2018
+ * @date 6/12/2018 created
+ * @date 11/1/2018 added PDF compare for Portal
  * 
  * PDF comparison module to compare 2 PDF files pixel by pixel
  * 
@@ -40,18 +40,26 @@ public class PDFCompare {
 
 		String basefile = ((aNumber + '_') + reportStat) + '_report.pdf'
 
-		def outFile = ''
-		if (isLong)
-			outFile = 'Guardant360-' + aNumber + '-v' + revision + '-Final.pdf'
-		else
-			outFile = 'Guardant360-' + aNumber + '-v' + revision + '-Final-Additional-Info.pdf'
-
-		println outFile
-
 		String file1 = Properties.getPDFBaseDir() + basefile
-		String file2 = Properties.getPDFDownloadDir() + outFile
+		String file2 = getGH360File(aNumber, reportStat, revision, isLong)
 
 		doCompare(file1, file2)
+	}
+
+	@Keyword
+	boolean isDownloaded(String aNumber, String reportStat, Integer revision, boolean isLong){
+		return new File(getGH360File(aNumber, reportStat, revision, isLong)).isFile()
+	}
+
+	private String getGH360File(String aNumber, String reportStat, Integer revision, boolean isLong){
+		def outFile = ''
+
+		if (isLong)
+			outFile = 'Guardant360-' + aNumber + '-v' + revision + '-' + reportStat +  '-Additional-Info.pdf'
+		else
+			outFile = 'Guardant360-' + aNumber + '-v' + revision + '-' + reportStat + '.pdf'
+
+		return Properties.getPDFDownloadDir() + outFile
 	}
 
 	private doCompare(String file1, String file2){
