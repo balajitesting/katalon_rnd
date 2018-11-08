@@ -30,7 +30,7 @@ String sampleID = 'A011760801'
 
 CustomKeywords.'com.gh.db.LimsDBDataReset.resetStorageStatus'(sampleID)
 
-CustomKeywords.'com.gh.db.LimsDBDataReset.resetSampleStatus'(sampleID, 'Ready for Plasma Isolation')
+//CustomKeywords.'com.gh.db.LimsDBDataReset.resetSampleStatus'(sampleID, 'Ready for Plasma Isolation')
 
 CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserDagmar', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
@@ -87,7 +87,9 @@ WebUI.switchToFrame(findTestObject('LIMS/Plasma_Isolation/SampleStorage/iframe_S
 
 WebUI.click(findTestObject('LIMS/Plasma_Isolation/SampleStorage/checkbox_Sample'))
 
-//Thread.sleep(3000)
+Thread.sleep(3000)
+
+WebUI.switchToDefaultContent()
 
 WebUI.click(findTestObject('LIMS/Plasma_Isolation/SampleStorage/btn_AutoFile'))
 
