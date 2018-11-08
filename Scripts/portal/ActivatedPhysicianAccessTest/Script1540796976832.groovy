@@ -67,7 +67,7 @@ WebUI.switchToDefaultContent()
 WebUI.click(findTestObject('Object Repository/Portal/page_limsaccession/logoff'))
 
 'Step 4: Should see reports table view'
-CustomKeywords.'com.gh.portal.Common.logon'('yan.feng@uhhospitals.org', 'Pa22word')
+CustomKeywords.'com.gh.portal.Common.logon'('yan.feng@uhhospitals.org', 'R9dwWsVuqf0RB1p2unfSZQ==')
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Portal/page_portalaccession/viewtablereport'), 20)
 
