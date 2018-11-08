@@ -56,7 +56,7 @@ Thread.sleep(3000)
 
 WebDriver driver = DriverFactory.getWebDriver()
 
-'Switch to Problem Case Window'
+'Switch to Storage Unit'
 String winHandleBefore = driver.getWindowHandle();
 
 for(String winHandle : driver.getWindowHandles()){
