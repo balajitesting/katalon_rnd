@@ -42,7 +42,7 @@ def url = '/api/v1.0/guardanthealth/clinical/Report/' + A_Number
 Map response = CustomKeywords.'com.gh.core.HttpClient.doGet'(url)
 
 def revision = response.get("revision")
-def isLong = true
+def isLong = false
 
 CustomKeywords.'com.gh.core.PDFCompare.compareAndSave'(A_Number, ReportStatus, revision, isLong)
 

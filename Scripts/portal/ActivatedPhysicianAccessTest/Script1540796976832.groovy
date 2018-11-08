@@ -34,6 +34,7 @@ String accessionId
 
 String shareButton
 
+String gmail='bridgesb@slhs.org'
 'Step 1: Should see reports for only their patients'
 CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserDagmar', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
@@ -66,7 +67,7 @@ WebUI.switchToDefaultContent()
 WebUI.click(findTestObject('Object Repository/Portal/page_limsaccession/logoff'))
 
 'Step 4: Should see reports table view'
-CustomKeywords.'com.gh.portal.Common.logon'('yan.feng@uhhospitals.org', 'Pa22word')
+CustomKeywords.'com.gh.portal.Common.logon'('yan.feng@uhhospitals.org', 'R9dwWsVuqf0RB1p2unfSZQ==')
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Portal/page_portalaccession/viewtablereport'), 20)
 
@@ -131,7 +132,7 @@ WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/profil
 WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/signout'))
 
 'Step 7:Should be able to release a patients report with a portal user email address'
-CustomKeywords.'com.gh.portal.Common.logon'('yan.feng@uhhospitals.org', 'Pa22word')
+CustomKeywords.'com.gh.portal.Common.logon'('yan.feng@uhhospitals.org', 'R9dwWsVuqf0RB1p2unfSZQ==')
 
 WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/selectpatient'))
 
@@ -170,7 +171,7 @@ WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/signou
 WebUI.closeBrowser()
 
 'Validation for portal account that it contains patient of other physician account '
-CustomKeywords.'com.gh.portal.Common.logon'('bridgesb@slhs.org', 'Pa22word')
+CustomKeywords.'com.gh.portal.Common.logon'('bridgesb@slhs.org', 'R9dwWsVuqf0RB1p2unfSZQ==')
 
 WebUI.waitForPageLoad(5)
 
@@ -200,7 +201,7 @@ WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/signou
 WebUI.closeBrowser()
 
 'Step 8:Should be able to release a patients report with a non-portal user email address.'
-CustomKeywords.'com.gh.portal.Common.logon'('yan.feng@uhhospitals.org', 'Pa22word')
+CustomKeywords.'com.gh.portal.Common.logon'('yan.feng@uhhospitals.org', 'R9dwWsVuqf0RB1p2unfSZQ==')
 
 WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/selectpatient'))
 
@@ -394,7 +395,7 @@ WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/signou
 WebUI.closeBrowser()
 
 'Step 2: Should see reports for only their patients and with recent accessioning date and for any previous dates.'
-CustomKeywords.'com.gh.portal.Common.logon'('bridgesb@slhs.org', 'Pa22word')
+CustomKeywords.'com.gh.portal.Common.logon'('bridgesb@slhs.org', 'R9dwWsVuqf0RB1p2unfSZQ==')
 
 WebUI.setText(findTestObject('Object Repository/Portal/page_portalaccession/searchid'), aNumber)
 
@@ -519,3 +520,60 @@ WebUI.closeBrowser()
  WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/signout'))
  
  WebUI.closeBrowser()
+ 
+ 'Step 10: Should be able to revoke access to a grantee'
+ CustomKeywords.'com.gh.portal.Common.logon'('bejoysitemgr@gmail.com', 'R9dwWsVuqf0RB1p2unfSZQ==')
+ 
+ WebUI.waitForPageLoad(5)
+ 
+ WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/permissionstab'))
+ 
+ WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/reportaccessheading'))
+ 
+// listphysicians='Object Repository/Portal/page_portalaccession/physicianlist'
+ Thread.sleep(5000)
+	 List<WebElement> allRevokePhysicians = DriverFactory.getWebDriver().findElements(By.xpath("(//div[text()='Reports-Access Invitations']//ancestor::div[@class='share-index__body']//div[@class='share-index__collaborators-container']//div[@class='share-index__collaborator'])[1]//div[@class='share-created__text-description']"))
+ 
+	 int allRevokePhysicianCount = allRevokePhysicians.size()
+ 
+	 boolean allPhyflag = false
+	  for (int j = allRevokePhysicianCount-1; j < allRevokePhysicianCount; j--) {
+		 println(allRevokePhysicians.get(j).getText())
+ 
+		 allPhyflag = strPhysician.contains(allRevokePhysicians.get(j).getText())
+ 
+		 println(allPhyflag)
+		 
+		 if (allPhyflag)
+		  {
+			  
+			 List<WebElement> allRevokeButtons = DriverFactory.getWebDriver().findElements(By.xpath("//div[contains(text(),'"+gmail+"')]//ancestor::div[@class='share-index__collaborators-container']//div[text()='"+strPhysician+"']//ancestor::div[@class='share-created']//div[@class='simple-toggle__share-index on']"))
+			 int allRevokeButtonsCount = allRevokeButtons.size()
+			  for (int l = allRevokeButtonsCount-1; l < allRevokeButtonsCount; l--)
+			  {
+				  allRevokeButtons.get(l).click()
+				  List<WebElement> allYesButtons = DriverFactory.getWebDriver().findElements(By.xpath("//div[contains(text(),'"+gmail+"')]//ancestor::div[@class='share-index__collaborators-container']//div[text()='"+strPhysician+"']//ancestor::div[@class='share-created']//div[text()='YES']"))
+				  int allYesButtonsCount=allYesButtons.size()
+				  for (int k = allYesButtonsCount-1; k < allYesButtonsCount; k--)
+				  {
+					  allYesButtons.get(k).click()
+					  break
+				  }
+				  break
+			  }
+		 }
+		  break
+	 }
+	 
+ WebUI.waitForPageLoad(10)
+ 
+ WebUI.waitForElementClickable(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'), 20)
+ 
+ WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'))
+ 
+ WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/signout'))
+ 
+ WebUI.closeBrowser()
+
+ 
+ 
