@@ -182,6 +182,20 @@ public class LimsDBDataReset {
 	}
 
 	/**
+	 *
+	 */
+	@Keyword
+	def deleteEManifest(String studyid, String customersampleid, String projectid, String patientid, String tubebarcode) {
+
+		LimsOracleDBService db = new LimsOracleDBService();
+		db.connectDB(GlobalVariable.oracleDBurl, GlobalVariable.oracleDBuser, GlobalVariable.oracleDBpwd);
+
+		String query = "delete from u_ghemanifest where studyid = '"+studyid+"' and customersampleid = '"+customersampleid+"' and ProjectID = '"+projectid+"' and PatientID = '"+patientid+"' and tubebarcode = '"+tubebarcode+"'";
+		db.execute(query);
+	}
+
+
+	/**
 	 * Click element
 	 * @param to Katalon test object
 	 */
