@@ -17,11 +17,7 @@ WebUI.comment('Run: ENTSW-TC-2890')
 
 String A_Number = 'A0100253'
 
-//String A_Number = 'A0107094'
-
 CustomKeywords.'com.gh.db.LimsDBDataReset.resetXIFINAccession'(A_Number)
-
-//WebUI.callTestCase(findTestCase('lims/report/fax_portal/FaxFinalReportForPrimaryPhysicianTest'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.callTestCase(findTestCase('lims/report/fax_portal/PortalCorrectedReportForPrimaryPhysicianTest'), [:], FailureHandling.STOP_ON_FAILURE)
 
