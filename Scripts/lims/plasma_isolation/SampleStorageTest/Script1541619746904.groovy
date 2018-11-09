@@ -93,11 +93,23 @@ WebUI.switchToDefaultContent()
 
 WebUI.click(findTestObject('LIMS/Plasma_Isolation/SampleStorage/btn_AutoFile'))
 
+Thread.sleep(3000)
+
 WebUI.click(findTestObject('LIMS/Plasma_Isolation/SampleStorage/btn_Save'))
 
-WebUI.waitForElementPresent(findTestObject('Object Repository/LIMS/logout/img'), 10)
+Thread.sleep(3000)
 
-WebUI.click(findTestObject('Object Repository/LIMS/logout/img'))
+WebUI.click(findTestObject('LIMS/Plasma_Isolation/SampleStorage/tab_SampleStorage'))
+
+WebUI.setText(findTestObject('LIMS/Plasma_Isolation/Page_Plasma Tube List/Search_Textbox'), sampleID)
+
+WebUI.click(findTestObject('LIMS/Plasma_Isolation/Page_Plasma Tube List/Search_OK_Button'))
+
+WebUI.switchToFrame(findTestObject('LIMS/Requests/AllRequests/list_iFrame'), 3)
+
+assert WebUI.getText(findTestObject('LIMS/Plasma_Isolation/SampleStorage/btn_Box')).contains("SU-0000103511") == true
+
+assert WebUI.getText(findTestObject('LIMS/Plasma_Isolation/SampleStorage/btn_Location')).contains("/Freezer-80C_#42_0234/Shelf4/Rack7/Box15/LocE5") == true
 
 WebUI.closeBrowser()
 
