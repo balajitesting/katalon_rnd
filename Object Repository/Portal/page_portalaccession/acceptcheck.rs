@@ -10,7 +10,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//input[@name='accept_terms'])[2]</value>
+         <value>//div[@class='input-group share__terms']//input[@name='accept_terms']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
