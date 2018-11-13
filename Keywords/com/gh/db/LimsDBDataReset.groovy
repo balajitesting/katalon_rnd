@@ -53,9 +53,19 @@ public class LimsDBDataReset {
 
 		String updateFinalReportDate = "update s_request set u_finalreportdate = null where s_requestid = '"+requestID+"'";
 		db.execute(updateFinalReportDate);
-		
+
 		String updateXIFINAccession = "update s_request set u_xifinaccession = null where s_requestid = '"+requestID+"'";
 		db.execute(updateXIFINAccession);
+	}
+
+	@Keyword
+	def resetEManifest(String requestID) {
+
+		LimsOracleDBService db = new LimsOracleDBService();
+		db.connectDB(GlobalVariable.oracleDBurl, GlobalVariable.oracleDBuser, GlobalVariable.oracleDBpwd);
+
+		String updateEManifest = "update U_GHEMANIFEST set VERIFIED = null, STATUS = null, REQUESTID = null where U_GHEMANIFESTID = '"+requestID+"'";
+		db.execute(updateEManifest);
 	}
 
 	/**
