@@ -17,7 +17,7 @@ WebUI.comment('Run: ENTSW-TC-2922')
 
 CustomKeywords.'com.gh.portal.Common.logon'('kimberly.schlesinger@rivhs.com', 'R9dwWsVuqf0RB1p2unfSZQ==')
 
-CustomKeywords.'com.gh.portal.provider.shareReportToPhysician'('KENNEALY', 'Mary', 'Fidler', 'mary_fidler@rush.edu')
+CustomKeywords.'com.gh.portal.Provider.shareReportToPhysician'('KENNEALY', 'Mary', 'Fidler', 'mary_fidler@rush.edu')
 
 CustomKeywords.'com.gh.portal.Common.logout'()
 
