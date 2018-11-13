@@ -97,6 +97,7 @@ public class Common {
 
 	@Keyword
 	def logout(){
+		Thread.sleep(1000)
 		WebUI.click(findTestObject('Portal/Dashboard/logout/Page_Guardant Health/i_PERMISSIONS_fa fa-chevron-do'))
 
 		WebUI.click(findTestObject('Portal/Dashboard/logout/Page_Guardant Health/a_Sign Out'))
