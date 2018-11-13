@@ -39,15 +39,11 @@ WebUI.switchToFrame(findTestObject('LIMS/Requests/AllRequests/list_iFrame'), 3)
 
 assert WebUI.getText(findTestObject('LIMS/DataEntryBilling/XIFINAccession/requestNumber')).contains(A_Number ) == true
 
-Thread.sleep(3000)
-
 WebUI.click(findTestObject('LIMS/DataEntryBilling/XIFINAccession/requestCheckbox'))
 
 WebUI.switchToDefaultContent()
 
 WebUI.click(findTestObject('LIMS/DataEntryBilling/XIFINAccession/sendAccession'))
-
-Thread.sleep(3000)
 
 WebUI.waitForElementPresent(findTestObject('Object Repository/LIMS/logout/img'), 15)
 
