@@ -19,6 +19,16 @@ String A_Number = 'A0100253'
 
 CustomKeywords.'com.gh.db.LimsDBDataReset.resetXIFINAccession'(A_Number)
 
+CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserBilling', '5Ed5CIkj9UQfaMZXAkDVaQ==')
+
+WebUI.click(findTestObject('LIMS/Home/XIFINAccessionsTramStop'))
+
+WebUI.switchToFrame(findTestObject('LIMS/Requests/AllRequests/list_iFrame'), 3)
+
+assert WebUI.getText(findTestObject('LIMS/DataEntryBilling/XIFINAccession/requestNumber')).contains(A_Number ) == false
+
+WebUI.closeBrowser()
+
 WebUI.callTestCase(findTestCase('lims/report/fax_portal/PortalCorrectedReportForPrimaryPhysicianTest'), [:], FailureHandling.STOP_ON_FAILURE)
 
 CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserBilling', '5Ed5CIkj9UQfaMZXAkDVaQ==')
