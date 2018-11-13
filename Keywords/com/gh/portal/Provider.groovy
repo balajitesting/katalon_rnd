@@ -28,9 +28,9 @@ import internal.GlobalVariable
 public class Provider {
 
 	@Keyword
-	def shareReportToPhysician(String patientName, String Phy2Fname, String Phy2Lname, String phy2Email){
+	def shareReportToPhysician(String patientName, String phy2Fname, String phy2Lname, String phy2Email){
 
-		WebUI.setText(findTestObject('Portal/page_guardanthealth/inputpatientname'), 'KENNEALY')
+		WebUI.setText(findTestObject('Portal/page_guardanthealth/inputpatientname'), patientName)
 
 		WebUI.click(findTestObject('Portal/page_guardanthealth/searchpatientname'))
 
@@ -38,19 +38,17 @@ public class Provider {
 
 		WebUI.click(findTestObject('Portal/page_guardanthealth/sharebutton'))
 
-		WebUI.setText(findTestObject('Portal/page_guardanthealth/inputfirstname'), 'Mary')
+		WebUI.setText(findTestObject('Portal/page_guardanthealth/inputfirstname'), phy2Fname)
 
-		WebUI.setText(findTestObject('Portal/page_guardanthealth/inputlastname'), 'Fidler')
+		WebUI.setText(findTestObject('Portal/page_guardanthealth/inputlastname'), phy2Lname)
 
-		WebUI.setText(findTestObject('Portal/page_guardanthealth/inputemailaddress'), 'mary_fidler@rush.edu')
+		WebUI.setText(findTestObject('Portal/page_guardanthealth/inputemailaddress'), phy2Email)
 
 		WebUI.click(findTestObject('Portal/page_guardanthealth/acceptterms'))
 
 		WebUI.click(findTestObject('Portal/page_guardanthealth/invitationbutton'))
 
 		WebUI.acceptAlert()
-
-		//WebUI.waitForPageLoad(10)
 
 		WebUI.waitForElementVisible(findTestObject('Portal/page_guardanthealth/confirmationmessage'), 15)
 
