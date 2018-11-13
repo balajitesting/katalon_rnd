@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>ResOpsGenerateReleaseReport</name>
+   <tag></tag>
+   <comment>ENTC-2935
+ENTC-2936</comment>
+   <testCaseGuid>ba446e6b-3e47-4096-8b1d-881e1604ea19</testCaseGuid>
+</TestCaseEntity>
