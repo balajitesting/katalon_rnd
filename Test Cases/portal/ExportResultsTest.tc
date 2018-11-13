@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>ExportResultsTest</name>
+   <tag></tag>
+   <comment>ENTSW-TC-3257</comment>
+   <testCaseGuid>6163fc6a-30ff-4f42-b4a8-ec33a54d403c</testCaseGuid>
+</TestCaseEntity>
