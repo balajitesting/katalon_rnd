@@ -4,7 +4,83 @@
    <name>promotion_code</name>
    <tag></tag>
    <elementGuidId>1d001174-a13e-4c9b-a4d0-6f39de38da13</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//select[@id='promotioncode']</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//select[@id = 'promotioncode' and @name = 'promotioncode' and (text() = '
+				   				  
+								  
+									001
+
+								  
+									002
+
+								  
+									003
+
+								  
+									004
+
+								  
+									005
+
+								  
+									006
+
+								  
+									007
+
+								  
+									008
+
+								  
+									010
+
+								  
+									011
+
+								  
+								' or . = '
+				   				  
+								  
+									001
+
+								  
+									002
+
+								  
+									003
+
+								  
+									004
+
+								  
+									005
+
+								  
+									006
+
+								  
+									007
+
+								  
+									008
+
+								  
+									010
+
+								  
+									011
+
+								  
+								')]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>
