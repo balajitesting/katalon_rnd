@@ -3,6 +3,6 @@
    <description></description>
    <name>FaxAmendedReportForPrimaryAndSecondaryPhysicianTest</name>
    <tag></tag>
-   <comment>Run: ENTC-2855</comment>
+   <comment>Run: ENTSW-TC-2855</comment>
    <testCaseGuid>a66b5280-11c7-4329-bf7c-ecde273816d4</testCaseGuid>
 </TestCaseEntity>

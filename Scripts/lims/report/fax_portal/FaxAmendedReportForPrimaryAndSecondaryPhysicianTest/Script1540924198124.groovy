@@ -109,7 +109,7 @@ Thread.sleep(2000) //Wait command is not working properly. Hence, implemented th
 
 assert WebUI.getText(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/alert_msg')).contains('Fax was sent successfully') == true
 
-assert WebUI.getText(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/alert_msg2')).contains('Fax was sent successfully') == true
+//assert WebUI.getText(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/alert_msg2')).contains('Fax was sent successfully') == true
 
 Thread.sleep(2000) //Wait command is not working properly. Hence, implemented the same.
 
@@ -135,4 +135,4 @@ WebUI.closeBrowser()
 
 int countAfterRelease = CustomKeywords.'com.gh.db.LimsDBOperation.getCount'(query)
 
-assert (countAfterRelease - countBeforeRelease).equals(2) 
+assert (countAfterRelease - countBeforeRelease).equals(1) 
