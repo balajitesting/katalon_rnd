@@ -4,7 +4,7 @@
    <name>LIMS_Demo</name>
    <tag></tag>
    <isRerun>false</isRerun>
-   <lastRun>2018-11-13T20:32:03</lastRun>
+   <lastRun>2018-11-14T15:01:42</lastRun>
    <mailRecipient></mailRecipient>
    <numberOfRerun>0</numberOfRerun>
    <pageLoadTimeout>30</pageLoadTimeout>
@@ -14,97 +14,97 @@
    <testCaseLink>
       <guid>015b7c56-6b43-453d-a154-b792dc4f7eea</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/accession/AccessionClinicalOptionalDataEntryTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>0b4c7885-839d-486e-900c-a95ab1951baf</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/accession/AccessionClinicalRequiredDataEntryTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>8cb81839-b47f-44e5-90ff-867edb9ff696</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/accession/DE1CreateProblemCaseTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>4d43a498-1e32-4658-9368-7b5080dbad3a</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/accession/DE2NoPlasmaHoldTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>5a20c7b2-e1c8-4a3c-912e-f1ef9c2ef2c0</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/accession/DE2UpdateProblemCaseTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>996a8747-d1b3-41d9-995f-4704f971bff6</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/billing/BillingWithPrimaryAndSecondaryInsuranceTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>06157654-2dba-45af-9048-8acd5fd64011</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/billing/BillingWithPrimaryAndTertiaryInsuranceTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>43e702b3-32c8-4682-9dac-50e94721cfe9</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/billing/PrimaryInsuranceWithProblemCaseTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>b6b7c1f5-16e7-4492-9182-425c43c298a6</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/billing/XIFINAccessiontramstopTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>4d5e3e1a-9e27-48be-93a3-60055d46584a</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/database/LimsDBHealthCheckTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>aaf2b33f-4f39-4206-a120-071af424fba3</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/plasma_isolation/CreateBatchedPlasmaTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>dac3dce0-c228-4687-968b-7dc187ed9bb6</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/plasma_isolation/PlasmaIsolationCompleteTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>ad5845d4-e32d-4e20-a1e4-e4877dc3f77e</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/plasma_isolation/SampleStorageTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>b70cc21f-b6bf-4dda-aa0c-846a8708c14f</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/postsequence/BIPAutoQCTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>81f0986f-971e-438b-aa6f-8d3754085584</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/postsequence/BIPManualQCTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>18818b44-0c80-44ec-bd44-54b27d12a892</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/postsequence/BIPUploadBySample</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
@@ -116,7 +116,7 @@
    <testCaseLink>
       <guid>8a291871-34c1-4795-b0d1-7656f3b472bc</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/postsequence/BIPUploadTest</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
@@ -128,37 +128,37 @@
    <testCaseLink>
       <guid>c63a0dfa-81f3-443e-9e63-bfab9c06ae71</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/postsequence/TBReviewWithNoF1Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>9b648b6d-93a0-431f-91cd-48013822c69c</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/postsequence/TBReviewWithOutNoF1Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>ea3a842c-968b-4c85-afc2-30462b32d0ae</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/presequence/DnaExtractionTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>bfe5482e-65a2-45dd-93a2-f0febb13ff4a</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/report/CreateAddendumReportTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>907b3042-ba91-4f29-b18d-cbb71d34387c</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/report/CreateAmendedReportLdClsMsiReviewTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>9c2b2b0a-4d37-4c99-b8cc-130a34276138</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/report/CreateCancelReportTest</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
@@ -176,43 +176,43 @@
    <testCaseLink>
       <guid>d415bac5-649d-4778-81e5-cb97bc452cba</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/report/CreateCorrectedReportTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>4c7f8c9d-cfa9-4da2-8a21-de1fa0f58912</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/report/CreateFinalReportTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>a2950672-7753-4b58-9627-b3d40342d0c1</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/report/fax_portal/FaxAmendedReportForPrimaryAndSecondaryPhysicianTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>33860248-bead-4c42-a463-8f851e7ce625</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/report/fax_portal/FaxAndPortalAddendumReportForPrimaryPhysicianTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>8860bf09-0c25-4803-be9d-720e44ce99db</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/report/fax_portal/FaxFinalReportForPrimaryPhysicianTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>eaffa6bb-2cf4-422f-a77d-8e79a73ccd56</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/report/fax_portal/PortalCorrectedReportForPrimaryPhysicianTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>3c7d16ae-6673-48d6-ac3f-48e7f2bd212c</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/request/DataVerificationWithProblemCaseTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -248,19 +248,19 @@
    <testCaseLink>
       <guid>f48f8ab6-6d8e-4268-8312-a8e518e4e749</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/resops_accession/EmanifestSingleTubeAccessionTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>fcac1689-2f6c-44a7-a3d5-a681d7d15d17</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/resops_accession/EmanifestSingleTubeAccessionUploadEManifestTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>2095a306-c044-4489-95e1-79d5a273995f</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/resops_reporting/ResOpsGenerateReleaseReport</testCaseId>
    </testCaseLink>
    <testCaseLink>

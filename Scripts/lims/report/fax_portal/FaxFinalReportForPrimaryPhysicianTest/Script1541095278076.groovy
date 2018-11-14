@@ -75,11 +75,11 @@ WebUI.click(findTestObject('LIMS/DCO/Report/Page_SNV/td_Fusion Review'))
 
 Thread.sleep(3000)
 
-WebUI.click(findTestObject('LIMS/DCO/Report/Page_INDEL/faxandportal/div_Indel Review'))
+//WebUI.click(findTestObject('LIMS/DCO/Report/Page_INDEL/faxandportal/div_Indel Review'))
 
 WebUI.click(findTestObject('LIMS/DCO/Report/Page_INDEL/div_MSI Review'))
 
-WebUI.click(findTestObject('LIMS/DCO/Report/Page_MSI/div_Final Review'))
+//WebUI.click(findTestObject('LIMS/DCO/Report/Page_MSI/div_Final Review'))
 
 //WebUI.waitForElementVisible(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/select_FINALAMENDEDCORRECTEDAD'), 180)
 
@@ -115,7 +115,7 @@ WebUI.click(findTestObject('LIMS/DCO/Report/Page_INDEL/div_MSI Review'))
 
 //WebUI.click(findTestObject('LIMS/DCO/Report/Page_FINAL/div_Final Review'))
 
-WebUI.click(findTestObject('LIMS/DCO/Report/Page_MSI/div_Final Review'))
+//WebUI.click(findTestObject('LIMS/DCO/Report/Page_MSI/div_Final Review'))
 
 WebUI.click(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/td_Release Report'))
 

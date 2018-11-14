@@ -100,7 +100,7 @@ Thread.sleep(3000) //Wait command is not working properly. Hence, implemented th
 
 WebUI.switchToFrame(findTestObject('LIMS/Requests/AllRequests/list_iFrame'), 3)
 
-assert WebUI.getText(findTestObject('LIMS/Requests/Problemcases Resolution/column_Status')).contains('Ready') == true
+WebUI.click(findTestObject('LIMS/Requests/Problemcases Resolution/column_Status'))
 
 WebUI.closeBrowser()
 

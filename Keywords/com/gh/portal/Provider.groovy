@@ -51,7 +51,6 @@ public class Provider {
 		WebUI.acceptAlert()
 
 		WebUI.waitForElementVisible(findTestObject('Portal/page_guardanthealth/confirmationmessage'), 15)
-
 	}
 }
 
