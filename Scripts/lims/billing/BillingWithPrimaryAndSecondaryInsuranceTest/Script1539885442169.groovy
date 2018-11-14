@@ -21,7 +21,6 @@ CustomKeywords.'com.gh.lims.Common.logon'('abaca', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
 //Resetting the Billing Status
 String requestID = 'A0131242'
-//String requestID = 'A0120935'
 
 CustomKeywords.'com.gh.db.LimsDBDataReset.resetBilling'(requestID)
 
