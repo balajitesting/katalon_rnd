@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>btn_OK</name>
+   <name>btn_Info_OK</name>
    <tag></tag>
    <elementGuidId>02f684e3-f431-4ca9-961c-f17cc72c49be</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//button[@id='okbutton']</value>
+         <value>//button[@id='dlgBtn2_0']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

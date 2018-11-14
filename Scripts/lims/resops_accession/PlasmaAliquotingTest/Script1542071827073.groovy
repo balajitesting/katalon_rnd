@@ -42,7 +42,7 @@ WebDriver driver = DriverFactory.getWebDriver()
 
 CustomKeywords.'com.gh.lims.Common.clearText'(driver, value)
 
-WebUI.sendKeys(findTestObject('Object Repository/LIMS/ResOps Accession/Page_EManifest SingleTube Accession/Search TextBox'), eManifestID)
+WebUI.setText(findTestObject('Object Repository/LIMS/ResOps Accession/Page_EManifest SingleTube Accession/Search TextBox'), eManifestID)
 
 WebUI.click(findTestObject('Object Repository/LIMS/ResOps Accession/Page_EManifest SingleTube Accession/Search OK Button'))
 
@@ -70,7 +70,7 @@ WebUI.click(findTestObject('Object Repository/LIMS/ResOps Requests/DV/Return To 
 
 CustomKeywords.'com.gh.lims.Common.clearText'(driver, value)
 
-WebUI.sendKeys(findTestObject('Object Repository/LIMS/ResOps Accession/Page_EManifest SingleTube Accession/Search TextBox'), eManifestID)
+WebUI.setText(findTestObject('Object Repository/LIMS/ResOps Accession/Page_EManifest SingleTube Accession/Search TextBox'), eManifestID)
 
 WebUI.click(findTestObject('Object Repository/LIMS/ResOps Accession/Page_EManifest SingleTube Accession/Search OK Button'))
 
@@ -96,8 +96,6 @@ WebUI.click(findTestObject('LIMS/ResOps Accession/Page_EManifest SingleTube Acce
 
 WebUI.click(findTestObject('LIMS/Header/img_AllTram'))
 
-//String A_Number = 'A0131202'
-
 'Create Aliquot under Resops -> All Request'
 	
 WebUI.click(findTestObject('LIMS/Home/ResopsAllRequests'))
@@ -110,24 +108,40 @@ Thread.sleep(2000)
 
 WebUI.click(findTestObject('LIMS/Problem Resolution/Page_Problem Cases Resolution/div_Edit'))
 
-Thread.sleep(2000)
-
 WebUI.click(findTestObject('LIMS/ResOps Requests/AllRequests/img_CreateAliquot'))
 
-Thread.sleep(2000)
+driver.switchTo().frame("dlg_frame0");
 
-CustomKeywords.'com.gh.lims.Common.switchToWindows'(driver)
+Thread.sleep(1000);
 
-Thread.sleep(2000)
-
-WebUI.switchToFrame(findTestObject('LIMS/ResOps Requests/AllRequests/iframe_CreateAliquot'), 3)
-
-Thread.sleep(2000)
+driver.switchTo().frame("promptfields_iframe");
 
 WebUI.selectOptionByValue(findTestObject('LIMS/ResOps Requests/AllRequests/selectSample'), A_Number + '01', true)
 
 WebUI.setText(findTestObject('LIMS/ResOps Requests/AllRequests/txtbox_Volume'), '2')
 
-WebUI.click(findTestObject('LIMS/ResOps Requests/AllRequests/btn_OK'))
-	
+WebUI.switchToDefaultContent()
+
+driver.switchTo().frame("dlg_frame0");
+
+WebUI.click(findTestObject('LIMS/ResOps Requests/AllRequests/btn_CreateAliquot_OK'))
+
+WebUI.switchToFrame(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Frame2'), 10)
+
+WebUI.waitForElementVisible(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Password'), 10)
+
+WebUI.setText(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Password'), 'abcd1234')
+
+WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Dropdown_Btn'))
+
+WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Select_Reason'))
+
+WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_OK'))
+
+WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/img'))
+
+Thread.sleep(2000)
+
+WebUI.click(findTestObject('LIMS/ResOps Requests/AllRequests/btn_Info_OK'))
+
 WebUI.closeBrowser()
