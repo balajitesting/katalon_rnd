@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>btn_Pool - Copy</name>
+   <name>btn_OK</name>
    <tag></tag>
    <elementGuidId>32793fc8-2cdc-40cc-9454-a89dc44e6e84</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//table[@title='Pool ']</value>
+         <value>//button[contains(text(), 'OK')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

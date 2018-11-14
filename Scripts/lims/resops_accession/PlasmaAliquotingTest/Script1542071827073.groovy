@@ -26,7 +26,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.LinkedHashMap;
 
-
 WebUI.comment('ENTSW-TC-3007')
 
 String eManifestID = 'E009649'
@@ -61,8 +60,6 @@ WebUI.switchToFrame(findTestObject('LIMS/Requests/DV2/Page_DV2/maint_iframe'), 1
 
 WebUI.click(findTestObject('LIMS/ResOps Accession/Page_EManifest SingleTube Accession/maint_iframe/verifiedCheckbox'))
 
-//Thread.sleep(3000)
-
 WebUI.switchToDefaultContent()
 
 WebUI.click(findTestObject('LIMS/Plasma_Isolation/SampleStorage/btn_Save'))
@@ -70,8 +67,6 @@ WebUI.click(findTestObject('LIMS/Plasma_Isolation/SampleStorage/btn_Save'))
 Thread.sleep(2000); //Wait command is not working properly. Hence, implemented the same.
 
 WebUI.click(findTestObject('Object Repository/LIMS/ResOps Requests/DV/Return To List Button'))
-
-//Thread.sleep(3000)
 
 CustomKeywords.'com.gh.lims.Common.clearText'(driver, value)
 
@@ -97,4 +92,42 @@ String A_Number = WebUI.getText(findTestObject('LIMS/ResOps Accession/Page_EMani
 
 assert WebUI.getText(findTestObject('LIMS/ResOps Accession/Page_EManifest SingleTube Accession/poolMsg')).contains(eManifestID) == true
 
+WebUI.click(findTestObject('LIMS/ResOps Accession/Page_EManifest SingleTube Accession/btn_OK'))
+
+WebUI.click(findTestObject('LIMS/Header/img_AllTram'))
+
+//String A_Number = 'A0131202'
+
+'Create Aliquot under Resops -> All Request'
+	
+WebUI.click(findTestObject('LIMS/Home/ResopsAllRequests'))
+
+WebUI.setText(findTestObject('LIMS/PostSequence/TBReview/Search/input_Search_searchtext'), A_Number)
+
+WebUI.click(findTestObject('LIMS/PostSequence/TBReview/Search/td_OK'))
+
+Thread.sleep(2000)
+
+WebUI.click(findTestObject('LIMS/Problem Resolution/Page_Problem Cases Resolution/div_Edit'))
+
+Thread.sleep(2000)
+
+WebUI.click(findTestObject('LIMS/ResOps Requests/AllRequests/img_CreateAliquot'))
+
+Thread.sleep(2000)
+
+CustomKeywords.'com.gh.lims.Common.switchToWindows'(driver)
+
+Thread.sleep(2000)
+
+WebUI.switchToFrame(findTestObject('LIMS/ResOps Requests/AllRequests/iframe_CreateAliquot'), 3)
+
+Thread.sleep(2000)
+
+WebUI.selectOptionByValue(findTestObject('LIMS/ResOps Requests/AllRequests/selectSample'), A_Number + '01', true)
+
+WebUI.setText(findTestObject('LIMS/ResOps Requests/AllRequests/txtbox_Volume'), '2')
+
+WebUI.click(findTestObject('LIMS/ResOps Requests/AllRequests/btn_OK'))
+	
 WebUI.closeBrowser()
