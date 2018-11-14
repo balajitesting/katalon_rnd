@@ -7,7 +7,9 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id=&quot;A0121058|Received&quot;]</value>
+         <value>//*[@id=&quot;column22&quot;]
+
+</value>
       </entry>
       <entry>
          <key>BASIC</key>
