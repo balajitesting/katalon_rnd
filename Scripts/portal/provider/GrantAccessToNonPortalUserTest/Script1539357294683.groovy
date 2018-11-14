@@ -16,49 +16,22 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.comment('Run: ENTSW-TC-3029') 
+WebUI.comment('Run: ENTSW-TC-3029, ENTSW-TC-2922') 
 
 String strFirstName = 'Xui' + CustomKeywords.'com.gh.core.TestUtil.getRandom'()
 
 String strLastName = 'Joes' + CustomKeywords.'com.gh.core.TestUtil.getRandom'()
 
+println strLastName
+
 String strEmailAddress = ('Nonportal' + CustomKeywords.'com.gh.core.TestUtil.getRandom'()) + '@gmail.com'
 
-CustomKeywords.'com.gh.portal.Common.logon'('venkat.mamillapelli@gmail.com', 'R9dwWsVuqf0RB1p2unfSZQ==')
+CustomKeywords.'com.gh.portal.Common.logon'('gracesitemgr@gmail.com', 'R9dwWsVuqf0RB1p2unfSZQ==')
+//CustomKeywords.'com.gh.portal.Common.logon'('venkat.mamillapelli@gmail.com', 'R9dwWsVuqf0RB1p2unfSZQ==')
 
-WebUI.setText(findTestObject('Portal/page_guardanthealth/inputpatientname'), 'LINDA')
+CustomKeywords.'com.gh.portal.Provider.shareReportToPhysician'('LINDA', strFirstName, strLastName, strEmailAddress)
 
-WebUI.click(findTestObject('Portal/page_guardanthealth/searchpatientname'))
-
-WebUI.waitForPageLoad(10)
-
-WebUI.click(findTestObject('Portal/page_guardanthealth/sharebutton'))
-
-WebUI.setText(findTestObject('Portal/page_guardanthealth/inputfirstname'), strFirstName)
-
-WebUI.setText(findTestObject('Portal/page_guardanthealth/inputlastname'), strLastName)
-
-WebUI.setText(findTestObject('Portal/page_guardanthealth/inputemailaddress'), strEmailAddress)
-
-WebUI.click(findTestObject('Portal/page_guardanthealth/acceptterms'))
-
-WebUI.click(findTestObject('Portal/page_guardanthealth/invitationbutton'))
-
-WebUI.acceptAlert()
-
-WebUI.waitForPageLoad(10)
-
-WebUI.waitForElementVisible(findTestObject('Portal/page_guardanthealth/confirmationmessage'), 5)
-
-WebUI.waitForPageLoad(10)
-
-WebUI.back()
-
-WebUI.waitForPageLoad(10)
-
-WebUI.click(findTestObject('Portal/page_guardanthealth/profilemenu'))
-
-WebUI.click(findTestObject('Portal/page_guardanthealth/signout'))
+CustomKeywords.'com.gh.portal.Common.logout'()
 
 WebUI.closeBrowser()
 
@@ -78,7 +51,7 @@ WebUI.switchToWindowIndex(1)
 
 WebUI.click(findTestObject('Portal/page_mailtrap/page_portalmailtrap/sharepatientreportbutton'))
 
-WebUI.waitForPageLoad(2)
+WebUI.waitForPageLoad(10)
 WebUI.switchToWindowIndex(2)
 
 WebUI.click(findTestObject('Portal/page_mailtrap/page_mailconfirmationpage/nextbutton'))
