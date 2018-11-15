@@ -27,7 +27,7 @@ public class LimsDBDataReset {
 
 		db.connectDB(GlobalVariable.oracleDBurl, GlobalVariable.oracleDBuser, GlobalVariable.oracleDBpwd);
 
-		String query = "update s_request set u_finalreportdate = '', u_latestreportdate = '' where s_requestid in ('"+requestId+"')";
+		String query = "update s_request set u_finalreportdate = '', u_latestreportdate = '', u_dvcheck = 1, u_dv2check = 1 where s_requestid in ('"+requestId+"')";
 
 		db.execute(query);
 	}
