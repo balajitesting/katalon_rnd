@@ -3,6 +3,6 @@
    <description></description>
    <name>ActivatedPhysicianAccessTest</name>
    <tag></tag>
-   <comment>ENTSW-TC‌-2927</comment>
+   <comment>Run: ENTSW-TC‌-2927, ENTSW-TC-3282</comment>
    <testCaseGuid>97e828a0-cdfc-4353-873c-42abd407306c</testCaseGuid>
 </TestCaseEntity>
