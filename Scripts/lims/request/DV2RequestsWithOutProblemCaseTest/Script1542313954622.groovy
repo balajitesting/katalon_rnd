@@ -17,7 +17,7 @@ WebUI.comment('Run: ENTSW-TC-2875')
 
 //String aNumber = WebUI.callTestCase(findTestCase('lims/billing/PrimaryInsuranceWithProblemCaseTest'), [:], FailureHandling.STOP_ON_FAILURE)
 
-String aNumber = WebUI.callTestCase(findTestCase('lims/request/DataVerificationWithProblemCaseTest'), [:], FailureHandling.STOP_ON_FAILURE)
+String aNumber = WebUI.callTestCase(findTestCase('lims/request/DataVerificationWithOutProblemCaseTest'), [:], FailureHandling.STOP_ON_FAILURE)
 
 //String aNumber = 'A0120020'
 

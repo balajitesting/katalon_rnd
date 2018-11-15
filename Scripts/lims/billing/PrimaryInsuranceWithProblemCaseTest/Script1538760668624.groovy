@@ -15,7 +15,7 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.comment('Run: ENTSW-TC-2863')
 
-String aNumber = WebUI.callTestCase(findTestCase('lims/request/DataVerificationWithProblemCaseTest'), [:], FailureHandling.STOP_ON_FAILURE)
+String aNumber = WebUI.callTestCase(findTestCase('lims/request/DataVerificationWithOutProblemCaseTest'), [:], FailureHandling.STOP_ON_FAILURE)
 
 'Enable when run this test alone'
 //String aNumber = 'A0120020'

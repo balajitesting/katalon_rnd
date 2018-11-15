@@ -27,9 +27,7 @@ import java.util.Date;
 import java.util.LinkedHashMap;
 
 
-WebUI.comment('ENTSW-TC-2935')
-WebUI.comment('ENTSW-TC-2936')
-
+WebUI.comment('ENTSW-TC-2935, ENTSW-TC-2936, ENTSW-TC-2934')
 
 CustomKeywords.'com.gh.db.LimsDBDataReset.resetResOpsGenerateRelease'()
 

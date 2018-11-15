@@ -213,7 +213,7 @@
       <guid>3c7d16ae-6673-48d6-ac3f-48e7f2bd212c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/lims/request/DataVerificationWithProblemCaseTest</testCaseId>
+      <testCaseId>Test Cases/lims/request/DataVerificationWithOutProblemCaseTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>f03043ad-77a7-4cb0-9abf-0216b0e8ed39</guid>
@@ -225,7 +225,7 @@
       <guid>c732375e-8f4e-4bc3-abb2-adc5da3d3865</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/lims/request/DV2RequestsWithProblemCaseTest</testCaseId>
+      <testCaseId>Test Cases/lims/request/DV2RequestsWithOutProblemCaseTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>83e9f229-10ab-4ad1-b926-a66e9cd28c32</guid>

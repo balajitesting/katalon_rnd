@@ -24,6 +24,9 @@ import com.gh.core.Properties as Properties
 import com.gh.core.PDFCompare as PDFCompare
 import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
 
+WebUI.comment('ENTSW-TC-2899')
+
+
 WebUI.callTestCase(findTestCase('lims/request/SearchRequestCancelReportTest'), [:], FailureHandling.STOP_ON_FAILURE)
 
 'Enable following when run test case only'

@@ -21,7 +21,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 
 
-WebUI.comment('ENT-6684')
+WebUI.comment('ENTSW-TC-2885')
 
 String sampleID = 'A011985601'
 
