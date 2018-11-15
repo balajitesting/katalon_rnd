@@ -21,15 +21,23 @@ CustomKeywords.'com.gh.lims.Common.logon'('abaca', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
 //Resetting the Billing Status
 
-String requestID = 'A0120935'
+String requestID = 'A0131242'
 
 CustomKeywords.'com.gh.db.LimsDBDataReset.resetBilling'(requestID)
 
-//Go to Billing Edit Screen
+//Search for the RequestId in the Billing Screen
 
 WebUI.click(findTestObject('LIMS/DataEntryBilling/Billing/Search/td_dataentrybilling_billing'))
 
-CustomKeywords.'com.gh.lims.Acession.searchRequest'(requestID)
+WebUI.setText(findTestObject('LIMS/DataEntryBilling/Billing/Search/input_Search_searchtext'), requestID)
+
+WebUI.click(findTestObject('LIMS/DataEntryBilling/Billing/Search/td_OK'))
+
+Thread.sleep(3000) //Wait command is not working properly. Hence, implemented the same.
+
+//Billing Screen
+
+WebUI.click(findTestObject('LIMS/DataEntryBilling/Billing/Search/td_Edit'))
 
 WebUI.setText(findTestObject('LIMS/DataEntryBilling/Billing/EditScreen/input_icdcode01'), '123543')
 

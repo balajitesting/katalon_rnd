@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//input[@name='searchinsurance_t']/parent::td/input[@value='Search Payor']</value>
+         <value>//input[@name='searchinsurance_s']/parent::td/input[@value='Search Payor']</value>
       </entry>
       <entry>
          <key>BASIC</key>
