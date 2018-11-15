@@ -19,7 +19,7 @@ import com.gh.core.Properties as CustomProperties
 public class TestUtil {
 
 	public static void purgeDirectory(String filepath){
-			
+
 		File dir = new File (filepath);
 		if(hasFile(dir)) {
 			File[] files = getFiles(dir);
@@ -31,6 +31,13 @@ public class TestUtil {
 		}
 	}
 
+	public static void purgeFile(String filepath){
+		
+				File file = new File (filepath);
+				file.delete();
+
+			}
+	
 	public static File[] getFiles(File dir){
 
 		File[] files = dir.listFiles(new FileFilter() {

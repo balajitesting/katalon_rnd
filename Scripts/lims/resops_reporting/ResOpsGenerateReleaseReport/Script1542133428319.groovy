@@ -34,8 +34,10 @@ WebUI.comment('ENTSW-TC-2936')
 CustomKeywords.'com.gh.db.LimsDBDataReset.resetResOpsGenerateRelease'()
 
 String current = new java.io.File(".").getCanonicalPath();
-
-CustomKeywords.'com.gh.core.TestUtil.purgeDirectory'(current + "/Results/download");
+String date = CustomKeywords.'com.gh.core.TestUtil.getDate'("yyyyMMdd");
+System.out.println(date);
+String filepath = current + "/Results/download/"+date+"_GNE_01_5Samples_G360Report.csv";
+CustomKeywords.'com.gh.core.TestUtil.purgeFile'(filepath);
 
 CustomKeywords.'com.gh.lims.Common.logon'('ResOpsRhea', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
@@ -73,9 +75,7 @@ WebUI.waitForElementPresent(findTestObject('Object Repository/LIMS/ResOps Report
 WebUI.click(findTestObject('Object Repository/LIMS/ResOps Reporting/ResOpsProjectList/Confirmation_OK Button'))
 
 //Assert file generated succesfully and the csv generated successfully.
-String date = CustomKeywords.'com.gh.core.TestUtil.getDate'("yyyyMMdd");
-System.out.println(date);
-String filepath = current + "/Results/download/"+date+"_GNE_01_5Samples_G360Report.csv";
+
 assert CustomKeywords.'com.gh.core.TestUtil.waitUntilFileExist'(filepath, 5) == true;
 
 
