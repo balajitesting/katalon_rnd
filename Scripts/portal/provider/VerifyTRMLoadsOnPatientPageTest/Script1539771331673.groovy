@@ -14,7 +14,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 import org.testng.Assert as Assert
 
-WebUI.comment('Run: ENTSW-TC-3247')
+WebUI.comment('Run: ENTSW-TC-3247, ENTSW-TC-6711')
 
 CustomKeywords.'com.gh.portal.Common.logon'('bridgesb@slhs.org', 'R9dwWsVuqf0RB1p2unfSZQ==')
 

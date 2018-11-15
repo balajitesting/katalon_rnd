@@ -74,7 +74,6 @@ String releaseDateDashboard = firstString.next()
 'Verifying release date in dashboard and TRM'
 Assert.assertEquals(releaseDateDashboard, releasedDateTRM)
 
-
 WebUI.verifyElementPresent(findTestObject('Portal/page_inprogressreport/profilemenu'), 10)
  
 WebUI.click(findTestObject('Portal/page_inprogressreport/profilemenu'))
