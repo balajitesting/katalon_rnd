@@ -28,7 +28,7 @@ import java.util.LinkedHashMap;
 
 WebUI.comment('ENT-2932')
 
-String requestID = 'A0120749';
+String requestID = 'A0131145';
 
 CustomKeywords.'com.gh.db.LimsDBDataReset.resetDVStatus'(requestID, '1');
 CustomKeywords.'com.gh.db.LimsDBDataReset.resetDV2Status'(requestID, '0');
@@ -48,7 +48,7 @@ WebUI.waitForPageLoad(6);
 
 WebUI.switchToFrame(findTestObject('Object Repository/LIMS/ResOps Requests/DV2/list_iframe/list_iframe'), 10)
 Thread.sleep(2000) //Katalon wait not working
-
+//need to fix the selector radio to be dynamic based on requestID
 WebUI.waitForElementVisible(findTestObject('Object Repository/LIMS/ResOps Requests/DV2/list_iframe/Request Type selector Radio Button'), 10)
 WebUI.waitForElementClickable(findTestObject('Object Repository/LIMS/ResOps Requests/DV2/list_iframe/Request Type selector Radio Button'), 30)
 WebUI.click(findTestObject('Object Repository/LIMS/ResOps Requests/DV2/list_iframe/Request Type selector Radio Button'))

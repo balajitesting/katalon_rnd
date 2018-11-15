@@ -139,7 +139,7 @@ String value = CustomKeywords.'com.gh.db.LimsDBOperation.getValue'(query);
 driver.findElement(By.xpath("//*[@id='searchtext']")).clear();
 WebUI.sendKeys(findTestObject('Object Repository/LIMS/ResOps Accession/Page_EManifest SingleTube Accession/Search TextBox'), value)
 WebUI.click(findTestObject('Object Repository/LIMS/ResOps Accession/Page_EManifest SingleTube Accession/Search OK Button'))
-
+System.out.println(value);
 driver.switchTo().defaultContent();
 //assert the list return the item
 driver.switchTo().frame("list_iframe");

@@ -18,8 +18,9 @@ import com.gh.core.Properties as CustomProperties
 
 public class TestUtil {
 
-	public static void purgeDirectory(File dir){
+	public static void purgeDirectory(String filepath){
 
+		File dir = new File (filepath);
 		if(hasFile(dir)) {
 			File[] files = getFiles(dir);
 
@@ -30,6 +31,13 @@ public class TestUtil {
 		}
 	}
 
+	public static void purgeFile(String filepath){
+		
+				File file = new File (filepath);
+				file.delete();
+
+			}
+	
 	public static File[] getFiles(File dir){
 
 		File[] files = dir.listFiles(new FileFilter() {
@@ -70,6 +78,27 @@ public class TestUtil {
 	}
 
 	@Keyword
+	public static boolean waitUntilFileExist(String filepath, int timeout)  {
+		try {
+			Thread.sleep(1000);
+			//int timeout = 40;
+			File f = new File(filepath);
+			while (!f.exists()) {
+				Thread.sleep(1000);
+				timeout --;
+				if (timeout == 0) {
+					return false;
+				}
+			}
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		return true;
+	}
+
+
+	@Keyword
 	public static String getRandom(){
 		Random rand = new Random();
 		String barCode = "SQA" +rand.nextInt(9999) + rand.nextInt(999999999);
@@ -82,6 +111,15 @@ public class TestUtil {
 		String sampleID = 100000000 + rand.nextInt(999999999);
 		return sampleID
 	}
+
+	@Keyword
+	public static String getDate(String pattern){
+		Calendar cal = Calendar.getInstance();
+		SimpleDateFormat ds = new SimpleDateFormat(pattern);
+		String date = ds.format(cal.getTime());
+		return date
+	}
+
 
 	@Keyword
 	public static String setDate(){

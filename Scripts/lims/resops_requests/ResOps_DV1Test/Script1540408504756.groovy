@@ -28,7 +28,7 @@ import java.util.LinkedHashMap;
 
 WebUI.comment('ENT-2932')
 
-String requestID = 'A0120749';
+String requestID = 'A0131145';
 
 CustomKeywords.'com.gh.db.LimsDBDataReset.resetDVStatus'(requestID, '0');
 CustomKeywords.'com.gh.db.LimsDBDataReset.resetDV2Status'(requestID, '0');

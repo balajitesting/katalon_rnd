@@ -36,7 +36,7 @@ WebUI.waitForElementVisible(findTestObject('LIMS/DCO/Report/Page_All Requests/a_
 
 WebUI.click(findTestObject('LIMS/DCO/Report/Page_All Requests/a_LD Review'))
 
-WebUI.acceptAlert()
+//WebUI.acceptAlert()
 
 WebUI.setText(findTestObject('LIMS/DCO/Report/Page_Request List for LD Review/input_searchtext'), A_Number)
 
@@ -50,11 +50,11 @@ WebUI.click(findTestObject('LIMS/DCO/Report/Page_CNV/div_SNV Review'))
 
 WebUI.click(findTestObject('LIMS/DCO/Report/Page_SNV/td_Fusion Review'))
 
-WebUI.click(findTestObject('LIMS/DCO/Report/Page_FUSION/div_Indel Review'))
+//WebUI.click(findTestObject('LIMS/DCO/Report/Page_FUSION/div_Indel Review'))
 
 WebUI.click(findTestObject('LIMS/DCO/Report/Page_INDEL/div_MSI Review'))
 
-WebUI.click(findTestObject('LIMS/DCO/Report/Page_MSI/div_Final Review'))
+//WebUI.click(findTestObject('LIMS/DCO/Report/Page_MSI/div_Final Review'))
 
 WebUI.click(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/td_Generate Report'))
 
@@ -80,7 +80,7 @@ WebUI.click(findTestObject('LIMS/DCO/Report/Page_SNV/td_Fusion Review'))
 
 WebUI.click(findTestObject('LIMS/DCO/Report/Page_INDEL/div_MSI Review'))
 
-WebUI.click(findTestObject('LIMS/DCO/Report/Page_MSI/div_Final Review'))
+//WebUI.click(findTestObject('LIMS/DCO/Report/Page_MSI/div_Final Review'))
 
 WebUI.click(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/td_Release Report'))
 

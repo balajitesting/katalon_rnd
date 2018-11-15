@@ -21,7 +21,7 @@ WebUI.comment('Run: ENT-6677')
 
 'Reset the aNumber status in DV and ProblemCase'
 
-String aNumber = 'A0121097'
+String aNumber = 'A0131242'
 
 CustomKeywords.'com.gh.db.LimsDBDataReset.resetDVStatus'(aNumber, '0')
 
@@ -110,7 +110,7 @@ Thread.sleep(1000) //Wait command is not working properly. Hence, implemented th
 
 WebUI.switchToFrame(findTestObject('LIMS/Requests/AllRequests/list_iFrame'), 3)
 
-assert WebUI.getText(findTestObject('LIMS/Requests/Problemcases Resolution/column_Status')).contains('Ready') == true
+assert WebUI.getText(findTestObject('LIMS/Requests/Problemcases Resolution/column_Status')).contains(aNumber) == true
 
 WebUI.closeBrowser()
 

@@ -6,11 +6,13 @@
    <elementGuidId>7c02a8d8-6af2-4773-8c3d-60e5f539e087</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>//*[@id=&quot;column22&quot;]
+
+</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//td[@id='column16' and @class='list_tablebodycell']</value>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

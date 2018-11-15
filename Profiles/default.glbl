@@ -74,4 +74,9 @@
       <initValue>'https://clinical-sqa.k8s.ghdna.io'</initValue>
       <name>clinicalServiceUrl</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'A0131145'</initValue>
+      <name>requestID</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
