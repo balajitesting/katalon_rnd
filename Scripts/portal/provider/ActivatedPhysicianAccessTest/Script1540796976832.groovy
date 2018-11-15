@@ -183,7 +183,6 @@ if (WebUI.verifyElementPresent(findTestObject('Object Repository/Portal/page_por
 
 WebUI.setText(findTestObject('Object Repository/Portal/page_portalaccession/searchid'), aNumber)
 
-//Thread.sleep(2000)
 WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/selectsearch'))
 
 Thread.sleep(2000)
@@ -422,7 +421,7 @@ WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/signou
 WebUI.closeBrowser()
 
 'Step 3:Should see only reports for all physicians that admin granted access'
- CustomKeywords.'com.gh.portal.Common.logon'('bejoysitemgr@gmail.com', 'R9dwWsVuqf0RB1p2unfSZQ==')
+ CustomKeywords.'com.gh.portal.Common.logon'('gracesitemgr@gmail.com', 'R9dwWsVuqf0RB1p2unfSZQ==')
  
  WebUI.waitForPageLoad(5)
  
@@ -522,7 +521,7 @@ WebUI.closeBrowser()
  WebUI.closeBrowser()
  
  'Step 10: Should be able to revoke access to a grantee'
- CustomKeywords.'com.gh.portal.Common.logon'('bejoysitemgr@gmail.com', 'R9dwWsVuqf0RB1p2unfSZQ==')
+ CustomKeywords.'com.gh.portal.Common.logon'('gracesitemgr@gmail.com', 'R9dwWsVuqf0RB1p2unfSZQ==')
  
  WebUI.waitForPageLoad(5)
  
