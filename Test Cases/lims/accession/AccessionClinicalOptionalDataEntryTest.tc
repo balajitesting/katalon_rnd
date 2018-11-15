@@ -3,6 +3,6 @@
    <description></description>
    <name>AccessionClinicalOptionalDataEntryTest</name>
    <tag></tag>
-   <comment></comment>
+   <comment>ToDo: add optional fields code</comment>
    <testCaseGuid>a3e43e47-3877-47ff-b83f-efa90f1bf89c</testCaseGuid>
 </TestCaseEntity>

@@ -3,16 +3,128 @@ import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
-import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
+import com.kms.katalon.core.checkpoint.CheckpointFactory as CheckpointFactory
+import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as MobileBuiltInKeywords
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import com.kms.katalon.core.testcase.TestCase as TestCase
+import com.kms.katalon.core.testcase.TestCaseFactory as TestCaseFactory
 import com.kms.katalon.core.testdata.TestData as TestData
+import com.kms.katalon.core.testdata.TestDataFactory as TestDataFactory
+import com.kms.katalon.core.testobject.ObjectRepository as ObjectRepository
 import com.kms.katalon.core.testobject.TestObject as TestObject
+import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WSBuiltInKeywords
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
+import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKeywords
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+
+import org.junit.After
+import org.openqa.selenium.By as By
+import org.openqa.selenium.JavascriptExecutor
+import com.kms.katalon.core.webui.common.WebUiCommonHelper
+
+import org.openqa.selenium.WebDriver as WebDriver
+
+import org.openqa.selenium.WebElement as WebElement
+
+import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
+
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.callTestCase(findTestCase('lims/accession/AccessionClinicalRequiredDataEntryTest'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.comment('ENTSW-TC-2859, ENTSW-TC-2860, ENTSW-TC-2960, ENTSW-TC-2961')
 
-'ToDo: add optional fields code'
+CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserDagmar', '5Ed5CIkj9UQfaMZXAkDVaQ==')
+
+String orDE1 = 'LIMS/DE1/'
+
+WebUI.click(findTestObject(orDE1 + 'Page_Iteration/td_Accession Clinical'))
+
+String barCode = CustomKeywords.'com.gh.core.TestUtil.getRandom'()
+
+WebUI.setText(findTestObject(orDE1 + 'Page_Iteration/input_trfbarcode'), barCode)
+
+WebUI.setText(findTestObject(orDE1 + 'Page_Iteration/input_trfversion'), 'TST-TRF-001 V7')
+
+WebUI.setText(findTestObject(orDE1 + 'Page_Iteration/input_trackingno'), CustomKeywords.'com.gh.core.TestUtil.getRandom'())
+
+WebUI.setText(findTestObject(orDE1 + 'Page_Iteration/input_tubebarcode01'), barCode)
+
+WebUI.setText(findTestObject(orDE1 + 'Page_Iteration/input_tubebarcode02'), barCode)
+
+WebUI.setText(findTestObject('LIMS/DE1/Page_Iteration/input_tubebarcode03'), barCode)
+
+WebUI.setText(findTestObject('LIMS/DE1/Page_Iteration/input_tubebarcode04'), barCode)
+
+String date = CustomKeywords.'com.gh.core.TestUtil.setDate'()
+
+WebUI.setText(findTestObject(orDE1 + 'Page_Iteration/input_bloodcolldate'), date)
+
+WebUI.setText(findTestObject(orDE1 + 'Page_Iteration/input_noofpages'), '2')
+//Set Followup Notes, ENTSW-TC-2960
+WebUI.setText(findTestObject('Object Repository/LIMS/DE1/AccessionClinical/Follow-up Notes TextArea'), 'Test Followup Notes');
+//Set Lab Internal Comment ENTSW-TC-2961
+WebUI.setText(findTestObject('Object Repository/LIMS/DE1/AccessionClinical/Lab Internal Comment TextArea'), 'Test Followup Notes');
+//Set Followup reason ENTSW-TC-2959
+WebDriver driver = DriverFactory.getWebDriver();
+driver.findElement(By.xpath("//input[@value='Follow Up Reasons']")).click();
+Set<String> s2=driver.getWindowHandles();
+Iterator<String> I2= s2.iterator();
+String parent1 = I2.next();
+String child_window1 = I2.next();
+driver.switchTo().window(child_window1);
+driver.findElement(By.xpath("//input[@id='R01' and @type='checkbox']")).click();
+Thread.sleep(1000);
+driver.findElement(By.name("save")).click();
+driver.switchTo().window(parent1);
+
+WebUI.scrollToPosition(430, 662)
+
+WebUI.click(findTestObject(orDE1 + 'Page_Iteration/input_searchbutton'))
+
+WebUI.switchToWindowTitle('')
+
+WebUI.setText(findTestObject(orDE1 + 'Page_/input_firstnamesrch'), 'SQAPortalPhysician')
+
+WebUI.click(findTestObject(orDE1 + 'Page_/input_Search'))
+
+WebUI.click(findTestObject(orDE1 + 'Page_/input_cb'))
+
+WebUI.switchToDefaultContent()
+
+WebUI.setText(findTestObject(orDE1 + 'Page_Iteration/input_secsearchstr'), 'sqa')
+
+WebUI.click(findTestObject(orDE1 + 'Page_Iteration/input_searchbuttonsr'))
+
+//Set Secondary Physician ENTSW-TC-2860
+String number = '0';
+Set<String> s1=driver.getWindowHandles();
+// Now we will iterate using Iterator
+Iterator<String> I1= s1.iterator();
+String parent = I1.next();
+String child_window = I1.next();
+driver.switchTo().window(child_window);
+String xpath = "//input[@id='" + number + "' and @type='checkbox']";
+driver.findElement(By.xpath(xpath)).click();
+driver.switchTo().window(parent);
+
+WebUI.switchToDefaultContent()
+
+WebUI.scrollToElement(findTestObject('LIMS/DE1/Page_Iteration/input_saveAccession01'), 15)
+
+CustomKeywords.'com.gh.core.JSHandler.JClick'(findTestObject('LIMS/DE1/Page_Iteration/input_saveAccession01'), 15)
+
+aNumber = WebUI.getAttribute(findTestObject(orDE1 + 'Page_Iteration/input_requestid'), 'value')
+
+println(aNumber)
+
+Thread.sleep(20000)
+
+
+WebUI.click(findTestObject('LIMS/logout/img'))
+
+WebUI.closeBrowser()
+
+
+
+
+return aNumber
