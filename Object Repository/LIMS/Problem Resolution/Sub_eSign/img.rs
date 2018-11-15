@@ -6,11 +6,12 @@
    <elementGuidId>aa83df5d-7ab7-467a-9751-bbed3e74f539</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>id(&quot;Save&quot;)/tbody[1]/tr[1]/td[@class=&quot;buttonmargin_thin&quot;]/table[1]/tbody[1]/tr[1]/td[1]/img[1]</value>
+         <key>XPATH</key>
+         <value></value>
       </entry>
       <entry>
-         <key>XPATH</key>
+         <key>BASIC</key>
+         <value>id(&quot;Save&quot;)/tbody[1]/tr[1]/td[@class=&quot;buttonmargin_thin&quot;]/table[1]/tbody[1]/tr[1]/td[1]/img[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>

@@ -6,7 +6,7 @@ import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 
 import org.eclipse.persistence.internal.jpa.parsing.jpql.antlr.JPQLParser.setClause_scope
-
+import org.openqa.selenium.WebDriver
 import com.kms.katalon.core.annotation.Keyword
 import com.kms.katalon.core.checkpoint.Checkpoint
 import com.kms.katalon.core.checkpoint.CheckpointFactory
@@ -20,9 +20,11 @@ import com.kms.katalon.core.testobject.ObjectRepository
 import com.kms.katalon.core.testobject.TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords
-
+import org.openqa.selenium.WebDriver as WebDriver
+import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
+import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import internal.GlobalVariable
-
+import org.openqa.selenium.By as By
 
 import MobileBuiltInKeywords as Mobile
 import WSBuiltInKeywords as WS
@@ -67,7 +69,32 @@ public class Common {
 
 		WebUI.click(findTestObject(orPathToEdit))
 	}
+	
+	/**
+	 *  Switch to New Window
+	 */
 
+	@Keyword
+	def static switchToWindows(WebDriver driver){
+
+		String winHandleBefore = driver.getWindowHandle();
+		
+		for(String winHandle : driver.getWindowHandles()){
+			driver.switchTo().window(winHandle);
+		}
+	}	
+	
+	/**
+	 *  Clear Text
+	 */
+
+	@Keyword
+	def static clearText(WebDriver driver, String value){
+
+		driver.findElement(By.xpath(value)).clear();
+		
+	}
+	
 	/**
 	 *  Return to List log out
 	 */

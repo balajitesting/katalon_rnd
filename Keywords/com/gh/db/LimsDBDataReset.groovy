@@ -57,12 +57,11 @@ public class LimsDBDataReset {
 		db.execute(updateXIFINAccession);
 	}
 
-	@Keyword
-	def resetResOpsGenerateRelease() {
-
-		LimsOracleDBService db = new LimsOracleDBService();
+  @Keyword  
+  def resetResOpsGenerateRelease() {
+    		LimsOracleDBService db = new LimsOracleDBService();
 		db.connectDB(GlobalVariable.oracleDBurl, GlobalVariable.oracleDBuser, GlobalVariable.oracleDBpwd);
-
+    
 		String sql = "update labvantage.S_REQUEST set U_GHREQUESTSTATUS = 'Generate and Release Cancelled Report' where S_REQUESTID in ('A85143')";
 		db.execute(sql);
 
@@ -77,6 +76,15 @@ public class LimsDBDataReset {
 
 		sql = "update labvantage.u_ghreportinfo set recordstatus='Activating' where runid='180113_NB501054_0372_AHGW7YBGX3' and sampleid in ('A8513901','A8514001','A8514101','A8514201','A8514301')";
 		db.execute(sql);
+    
+  @Keyword  
+	def resetEManifest(String requestID) {
+
+		LimsOracleDBService db = new LimsOracleDBService();
+		db.connectDB(GlobalVariable.oracleDBurl, GlobalVariable.oracleDBuser, GlobalVariable.oracleDBpwd);
+
+		String updateEManifest = "update U_GHEMANIFEST set VERIFIED = null, STATUS = null, REQUESTID = null where U_GHEMANIFESTID = '"+requestID+"'";
+		db.execute(updateEManifest);
 	}
 
 	/**
