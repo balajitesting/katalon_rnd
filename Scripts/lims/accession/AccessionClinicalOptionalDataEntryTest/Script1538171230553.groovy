@@ -63,7 +63,7 @@ WebUI.setText(findTestObject(orDE1 + 'Page_Iteration/input_noofpages'), '2')
 //Set Followup Notes, ENTSW-TC-2960
 WebUI.setText(findTestObject('Object Repository/LIMS/DE1/AccessionClinical/Follow-up Notes TextArea'), 'Test Followup Notes');
 //Set Lab Internal Comment ENTSW-TC-2961
-WebUI.setText(findTestObject('Object Repository/LIMS/DE1/AccessionClinical/Lab Internal Comment TextArea'), 'Test Followup Notes');
+WebUI.setText(findTestObject('Object Repository/LIMS/DE1/AccessionClinical/Lab Internal Comment TextArea'), 'Test Lab Internal Notes');
 //Set Followup reason ENTSW-TC-2959
 WebDriver driver = DriverFactory.getWebDriver();
 driver.findElement(By.xpath("//input[@value='Follow Up Reasons']")).click();
@@ -116,8 +116,6 @@ CustomKeywords.'com.gh.core.JSHandler.JClick'(findTestObject('LIMS/DE1/Page_Iter
 aNumber = WebUI.getAttribute(findTestObject(orDE1 + 'Page_Iteration/input_requestid'), 'value')
 
 println(aNumber)
-
-Thread.sleep(20000)
 
 
 WebUI.click(findTestObject('LIMS/logout/img'))
