@@ -129,6 +129,10 @@ WebUI.switchToFrame(findTestObject('LIMS/Requests/AllRequests/list_iFrame'), 3)
 
 assert WebUI.getText(findTestObject('LIMS/DCO/Report/Page_All Requests/reqStatus')).contains("Released") == true
 
+WebUI.switchToDefaultContent()
+
+WebUI.click(findTestObject('LIMS/logout/img_Logout'))
+
 WebUI.closeBrowser()
 
 //Validation2: Verify record count in u_ghfax table
