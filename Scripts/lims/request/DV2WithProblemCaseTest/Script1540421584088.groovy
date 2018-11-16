@@ -17,7 +17,7 @@ import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 
-WebUI.comment('Run: ENT-6679')
+WebUI.comment('Run: ENTSW-TC-2876')
 
 //Reset the aNumber status in DV2 and ProblemCase
 

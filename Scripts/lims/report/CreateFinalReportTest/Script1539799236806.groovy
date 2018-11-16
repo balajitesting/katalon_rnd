@@ -13,6 +13,8 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
+WebUI.comment('ENTSW-TC-2896')
+
 A_Number = 'A0112848'
 
 CustomKeywords.'com.gh.db.LimsDBDataReset.redoFinalReport'(A_Number)

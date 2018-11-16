@@ -13,7 +13,7 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.comment('ENT-6482')
+WebUI.comment('ENTSW-TC-2891')
 
 String flowcellID_full = '170616_NB501068_0284_AHWCCHBGXY'
 

@@ -14,7 +14,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
 //Validation1: Finish TB review workflow
-WebUI.comment('Run: ENT-6484')
+WebUI.comment('Run: ENTSW-TC-2893')
 
 CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserReporting', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 

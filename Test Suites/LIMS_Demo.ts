@@ -213,42 +213,42 @@
       <guid>3c7d16ae-6673-48d6-ac3f-48e7f2bd212c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/lims/request/DataVerificationWithProblemCaseTest</testCaseId>
+      <testCaseId>Test Cases/lims/request/DataVerificationWithOutProblemCaseTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>f03043ad-77a7-4cb0-9abf-0216b0e8ed39</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/request/DV1WithProblemCaseTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>c732375e-8f4e-4bc3-abb2-adc5da3d3865</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/lims/request/DV2RequestsWithProblemCaseTest</testCaseId>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/lims/request/DV2RequestsWithOutProblemCaseTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>83e9f229-10ab-4ad1-b926-a66e9cd28c32</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/request/DV2WithProblemCaseTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>e5fffced-4bdb-49f2-87aa-7a3d72a9de8f</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/request/ResolveProblemCaseTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>a047a637-4c27-45fd-b415-d75d802bb534</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/request/SearchRequestCancelReportTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>f48f8ab6-6d8e-4268-8312-a8e518e4e749</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/lims/resops_accession/EmanifestSingleTubeAccessionTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -266,13 +266,13 @@
    <testCaseLink>
       <guid>ac8d0d81-aebe-44ab-8427-573786530527</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/resops_requests/ResOps_AllRequests_CancelRequest_DV2CompleteTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>2518f4e0-7f31-4778-8142-5d1fc837d2ad</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/resops_requests/ResOps_AllRequests_CancelRequest_DV2NotCompleteTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -286,5 +286,11 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/lims/resops_requests/ResOps_DV2Test</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>d77d186e-76f6-49f6-acfd-bd8bf7ce7079</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/lims/resops_accession/PlasmaAliquotingTest</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
