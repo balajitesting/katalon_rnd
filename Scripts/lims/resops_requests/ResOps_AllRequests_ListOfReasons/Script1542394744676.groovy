@@ -23,7 +23,7 @@ String aNumber = 'A0100125'
 
 CustomKeywords.'com.gh.lims.Common.logon'('ResOpsRhea', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
-//Validation 1: Verify change in Resops -> All Requests page results in list of reasons presented.
+//Validation 1: Verify popup with list of reasons in Resops -> All Requests page.
 
 WebUI.click(findTestObject('LIMS/ResOps Requests/AllRequests TramStop'))
 

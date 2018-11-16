@@ -23,7 +23,7 @@ String aNumber = 'A59995'
 
 CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserDagmar', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
-//Validation 1: Verify change in Requests -> All Requests page results in list of reasons presented.
+//Validation 1: Verify popup with list of reasons in Requests -> All Requests page.
 
 WebUI.click(findTestObject('LIMS/Requests/AllRequests/AllRequestsTram'))
 
