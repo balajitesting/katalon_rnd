@@ -47,6 +47,8 @@ WebUI.click(findTestObject('LIMS/DataEntryBilling/XIFINAccession/sendAccession')
 
 WebUI.waitForElementPresent(findTestObject('Object Repository/LIMS/logout/img'), 15)
 
-WebUI.click(findTestObject('LIMS/logout/img'))
+WebUI.switchToDefaultContent()
+
+WebUI.click(findTestObject('LIMS/logout/img_Logout'))
 
 WebUI.closeBrowser()
