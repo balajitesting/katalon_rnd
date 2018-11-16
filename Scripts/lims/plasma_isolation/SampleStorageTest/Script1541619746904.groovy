@@ -111,6 +111,10 @@ assert WebUI.getText(findTestObject('LIMS/Plasma_Isolation/SampleStorage/btn_Box
 
 assert WebUI.getText(findTestObject('LIMS/Plasma_Isolation/SampleStorage/btn_Location')).contains("/Freezer-80C_#42_0234/Shelf4/Rack7/Box15/LocE5") == true
 
+WebUI.switchToDefaultContent()
+
+WebUI.click(findTestObject('LIMS/logout/img_Logout'))
+
 WebUI.closeBrowser()
 
 return sampleID

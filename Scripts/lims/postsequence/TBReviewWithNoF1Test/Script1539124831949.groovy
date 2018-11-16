@@ -70,5 +70,9 @@ WebUI.switchToFrame(findTestObject('LIMS/Requests/AllRequests/list_iFrame'), 3)
 
 assert WebUI.getText(findTestObject('LIMS/Requests/AllRequests/td_RequestStatus')).contains("Sent") == true
 
+WebUI.switchToDefaultContent()
+
+WebUI.click(findTestObject('LIMS/logout/img_Logout'))
+
 WebUI.closeBrowser()
 
