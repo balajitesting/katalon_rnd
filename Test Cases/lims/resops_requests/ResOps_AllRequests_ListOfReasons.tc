@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>ResOps_AllRequests_ListOfReasons</name>
+   <tag></tag>
+   <comment>Run: ENT-7095</comment>
+   <testCaseGuid>4abcd5bf-d898-4aa6-bcc4-064a9b7b72ae</testCaseGuid>
+</TestCaseEntity>
