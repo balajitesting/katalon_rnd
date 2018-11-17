@@ -90,4 +90,8 @@ WebUI.switchToFrame(findTestObject('LIMS/Requests/AllRequests/list_iFrame'), 3)
 
 assert WebUI.getText(findTestObject('LIMS/DataEntryBilling/Billing/Search/searchResult')).contains("No rows found.") == true
 
+WebUI.switchToDefaultContent()
+
+WebUI.click(findTestObject('LIMS/logout/img_Logout'))
+
 WebUI.closeBrowser()

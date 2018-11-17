@@ -144,4 +144,8 @@ Thread.sleep(2000)
 
 WebUI.click(findTestObject('LIMS/ResOps Requests/AllRequests/btn_Info_OK'))
 
+WebUI.switchToDefaultContent()
+
+WebUI.click(findTestObject('LIMS/logout/img_Logout'))
+
 WebUI.closeBrowser()
