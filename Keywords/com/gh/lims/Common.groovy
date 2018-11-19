@@ -69,7 +69,15 @@ public class Common {
 
 		WebUI.click(findTestObject(orPathToEdit))
 	}
-	
+
+	@Keyword
+	def static setClick2(String orPathToEdit){
+
+		WebUI.waitForElementClickable(findTestObject(orPathToEdit), 10)
+		WebUI.delay(2)
+		WebUI.click(findTestObject(orPathToEdit))
+	}
+
 	/**
 	 *  Switch to New Window
 	 */
@@ -78,12 +86,12 @@ public class Common {
 	def static switchToWindows(WebDriver driver){
 
 		String winHandleBefore = driver.getWindowHandle();
-		
+
 		for(String winHandle : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle);
 		}
-	}	
-	
+	}
+
 	/**
 	 *  Clear Text
 	 */
@@ -92,15 +100,24 @@ public class Common {
 	def static clearText(WebDriver driver, String value){
 
 		driver.findElement(By.xpath(value)).clear();
-		
 	}
-	
+
 	/**
 	 *  Return to List log out
 	 */
 
 	@Keyword
 	def rtlLogout(){
+
+		setClick('LIMS/Problem Resolution/returnToList/div_Return To List')
+
+		WebUI.waitForElementPresent(findTestObject('LIMS/logout/img'), 15)
+
+		WebUI.click(findTestObject('LIMS/logout/img'))
+	}
+
+	@Keyword
+	def rtlLogout2(){
 
 		setClick('LIMS/Problem Resolution/returnToList/div_Return To List')
 
