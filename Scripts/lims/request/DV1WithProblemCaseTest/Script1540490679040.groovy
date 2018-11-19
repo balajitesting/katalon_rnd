@@ -58,43 +58,29 @@ for(String winHandle : driver.getWindowHandles()){
 	driver.switchTo().window(winHandle);
 }
 
-assert WebUI.getText(findTestObject('LIMS/Requests/DV2/DV2Request/searchBarText')).contains("Search Bar") == true
+//assert WebUI.getText(findTestObject('LIMS/Requests/DV2/DV2Request/searchBarText')).contains("Search Bar") == true
+//
+//WebUI.setText(findTestObject('LIMS/Requests/DV2/Page_DV2/searchProblemCase/searchText'), 'R01')
+//
+//WebUI.click(findTestObject('LIMS/Requests/DV2/Page_DV2/searchProblemCase/searchOk'))
+//
+//WebUI.switchToFrame(findTestObject('LIMS/Requests/DV2/Page_DV2/listFrame'), 3)
+//
+//Thread.sleep(2000) //Wait command is not working properly. Hence, implemented the same.
+//
+//assert WebUI.getText(findTestObject('LIMS/Requests/DV2/Page_DV2/problemCaseValue')).contains("R01") == true
+//
+//WebUI.click(findTestObject('LIMS/Requests/DV2/Page_DV2/problemCaseValue'))
 
-WebUI.setText(findTestObject('LIMS/Requests/DV2/Page_DV2/searchProblemCase/searchText'), 'R01')
+CustomKeywords.'com.gh.lims.Common.selectValueInPopUp'('200')
 
-WebUI.click(findTestObject('LIMS/Requests/DV2/Page_DV2/searchProblemCase/searchOk'))
+CustomKeywords.'com.gh.lims.ResOpsRequests.enterESign'('abcd1234')
 
-WebUI.switchToFrame(findTestObject('LIMS/Requests/DV2/Page_DV2/listFrame'), 3)
-
-Thread.sleep(2000) //Wait command is not working properly. Hence, implemented the same.
-
-assert WebUI.getText(findTestObject('LIMS/Requests/DV2/Page_DV2/problemCaseValue')).contains("R01") == true
-
-WebUI.click(findTestObject('LIMS/Requests/DV2/Page_DV2/problemCaseValue'))
-
-WebUI.switchToDefaultContent()
-
-WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/img'))  
-
-WebUI.switchToFrame(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Frame'), 10) 
-
-WebUI.waitForElementVisible(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Password'), 10)
-
-WebUI.setText(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Password'), 'abcd1234')
-
-WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Dropdown_Btn'))
-
-WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Select_Reason'))
-
-WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_OK'))
-
-WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/img'))
-
-Thread.sleep(2000); //Wait command is not working properly. Hence, implemented the same.
+WebUI.delay(2)
 
 WebUI.click(findTestObject('Object Repository/LIMS/ResOps Requests/DV/Return To List Button'))
 
-Thread.sleep(1000);
+WebUI.delay(1)
 
 'Validation 2: Verify that the request is moved to PC.'
 

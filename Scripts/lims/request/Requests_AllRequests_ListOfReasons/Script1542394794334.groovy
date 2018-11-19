@@ -33,23 +33,7 @@ WebUI.switchToFrame(findTestObject('LIMS/Requests/DV2/Page_DV2/maint_iframe'), 1
 
 WebUI.click(findTestObject('LIMS/Requests/AllRequests/expediteCheckbox'))
 
-WebUI.switchToDefaultContent()
-
-WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/img'))
-
-WebUI.switchToFrame(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Frame'), 10)
-
-WebUI.waitForElementVisible(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Password'), 10)
-
-WebUI.setText(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Password'), 'abcd1234')
-
-WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Dropdown_Btn'))
-
-WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Select_Reason'))
-
-WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_OK'))
-
-WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/img'))
+CustomKeywords.'com.gh.lims.ResOpsRequests.enterESign'('abcd1234')
 
 CustomKeywords.'com.gh.lims.Common.rtlLogout2'()
 

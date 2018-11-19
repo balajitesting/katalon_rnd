@@ -32,14 +32,35 @@ public class ResOpsRequests {
 
 	@Keyword
 	def searchRequest(requestId){
-
-		WebUI.click(findTestObject('LIMS/ResOps Requests/AllRequests TramStop'))
 		
 		WebUI.setText(findTestObject('LIMS/PostSequence/TBReview/Search/input_Search_searchtext'), requestId)
 		
 		WebUI.click(findTestObject('LIMS/PostSequence/TBReview/Search/td_OK'))
 		
 		WebUI.delay(1)
+		
+	}
+		
+	@Keyword
+	def enterESign(String pwd){
+		
+		WebUI.switchToDefaultContent()
+		
+		WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/img'))
+		
+		WebUI.switchToFrame(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Frame'), 10)
+		
+		WebUI.waitForElementVisible(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Password'), 10)
+		
+		WebUI.setText(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Password'), pwd)
+		
+		WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Dropdown_Btn'))
+		
+		WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Select_Reason'))
+		
+		WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_OK'))
+		
+		WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/img'))
 		
 	}
 }

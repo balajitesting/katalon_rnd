@@ -127,4 +127,24 @@ public class Common {
 		
 		WebUI.click(findTestObject('LIMS/logout/img_Logout'))
 	}
+	
+	/*
+	 * 
+	 */
+	def selectValueInPopUp(String value){
+		
+		assert WebUI.getText(findTestObject('LIMS/Requests/DV2/DV2Request/searchBarText')).contains("Search Bar") == true
+		
+		WebUI.setText(findTestObject('LIMS/Requests/DV2/Page_DV2/searchProblemCase/searchText'), value)
+		
+		WebUI.click(findTestObject('LIMS/Requests/DV2/Page_DV2/searchProblemCase/searchOk'))
+		
+		WebUI.switchToFrame(findTestObject('LIMS/Requests/DV2/Page_DV2/listFrame'), 3)
+		
+		WebUI.delay(1)
+		
+		assert WebUI.getText(findTestObject('LIMS/Requests/DV2/Page_DV2/problemCaseValue')).contains(value) == true
+		
+		WebUI.click(findTestObject('LIMS/Requests/DV2/Page_DV2/problemCaseValue'))
+	}
 }
