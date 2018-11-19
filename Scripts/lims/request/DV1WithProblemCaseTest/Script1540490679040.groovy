@@ -41,7 +41,7 @@ WebUI.click(findTestObject('LIMS/Requests/DV1/DV1Request/td_OK'))
 
 edit = 'LIMS/Problem Resolution/Page_Problem Cases Resolution/div_Edit'
 
-CustomKeywords.'com.gh.lims.Common.setClick'(edit)
+CustomKeywords.'com.gh.lims.Common.setClick2'(edit)
 
 WebUI.switchToFrame(findTestObject('LIMS/Requests/DV2/Page_DV2/maint_iframe'), 10)
 
@@ -51,28 +51,11 @@ WebUI.click(findTestObject('LIMS/Requests/DV2/Page_DV2/searchProbCaseIcon'))
 
 WebDriver driver = DriverFactory.getWebDriver()
 
-'Switch to Problem Case Window'
-String winHandleBefore = driver.getWindowHandle();
+CustomKeywords.'com.gh.lims.Common.switchToWindows'(driver)
 
-for(String winHandle : driver.getWindowHandles()){
-	driver.switchTo().window(winHandle);
-}
+WebUI.delay(1)
 
-//assert WebUI.getText(findTestObject('LIMS/Requests/DV2/DV2Request/searchBarText')).contains("Search Bar") == true
-//
-//WebUI.setText(findTestObject('LIMS/Requests/DV2/Page_DV2/searchProblemCase/searchText'), 'R01')
-//
-//WebUI.click(findTestObject('LIMS/Requests/DV2/Page_DV2/searchProblemCase/searchOk'))
-//
-//WebUI.switchToFrame(findTestObject('LIMS/Requests/DV2/Page_DV2/listFrame'), 3)
-//
-//Thread.sleep(2000) //Wait command is not working properly. Hence, implemented the same.
-//
-//assert WebUI.getText(findTestObject('LIMS/Requests/DV2/Page_DV2/problemCaseValue')).contains("R01") == true
-//
-//WebUI.click(findTestObject('LIMS/Requests/DV2/Page_DV2/problemCaseValue'))
-
-CustomKeywords.'com.gh.lims.Common.selectValueInPopUp'('200')
+CustomKeywords.'com.gh.lims.Common.selectValueInPopUp'('R01')
 
 CustomKeywords.'com.gh.lims.ResOpsRequests.enterESign'('abcd1234')
 
