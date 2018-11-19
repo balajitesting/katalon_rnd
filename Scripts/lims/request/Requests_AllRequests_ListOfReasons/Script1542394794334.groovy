@@ -25,13 +25,7 @@ CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserDagmar', '5Ed5CIkj9UQfaMZXAkD
 
 //Validation 1: Verify popup with list of reasons in Requests -> All Requests page.
 
-WebUI.click(findTestObject('LIMS/Requests/AllRequests/AllRequestsTram'))
-
-WebUI.setText(findTestObject('LIMS/Requests/AllRequests/RequestIdSearchTextBox'), aNumber)
-
-WebUI.click(findTestObject('LIMS/Requests/AllRequests/btn_OK'))
-
-WebUI.delay(1)
+CustomKeywords.'com.gh.lims.Requests.searchRequest2'(aNumber)
 
 WebUI.click(findTestObject('LIMS/Problem Resolution/Page_Problem Cases Resolution/div_Edit'))
 
@@ -56,13 +50,15 @@ WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Select_Reaso
 WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_OK'))
 
 WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/img'))
+//
+//WebUI.delay(2); 
+//
+//WebUI.click(findTestObject('Object Repository/LIMS/ResOps Requests/DV/Return To List Button'))
+//
+//WebUI.switchToDefaultContent()
+//
+//WebUI.click(findTestObject('LIMS/logout/img_Logout'))
 
-WebUI.delay(2); 
-
-WebUI.click(findTestObject('Object Repository/LIMS/ResOps Requests/DV/Return To List Button'))
-
-WebUI.switchToDefaultContent()
-
-WebUI.click(findTestObject('LIMS/logout/img_Logout'))
+CustomKeywords.'com.gh.lims.Common.rtlLogout2'()
 
 WebUI.closeBrowser()

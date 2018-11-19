@@ -42,4 +42,16 @@ public class Requests {
 
 		WebUI.click(findTestObject('LIMS/DCO/Request/button_OK'))
 	}
+	
+	@Keyword
+	def searchRequest2(requestId){
+
+		WebUI.click(findTestObject('LIMS/Requests/AllRequests/AllRequestsTram'))
+		
+		WebUI.setText(findTestObject('LIMS/Requests/AllRequests/RequestIdSearchTextBox'), requestId)
+		
+		WebUI.click(findTestObject('LIMS/Requests/AllRequests/btn_OK'))
+		
+		WebUI.delay(1)
+	}
 }

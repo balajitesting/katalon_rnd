@@ -119,10 +119,12 @@ public class Common {
 	@Keyword
 	def rtlLogout2(){
 
-		setClick('LIMS/Problem Resolution/returnToList/div_Return To List')
-
-		WebUI.waitForElementPresent(findTestObject('LIMS/logout/img'), 15)
-
-		WebUI.click(findTestObject('LIMS/logout/img'))
+		WebUI.delay(2); 
+		
+		WebUI.click(findTestObject('Object Repository/LIMS/ResOps Requests/DV/Return To List Button'))
+		
+		WebUI.switchToDefaultContent()
+		
+		WebUI.click(findTestObject('LIMS/logout/img_Logout'))
 	}
 }
