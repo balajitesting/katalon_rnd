@@ -117,12 +117,8 @@ aNumber = WebUI.getAttribute(findTestObject(orDE1 + 'Page_Iteration/input_reques
 
 println(aNumber)
 
-
 WebUI.click(findTestObject('LIMS/logout/img'))
 
 WebUI.closeBrowser()
-
-
-
 
 return aNumber
