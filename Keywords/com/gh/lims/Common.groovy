@@ -71,7 +71,7 @@ public class Common {
 	}
 
 	@Keyword
-	def static setClick2(String orPathToEdit){
+	def static waitAndClick(String orPathToEdit){
 
 		WebUI.waitForElementClickable(findTestObject(orPathToEdit), 10)
 		WebUI.delay(2)
@@ -129,8 +129,9 @@ public class Common {
 	}
 	
 	/*
-	 * 
+	 * To Select Value in Popup after search in Create/Edit Page
 	 */
+	
 	def selectValueInPopUp(String value){
 		
 		assert WebUI.getText(findTestObject('LIMS/Requests/DV2/DV2Request/searchBarText')).contains("Search Bar") == true
