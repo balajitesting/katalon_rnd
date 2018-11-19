@@ -50,14 +50,6 @@ WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Select_Reaso
 WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_OK'))
 
 WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/img'))
-//
-//WebUI.delay(2); 
-//
-//WebUI.click(findTestObject('Object Repository/LIMS/ResOps Requests/DV/Return To List Button'))
-//
-//WebUI.switchToDefaultContent()
-//
-//WebUI.click(findTestObject('LIMS/logout/img_Logout'))
 
 CustomKeywords.'com.gh.lims.Common.rtlLogout2'()
 

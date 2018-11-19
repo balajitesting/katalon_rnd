@@ -25,13 +25,15 @@ CustomKeywords.'com.gh.lims.Common.logon'('ResOpsRhea', '5Ed5CIkj9UQfaMZXAkDVaQ=
 
 //Validation 1: Verify popup with list of reasons in Resops -> All Requests page.
 
-WebUI.click(findTestObject('LIMS/ResOps Requests/AllRequests TramStop'))
+CustomKeywords.'com.gh.lims.ResOpsRequests.searchRequest'(aNumber)
 
-WebUI.setText(findTestObject('LIMS/PostSequence/TBReview/Search/input_Search_searchtext'), aNumber)
-
-WebUI.click(findTestObject('LIMS/PostSequence/TBReview/Search/td_OK'))
-
-WebUI.delay(1)
+//WebUI.click(findTestObject('LIMS/ResOps Requests/AllRequests TramStop'))
+//
+//WebUI.setText(findTestObject('LIMS/PostSequence/TBReview/Search/input_Search_searchtext'), aNumber)
+//
+//WebUI.click(findTestObject('LIMS/PostSequence/TBReview/Search/td_OK'))
+//
+//WebUI.delay(1)
 
 WebUI.click(findTestObject('LIMS/Problem Resolution/Page_Problem Cases Resolution/div_Edit'))
 
@@ -57,12 +59,6 @@ WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_OK'))
 
 WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/img'))
 
-WebUI.delay(2); 
-
-WebUI.click(findTestObject('Object Repository/LIMS/ResOps Requests/DV/Return To List Button'))
-
-WebUI.switchToDefaultContent()
-
-WebUI.click(findTestObject('LIMS/logout/img_Logout'))
+CustomKeywords.'com.gh.lims.Common.rtlLogout2'()
 
 WebUI.closeBrowser()
