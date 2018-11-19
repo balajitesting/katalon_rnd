@@ -13,7 +13,7 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.comment('Run ENTSW-TC-1359, ENTSW-TC-1319, ENTSW-TC-1320, ENTSW-TC-1321, ENTSW-TC-1331, ENTSW-TC-2861')
+WebUI.comment('Run ENTSW-TC-2861')
 
 String aNumber = WebUI.callTestCase(findTestCase('lims/accession/DE1CreateProblemCaseTest'), [:], FailureHandling.STOP_ON_FAILURE)
 
