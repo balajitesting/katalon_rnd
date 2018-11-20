@@ -30,8 +30,6 @@ String sampleID = 'A011760801'
 
 CustomKeywords.'com.gh.db.LimsDBDataReset.resetStorageStatus'(sampleID)
 
-//CustomKeywords.'com.gh.db.LimsDBDataReset.resetSampleStatus'(sampleID, 'Ready for Plasma Isolation')
-
 CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserDagmar', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
 WebUI.click(findTestObject('LIMS/Plasma_Isolation/SampleStorageTramStop'))
@@ -41,6 +39,8 @@ WebUI.setText(findTestObject('LIMS/Plasma_Isolation/Page_Plasma Tube List/Search
 WebUI.click(findTestObject('LIMS/Plasma_Isolation/Page_Plasma Tube List/Search_OK_Button'))
 
 WebUI.switchToFrame(findTestObject('LIMS/Plasma_Isolation/Page_Plasma Tube List/list_iframe'), 2, FailureHandling.STOP_ON_FAILURE)
+
+WebUI.delay(2)
 
 WebUI.click(findTestObject('LIMS/Plasma_Isolation/Page_Plasma Tube List/list_header_CheckBox'))
 
@@ -52,18 +52,15 @@ WebUI.switchToFrame(findTestObject('LIMS/Plasma_Isolation/SampleStorage/iframe_T
 
 WebUI.click(findTestObject('LIMS/Plasma_Isolation/SampleStorage/searchStorage'))
 
-Thread.sleep(3000)
+WebUI.delay(3)
 
 WebDriver driver = DriverFactory.getWebDriver()
 
-'Switch to Storage Unit'
 String winHandleBefore = driver.getWindowHandle();
 
-for(String winHandle : driver.getWindowHandles()){
-	driver.switchTo().window(winHandle);
-}
+CustomKeywords.'com.gh.lims.Common.switchToWindows'(driver)
 
-Thread.sleep(3000)
+WebUI.delay(1)
 
 WebUI.click(findTestObject('LIMS/Plasma_Isolation/SampleStorage/storageUnitLink'))
 
@@ -87,17 +84,17 @@ WebUI.switchToFrame(findTestObject('LIMS/Plasma_Isolation/SampleStorage/iframe_S
 
 WebUI.click(findTestObject('LIMS/Plasma_Isolation/SampleStorage/checkbox_Sample'))
 
-Thread.sleep(3000)
+WebUI.delay(1)
 
 WebUI.switchToDefaultContent()
 
 WebUI.click(findTestObject('LIMS/Plasma_Isolation/SampleStorage/btn_AutoFile'))
 
-Thread.sleep(3000)
+WebUI.delay(1)
 
 WebUI.click(findTestObject('LIMS/Plasma_Isolation/SampleStorage/btn_Save'))
 
-Thread.sleep(3000)
+WebUI.delay(1)
 
 WebUI.click(findTestObject('LIMS/Plasma_Isolation/SampleStorage/tab_SampleStorage'))
 
@@ -106,6 +103,8 @@ WebUI.setText(findTestObject('LIMS/Plasma_Isolation/Page_Plasma Tube List/Search
 WebUI.click(findTestObject('LIMS/Plasma_Isolation/Page_Plasma Tube List/Search_OK_Button'))
 
 WebUI.switchToFrame(findTestObject('LIMS/Requests/AllRequests/list_iFrame'), 3)
+
+WebUI.delay(1)
 
 assert WebUI.getText(findTestObject('LIMS/Plasma_Isolation/SampleStorage/btn_Box')).contains("SU-0000103511") == true
 
