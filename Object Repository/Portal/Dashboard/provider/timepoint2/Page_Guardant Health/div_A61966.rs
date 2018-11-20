@@ -14,7 +14,7 @@
          <value>//div[@id='main-content']/div[4]/div/div[7]/div/div[3]/div/div[2]/div/div[2]</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>
