@@ -45,7 +45,9 @@ WebUI.click(findTestObject('LIMS/ResOps Requests/AllRequests TramStop'))
 
 CustomKeywords.'com.gh.lims.ResOpsRequests.searchRequest'(requestID)
 
-WebUI.click(findTestObject('Object Repository/LIMS/ResOps Requests/DV/Edit Button'))
+CustomKeywords.'com.gh.lims.Common.waitAndClick'('Object Repository/LIMS/ResOps Requests/DV/Edit Button')
+
+//WebUI.click(findTestObject('Object Repository/LIMS/ResOps Requests/DV/Edit Button'))
 
 Thread.sleep(2000) //Katalon wait not working
 
