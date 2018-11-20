@@ -20,6 +20,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 import java.awt.Robot as Robot
 import java.awt.event.KeyEvent as KeyEvent
+import java.io.File
 
 WebUI.comment('ENTSW-TC-3257')
 
@@ -36,9 +37,9 @@ WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/csvdow
 
 WebUI.waitForPageLoad(10)
 
-WebUI.delay(5)
+Thread.sleep(5000)
 
-handlingWindowPopup()
+verifyFileDownloaded('Practice_Summary')
 
 WebUI.waitForElementPresent(findTestObject('Object Repository/Portal/page_portalaccession/exportresultscsv'), 120)
 
@@ -48,9 +49,7 @@ WebUI.waitForElementPresent(findTestObject('Object Repository/Portal/page_export
 
 WebUI.click(findTestObject('Object Repository/Portal/page_exportresult/pdfdownload'))
 
-WebUI.delay(10)
-
-handlingWindowPopup()
+verifyFileDownloaded('patient_summary')
 
 WebUI.waitForElementPresent(findTestObject('Object Repository/Portal/page_portalaccession/exportresultscsv'), 120)
 
@@ -62,17 +61,17 @@ WebUI.click(findTestObject('Object Repository/Portal/page_exportresult/xmldownlo
 
 WebUI.waitForPageLoad(10)
 
-WebUI.delay(10)
+Thread.sleep(10000)
 
-handlingWindowPopup()
+verifyFileDownloaded('patient_summary')
 
 WebUI.click(findTestObject('Portal/page_exportresult/patientdownloadimagedashboard'))
 
 WebUI.click(findTestObject('Portal/page_exportresult/patientreportonly'))
 
-WebUI.delay(5)
+Thread.sleep(5000)
 
-handlingWindowPopup()
+verifyFileDownloaded('Guardant360')
 
 WebUI.waitForElementClickable(findTestObject('Object Repository/Portal/page_portalaccession/selectpatient'), 20)
 
@@ -90,9 +89,9 @@ WebUI.click(findTestObject('Portal/page_exportresult/patientdownloadimage'))
 
 WebUI.click(findTestObject('Portal/page_exportresult/patientreportonly'))
 
-WebUI.delay(5)
+Thread.sleep(5000)
 
-handlingWindowPopup()
+verifyFileDownloaded('Guardant360')
 
 WebUI.verifyElementPresent(findTestObject('Portal/page_inprogressreport/profilemenu'), 10)
 
@@ -102,14 +101,28 @@ WebUI.click(findTestObject('Portal/page_inprogressreport/signout'))
 
 WebUI.closeBrowser()
 
-def handlingWindowPopup() {
-    Robot rb = new Robot()
-
-    rb.keyPress(KeyEvent.VK_ENTER)
-
-    WebUI.delay(2)
-
-    rb.keyPress(KeyEvent.VK_TAB)
-
-    rb.keyPress(KeyEvent.VK_ENTER)
+def verifyFileDownloaded(String fileName)
+{
+	boolean flag = false
+	String home = System.getProperty('user.home')
+	
+	File downloadlocation=new File(home + '/git/'+'/ent-web-automation/'+'/Results/'+'/download/')
+	
+	File[] contents = downloadlocation.listFiles()
+	
+	for(int i=0;i<contents.length;i++)
+	{
+		println contents[i].getName()
+		
+		if(contents[i].getName().contains(fileName))
+		{
+			contents[i].delete()
+			return flag=true
+		}
+	}
+	if (flag) {
+		println 'file found successfully'
+	}
+	
 }
+	
