@@ -69,7 +69,7 @@ public class Common {
 
 		WebUI.click(findTestObject(orPathToEdit))
 	}
-	
+
 	/**
 	 *  Switch to New Window
 	 */
@@ -78,12 +78,12 @@ public class Common {
 	def static switchToWindows(WebDriver driver){
 
 		String winHandleBefore = driver.getWindowHandle();
-		
+
 		for(String winHandle : driver.getWindowHandles()){
 			driver.switchTo().window(winHandle);
 		}
-	}	
-	
+	}
+
 	/**
 	 *  Clear Text
 	 */
@@ -92,9 +92,8 @@ public class Common {
 	def static clearText(WebDriver driver, String value){
 
 		driver.findElement(By.xpath(value)).clear();
-		
 	}
-	
+
 	/**
 	 *  Return to List log out
 	 */

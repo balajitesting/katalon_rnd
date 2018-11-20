@@ -52,6 +52,87 @@ public class Provider {
 
 		WebUI.waitForElementVisible(findTestObject('Portal/page_guardanthealth/confirmationmessage'), 15)
 	}
+	
+	@Keyword
+	def acceptInvitation(String pwd){
+		WebUI.switchToWindowIndex(2)
+		
+		WebUI.click(findTestObject('Portal/page_mailtrap/page_mailconfirmationpage/nextbutton'))
+		
+		WebUI.setText(findTestObject('Portal/page_mailtrap/page_mailconfirmationpage/userpassword'), pwd)
+		
+		WebUI.click(findTestObject('Portal/page_mailtrap/page_mailconfirmationpage/accepterm'))
+		
+		WebUI.click(findTestObject('Portal/page_mailtrap/page_mailconfirmationpage/portalaccountbutton'))
+		
+		//WebUI.waitForPageLoad(10)
+		
+		WebUI.click(findTestObject('Portal/page_mailtrap/page_mailconfirmationpage/acceptcheckbox'))
+		
+		WebUI.click(findTestObject('Portal/page_mailtrap/page_mailconfirmationpage/buttonacceptinvitation'))
+	}
+
+	@Keyword
+	def verifyTrm(String patientName){
+
+		WebUI.setText(findTestObject('Portal/page_mailtrap/page_mailconfirmationpage/searchguestpatientname'), patientName)
+
+		WebUI.setText(findTestObject('Portal/page_guardanthealth/inputpatientname'), patientName)
+
+		WebUI.click(findTestObject('Portal/page_guardanthealth/searchpatientname'))
+
+		com.gh.core.JSHandler.JClick(findTestObject('Portal/Dashboard/provider/timepoint2/Page_Guardant Health/i_Flores Rey_fa fa-angle-down'), 15)
+
+		WebUI.click(findTestObject('Object Repository/Portal/Dashboard/provider/timepoint2/Page_Guardant Health/div_ACCESSION ID'))
+
+		WebUI.click(findTestObject('Object Repository/Portal/Dashboard/provider/timepoint2/Page_Guardant Health/div_A61966'))
+
+		WebUI.click(findTestObject('Object Repository/Portal/Dashboard/provider/timepoint2/Page_Guardant Health/div_MRN'))
+
+		WebUI.click(findTestObject('Object Repository/Portal/Dashboard/provider/timepoint2/Page_Guardant Health/div_DOB'))
+
+		WebUI.click(findTestObject('Object Repository/Portal/Dashboard/provider/timepoint2/Page_Guardant Health/div_GENDER'))
+
+		WebUI.click(findTestObject('Object Repository/Portal/Dashboard/provider/timepoint2/Page_Guardant Health/div_DIAGNOSIS'))
+
+		WebUI.click(findTestObject('Object Repository/Portal/Dashboard/provider/timepoint2/Page_Guardant Health/div_TEST NUMBER'))
+
+		WebUI.click(findTestObject('Object Repository/Portal/Dashboard/provider/timepoint2/Page_Guardant Health/div_Report Date'))
+
+		WebUI.click(findTestObject('Object Repository/Portal/Dashboard/provider/timepoint2/Page_Guardant Health/div_RECEIPT DATE'))
+
+		WebUI.click(findTestObject('Object Repository/Portal/Dashboard/provider/timepoint2/Page_Guardant Health/div_COLLECTION DATE'))
+
+		WebUI.click(findTestObject('Object Repository/Portal/Dashboard/provider/timepoint2/Page_Guardant Health/div_SPECIMEN'))
+
+		WebUI.click(findTestObject('Object Repository/Portal/Dashboard/provider/timepoint2/Page_Guardant Health/div_STATUS'))
+
+		WebUI.click(findTestObject('Object Repository/Portal/Dashboard/provider/timepoint2/Page_Guardant Health/div_PHYSICIAN'))
+
+		WebUI.click(findTestObject('Object Repository/Portal/Dashboard/provider/timepoint2/Page_Guardant Health/div_ACCOUNT'))
+
+		WebUI.click(findTestObject('Object Repository/Portal/Dashboard/provider/timepoint2/Page_Guardant Health/div_ADDRESS'))
+
+		WebUI.click(findTestObject('Object Repository/Portal/Dashboard/provider/timepoint2/Page_Guardant Health/div_PH'))
+
+		WebUI.click(findTestObject('Object Repository/Portal/Dashboard/provider/timepoint2/Page_Guardant Health/div_FAX'))
+
+		WebUI.click(findTestObject('Portal/Dashboard/provider/timepoint2/Page_Guardant Health/div_ADDITIONAL RECIPIENT'))
+
+		com.gh.core.JSHandler.JClick(findTestObject('Portal/Dashboard/provider/timepoint2/Page_Guardant Health/i_Flores Rey_fa fa-angle-down'), 15)
+
+		/**
+		 *
+		 WebUI.click(findTestObject('Portal/timepoint/Page_Guardant Health/Page_Guardant Health/i_Flores Rey_fa fa-angle-up'))
+		 WebUI.click(findTestObject('Portal/timepoint/Page_Guardant Health/Page_Guardant Health/path_-_tumor-response-map__box'))
+		 WebUI.click(findTestObject('Portal/timepoint/Page_Guardant Health/path_JAN-19-2017_tumor-respons'))
+		 WebUI.click(findTestObject('/Portal/timepoint/Page_Guardant Health/text_5.9'))
+		 WebUI.click(findTestObject('Portal/timepoint/Page_Guardant Health/Page_Guardant Health/div_ACCESSION ID'))
+		 WebUI.click(findTestObject('Portal/timepoint/Page_Guardant Health/Page_Guardant Health/div_A47257'))
+		 WebUI.click(findTestObject('Portal/timepoint/Page_Guardant Health/Page_Guardant Health/div_MRN'))
+		 WebUI.click(findTestObject('Portal/timepoint/Page_Guardant Health/Page_Guardant Health/div_5680202'))
+		 */
+	}
 }
 
 

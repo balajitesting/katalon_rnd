@@ -96,6 +96,26 @@ public class Common {
 	}
 
 	@Keyword
+	def checkMailTrap(String email, String sendObjPath){
+		
+		WebUI.click(findTestObject('Portal/page_mailtrap/page_inboxesmailtrap/spanportal'))
+		
+		WebUI.setText(findTestObject('Portal/page_mailtrap/page_portalmailtrap/inputemail'), email)
+		
+		WebUI.verifyElementClickable(findTestObject(sendObjPath))
+		
+		WebUI.click(findTestObject(sendObjPath))
+		
+		WebUI.click(findTestObject('Portal/page_mailtrap/safeemailtestingpage/externallink'))
+		
+		WebUI.switchToWindowIndex(1)
+		
+		WebUI.click(findTestObject('Portal/page_mailtrap/page_portalmailtrap/sharepatientreportbutton'))
+		
+		WebUI.switchToWindowIndex(2)
+	}
+
+	@Keyword
 	def logout(){
 		Thread.sleep(1000)
 		WebUI.click(findTestObject('Portal/Dashboard/logout/Page_Guardant Health/i_PERMISSIONS_fa fa-chevron-do'))
