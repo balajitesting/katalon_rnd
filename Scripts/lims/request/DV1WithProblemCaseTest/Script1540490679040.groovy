@@ -39,9 +39,9 @@ WebUI.setText(findTestObject('LIMS/Requests/DV1/DV1Request/dv1SearchTextBox'), a
 
 WebUI.click(findTestObject('LIMS/Requests/DV1/DV1Request/td_OK'))
 
-edit = 'LIMS/Problem Resolution/Page_Problem Cases Resolution/div_Edit'
+CustomKeywords.'com.gh.lims.Common.waitAndClick'('Object Repository/LIMS/ResOps Requests/DV/Edit Button')
 
-CustomKeywords.'com.gh.lims.Common.setClick2'(edit)
+//WebUI.click(findTestObject('Object Repository/LIMS/ResOps Requests/DV/Edit Button')))
 
 WebUI.switchToFrame(findTestObject('LIMS/Requests/DV2/Page_DV2/maint_iframe'), 10)
 
