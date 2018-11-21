@@ -52,23 +52,23 @@ public class Provider {
 
 		WebUI.waitForElementVisible(findTestObject('Portal/page_guardanthealth/confirmationmessage'), 15)
 	}
-	
+
 	@Keyword
 	def acceptInvitation(String pwd){
 		WebUI.switchToWindowIndex(2)
-		
+
 		WebUI.click(findTestObject('Portal/page_mailtrap/page_mailconfirmationpage/nextbutton'))
-		
+
 		WebUI.setText(findTestObject('Portal/page_mailtrap/page_mailconfirmationpage/userpassword'), pwd)
-		
+
 		WebUI.click(findTestObject('Portal/page_mailtrap/page_mailconfirmationpage/accepterm'))
-		
+
 		WebUI.click(findTestObject('Portal/page_mailtrap/page_mailconfirmationpage/portalaccountbutton'))
-		
+
 		//WebUI.waitForPageLoad(10)
-		
+
 		WebUI.click(findTestObject('Portal/page_mailtrap/page_mailconfirmationpage/acceptcheckbox'))
-		
+
 		WebUI.click(findTestObject('Portal/page_mailtrap/page_mailconfirmationpage/buttonacceptinvitation'))
 	}
 
