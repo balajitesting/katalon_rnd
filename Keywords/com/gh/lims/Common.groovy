@@ -70,14 +70,6 @@ public class Common {
 		WebUI.click(findTestObject(orPathToEdit))
 	}
 
-	@Keyword
-	def static waitAndClick(String orPathToEdit){
-
-		WebUI.waitForElementClickable(findTestObject(orPathToEdit), 10)
-		WebUI.delay(2)
-		WebUI.click(findTestObject(orPathToEdit))
-	}
-
 	/**
 	 *  Switch to New Window
 	 */
@@ -117,6 +109,14 @@ public class Common {
 	}
 
 	@Keyword
+	def static waitAndClick(String orPathToEdit){
+
+		WebUI.waitForElementClickable(findTestObject(orPathToEdit), 10)
+		WebUI.delay(2)
+		WebUI.click(findTestObject(orPathToEdit))
+	}
+
+	@Keyword
 	def rtlLogout2(){
 
 		WebUI.delay(2);
@@ -127,10 +127,6 @@ public class Common {
 
 		WebUI.click(findTestObject('LIMS/logout/img_Logout'))
 	}
-
-	/*
-	 * To Select Value in Popup after search in Create/Edit Page
-	 */
 
 	def selectValueInPopUp(String value){
 
