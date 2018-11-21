@@ -35,7 +35,7 @@ CustomKeywords.'com.gh.portal.Common.logout'()
 
 WebUI.closeBrowser()
 
-CustomKeywords.'com.gh.portal.Common.mailTrapLogin'('bkotta@guardanthealth.com', 'Balu@1981')
+CustomKeywords.'com.gh.portal.Common.mailTrapLogin'('gxu@guardanthealth.com', 'gracemt')
 
 WebUI.click(findTestObject('Portal/page_mailtrap/page_inboxesmailtrap/spanportal'))
 
