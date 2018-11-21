@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Share2TimepointReportTest</name>
+   <name>ShareReportWithGuestUserTest</name>
    <tag></tag>
    <comment>Run: ENTSW-TC-2921</comment>
    <testCaseGuid>e3efd6b7-67e4-4854-acc2-c0025deb317f</testCaseGuid>
