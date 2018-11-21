@@ -43,15 +43,13 @@ CustomKeywords.'com.gh.lims.Common.logon'('ResOpsRhea', '5Ed5CIkj9UQfaMZXAkDVaQ=
 
 WebUI.click(findTestObject('LIMS/ResOps Requests/AllRequests TramStop'))
 
-WebUI.setText(findTestObject('LIMS/PostSequence/TBReview/Search/input_Search_searchtext'), requestID)
+CustomKeywords.'com.gh.lims.ResOpsRequests.searchRequest'(requestID)
 
-WebUI.click(findTestObject('LIMS/PostSequence/TBReview/Search/td_OK'))
+CustomKeywords.'com.gh.lims.Common.waitAndClick'('Object Repository/LIMS/ResOps Requests/DV/Edit Button')
 
-Thread.sleep(2000) //Katalon wait not working
+//WebUI.click(findTestObject('Object Repository/LIMS/ResOps Requests/DV/Edit Button'))
 
-WebUI.click(findTestObject('Object Repository/LIMS/ResOps Requests/DV/Edit Button'))
-
-Thread.sleep(2000) //Katalon wait not working
+WebUI.delay(2)
 
 WebUI.switchToFrame(findTestObject('LIMS/Requests/DV2/Page_DV2/maint_iframe'), 10)
 
@@ -59,76 +57,41 @@ WebDriver driver = DriverFactory.getWebDriver()
 
 WebUI.click(findTestObject('LIMS/ResOps Requests/EditRequest/SearchCancel'))
 
-Thread.sleep(2000) //Wait command is not working properly. Hence, implemented the same.
+WebUI.delay(2)
 
-// Switch to Cancel Reason Window
-String winHandleBefore = driver.getWindowHandle();
+CustomKeywords.'com.gh.lims.Common.switchToWindows'(driver)
 
-for(String winHandle : driver.getWindowHandles()){
-	driver.switchTo().window(winHandle);
-}
+WebUI.delay(2)
 
-Thread.sleep(2000)
+CustomKeywords.'com.gh.lims.Common.selectValueInPopUp'('200')
 
-assert WebUI.getText(findTestObject('LIMS/Requests/DV2/DV2Request/searchBarText')).contains("Search Bar") == true
+CustomKeywords.'com.gh.lims.ResOpsRequests.enterESign'('abcd1234')
 
-WebUI.setText(findTestObject('LIMS/Requests/DV2/Page_DV2/searchProblemCase/searchText'), '200')
-
-WebUI.click(findTestObject('LIMS/Requests/DV2/Page_DV2/searchProblemCase/searchOk'))
-
-WebUI.switchToFrame(findTestObject('LIMS/Requests/DV2/Page_DV2/listFrame'), 3)
-
-Thread.sleep(2000) //Wait command is not working properly. Hence, implemented the same.
-
-assert WebUI.getText(findTestObject('LIMS/Requests/DV2/Page_DV2/problemCaseValue')).contains("200") == true
-
-WebUI.click(findTestObject('LIMS/Requests/DV2/Page_DV2/problemCaseValue'))
-
-WebUI.switchToDefaultContent()
-
-WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/img'))
-
-WebUI.switchToFrame(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Frame'), 10) 
-
-WebUI.waitForElementVisible(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Password'), 10)
-
-WebUI.setText(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Password'), 'abcd1234')
-
-WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Dropdown_Btn'))
-
-WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Select_Reason'))
-
-WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_OK'))
-
-WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/img'))
-
-Thread.sleep(2000) //Wait command is not working properly. Hence, implemented the same.
+WebUI.delay(2)
 
 WebUI.click(findTestObject('LIMS/ResOps Requests/EditRequest/btn_CancelRequest'))
 
-Thread.sleep(2000) //Wait command is not working properly. Hence, implemented the same.
+WebUI.delay(2)
 
 WebUI.acceptAlert()
 
-Thread.sleep(2000); //Katalon wait not working.
-
-//assert WebUI.getAlertText().contains('DV Check not completed') == true
+WebUI.delay(2)
 
 assert WebUI.getText(findTestObject('LIMS/ResOps Requests/EditRequest/msg_div2Verification')).contains('DV Check not completed') == true
 
 WebUI.click(findTestObject('LIMS/ResOps Requests/EditRequest/btn_div2Verification'))
 
-Thread.sleep(2000); //Katalon wait not working.
+WebUI.delay(2)
 
 WebUI.click(findTestObject('Object Repository/LIMS/ResOps Requests/DV/Return To List Button'))
 
-Thread.sleep(3000) //Wait command is not working properly. Hence, implemented the same.
+WebUI.delay(2)
 
 WebUI.setText(findTestObject('LIMS/PostSequence/TBReview/Search/input_Search_searchtext'), requestID)
 
 WebUI.click(findTestObject('LIMS/PostSequence/TBReview/Search/td_OK'))
 
-Thread.sleep(3000) //Wait command is not working properly. Hence, implemented the same.
+WebUI.delay(2)
 
 WebUI.switchToFrame(findTestObject('LIMS/Requests/AllRequests/list_iFrame'), 3)
 

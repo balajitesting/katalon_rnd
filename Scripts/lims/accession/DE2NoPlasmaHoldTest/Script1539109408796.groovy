@@ -24,7 +24,7 @@ import org.openqa.selenium.WebElement as WebElement
 import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
 
-WebUI.comment('Run ENTSW-TC-1359, ENTSW-TC-1320, ENTSW-TC-1321, ENTSW-TC-2862')
+WebUI.comment('Run ENTSW-TC-2963, ENTSW-TC-2862')
 
 'Enable when run standalone'
 //String aNumber = 'A0119534'

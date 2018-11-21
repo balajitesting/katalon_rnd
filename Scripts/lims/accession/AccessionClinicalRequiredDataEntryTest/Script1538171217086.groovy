@@ -93,7 +93,4 @@ WebUI.click(findTestObject('LIMS/logout/img'))
 
 WebUI.closeBrowser()
 
-
-
-
 return aNumber

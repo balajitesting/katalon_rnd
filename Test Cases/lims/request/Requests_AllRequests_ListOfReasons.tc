@@ -3,6 +3,6 @@
    <description></description>
    <name>Requests_AllRequests_ListOfReasons</name>
    <tag></tag>
-   <comment>Run: ENT-7095</comment>
+   <comment>Run: ENTSW-TC-3077</comment>
    <testCaseGuid>cc50a468-a483-4e6f-8fb2-3632e5cd2ae0</testCaseGuid>
 </TestCaseEntity>

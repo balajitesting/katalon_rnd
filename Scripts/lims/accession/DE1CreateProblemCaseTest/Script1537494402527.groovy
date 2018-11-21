@@ -15,8 +15,6 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.comment('ENTSW-TC-2959')
 
-WebUI.callTestCase(findTestCase('lims/accession/AccessionClinicalRequiredDataEntryTest'), [:], FailureHandling.STOP_ON_FAILURE)
-
 CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserDagmar', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
 String orDE1 = 'LIMS/DE1/'
@@ -73,8 +71,6 @@ WebUI.setText(findTestObject(orDE1 + 'Page_Iteration/input_secsearchstr'), 'sqa'
 
 WebUI.click(findTestObject(orDE1 + 'Page_Iteration/input_searchbuttonsr'))
 
-//WebUI.switchToWindowUrl(GlobalVariable.limsUrl + '/rc?command=page&page=GHMainAccessionSHPHY')
-
 WebUI.switchToDefaultContent()
 
 WebUI.scrollToElement(findTestObject(orDE1 + 'Page_Iteration/input_saveAccession01'), 15)
@@ -92,6 +88,3 @@ WebUI.click(findTestObject('LIMS/logout/img'))
 WebUI.closeBrowser()
 
 return aNumber
-
-WebUI.callTestCase(findTestCase('lims/accession/AccessionClinicalRequiredDataEntryTest'), [:], FailureHandling.STOP_ON_FAILURE)
-
