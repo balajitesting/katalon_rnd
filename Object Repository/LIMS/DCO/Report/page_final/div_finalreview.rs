@@ -6,12 +6,11 @@
    <elementGuidId>e27e06cc-96a2-4d9f-b28b-01bd55755efb</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//div[text()='Final Review']</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//div[text()=''Final Review]</value>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
