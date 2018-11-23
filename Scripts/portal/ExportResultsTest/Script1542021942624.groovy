@@ -21,6 +21,8 @@ import internal.GlobalVariable as GlobalVariable
 import java.awt.Robot as Robot
 import java.awt.event.KeyEvent as KeyEvent
 import java.io.File
+import java.text.SimpleDateFormat
+
 
 WebUI.comment('ENTSW-TC-3257')
 
@@ -37,9 +39,9 @@ WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/csvdow
 
 WebUI.waitForPageLoad(10)
 
-Thread.sleep(5000)
+WebUI.delay(5)
 
-verifyFileDownloaded('Practice_Summary')
+Assert.assertTrue(verifyFileDownloaded('Practice_Summary'),'Failed to verify CSV file')
 
 WebUI.waitForElementPresent(findTestObject('Object Repository/Portal/page_portalaccession/exportresultscsv'), 120)
 
@@ -49,7 +51,9 @@ WebUI.waitForElementPresent(findTestObject('Object Repository/Portal/page_export
 
 WebUI.click(findTestObject('Object Repository/Portal/page_exportresult/pdfdownload'))
 
-verifyFileDownloaded('patient_summary')
+WebUI.delay(40)
+
+Assert.assertTrue(verifyFileDownloaded('patient_summary'),'Failed to verify PDF file')
 
 WebUI.waitForElementPresent(findTestObject('Object Repository/Portal/page_portalaccession/exportresultscsv'), 120)
 
@@ -59,19 +63,17 @@ WebUI.waitForElementPresent(findTestObject('Object Repository/Portal/page_export
 
 WebUI.click(findTestObject('Object Repository/Portal/page_exportresult/xmldownload'))
 
-WebUI.waitForPageLoad(10)
+WebUI.delay(10)
 
-Thread.sleep(10000)
-
-verifyFileDownloaded('patient_summary')
+Assert.assertTrue(verifyFileDownloaded('patient_summary'),'Failed to verify XML file')
 
 WebUI.click(findTestObject('Portal/page_exportresult/patientdownloadimagedashboard'))
 
 WebUI.click(findTestObject('Portal/page_exportresult/patientreportonly'))
 
-Thread.sleep(5000)
+WebUI.delay(5)
 
-verifyFileDownloaded('Guardant360')
+Assert.assertTrue(verifyFileDownloaded('Final'),'Failed to verify patient final report')
 
 WebUI.waitForElementClickable(findTestObject('Object Repository/Portal/page_portalaccession/selectpatient'), 20)
 
@@ -89,9 +91,11 @@ WebUI.click(findTestObject('Portal/page_exportresult/patientdownloadimage'))
 
 WebUI.click(findTestObject('Portal/page_exportresult/patientreportonly'))
 
-Thread.sleep(5000)
+WebUI.delay(5)
 
-verifyFileDownloaded('Guardant360')
+Assert.assertTrue(verifyFileDownloaded('Final'),'Failed to verify patient final report')
+
+WebUI.delay(5)
 
 WebUI.verifyElementPresent(findTestObject('Portal/page_inprogressreport/profilemenu'), 10)
 
@@ -104,9 +108,9 @@ WebUI.closeBrowser()
 def verifyFileDownloaded(String fileName)
 {
 	boolean flag = false
-	String home = System.getProperty('user.home')
+	String home = System.getProperty('user.dir')
 	
-	File downloadlocation=new File(home + '/git/'+'/ent-web-automation/'+'/Results/'+'/download/')
+	File downloadlocation=new File(home +'/Results/'+'/download/')
 	
 	File[] contents = downloadlocation.listFiles()
 	
@@ -117,12 +121,12 @@ def verifyFileDownloaded(String fileName)
 		if(contents[i].getName().contains(fileName))
 		{
 			contents[i].delete()
-			return flag=true
+			 flag=true
 		}
+		
 	}
-	if (flag) {
-		println 'file found successfully'
-	}
+	return flag
 	
 }
+
 	
