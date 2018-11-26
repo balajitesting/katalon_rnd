@@ -109,6 +109,8 @@ WebUI.setText(findTestObject('Object Repository/Portal/page_portalaccession/sear
 
 WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/selectsearch'))
 
+Thread.sleep(3000)
+
 WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/tooglepatientname'))
 
 assert WebUI.getText(findTestObject('Portal/page_inprogressreport/test/verifyStatus')).equalsIgnoreCase('In Progress') == true
