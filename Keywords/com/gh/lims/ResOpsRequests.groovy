@@ -16,6 +16,10 @@ import com.kms.katalon.core.testobject.ObjectRepository
 import com.kms.katalon.core.testobject.TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords
+import org.openqa.selenium.WebDriver as WebDriver
+import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
+import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
+import org.openqa.selenium.By as By
 
 import internal.GlobalVariable
 import WebUiBuiltInKeywords as WebUI
@@ -32,35 +36,59 @@ public class ResOpsRequests {
 
 	@Keyword
 	def searchRequest(requestId){
-		
+
 		WebUI.setText(findTestObject('LIMS/PostSequence/TBReview/Search/input_Search_searchtext'), requestId)
-		
+
 		WebUI.click(findTestObject('LIMS/PostSequence/TBReview/Search/td_OK'))
-		
+
 		WebUI.delay(1)
-		
 	}
-		
+
 	@Keyword
 	def enterESign(String pwd){
-		
+
 		WebUI.switchToDefaultContent()
-		
+
 		WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/img'))
-		
+
 		WebUI.switchToFrame(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Frame'), 10)
-		
+
 		WebUI.waitForElementVisible(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Password'), 10)
-		
+
 		WebUI.setText(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Password'), pwd)
-		
+
 		WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Dropdown_Btn'))
-		
+
 		WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Select_Reason'))
-		
+
 		WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_OK'))
-		
+
 		WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/img'))
-		
+	}
+
+	@Keyword
+	def enterESign(String pwd, String reason){
+
+		WebDriver driver = DriverFactory.getWebDriver()
+
+		WebUI.switchToDefaultContent()
+
+		WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/img'))
+
+		WebUI.switchToFrame(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Frame'), 10)
+
+		WebUI.waitForElementVisible(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Password'), 10)
+
+		WebUI.setText(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Password'), pwd)
+
+		WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Dropdown_Btn'))
+
+		Thread.sleep(10000)
+
+		driver.findElement(By.xpath("//td[contains(text(), '" + reason + "')]")).click();
+
+		WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_OK'))
+
+		WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/img'))
 	}
 }
