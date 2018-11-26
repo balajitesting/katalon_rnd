@@ -20,17 +20,28 @@ String A_Number = 'A0131290'
 
 CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserReporting', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
-CustomKeywords.'com.gh.lims.Report.searchRequest'(A_Number)
+WebUI.click(findTestObject('LIMS/DCO/Report/Page_Iteration/td_All Requests'))
+
+WebUI.setText(findTestObject('LIMS/DCO/Report/Page_Request List/input_searchtext'), A_Number)
+
+WebUI.click(findTestObject('LIMS/DCO/Report/Page_Request List/td_OK'))
+
+WebUI.delay(2)
+
+WebUI.click(findTestObject('LIMS/DCO/Report/Page_Request List/td_Edit'))
 
 WebUI.waitForElementVisible(findTestObject('LIMS/DCO/Report/Page_All Requests/select_TB Review BIP DataLD Re'), 60)
 
 WebUI.selectOptionByValue(findTestObject('LIMS/DCO/Report/Page_All Requests/select_TB Review BIP DataLD Re'), 'LD Review BIP Data', 
     true)
+
 String PhysicianEmail = WebUI.getAttribute(findTestObject('LIMS/DCO/Report/Page_All Requests/physicianemail'), 'value')
 
 WebUI.waitForElementVisible(findTestObject('LIMS/DCO/Report/Page_All Requests/td_Save'), 60)
 
 WebUI.click(findTestObject('LIMS/DCO/Report/Page_All Requests/td_Save'))
+
+WebUI.delay(1)
 
 WebUI.waitForElementVisible(findTestObject('LIMS/DCO/Report/Page_All Requests/a_LD Review'), 60)
 
@@ -77,7 +88,7 @@ WebUI.click(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/button_OK_gen
 
 WebUI.waitForElementPresent(findTestObject('Object Repository/LIMS/logout/img'), 10)
 
-WebUI.delay(5)
+WebUI.delay(3)
 
 WebUI.click(findTestObject('LIMS/logout/img'))
 
@@ -88,19 +99,21 @@ CustomKeywords.'com.gh.portal.Common.logon'('tvo@guardanthealth.com', 'R9dwWsVuq
 
 WebUI.waitForPageLoad(5)
 
-WebUI.setText(findTestObject('Object Repository/Portal/page_portalaccession/physiciansearchbar'), PhysicianEmail)
+WebUI.setText(findTestObject('Object Repository/Portal/page_portalaccession/physiciansearchbar'),PhysicianEmail)
 
 WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/physicianselect'))
 
 WebUI.waitForPageLoad(5)
 
-WebUI.setText(findTestObject('Object Repository/Portal/page_portalaccession/searchid'), A_Number)
-
-WebUI.verifyElementPresent(findTestObject('Object Repository/Portal/page_portalaccession/selectsearch'), 20)
+WebUI.setText(findTestObject('Object Repository/Portal/page_portalaccession/searchid'),A_Number)
 
 WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/selectsearch'))
 
-WebUI.delay(5)
+WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/tooglepatientname'))
+
+assert WebUI.getText(findTestObject('Portal/page_inprogressreport/test/verifyStatus')).equalsIgnoreCase('In Progress') == true
+
+WebUI.delay(3)
 
 WebUI.waitForElementClickable(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'), 20)
 
