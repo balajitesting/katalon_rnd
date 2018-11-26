@@ -5,6 +5,8 @@ import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 
+import org.testng.Assert
+
 import com.kms.katalon.core.annotation.Keyword
 import com.kms.katalon.core.checkpoint.Checkpoint
 import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
@@ -64,8 +66,6 @@ public class Provider {
 		WebUI.click(findTestObject('Portal/page_mailtrap/page_mailconfirmationpage/accepterm'))
 
 		WebUI.click(findTestObject('Portal/page_mailtrap/page_mailconfirmationpage/portalaccountbutton'))
-
-		//WebUI.waitForPageLoad(10)
 
 		WebUI.click(findTestObject('Portal/page_mailtrap/page_mailconfirmationpage/acceptcheckbox'))
 
@@ -132,6 +132,61 @@ public class Provider {
 		 WebUI.click(findTestObject('Portal/timepoint/Page_Guardant Health/Page_Guardant Health/div_MRN'))
 		 WebUI.click(findTestObject('Portal/timepoint/Page_Guardant Health/Page_Guardant Health/div_5680202'))
 		 */
+	}
+	
+	@Keyword
+	def verifyTrm(String patientName, String aNum){
+
+		WebUI.setText(findTestObject('Portal/page_mailtrap/page_mailconfirmationpage/searchguestpatientname'), patientName)
+
+		WebUI.setText(findTestObject('Portal/page_guardanthealth/inputpatientname'), patientName)
+
+		WebUI.click(findTestObject('Portal/page_guardanthealth/searchpatientname'))
+
+		com.gh.core.JSHandler.JClick(findTestObject('Portal/Dashboard/provider/timepoint2/Page_Guardant Health/i_Flores Rey_fa fa-angle-down'), 15)
+
+		WebUI.click(findTestObject('Object Repository/Portal/Dashboard/provider/timepoint2/Page_Guardant Health/div_ACCESSION ID'))
+
+		WebUI.click(findTestObject('Portal/Dashboard/provider/timepoint2/Page_Guardant Health/div_ANum'))
+		
+		def aNumber = WebUI.getText(findTestObject('Portal/Dashboard/provider/timepoint2/Page_Guardant Health/div_ANum'))
+		
+		Assert.assertEquals(aNumber, aNum)
+
+		WebUI.click(findTestObject('Object Repository/Portal/Dashboard/provider/timepoint2/Page_Guardant Health/div_MRN'))
+
+		WebUI.click(findTestObject('Object Repository/Portal/Dashboard/provider/timepoint2/Page_Guardant Health/div_DOB'))
+
+		WebUI.click(findTestObject('Object Repository/Portal/Dashboard/provider/timepoint2/Page_Guardant Health/div_GENDER'))
+
+		WebUI.click(findTestObject('Object Repository/Portal/Dashboard/provider/timepoint2/Page_Guardant Health/div_DIAGNOSIS'))
+
+		WebUI.click(findTestObject('Object Repository/Portal/Dashboard/provider/timepoint2/Page_Guardant Health/div_TEST NUMBER'))
+
+		WebUI.click(findTestObject('Object Repository/Portal/Dashboard/provider/timepoint2/Page_Guardant Health/div_Report Date'))
+
+		WebUI.click(findTestObject('Object Repository/Portal/Dashboard/provider/timepoint2/Page_Guardant Health/div_RECEIPT DATE'))
+
+		WebUI.click(findTestObject('Object Repository/Portal/Dashboard/provider/timepoint2/Page_Guardant Health/div_COLLECTION DATE'))
+
+		WebUI.click(findTestObject('Object Repository/Portal/Dashboard/provider/timepoint2/Page_Guardant Health/div_SPECIMEN'))
+
+		WebUI.click(findTestObject('Object Repository/Portal/Dashboard/provider/timepoint2/Page_Guardant Health/div_STATUS'))
+
+		WebUI.click(findTestObject('Object Repository/Portal/Dashboard/provider/timepoint2/Page_Guardant Health/div_PHYSICIAN'))
+
+		WebUI.click(findTestObject('Object Repository/Portal/Dashboard/provider/timepoint2/Page_Guardant Health/div_ACCOUNT'))
+
+		WebUI.click(findTestObject('Object Repository/Portal/Dashboard/provider/timepoint2/Page_Guardant Health/div_ADDRESS'))
+
+		WebUI.click(findTestObject('Object Repository/Portal/Dashboard/provider/timepoint2/Page_Guardant Health/div_PH'))
+
+		WebUI.click(findTestObject('Object Repository/Portal/Dashboard/provider/timepoint2/Page_Guardant Health/div_FAX'))
+
+		WebUI.click(findTestObject('Portal/Dashboard/provider/timepoint2/Page_Guardant Health/div_ADDITIONAL RECIPIENT'))
+
+		com.gh.core.JSHandler.JClick(findTestObject('Portal/Dashboard/provider/timepoint2/Page_Guardant Health/i_Flores Rey_fa fa-angle-down'), 15)
+
 	}
 }
 
