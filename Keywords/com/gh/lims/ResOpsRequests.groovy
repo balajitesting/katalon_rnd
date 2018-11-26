@@ -83,7 +83,7 @@ public class ResOpsRequests {
 
 		WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Dropdown_Btn'))
 
-		Thread.sleep(10000)
+		WebUI.delay(3)
 
 		driver.findElement(By.xpath("//td[contains(text(), '" + reason + "')]")).click();
 
