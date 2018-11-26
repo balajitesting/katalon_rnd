@@ -32,8 +32,8 @@ WebUI.click(findTestObject('LIMS/DCO/Report/Page_Request List/td_Edit'))
 
 WebUI.waitForElementVisible(findTestObject('LIMS/DCO/Report/Page_All Requests/select_TB Review BIP DataLD Re'), 60)
 
-WebUI.selectOptionByValue(findTestObject('LIMS/DCO/Report/Page_All Requests/select_TB Review BIP DataLD Re'), 'LD Review BIP Data', 
-    true)
+WebUI.selectOptionByValue(findTestObject('LIMS/DCO/Report/Page_All Requests/select_TB Review BIP DataLD Re'), 'LD Review BIP Data',
+	true)
 
 String PhysicianEmail = WebUI.getAttribute(findTestObject('LIMS/DCO/Report/Page_All Requests/physicianemail'), 'value')
 
@@ -48,7 +48,7 @@ WebUI.waitForElementVisible(findTestObject('LIMS/DCO/Report/Page_All Requests/a_
 WebUI.click(findTestObject('LIMS/DCO/Report/Page_All Requests/a_LD Review'))
 
 if (WebUI.verifyAlertPresent(10, FailureHandling.OPTIONAL)) {
-    WebUI.acceptAlert()
+	WebUI.acceptAlert()
 }
 
 WebUI.setText(findTestObject('LIMS/DCO/Report/Page_Request List for LD Review/input_searchtext'), A_Number)
@@ -66,19 +66,19 @@ WebUI.click(findTestObject('LIMS/DCO/Report/Page_CNV/div_SNV Review'))
 WebUI.click(findTestObject('LIMS/DCO/Report/Page_SNV/td_Fusion Review'))
 
 if (WebUI.verifyElementPresent(findTestObject('Object Repository/LIMS/DCO/Report/Page_INDEL/indelreview'), 20, FailureHandling.OPTIONAL)) {
-    WebUI.click(findTestObject('Object Repository/LIMS/DCO/Report/Page_INDEL/indelreview'))
+	WebUI.click(findTestObject('Object Repository/LIMS/DCO/Report/Page_INDEL/indelreview'))
 }
 
 WebUI.click(findTestObject('LIMS/DCO/Report/Page_INDEL/div_MSI Review'))
 
 if (WebUI.verifyElementPresent(findTestObject('Object Repository/LIMS/DCO/Report/page_final/div_finalreview'), 20, FailureHandling.OPTIONAL)) {
-    WebUI.click(findTestObject('Object Repository/LIMS/DCO/Report/page_final/div_finalreview'))
+	WebUI.click(findTestObject('Object Repository/LIMS/DCO/Report/page_final/div_finalreview'))
 }
 
 WebUI.delay(2)
 
-WebUI.selectOptionByValue(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/select_FINALAMENDEDCORRECTEDAD'), 'AMENDED', 
-    true)
+WebUI.selectOptionByValue(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/select_FINALAMENDEDCORRECTEDAD'), 'AMENDED',
+	true)
 
 WebUI.click(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/td_Generate Report'))
 
