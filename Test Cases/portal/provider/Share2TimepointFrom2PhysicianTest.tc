@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Share2TimepointFrom2PhysicianTest</name>
+   <tag></tag>
+   <comment>Run: ENTSW-TC-2921</comment>
+   <testCaseGuid>e3bbe8b3-4710-45fe-8c43-1ee6aad24a02</testCaseGuid>
+</TestCaseEntity>
