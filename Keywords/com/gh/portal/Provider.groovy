@@ -18,6 +18,12 @@ import com.kms.katalon.core.testobject.TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
+import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
+import org.openqa.selenium.WebDriver as WebDriver
+import org.openqa.selenium.WebElement as WebElement
+import org.openqa.selenium.JavascriptExecutor
+
+
 /**
  * @author gxu
  * @date 11/12/2018
@@ -133,7 +139,7 @@ public class Provider {
 		 WebUI.click(findTestObject('Portal/timepoint/Page_Guardant Health/Page_Guardant Health/div_5680202'))
 		 */
 	}
-	
+
 	@Keyword
 	def verifyTrm(String patientName, String aNum){
 
@@ -148,9 +154,9 @@ public class Provider {
 		WebUI.click(findTestObject('Object Repository/Portal/Dashboard/provider/timepoint2/Page_Guardant Health/div_ACCESSION ID'))
 
 		WebUI.click(findTestObject('Portal/Dashboard/provider/timepoint2/Page_Guardant Health/div_ANum'))
-		
+
 		def aNumber = WebUI.getText(findTestObject('Portal/Dashboard/provider/timepoint2/Page_Guardant Health/div_ANum'))
-		
+
 		Assert.assertEquals(aNumber, aNum)
 
 		WebUI.click(findTestObject('Object Repository/Portal/Dashboard/provider/timepoint2/Page_Guardant Health/div_MRN'))
@@ -186,7 +192,20 @@ public class Provider {
 		WebUI.click(findTestObject('Portal/Dashboard/provider/timepoint2/Page_Guardant Health/div_ADDITIONAL RECIPIENT'))
 
 		com.gh.core.JSHandler.JClick(findTestObject('Portal/Dashboard/provider/timepoint2/Page_Guardant Health/i_Flores Rey_fa fa-angle-down'), 15)
+	}
 
+	@Keyword
+	def verifyTrm2(String patientName, String aNum){
+
+		com.gh.core.JSHandler.JClick(findTestObject('Portal/Dashboard/provider/timepoint2/Page_Guardant Health/i_Flores Rey_fa fa-angle-down'), 15)
+
+		WebUI.click(findTestObject('Portal/Dashboard/provider/timepoint2/Page_Guardant Health/div_ANum'))
+
+		def aNumber = WebUI.getText(findTestObject('Portal/Dashboard/provider/timepoint2/Page_Guardant Health/div_ANum'))
+
+		Assert.assertEquals(aNumber, aNum)
+
+		com.gh.core.JSHandler.JClick(findTestObject('Portal/Dashboard/provider/timepoint2/Page_Guardant Health/i_Flores Rey_fa fa-angle-down'), 15)
 	}
 }
 
