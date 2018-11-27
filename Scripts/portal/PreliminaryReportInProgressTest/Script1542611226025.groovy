@@ -47,9 +47,11 @@ WebUI.waitForElementVisible(findTestObject('LIMS/DCO/Report/Page_All Requests/a_
 
 WebUI.click(findTestObject('LIMS/DCO/Report/Page_All Requests/a_LD Review'))
 
-if (WebUI.verifyAlertPresent(10, FailureHandling.OPTIONAL)) {
-	WebUI.acceptAlert()
-}
+//if (WebUI.verifyAlertPresent(10, FailureHandling.OPTIONAL)) {
+//	WebUI.acceptAlert()
+//}
+
+WebUI.delay(2)
 
 WebUI.setText(findTestObject('LIMS/DCO/Report/Page_Request List for LD Review/input_searchtext'), A_Number)
 
