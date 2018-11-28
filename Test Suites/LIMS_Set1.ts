@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>LIMS_Demo</name>
+   <name>LIMS_Set1</name>
    <tag></tag>
    <isRerun>false</isRerun>
-   <lastRun>2018-11-14T15:01:42</lastRun>
+   <lastRun>2018-11-27T14:41:01</lastRun>
    <mailRecipient></mailRecipient>
    <numberOfRerun>0</numberOfRerun>
    <pageLoadTimeout>30</pageLoadTimeout>
@@ -14,62 +14,56 @@
    <testCaseLink>
       <guid>015b7c56-6b43-453d-a154-b792dc4f7eea</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/lims/accession/AccessionClinicalOptionalDataEntryTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>0b4c7885-839d-486e-900c-a95ab1951baf</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/lims/accession/AccessionClinicalRequiredDataEntryTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>8cb81839-b47f-44e5-90ff-867edb9ff696</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/lims/accession/DE1CreateProblemCaseTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>4d43a498-1e32-4658-9368-7b5080dbad3a</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/lims/accession/DE2NoPlasmaHoldTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>5a20c7b2-e1c8-4a3c-912e-f1ef9c2ef2c0</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/lims/accession/DE2UpdateProblemCaseTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>996a8747-d1b3-41d9-995f-4704f971bff6</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/lims/billing/BillingWithPrimaryAndSecondaryInsuranceTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>06157654-2dba-45af-9048-8acd5fd64011</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/lims/billing/BillingWithPrimaryAndTertiaryInsuranceTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>43e702b3-32c8-4682-9dac-50e94721cfe9</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/lims/billing/PrimaryInsuranceWithProblemCaseTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>b6b7c1f5-16e7-4492-9182-425c43c298a6</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/lims/billing/XIFINAccessiontramstopTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>4d5e3e1a-9e27-48be-93a3-60055d46584a</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/lims/database/LimsDBHealthCheckTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>aaf2b33f-4f39-4206-a120-071af424fba3</guid>
@@ -248,7 +242,7 @@
    <testCaseLink>
       <guid>f48f8ab6-6d8e-4268-8312-a8e518e4e749</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/resops_accession/EmanifestSingleTubeAccessionTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -278,19 +272,61 @@
    <testCaseLink>
       <guid>5489b20e-b0ac-46a5-8339-65cd289bfd90</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/resops_requests/ResOps_DV1Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>5c742642-50fe-4e72-bc0f-4578c056d470</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/resops_requests/ResOps_DV2Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>d77d186e-76f6-49f6-acfd-bd8bf7ce7079</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/resops_accession/PlasmaAliquotingTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>c78b5245-30d4-48ee-8d44-20d1cffef3d0</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/lims/controls/AddNewReagentLotTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>7f42b08b-a252-46a2-836a-48d2bb57bfc5</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/lims/controls/CreateAliquotTubesTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>4de8b55b-fa0e-48de-a031-f4b5a681a23a</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/lims/LimsLoginLogoutTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>3f643c2e-aec8-4181-b7c8-847003b96fd3</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/lims/postsequence/BIPDataUploadBaseTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>5b831a25-c661-4f69-9869-9cf26f564762</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/lims/report/MSI-HIGH Detected</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>2476726e-2f3d-47fa-be3c-a226b24e5540</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/lims/request/Requests_AllRequests_ListOfReasons</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>970cc590-cd11-4f03-9b45-335977feee9a</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/lims/resops_requests/ResOps_AllRequests_ListOfReasons</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

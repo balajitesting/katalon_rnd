@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>MSI-HIGH Detected</name>
+   <tag></tag>
+   <comment>ENTSW-TC-3404, ENTSW-TC-3407</comment>
+   <testCaseGuid>66c09709-1029-4036-9f83-7ecf1d51201b</testCaseGuid>
+</TestCaseEntity>

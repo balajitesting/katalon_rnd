@@ -12,16 +12,25 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
+import com.kms.katalon.core.configuration.RunConfiguration as RC
 
 WebUI.comment('Run: ENTSW-TC-2864')
 
 //String aNumber = WebUI.callTestCase(findTestCase('lims/accession/DE2NoPlasmaHoldTest'), [:], FailureHandling.STOP_ON_FAILURE)
 
 CustomKeywords.'com.gh.lims.Common.logon'('abaca', '5Ed5CIkj9UQfaMZXAkDVaQ==')
-
+String runningProfile = RC.getExecutionProfile()
 //Resetting the Billing Status
-String requestID = 'A0131242'
+String requestID = "";
 
+if (runningProfile.equals("default"))
+{
+	requestID = 'A0131242'
+}
+else if (runningProfile.equals("VAL"))
+{
+	requestID = 'A0132436'
+}
 CustomKeywords.'com.gh.db.LimsDBDataReset.resetBilling'(requestID)
 
 //Search for the RequestId in the Billing Screen

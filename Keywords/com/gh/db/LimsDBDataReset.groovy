@@ -380,7 +380,7 @@ public class LimsDBDataReset {
 		delete_count = db.executeUpdate(query);
 		System.out.println("Deleted " + delete_count + " rows");
 	}
-	
+
 	/**
 	 * Reset the ReagentLot
 	 */
