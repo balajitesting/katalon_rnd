@@ -20,6 +20,8 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 import java.awt.Robot as Robot
 import java.awt.event.KeyEvent as KeyEvent
+import java.io.File as File
+import java.text.SimpleDateFormat as SimpleDateFormat
 
 WebUI.comment('ENTSW-TC-3257')
 
@@ -38,7 +40,7 @@ WebUI.waitForPageLoad(10)
 
 WebUI.delay(5)
 
-handlingWindowPopup()
+Assert.assertTrue(verifyFileDownloaded('Practice_Summary'), 'Failed to verify CSV file')
 
 WebUI.waitForElementPresent(findTestObject('Object Repository/Portal/page_portalaccession/exportresultscsv'), 120)
 
@@ -48,9 +50,9 @@ WebUI.waitForElementPresent(findTestObject('Object Repository/Portal/page_export
 
 WebUI.click(findTestObject('Object Repository/Portal/page_exportresult/pdfdownload'))
 
-WebUI.delay(10)
+WebUI.delay(40)
 
-handlingWindowPopup()
+Assert.assertTrue(verifyFileDownloaded('patient_summary'), 'Failed to verify PDF file')
 
 WebUI.waitForElementPresent(findTestObject('Object Repository/Portal/page_portalaccession/exportresultscsv'), 120)
 
@@ -60,39 +62,23 @@ WebUI.waitForElementPresent(findTestObject('Object Repository/Portal/page_export
 
 WebUI.click(findTestObject('Object Repository/Portal/page_exportresult/xmldownload'))
 
-WebUI.waitForPageLoad(10)
-
 WebUI.delay(10)
 
-handlingWindowPopup()
+Assert.assertTrue(verifyFileDownloaded('patient_summary'), 'Failed to verify XML file')
 
-WebUI.click(findTestObject('Portal/page_exportresult/patientdownloadimagedashboard'))
+if (WebUI.verifyElementPresent(findTestObject('Portal/page_exportresult/patientdownloadimagedashboard'), 5, FailureHandling.OPTIONAL)) {
+    selectingPatientDownloadButton()
+} else if (WebUI.verifyElementNotPresent(findTestObject('Portal/page_exportresult/patientdownloadimagedashboard'), 5, FailureHandling.OPTIONAL)) {
+    WebUI.click(findTestObject('Object Repository/Portal/page_exportresult/readbutton'))
 
-WebUI.click(findTestObject('Portal/page_exportresult/patientreportonly'))
+    selectingPatientDownloadButton()
+} else {
+    WebUI.click(findTestObject('Object Repository/Portal/page_exportresult/inprogressbutton'))
 
-WebUI.delay(5)
-
-handlingWindowPopup()
-
-WebUI.waitForElementClickable(findTestObject('Object Repository/Portal/page_portalaccession/selectpatient'), 20)
-
-WebUI.refresh()
-
-WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/selectpatient'))
-
-WebUI.waitForPageLoad(20)
-
-WebUI.delay(1)
-
-WebUI.waitForElementClickable(findTestObject('Portal/page_exportresult/patientdownloadimage'), 20)
-
-WebUI.click(findTestObject('Portal/page_exportresult/patientdownloadimage'))
-
-WebUI.click(findTestObject('Portal/page_exportresult/patientreportonly'))
+    selectingPatientDownloadButton()
+}
 
 WebUI.delay(5)
-
-handlingWindowPopup()
 
 WebUI.verifyElementPresent(findTestObject('Portal/page_inprogressreport/profilemenu'), 10)
 
@@ -102,14 +88,56 @@ WebUI.click(findTestObject('Portal/page_inprogressreport/signout'))
 
 WebUI.closeBrowser()
 
-def handlingWindowPopup() {
-    Robot rb = new Robot()
+def verifyFileDownloaded(String fileName) {
+    boolean flag = false
 
-    rb.keyPress(KeyEvent.VK_ENTER)
+    String home = System.getProperty('user.dir')
 
-    WebUI.delay(2)
+    File downloadlocation = new File((home + '/Results/') + '/download/')
 
-    rb.keyPress(KeyEvent.VK_TAB)
+    File[] contents = downloadlocation.listFiles()
 
-    rb.keyPress(KeyEvent.VK_ENTER)
+    for (int i = 0; i < contents.length; i++) {
+        println(contents[i].getName())
+
+        if (contents[i].getName().contains(fileName)) {
+            contents[i].delete()
+
+            flag = true
+        }
+    }
+    
+    return flag
+}
+
+def selectingPatientDownloadButton() {
+    WebUI.click(findTestObject('Portal/page_exportresult/patientdownloadimagedashboard'))
+
+    WebUI.click(findTestObject('Portal/page_exportresult/patientreportonly'))
+
+    WebUI.delay(5)
+
+    Assert.assertTrue(verifyFileDownloaded('A'), 'Failed to verify patient final report')
+
+    WebUI.refresh()
+
+    WebUI.waitForElementClickable(findTestObject('Object Repository/Portal/page_portalaccession/selectpatient'), 20)
+
+    WebUI.refresh()
+
+    WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/selectpatient'))
+
+    WebUI.waitForPageLoad(20)
+
+    WebUI.delay(1)
+
+    WebUI.waitForElementClickable(findTestObject('Portal/page_exportresult/patientdownloadimage'), 20)
+
+    WebUI.click(findTestObject('Portal/page_exportresult/patientdownloadimage'))
+
+    WebUI.click(findTestObject('Portal/page_exportresult/patientreportonly'))
+
+    WebUI.delay(5)
+
+    Assert.assertTrue(verifyFileDownloaded('A'), 'Failed to verify patient final report')
 }
