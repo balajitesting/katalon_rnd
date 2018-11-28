@@ -4,7 +4,7 @@
    <name>LIMS_Set1</name>
    <tag></tag>
    <isRerun>false</isRerun>
-   <lastRun>2018-11-27T14:41:01</lastRun>
+   <lastRun>2018-11-28T11:40:45</lastRun>
    <mailRecipient></mailRecipient>
    <numberOfRerun>0</numberOfRerun>
    <pageLoadTimeout>30</pageLoadTimeout>

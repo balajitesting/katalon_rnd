@@ -31,7 +31,7 @@ WebUI.selectOptionByValue(findTestObject('LIMS/DCO/Report/Page_All Requests/sele
 WebUI.waitForElementVisible(findTestObject('LIMS/DCO/Report/Page_All Requests/td_Save'), 60)
 
 WebUI.click(findTestObject('LIMS/DCO/Report/Page_All Requests/td_Save'))
-
+Thread.sleep(2000);
 WebUI.waitForElementVisible(findTestObject('LIMS/DCO/Report/Page_All Requests/a_LD Review'), 60)
 
 WebUI.click(findTestObject('LIMS/DCO/Report/Page_All Requests/a_LD Review'))

@@ -4,7 +4,7 @@
    <name>LIMS_Set2</name>
    <tag></tag>
    <isRerun>false</isRerun>
-   <lastRun>2018-11-27T14:47:20</lastRun>
+   <lastRun>2018-11-28T13:52:19</lastRun>
    <mailRecipient></mailRecipient>
    <numberOfRerun>0</numberOfRerun>
    <pageLoadTimeout>30</pageLoadTimeout>
@@ -74,13 +74,13 @@
    <testCaseLink>
       <guid>dac3dce0-c228-4687-968b-7dc187ed9bb6</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/plasma_isolation/PlasmaIsolationCompleteTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>ad5845d4-e32d-4e20-a1e4-e4877dc3f77e</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/plasma_isolation/SampleStorageTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -98,7 +98,7 @@
    <testCaseLink>
       <guid>18818b44-0c80-44ec-bd44-54b27d12a892</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/postsequence/BIPUploadBySample</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
@@ -110,7 +110,7 @@
    <testCaseLink>
       <guid>8a291871-34c1-4795-b0d1-7656f3b472bc</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/postsequence/BIPUploadTest</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
@@ -122,25 +122,25 @@
    <testCaseLink>
       <guid>c63a0dfa-81f3-443e-9e63-bfab9c06ae71</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/postsequence/TBReviewWithNoF1Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>9b648b6d-93a0-431f-91cd-48013822c69c</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/postsequence/TBReviewWithOutNoF1Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>ea3a842c-968b-4c85-afc2-30462b32d0ae</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/presequence/DnaExtractionTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>bfe5482e-65a2-45dd-93a2-f0febb13ff4a</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/report/CreateAddendumReportTest</testCaseId>
    </testCaseLink>
    <testCaseLink>

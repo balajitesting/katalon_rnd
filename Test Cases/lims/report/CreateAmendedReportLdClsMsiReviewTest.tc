@@ -3,6 +3,6 @@
    <description></description>
    <name>CreateAmendedReportLdClsMsiReviewTest</name>
    <tag></tag>
-   <comment></comment>
+   <comment>ENTSW-TC-2996</comment>
    <testCaseGuid>66a4a216-e59b-4798-a0c6-bd61d4cf4d41</testCaseGuid>
 </TestCaseEntity>

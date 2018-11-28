@@ -4,7 +4,7 @@
    <name>LIMS_Set3</name>
    <tag></tag>
    <isRerun>false</isRerun>
-   <lastRun>2018-11-27T14:57:12</lastRun>
+   <lastRun>2018-11-28T12:54:18</lastRun>
    <mailRecipient></mailRecipient>
    <numberOfRerun>0</numberOfRerun>
    <pageLoadTimeout>30</pageLoadTimeout>
@@ -146,13 +146,13 @@
    <testCaseLink>
       <guid>907b3042-ba91-4f29-b18d-cbb71d34387c</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/report/CreateAmendedReportLdClsMsiReviewTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>9c2b2b0a-4d37-4c99-b8cc-130a34276138</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/report/CreateCancelReportTest</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
@@ -170,7 +170,7 @@
    <testCaseLink>
       <guid>d415bac5-649d-4778-81e5-cb97bc452cba</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/report/CreateCorrectedReportTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -182,7 +182,7 @@
    <testCaseLink>
       <guid>a2950672-7753-4b58-9627-b3d40342d0c1</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/report/fax_portal/FaxAmendedReportForPrimaryAndSecondaryPhysicianTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -206,13 +206,13 @@
    <testCaseLink>
       <guid>3c7d16ae-6673-48d6-ac3f-48e7f2bd212c</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/request/DataVerificationWithOutProblemCaseTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>f03043ad-77a7-4cb0-9abf-0216b0e8ed39</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/lims/request/DV1WithProblemCaseTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
