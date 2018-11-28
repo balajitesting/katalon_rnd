@@ -3,6 +3,6 @@
    <description></description>
    <name>BillingWithPrimaryAndTertiaryInsuranceTest</name>
    <tag></tag>
-   <comment>Run: ENT-6674</comment>
+   <comment>Run: ENTSW-TC-2974</comment>
    <testCaseGuid>a8a67d4c-a596-4f8e-803e-dce6a19c06af</testCaseGuid>
 </TestCaseEntity>

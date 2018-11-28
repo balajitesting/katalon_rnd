@@ -52,6 +52,7 @@ WebUI.click(findTestObject('LIMS/DCO/Report/div_Generate Cancelled_Report'))
 
 WebUI.click(findTestObject('LIMS/DCO/Report/button_OK_report'))
 
+WebUI.waitForElementVisible(findTestObject('LIMS/DCO/Report/Page_CNV/div_Release Report'), 60)
 WebUI.click(findTestObject('LIMS/DCO/Report/Page_CNV/div_Release Report'))
 
 WebUI.waitForElementVisible(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/button_OK_rel_rep'), 120)

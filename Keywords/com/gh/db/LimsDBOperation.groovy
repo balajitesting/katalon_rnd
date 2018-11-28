@@ -94,11 +94,27 @@ public class LimsDBOperation extends LimsOracleDBService {
 		return value;
 	}
 
+	// return true if the sample is MSI-high , else return false.
+	public boolean isMSIHigh(String requestID)
+	{
+		String sql = "select count(*) from u_ghmsi where sampleid like '"+requestID+"%' and msi_status = 'MSI-H'";
+
+		int count = getCount(sql);
+
+		if (count == 0) {
+			return false;
+		}
+		else
+		{
+			return true;
+		}
+	}
+
 
 	/*  If TB Review count is more than 1 or IsPositiveReview count is more than 1, return true
 	 CLS Review for that gene type will show up if it is true.
 	 Otherwise the flow will not show. 
-	 **/
+	 **/	
 
 	public boolean clsReviewQuery(String a_number, String gen_type) {
 

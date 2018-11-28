@@ -25,7 +25,7 @@ import java.sql.ResultSet
 WebUI.comment('Run: ENTSW-TC-2855')
 
 String A_Number = 'A0100069'
-
+//String A_Number = 'A50148'
 'Get the count of records in Fax table Prior to releasing the report'
 
 String query = "select COUNT(*) as count from U_GHFAX U, S_REQUEST S WHERE U.REQUESTID = '"+A_Number+"' AND S.S_REQUESTID = U.REQUESTID ORDER BY S.MODDT DESC"

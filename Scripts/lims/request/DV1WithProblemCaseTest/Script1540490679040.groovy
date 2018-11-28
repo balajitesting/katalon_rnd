@@ -16,16 +16,35 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
+import com.kms.katalon.core.configuration.RunConfiguration as RC
 
 WebUI.comment('Run: ENT-6677')
 
 'Reset the aNumber status in DV and ProblemCase'
 
-String aNumber = 'A0131242'
+import com.kms.katalon.core.configuration.RunConfiguration as RC
 
-CustomKeywords.'com.gh.db.LimsDBDataReset.resetDVStatus'(aNumber, '0')
+WebUI.comment('Run: ENTSW-TC-2864')
 
-CustomKeywords.'com.gh.db.LimsDBDataReset.resetProblemCase'(aNumber)
+//String aNumber = WebUI.callTestCase(findTestCase('lims/accession/DE2NoPlasmaHoldTest'), [:], FailureHandling.STOP_ON_FAILURE)
+
+String runningProfile = RC.getExecutionProfile()
+//Resetting the Billing Status
+String requestID = "";
+
+if (runningProfile.equals("default"))
+{
+	requestID = 'A0131242'
+}
+else if (runningProfile.equals("VAL"))
+{
+	requestID = 'A0132436'
+}
+
+
+CustomKeywords.'com.gh.db.LimsDBDataReset.resetDVStatus'(requestID, '0')
+
+CustomKeywords.'com.gh.db.LimsDBDataReset.resetProblemCase'(requestID)
 
 CustomKeywords.'com.gh.lims.Common.logon'('abaca', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
@@ -35,7 +54,7 @@ WebUI.click(findTestObject('LIMS/Requests/DV1/DV1Request/dv1Tram'))
 
 WebUI.click(findTestObject('LIMS/Requests/DV1/DV1Request/GHDVSearchButton'))
 
-WebUI.setText(findTestObject('LIMS/Requests/DV1/DV1Request/dv1SearchTextBox'), aNumber)
+WebUI.setText(findTestObject('LIMS/Requests/DV1/DV1Request/dv1SearchTextBox'), requestID)
 
 WebUI.click(findTestObject('LIMS/Requests/DV1/DV1Request/td_OK'))
 
@@ -71,7 +90,7 @@ WebUI.click(findTestObject('LIMS/Requests/Problemcases Resolution/tab_Problemcas
 
 Thread.sleep(1000) //Wait command is not working properly. Hence, implemented the same.
 
-WebUI.setText(findTestObject('LIMS/PostSequence/TBReview/Search/input_Search_searchtext'), aNumber)
+WebUI.setText(findTestObject('LIMS/PostSequence/TBReview/Search/input_Search_searchtext'), requestID)
 
 WebUI.click(findTestObject('LIMS/PostSequence/TBReview/Search/td_OK'))
 
@@ -79,7 +98,7 @@ Thread.sleep(1000) //Wait command is not working properly. Hence, implemented th
 
 WebUI.switchToFrame(findTestObject('LIMS/Requests/AllRequests/list_iFrame'), 3)
 
-assert WebUI.getText(findTestObject('LIMS/Requests/Problemcases Resolution/column_Status')).contains(aNumber) == true
+assert WebUI.getText(findTestObject('LIMS/Requests/Problemcases Resolution/column_Status')).contains(requestID) == true
 
 WebUI.closeBrowser()
 
