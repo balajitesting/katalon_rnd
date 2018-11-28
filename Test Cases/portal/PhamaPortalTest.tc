@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>PharmaPortalTest</name>
+   <name>PhamaPortalTest</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>cbdc16f5-672a-43bf-81f3-c7bd4d72eccd</testCaseGuid>
