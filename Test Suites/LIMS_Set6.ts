@@ -64,4 +64,10 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/lims/billing/XIFINAccessiontramstopTest_ENTSW-TC-2890</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>1a6ce20a-52a1-475a-b713-bc570c3f7e51</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/lims/plasma_isolation/SampleStorageTest_ENTSW-TC-2880</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>

@@ -4,7 +4,7 @@
    <name>LIMS_Set2</name>
    <tag></tag>
    <isRerun>false</isRerun>
-   <lastRun>2018-11-28T17:59:19</lastRun>
+   <lastRun>2018-11-29T07:04:43</lastRun>
    <mailRecipient></mailRecipient>
    <numberOfRerun>0</numberOfRerun>
    <pageLoadTimeout>30</pageLoadTimeout>
@@ -22,12 +22,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/lims/plasma_isolation/PlasmaIsolationCompleteTest_ENTSW-TC-2878_2879</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>ad5845d4-e32d-4e20-a1e4-e4877dc3f77e</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/lims/plasma_isolation/SampleStorageTest_ENTSW-TC-2880</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>b70cc21f-b6bf-4dda-aa0c-846a8708c14f</guid>
@@ -70,5 +64,11 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/lims/presequence/DnaExtractionTest_ENTSW-TC-2881</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>c8488064-f2b1-455e-95f8-a623a119adbe</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/lims/resops_accession/EmanifestSingleTubeAccessionUploadEManifestTest_ENTSW-TC-2931</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

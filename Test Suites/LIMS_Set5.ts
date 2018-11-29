@@ -41,10 +41,4 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/lims/resops_requests/ResOps_AllRequests_CancelRequest_DV2NotCompleteTest_ENT-2934b</testCaseId>
    </testCaseLink>
-   <testCaseLink>
-      <guid>5489b20e-b0ac-46a5-8339-65cd289bfd90</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/lims/resops_requests/ResOps_DV1Test_ENT-2932</testCaseId>
-   </testCaseLink>
 </TestSuiteEntity>
