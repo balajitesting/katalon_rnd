@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>FaxAndPortalAddendumReportForPrimaryPhysicianTest_ENTSW-TC-2897</name>
+   <tag></tag>
+   <comment>Run: ENTSW-TC-2897</comment>
+   <testCaseGuid>20110875-3316-4d23-94a4-96f617497c8b</testCaseGuid>
+</TestCaseEntity>

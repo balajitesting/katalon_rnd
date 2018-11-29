@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>TBReviewWithNoF1Test</name>
-   <tag></tag>
-   <comment>Run: ENT-6483</comment>
-   <testCaseGuid>14093965-380f-4aee-8264-acc4fe40b6ac</testCaseGuid>
-</TestCaseEntity>

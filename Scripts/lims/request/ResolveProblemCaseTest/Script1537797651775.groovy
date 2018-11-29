@@ -20,7 +20,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKe
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-String aNumber = WebUI.callTestCase(findTestCase('lims/accession/DE2UpdateProblemCaseTest'), [:], FailureHandling.STOP_ON_FAILURE)
+String aNumber = WebUI.callTestCase(findTestCase('lims/accession/DE2UpdateProblemCaseTest_ENTSW-TC-2861'), [:], FailureHandling.STOP_ON_FAILURE)
 
 //String aNumber = 'A0119929'
 

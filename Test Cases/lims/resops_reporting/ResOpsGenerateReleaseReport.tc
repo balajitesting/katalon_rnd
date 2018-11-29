@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>ResOpsGenerateReleaseReport</name>
-   <tag></tag>
-   <comment>ENTSW-TC-2935
-ENTSW-TC-2936</comment>
-   <testCaseGuid>ba446e6b-3e47-4096-8b1d-881e1604ea19</testCaseGuid>
-</TestCaseEntity>

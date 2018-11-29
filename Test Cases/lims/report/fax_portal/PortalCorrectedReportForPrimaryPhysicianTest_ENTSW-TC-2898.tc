@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>PortalCorrectedReportForPrimaryPhysicianTest_ENTSW-TC-2898</name>
+   <tag></tag>
+   <comment>Run: ENTSW-TC-2898</comment>
+   <testCaseGuid>496eebe5-420f-4ddb-bb44-2ba2da584e04</testCaseGuid>
+</TestCaseEntity>

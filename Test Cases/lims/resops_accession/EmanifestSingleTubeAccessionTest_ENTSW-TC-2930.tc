@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>EmanifestSingleTubeAccessionTest_ENTSW-TC-2930</name>
+   <tag></tag>
+   <comment>ENT-6699</comment>
+   <testCaseGuid>de1ba798-7a62-4f63-a4bd-93cf9869a483</testCaseGuid>
+</TestCaseEntity>

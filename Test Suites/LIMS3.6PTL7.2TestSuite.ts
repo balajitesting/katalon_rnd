@@ -21,7 +21,7 @@
       <guid>a6b0e06c-597e-4e37-8edb-609c7cdb963a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/lims/accession/AccessionClinicalOptionalDataEntryTest</testCaseId>
+      <testCaseId>Test Cases/lims/accession/Optional_DE1Test_ENTSW-TC-2859_2860_2960_2961</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>c645a7a7-83f2-4e9e-9b60-539e633c06c4</guid>
@@ -39,19 +39,19 @@
       <guid>6ab5d427-aaaf-44e9-9690-7b624b7f0459</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/lims/accession/DE1CreateProblemCaseTest</testCaseId>
+      <testCaseId>Test Cases/lims/accession/DE1CreateProblemCaseTest_ENTSW-TC-2959</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>5a8bed95-4c70-4aa3-b9f1-7602a4d499f9</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/lims/accession/DE2UpdateProblemCaseTest</testCaseId>
+      <testCaseId>Test Cases/lims/accession/DE2UpdateProblemCaseTest_ENTSW-TC-2861</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>3e608199-9fbf-404d-a794-824f0e41dd98</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/lims/report/CreateCancelReportTest</testCaseId>
+      <testCaseId>Test Cases/lims/report/CreateCancelReportTest_ENTSW-TC-2899</testCaseId>
       <testDataLink>
          <combinationType>ONE</combinationType>
          <id>c3faaa90-b133-43a1-bc66-acf3ad646d9a</id>
@@ -78,13 +78,13 @@
       <guid>464a22df-8440-4c45-bd92-949311bf6362</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/lims/accession/DE2NoPlasmaHoldTest</testCaseId>
+      <testCaseId>Test Cases/lims/accession/DE2NoPlasmaHoldTest_ENTSW-TC-2963_2862</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>cd2740ce-8bdc-441d-82ce-23ba3ab4c49b</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/lims/accession/AccessionClinicalRequiredDataEntryTest</testCaseId>
+      <testCaseId>Test Cases/lims/accession/RequiredDE1Test_ENTSW-TC-2854</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>45852526-93e4-49a3-bb1b-167bab385519</guid>
@@ -102,7 +102,7 @@
       <guid>e32723f4-a825-48ad-af2c-44b6311ea8b9</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/lims/report/CreateAmendedReportLdClsMsiReviewTest</testCaseId>
+      <testCaseId>Test Cases/lims/report/CreateAmendedReportLdClsMsiReviewTest_ENTSW-TC-2996</testCaseId>
       <testDataLink>
          <combinationType>ONE</combinationType>
          <id>88da6d7d-c39b-435f-b4d5-b9405e990317</id>
@@ -129,42 +129,42 @@
       <guid>f1e0b4da-9803-4b57-b80c-ecfe9710b3ff</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/lims/request/DataVerificationWithOutProblemCaseTest</testCaseId>
+      <testCaseId>Test Cases/lims/request/DataVerificationWithOutProblemCaseTest_ENTSW-TC-2873</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>60b1fdbf-8ba4-4a56-a2b8-1d6f1c0667b6</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/lims/request/DV2RequestsWithOutProblemCaseTest</testCaseId>
+      <testCaseId>Test Cases/lims/request/DV2RequestsWithOutProblemCaseTest_ENTSW-TC-2875</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>9bf17ac5-76fe-475b-a229-85a4ebfa9549</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/lims/billing/PrimaryInsuranceWithProblemCaseTest</testCaseId>
+      <testCaseId>Test Cases/lims/billing/PrimaryInsuranceWithProblemCaseTest_ENTSW-TC-2863</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>d0fa3fc8-068c-4ef9-b657-6d2a08ef473b</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/lims/presequence/DnaExtractionTest</testCaseId>
+      <testCaseId>Test Cases/lims/presequence/DnaExtractionTest_ENTSW-TC-2881</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>57c2850e-e983-4c69-8ac1-dd10a0886a7e</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/lims/plasma_isolation/CreateBatchedPlasmaTest</testCaseId>
+      <testCaseId>Test Cases/lims/plasma_isolation/CreateBatchedPlasmaTest_ENTSW-TC-2877</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>9e7287c5-2b6f-4463-a813-4cb7b9d965da</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/lims/plasma_isolation/PlasmaIsolationCompleteTest</testCaseId>
+      <testCaseId>Test Cases/lims/plasma_isolation/PlasmaIsolationCompleteTest_ENTSW-TC-2878_2879</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>7b32ead0-d795-4f8d-89ce-f868335e147f</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/lims/postsequence/BIPAutoQCTest</testCaseId>
+      <testCaseId>Test Cases/lims/postsequence/BIPAutoQCTest_ENTSW-TC-2890</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

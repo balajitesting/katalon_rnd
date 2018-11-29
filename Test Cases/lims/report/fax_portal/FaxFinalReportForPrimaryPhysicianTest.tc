@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>FaxFinalReportForPrimaryPhysicianTest</name>
-   <tag></tag>
-   <comment>Run: ENTSW-TC-2855</comment>
-   <testCaseGuid>a29fabc9-ac81-4a8d-b403-70e929bed36c</testCaseGuid>
-</TestCaseEntity>

@@ -17,7 +17,7 @@ import org.testng.Assert
 
 WebUI.comment('Run: ENTSW-TC-2911 Final Report Only')
 
-def A_Number = WebUI.callTestCase(findTestCase('lims/report/CreateFinalReportTest'), [:], FailureHandling.STOP_ON_FAILURE)
+def A_Number = WebUI.callTestCase(findTestCase('lims/report/CreateFinalReportTest_ENTSW-TC-2896'), [:], FailureHandling.STOP_ON_FAILURE)
 
 //def A_Number = 'A0112848'
 String ReportStatus = 'FINAL'

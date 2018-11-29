@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>BIPAutoQCTest_ENTSW-TC-2890</name>
+   <tag></tag>
+   <comment>ENT-6481</comment>
+   <testCaseGuid>190ced66-b2a2-4dad-8b06-329dede8ad9a</testCaseGuid>
+</TestCaseEntity>

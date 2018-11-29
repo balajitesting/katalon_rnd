@@ -16,7 +16,7 @@ import groovy.json.JsonSlurper
 
 WebUI.comment('Run: ENTSW-TC-2911 Final-Additional Information')
 
-def A_Number = WebUI.callTestCase(findTestCase('lims/report/CreateFinalReportTest'), [:], FailureHandling.STOP_ON_FAILURE)
+def A_Number = WebUI.callTestCase(findTestCase('lims/report/CreateFinalReportTest_ENTSW-TC-2896'), [:], FailureHandling.STOP_ON_FAILURE)
 
 String ReportStatus = 'FINAL'
 
