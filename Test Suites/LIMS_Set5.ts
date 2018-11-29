@@ -30,15 +30,27 @@
       <testCaseId>Test Cases/lims/resops_reporting/ResOpsGenerateReleaseReport_ENTSW-TC-2934_2935_2936</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>ac8d0d81-aebe-44ab-8427-573786530527</guid>
+      <guid>b0a0dbcb-4399-4040-8452-6bcc522d2b30</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/lims/resops_requests/ResOps_AllRequests_CancelRequest_DV2CompleteTest_ENTSW-TC-2934a</testCaseId>
+      <testCaseId>Test Cases/lims/resops_requests/ResOps_DV2Test_ENT-2933</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>2518f4e0-7f31-4778-8142-5d1fc837d2ad</guid>
+      <guid>f0705315-c4cf-47c3-846f-a442378b7790</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/lims/resops_requests/ResOps_AllRequests_CancelRequest_DV2NotCompleteTest_ENT-2934b</testCaseId>
+      <testCaseId>Test Cases/lims/controls/AddNewReagentLotTest_ENTSW-TC-3409</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>9c9241f4-8c76-4710-8502-f29802aeae17</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/lims/controls/CreateAliquotTubesTest-ENTSW-TC-3412</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>dfa2bac9-93b7-4795-b8f4-3b19261bbd7e</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/lims/request/Requests_AllRequests_ListOfReasons_ENTSW-TC-3077</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

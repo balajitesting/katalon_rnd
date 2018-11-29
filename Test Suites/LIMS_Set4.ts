@@ -47,4 +47,16 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/lims/request/DV2RequestsWithOutProblemCaseTest_ENTSW-TC-2875</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>b996604d-1cfa-46b8-9d9d-c445f4ca2195</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/lims/resops_requests/ResOps_AllRequests_CancelRequest_DV2CompleteTest_ENTSW-TC-2934a</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>8ecfdca8-5fd3-4073-879a-0e4d341e874c</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/lims/resops_requests/ResOps_AllRequests_CancelRequest_DV2NotCompleteTest_ENT-2934b</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>
