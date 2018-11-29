@@ -30,12 +30,6 @@
       <testCaseId>Test Cases/lims/report/fax_portal/FaxFinalReportForPrimaryPhysicianTest_ENTSW-TC-2855</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>eaffa6bb-2cf4-422f-a77d-8e79a73ccd56</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/lims/report/fax_portal/PortalCorrectedReportForPrimaryPhysicianTest_ENTSW-TC-2898</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>3c7d16ae-6673-48d6-ac3f-48e7f2bd212c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

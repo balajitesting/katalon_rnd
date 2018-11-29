@@ -53,9 +53,10 @@ WebUI.setText(findTestObject('LIMS/DCO/Report/Page_Request List for LD Review/in
 
 WebUI.click(findTestObject('LIMS/DCO/Report/Page_Request List for LD Review/td_OK'))
 
-beginWorkFlow = 'LIMS/DCO/Report/Page_Request List for CLS Review/td_Begin Workflow'
 
-CustomKeywords.'com.gh.lims.Common.setClick'(beginWorkFlow)
+Thread.sleep(2000);
+WebUI.waitForElementVisible(findTestObject('LIMS/DCO/Report/Page_Request List for CLS Review/td_Begin Workflow'), 60)
+WebUI.click(findTestObject('LIMS/DCO/Report/Page_Request List for CLS Review/td_Begin Workflow'))
 
 WebUI.click(findTestObject('LIMS/DCO/Report/Page_CNV/div_SNV Review'))
 
@@ -81,7 +82,11 @@ WebUI.setText(findTestObject('LIMS/DCO/Report/Page_Request List for CLS Review/i
 
 WebUI.click(findTestObject('LIMS/DCO/Report/Page_Request List for CLS Review/td_OK'))
 
-CustomKeywords.'com.gh.lims.Common.setClick'(beginWorkFlow)
+//CustomKeywords.'com.gh.lims.Common.setClick'(beginWorkFlow)
+
+Thread.sleep(2000);
+WebUI.waitForElementVisible(findTestObject('LIMS/DCO/Report/Page_Request List for CLS Review/td_Begin Workflow'), 60)
+WebUI.click(findTestObject('LIMS/DCO/Report/Page_Request List for CLS Review/td_Begin Workflow'))
 
 WebUI.click(findTestObject('LIMS/DCO/Report/Page_CNV/div_SNV Review'))
 

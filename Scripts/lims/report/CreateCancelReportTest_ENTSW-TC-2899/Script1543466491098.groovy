@@ -44,9 +44,10 @@ WebUI.setText(findTestObject('LIMS/DCO/Report/input_searchtext'), A_Number)
 
 WebUI.click(findTestObject('LIMS/DCO/Report/button_OK'))
 
-runWorkflow = 'LIMS/DCO/Report/div_Run Workflow'
+Thread.sleep(2000);
+WebUI.waitForElementVisible(findTestObject('LIMS/DCO/Report/div_Run Workflow'), 60)
+WebUI.click(findTestObject('LIMS/DCO/Report/div_Run Workflow'))
 
-CustomKeywords.'com.gh.lims.Common.setClick'(runWorkflow)
 
 WebUI.click(findTestObject('LIMS/DCO/Report/div_Generate Cancelled_Report'))
 

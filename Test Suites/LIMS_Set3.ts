@@ -65,4 +65,10 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/lims/report/CreateFinalReportTest_ENTSW-TC-2896</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>31b6db53-b719-40bd-9170-8a4cb87a5939</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/lims/resops_reporting/ResOpsGenerateReleaseReport_ENTSW-TC-2934_2935_2936</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>

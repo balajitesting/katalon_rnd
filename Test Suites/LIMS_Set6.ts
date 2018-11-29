@@ -70,4 +70,10 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/lims/plasma_isolation/SampleStorageTest_ENTSW-TC-2880</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>e398119a-9218-44fc-ae7a-2ce9f1897e3a</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/lims/report/fax_portal/PortalCorrectedReportForPrimaryPhysicianTest_ENTSW-TC-2898</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>
