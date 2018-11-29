@@ -141,7 +141,7 @@
       <guid>9bf17ac5-76fe-475b-a229-85a4ebfa9549</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/lims/billing/PrimaryInsuranceWithProblemCaseTest_ENTSW-TC-2863</testCaseId>
+      <testCaseId>Test Cases/lims/billing/BillingWithPrimaryInsuranceTest_ENTSW-TC-2863</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>d0fa3fc8-068c-4ef9-b657-6d2a08ef473b</guid>

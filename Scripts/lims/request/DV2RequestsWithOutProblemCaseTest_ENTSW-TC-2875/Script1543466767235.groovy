@@ -15,7 +15,7 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.comment('Run: ENTSW-TC-2875')
 
-//String aNumber = WebUI.callTestCase(findTestCase('lims/billing/PrimaryInsuranceWithProblemCaseTest_ENTSW-TC-2863'), [:], FailureHandling.STOP_ON_FAILURE)
+//String aNumber = WebUI.callTestCase(findTestCase('lims/billing/BillingWithPrimaryInsuranceTest_ENTSW-TC-2863'), [:], FailureHandling.STOP_ON_FAILURE)
 
 String aNumber = WebUI.callTestCase(findTestCase('lims/request/DataVerificationWithOutProblemCaseTest_ENTSW-TC-2873'), [:], FailureHandling.STOP_ON_FAILURE)
 

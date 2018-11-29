@@ -31,10 +31,9 @@ WebUI.click(findTestObject('LIMS/Problem Resolution/Page_Iteration/td_sitemap_Tr
 WebUI.setText(findTestObject('Object Repository/LIMS/Problem Resolution/Page_Problem Cases Resolution/input_searchtext'), aNumber)
 
 WebUI.click(findTestObject('LIMS/Problem Resolution/Page_Problem Cases Resolution/td_OK'))
-
-edit = 'LIMS/Problem Resolution/Page_Problem Cases Resolution/div_Edit'
-
-CustomKeywords.'com.gh.lims.Common.setClick'(edit)
+Thread.sleep(2000);
+WebUI.waitForElementPresent(findTestObject('LIMS/Problem Resolution/Page_Problem Cases Resolution/div_Edit'), 15)
+WebUI.click(findTestObject('LIMS/Problem Resolution/Page_Problem Cases Resolution/div_Edit'))
 
 WebUI.switchToFrame(findTestObject('LIMS/Problem Resolution/Sub_eSign/iframe'), 10)
 

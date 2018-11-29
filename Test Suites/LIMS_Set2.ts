@@ -12,12 +12,6 @@
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <testSuiteGuid>e45fb51b-56db-47dd-a90b-8e1c8c505b1c</testSuiteGuid>
    <testCaseLink>
-      <guid>b6b7c1f5-16e7-4492-9182-425c43c298a6</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/lims/billing/XIFINAccessiontramstopTest_ENTSW-TC-2890</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>aaf2b33f-4f39-4206-a120-071af424fba3</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -70,5 +64,11 @@
          <value></value>
          <variableId>bfd7fc32-8f43-4d65-a9d6-aa133b85f1bf</variableId>
       </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>54ad4af3-31b7-4cbf-84dc-47f67ef18087</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/lims/presequence/DnaExtractionTest_ENTSW-TC-2881</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

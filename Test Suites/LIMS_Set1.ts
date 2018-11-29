@@ -4,7 +4,7 @@
    <name>LIMS_Set1</name>
    <tag></tag>
    <isRerun>false</isRerun>
-   <lastRun>2018-11-28T21:19:02</lastRun>
+   <lastRun>2018-11-29T06:29:46</lastRun>
    <mailRecipient></mailRecipient>
    <numberOfRerun>0</numberOfRerun>
    <pageLoadTimeout>30</pageLoadTimeout>
@@ -57,6 +57,6 @@
       <guid>43e702b3-32c8-4682-9dac-50e94721cfe9</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/lims/billing/PrimaryInsuranceWithProblemCaseTest_ENTSW-TC-2863</testCaseId>
+      <testCaseId>Test Cases/lims/billing/BillingWithPrimaryInsuranceTest_ENTSW-TC-2863</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

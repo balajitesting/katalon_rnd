@@ -12,25 +12,40 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
+import com.kms.katalon.core.configuration.RunConfiguration as RC
 
 WebUI.comment('Run: ENTSW-TC-2863')
 
-String aNumber = WebUI.callTestCase(findTestCase('lims/request/DataVerificationWithOutProblemCaseTest_ENTSW-TC-2873'), [:], FailureHandling.STOP_ON_FAILURE)
-
-'Enable when run this test alone'
-//String aNumber = 'A0120020'
+//String aNumber = WebUI.callTestCase(findTestCase('lims/accession/DE2NoPlasmaHoldTest_ENTSW-TC-2963_2862'), [:], FailureHandling.STOP_ON_FAILURE)
 
 CustomKeywords.'com.gh.lims.Common.logon'('abaca', '5Ed5CIkj9UQfaMZXAkDVaQ==')
+String runningProfile = RC.getExecutionProfile()
+//Resetting the Billing Status
+String requestID = "";
 
-WebUI.click(findTestObject('LIMS/DataEntryBilling/Billing/EditScreen/td_Billing'))
+if (runningProfile.equals("default"))
+{
+	requestID = 'A0131242'
+}
+else if (runningProfile.equals("VAL"))
+{
+	requestID = 'A0132436'
+}
+CustomKeywords.'com.gh.db.LimsDBDataReset.resetBilling'(requestID)
 
-WebUI.setText(findTestObject('LIMS/DataEntryBilling/Billing/Search/input_searchtext'), aNumber)
+//Search for the RequestId in the Billing Screen
+
+WebUI.click(findTestObject('LIMS/DataEntryBilling/Billing/Search/td_dataentrybilling_billing'))
+
+WebUI.setText(findTestObject('LIMS/DataEntryBilling/Billing/Search/input_Search_searchtext'), requestID)
 
 WebUI.click(findTestObject('LIMS/DataEntryBilling/Billing/Search/td_OK'))
 
-edit = 'LIMS/Problem Resolution/Page_Problem Cases Resolution/div_Edit'
+Thread.sleep(3000) //Wait command is not working properly. Hence, implemented the same.
 
-CustomKeywords.'com.gh.lims.Common.setClick'(edit)
+//Billing Screen
+
+WebUI.click(findTestObject('LIMS/DataEntryBilling/Billing/Search/td_Edit'))
 
 WebUI.setText(findTestObject('LIMS/DataEntryBilling/Billing/EditScreen/input_icdcode01'), '123543')
 
@@ -61,13 +76,32 @@ WebUI.switchToDefaultContent()
 
 WebUI.setText(findTestObject('LIMS/DataEntryBilling/Billing/EditScreen/input_subscriberid_p'), '23145')
 
+WebUI.selectOptionByValue(findTestObject('LIMS/DataEntryBilling/Billing/EditScreen/sec_relation_to_patient'),
+	'Self', true)
+
+//WebUI.click(findTestObject('LIMS/DataEntryBilling/Billing/EditScreen/secondary_payor'))
+
+//WebUI.switchToWindowIndex(1)
+
+//WebUI.click(findTestObject('LIMS/DataEntryBilling/Billing/EditScreen/payor2'))
+
+WebUI.switchToDefaultContent()
+
 WebUI.click(findTestObject('LIMS/DataEntryBilling/Billing/EditScreen/input_save'))
 
-WebUI.waitForElementPresent(findTestObject('Object Repository/LIMS/logout/img'), 15)
+//Search Screen to verify the Result
 
-WebUI.click(findTestObject('LIMS/logout/img'))
+WebUI.setText(findTestObject('LIMS/DataEntryBilling/Billing/Search/input_Search_searchtext'), requestID)
+
+WebUI.click(findTestObject('LIMS/DataEntryBilling/Billing/Search/td_OK'))
+
+WebUI.switchToFrame(findTestObject('LIMS/Requests/AllRequests/list_iFrame'), 3)
+
+assert WebUI.getText(findTestObject('LIMS/DataEntryBilling/Billing/Search/searchResult')).contains("No rows found.") == true
+
+WebUI.switchToDefaultContent()
+
+WebUI.click(findTestObject('LIMS/logout/img_Logout'))
 
 WebUI.closeBrowser()
-
-return aNumber
 

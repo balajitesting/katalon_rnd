@@ -35,18 +35,6 @@
       <testCaseId>Test Cases/lims/controls/CreateAliquotTubesTest-ENTSW-TC-3412</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>4de8b55b-fa0e-48de-a031-f4b5a681a23a</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/lims/LimsLoginLogoutTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>3f643c2e-aec8-4181-b7c8-847003b96fd3</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/lims/postsequence/BIPDataUploadBaseTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>2476726e-2f3d-47fa-be3c-a226b24e5540</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -63,5 +51,17 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/lims/report/MSI-HIGH Detected_ENTSW-TC-3404_3407</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>90b9fbec-c9c2-4a57-beaa-5dabf4288e50</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/lims/request/DV2WithProblemCaseTest_ENTSW-TC-2876</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>6bc9b321-c94c-4046-b57e-d2b3c5d40412</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/lims/billing/XIFINAccessiontramstopTest_ENTSW-TC-2890</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

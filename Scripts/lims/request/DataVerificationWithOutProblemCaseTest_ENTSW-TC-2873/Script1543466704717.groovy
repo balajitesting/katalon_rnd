@@ -30,10 +30,11 @@ WebUI.click(findTestObject('Object Repository/LIMS/DV1/Page_Data Verification Re
 WebUI.setText(findTestObject('Object Repository/LIMS/DV1/Page_Data Verification Request List/input_GHDVSearch_arg1'), aNumber)
 
 WebUI.click(findTestObject('Object Repository/LIMS/DV1/Page_Iteration/search_btn_ok'))
+Thread.sleep(2000);
 
-edit = 'LIMS/Problem Resolution/Page_Problem Cases Resolution/div_Edit'
+WebUI.waitForElementPresent(findTestObject('LIMS/Problem Resolution/Page_Problem Cases Resolution/div_Edit'), 15)
+WebUI.click(findTestObject('LIMS/Problem Resolution/Page_Problem Cases Resolution/div_Edit'))
 
-CustomKeywords.'com.gh.lims.Common.setClick'(edit)
 
 //Thread.sleep(3000)
 

@@ -14,37 +14,31 @@
    <testCaseLink>
       <guid>c63a0dfa-81f3-443e-9e63-bfab9c06ae71</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/lims/postsequence/TBReviewWithNoF1Test_ENTSW-TC-2892</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>9b648b6d-93a0-431f-91cd-48013822c69c</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/lims/postsequence/TBReviewWithOutNoF1Test_ENTSW-TC-2893</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>ea3a842c-968b-4c85-afc2-30462b32d0ae</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/lims/presequence/DnaExtractionTest_ENTSW-TC-2881</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>bfe5482e-65a2-45dd-93a2-f0febb13ff4a</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/lims/report/CreateAddendumReportTest_ENTSW-TC-2998</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>907b3042-ba91-4f29-b18d-cbb71d34387c</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/lims/report/CreateAmendedReportLdClsMsiReviewTest_ENTSW-TC-2996</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>9c2b2b0a-4d37-4c99-b8cc-130a34276138</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/lims/report/CreateCancelReportTest_ENTSW-TC-2899</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
@@ -62,7 +56,7 @@
    <testCaseLink>
       <guid>d415bac5-649d-4778-81e5-cb97bc452cba</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/lims/report/CreateCorrectedReportTest_ENTSW-TC-2897</testCaseId>
    </testCaseLink>
    <testCaseLink>
