@@ -26,13 +26,13 @@ import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 
 WebUI.comment('ENTSW-TC-2948')
 
-String aNumber = 'A0131697'
+String requestID = 'A0131697'
 
 CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserDagmar', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
 WebUI.click(findTestObject('LIMS/Problem Resolution/Page_Iteration/td_sitemap_TramStopSelCell'))
 
-WebUI.setText(findTestObject('Object Repository/LIMS/Problem Resolution/Page_Problem Cases Resolution/input_searchtext'), aNumber)
+WebUI.setText(findTestObject('Object Repository/LIMS/Problem Resolution/Page_Problem Cases Resolution/input_searchtext'), requestID)
 
 WebUI.click(findTestObject('LIMS/Problem Resolution/Page_Problem Cases Resolution/td_OK'))
 
@@ -74,4 +74,4 @@ WebUI.click(findTestObject('LIMS/logout/img'))
 
 WebUI.closeBrowser()
 
-return aNumber
+return requestID
