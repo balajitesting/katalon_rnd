@@ -60,6 +60,8 @@ WebUI.selectOptionByValue(findTestObject('LIMS/Requests/Problemcases Resolution/
 
 CustomKeywords.'com.gh.lims.ResOpsRequests.enterESign'('eSign_Frame2', 'abcd1234', 'Added comment')
 
+assert WebUI.getText(findTestObject('LIMS/Requests/Problemcases Resolution/msg_Error')).contains('ERROR !! Cannot Save') == true
+
 WebUI.click(findTestObject('LIMS/Requests/Problemcases Resolution/btn_Close'))
 
 WebUI.switchToDefaultContent()
