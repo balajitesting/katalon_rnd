@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>DE2UpdateProblemCaseTest_ENTSW-TC-2861</name>
+   <tag></tag>
+   <comment>Run ENTSW-TC-1359, ENTSW-TC-1319, ENTSW-TC-1320, ENTSW-TC-1321, ENTSW-TC-1331, ENTSW-TC-2861</comment>
+   <testCaseGuid>c93ec625-493e-4243-9114-d0fea147b244</testCaseGuid>
+</TestCaseEntity>

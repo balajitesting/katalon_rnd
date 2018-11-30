@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>CreateCancelReportTest_ENTSW-TC-2899</name>
+   <tag></tag>
+   <comment>ENTSW-TC-2899</comment>
+   <testCaseGuid>a0da2fd1-3264-46af-a92d-626f6aab7557</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>33db85da-8811-4a0c-86df-1d8eacda06fb</id>
+      <masked>false</masked>
+      <name>A_Number</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>1d006669-4ef5-41c5-aeca-5c0bfb44c42a</id>
+      <masked>false</masked>
+      <name>ReportStatus</name>
+   </variable>
+</TestCaseEntity>

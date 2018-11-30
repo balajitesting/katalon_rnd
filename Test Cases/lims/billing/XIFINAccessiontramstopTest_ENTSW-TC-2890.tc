@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>XIFINAccessiontramstopTest_ENTSW-TC-2890</name>
+   <tag></tag>
+   <comment>Run: ENTSW-TC-2890</comment>
+   <testCaseGuid>823abeac-f487-438c-91cf-aa64e7430529</testCaseGuid>
+</TestCaseEntity>

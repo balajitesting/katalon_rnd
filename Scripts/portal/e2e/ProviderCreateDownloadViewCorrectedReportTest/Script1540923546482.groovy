@@ -14,7 +14,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 import org.testng.Assert
 
-//def A_Number = WebUI.callTestCase(findTestCase('lims/report/CreateCorrectedReportTest'), [:], FailureHandling.STOP_ON_FAILURE)
+//def A_Number = WebUI.callTestCase(findTestCase('lims/report/CreateCorrectedReportTest_ENTSW-TC-2897'), [:], FailureHandling.STOP_ON_FAILURE)
 
 A_Number = 'A86684' 
 ReportStatus = 'CORRECTED'

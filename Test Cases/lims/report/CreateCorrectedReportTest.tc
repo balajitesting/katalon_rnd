@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>CreateCorrectedReportTest</name>
-   <tag></tag>
-   <comment>ENTSW-TC-2897</comment>
-   <testCaseGuid>960684f5-89c9-4d86-9cb8-3b20163c5300</testCaseGuid>
-</TestCaseEntity>

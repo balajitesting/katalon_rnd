@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>CreateAliquotTubesTest</name>
-   <tag></tag>
-   <comment>ENTSW-TC-3007</comment>
-   <testCaseGuid>5259a5ed-dc13-4f00-b798-47ddfc721a48</testCaseGuid>
-</TestCaseEntity>

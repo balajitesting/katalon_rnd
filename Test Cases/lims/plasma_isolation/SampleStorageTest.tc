@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>SampleStorageTest</name>
-   <tag></tag>
-   <comment>Run: ENTSW-TC-2880</comment>
-   <testCaseGuid>568e6202-6bea-4bb6-a589-4e9a34c413f9</testCaseGuid>
-</TestCaseEntity>

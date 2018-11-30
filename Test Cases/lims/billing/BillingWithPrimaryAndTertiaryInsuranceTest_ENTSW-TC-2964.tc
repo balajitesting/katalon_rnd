@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>BillingWithPrimaryAndTertiaryInsuranceTest_ENTSW-TC-2964</name>
+   <tag></tag>
+   <comment>Run: ENTSW-TC-2974</comment>
+   <testCaseGuid>a8a67d4c-a596-4f8e-803e-dce6a19c06af</testCaseGuid>
+</TestCaseEntity>

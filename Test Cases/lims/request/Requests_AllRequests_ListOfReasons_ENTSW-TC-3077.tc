@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Requests_AllRequests_ListOfReasons_ENTSW-TC-3077</name>
+   <tag></tag>
+   <comment>Run: ENTSW-TC-3077</comment>
+   <testCaseGuid>cc50a468-a483-4e6f-8fb2-3632e5cd2ae0</testCaseGuid>
+</TestCaseEntity>
