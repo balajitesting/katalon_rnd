@@ -3,6 +3,7 @@ import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import org.junit.After
+import org.testng.Assert
 import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
 import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
@@ -24,6 +25,8 @@ WebUI.waitForPageLoad(10)
 WebUI.click(findTestObject('Object Repository/Portal/page_saleportal/acceptalert'))
 
 WebUI.waitForPageLoad(10)
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/Portal/page_saleportal/dashboard'), 5)
 
 WebUI.delay(2)
 
@@ -48,6 +51,8 @@ WebUI.waitForPageLoad(10)
 WebUI.setText(findTestObject('Object Repository/Portal/page_portalaccession/physiciansearchbar'),'bridgesb@slhs.org')
 
 WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/physicianselect'))
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/Portal/page_saleportal/dashboard'), 5)
 
 WebUI.waitForPageLoad(10)
 
@@ -75,7 +80,6 @@ WebUI.setText(findTestObject('Object Repository/Portal/page_portalaccession/phys
 WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/physicianselect'))
 
 WebUI.waitForPageLoad(10)
-
 WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/selectpatient'))
 
 WebUI.waitForElementPresent(findTestObject('Object Repository/Portal/page_portalaccession/tooglepatientname'), 10)
@@ -83,6 +87,10 @@ WebUI.waitForElementPresent(findTestObject('Object Repository/Portal/page_portal
 WebUI.delay(2)
 
 WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/tooglepatientname'))
+
+String mrnNumber = WebUI.getText(findTestObject('Object Repository/Portal/page_portalaccession/mrnnumber'))
+
+WebUI.verifyMatch(mrnNumber, "####", true,FailureHandling.STOP_ON_FAILURE)
 
 WebUI.waitForPageLoad(10)
 
