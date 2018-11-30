@@ -58,7 +58,7 @@ WebUI.selectOptionByValue(findTestObject('LIMS/Requests/Problemcases Resolution/
 
 WebUI.selectOptionByValue(findTestObject('LIMS/Requests/Problemcases Resolution/drpdwn_gender0'), 'Male', true)
 
-CustomKeywords.'com.gh.lims.ResOpsRequests.enterESign2'('abcd1234', 'Added comment')
+CustomKeywords.'com.gh.lims.ResOpsRequests.enterESign'('eSign_Frame2', 'abcd1234', 'Added comment')
 
 WebUI.click(findTestObject('LIMS/Requests/Problemcases Resolution/btn_Close'))
 
