@@ -65,6 +65,33 @@ public class ResOpsRequests {
 
 		WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/img'))
 	}
+	
+	@Keyword
+	def enterESign(String pwd, String reason){
+
+		WebDriver driver = DriverFactory.getWebDriver()
+
+		WebUI.switchToDefaultContent()
+
+		WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/img'))
+
+		WebUI.switchToFrame(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Frame'), 10)
+
+		WebUI.waitForElementVisible(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Password'), 10)
+
+		WebUI.setText(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Password'), pwd)
+
+		WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Dropdown_Btn'))
+
+		WebUI.delay(3)
+
+		driver.findElement(By.xpath("//td[contains(text(), '" + reason + "')]")).click();
+
+		WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_OK'))
+
+		WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/img'))
+	}
+
 
 	@Keyword
 	def enterESign(String frame, String pwd, String reason){
@@ -87,8 +114,5 @@ public class ResOpsRequests {
 
 		driver.findElement(By.xpath("//td[contains(text(), '" + reason + "')]")).click();
 
-		WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_OK'))
-
-		//WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/img'))
-	}
+		WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_OK'))	}
 }
