@@ -4,7 +4,7 @@
    <name>LIMS_Set5</name>
    <tag></tag>
    <isRerun>false</isRerun>
-   <lastRun>2018-11-28T22:00:50</lastRun>
+   <lastRun>2018-11-29T07:57:29</lastRun>
    <mailRecipient></mailRecipient>
    <numberOfRerun>0</numberOfRerun>
    <pageLoadTimeout>30</pageLoadTimeout>
@@ -48,7 +48,7 @@
       <testCaseId>Test Cases/lims/controls/CreateAliquotTubesTest-ENTSW-TC-3412</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>dfa2bac9-93b7-4795-b8f4-3b19261bbd7e</guid>
+      <guid>8893ec1b-319f-40bc-8aad-f1568d437ebf</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/lims/request/Requests_AllRequests_ListOfReasons_ENTSW-TC-3077</testCaseId>

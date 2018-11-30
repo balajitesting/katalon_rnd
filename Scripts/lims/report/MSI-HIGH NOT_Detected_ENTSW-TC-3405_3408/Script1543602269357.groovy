@@ -35,17 +35,17 @@ String requestID = "";
 
 if (runningProfile.equals("default"))
 {
-	requestID = 'A0128028'
+	requestID = 'A0128566'
 }
 else if (runningProfile.equals("VAL"))
 {
-	requestID = 'A0130841'
+	requestID = 'A0128556'
 }
 
 CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserReporting', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
-//check to see if requestID is MSI_HIGH sample
-boolean ismsi_high = CustomKeywords.'com.gh.db.LimsDBOperation.isMSIHigh'(requestID)
+//check to see if requestID is MSIHigh Not Detected sample
+boolean ismsi_high = CustomKeywords.'com.gh.db.LimsDBOperation.isMSIHighNotDetected'(requestID)
 assert ismsi_high == true
 
 String sql = "select analysisversion from u_ghboard where sampleid like '"+requestID+"%'";
@@ -145,7 +145,7 @@ Thread.sleep(2000)
 driver.switchTo().frame("maint_iframe");
 String msg = driver.findElement(By.xpath("//textarea[@id='pr0_comments']")).getText();
 System.out.println(msg);
-assert msg.equals("Mircrosatellite status: MSI-High DETECTED Microsatellite instability was detected in this sample. This finding is associated with increased efficacy of checkpoint inhibitors in multiple tumor types. The FDA has approved therapies for use in this indication.") == true
+assert msg.equals("Mircrosatellite status: MSI-High NOT DETECTED") == true
 driver.switchTo().defaultContent();
 
 WebUI.waitForElementVisible(findTestObject('LIMS/DCO/Report/Page_Select_Addendum/select_FINALAMENDEDCORRECTEDAD'), 180)
@@ -161,7 +161,7 @@ WebUI.click(findTestObject('LIMS/DCO/Report/Page_Edit GHReportInfo/button_OK_gen
 
 
 
-//search 
+//search
 Thread.sleep(3000)
 WebUI.click(findTestObject('LIMS/DCO/Report/Page_All Requests/a_CLS Review'))
 
@@ -232,7 +232,7 @@ Thread.sleep(2000)
 //WebDriver driver = DriverFactory.getWebDriver();
 driver.switchTo().frame("maint_iframe");
 msg = driver.findElement(By.xpath("//textarea[@id='pr0_comments']")).getText();
-assert msg.equals("Mircrosatellite status: MSI-High DETECTED Microsatellite instability was detected in this sample. This finding is associated with increased efficacy of checkpoint inhibitors in multiple tumor types. The FDA has approved therapies for use in this indication.") == true
+assert msg.equals("Mircrosatellite status: MSI-High NOT DETECTED") == true
 driver.switchTo().defaultContent();
 
 Thread.sleep(2000)

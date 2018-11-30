@@ -34,7 +34,7 @@ WebUI.switchToFrame(findTestObject('LIMS/Requests/DV2/Page_DV2/maint_iframe'), 1
 WebUI.click(findTestObject('LIMS/Requests/AllRequests/expediteCheckbox'))
 
 CustomKeywords.'com.gh.lims.ResOpsRequests.enterESign'('abcd1234')
-
+Thread.sleep(2000);
 CustomKeywords.'com.gh.lims.Common.rtlLogout2'()
 
 WebUI.closeBrowser()
