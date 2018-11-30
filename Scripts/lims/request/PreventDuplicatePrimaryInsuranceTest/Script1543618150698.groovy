@@ -24,6 +24,8 @@ import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 
+WebUI.comment('ENTSW-TC-2948')
+
 String aNumber = 'A0131697'
 
 CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserDagmar', '5Ed5CIkj9UQfaMZXAkDVaQ==')
@@ -34,9 +36,7 @@ WebUI.setText(findTestObject('Object Repository/LIMS/Problem Resolution/Page_Pro
 
 WebUI.click(findTestObject('LIMS/Problem Resolution/Page_Problem Cases Resolution/td_OK'))
 
-edit = 'LIMS/Problem Resolution/Page_Problem Cases Resolution/div_Edit'
-
-CustomKeywords.'com.gh.lims.Common.setClick'(edit)
+CustomKeywords.'com.gh.lims.Common.setClick'('LIMS/Problem Resolution/Page_Problem Cases Resolution/div_Edit')
 
 WebUI.switchToFrame(findTestObject('LIMS/Requests/DV2/Page_DV2/maint_iframe'), 10)
 
@@ -52,16 +52,13 @@ WebUI.selectOptionByValue(findTestObject('LIMS/Requests/Problemcases Resolution/
 
 WebUI.click(findTestObject('LIMS/Requests/Problemcases Resolution/btn_Ins_Add'))
 
-WebUI.selectOptionByValue(findTestObject('LIMS/Requests/Problemcases Resolution/drpdwn_InsType1'),
-	'Primary', true)
+WebUI.selectOptionByValue(findTestObject('LIMS/Requests/Problemcases Resolution/drpdwn_InsType1'), 'Primary', true)
 
-WebUI.selectOptionByValue(findTestObject('LIMS/Requests/Problemcases Resolution/drpdwn_Relationship0'),
-	'Self', true)
+WebUI.selectOptionByValue(findTestObject('LIMS/Requests/Problemcases Resolution/drpdwn_Relationship0'), 'Self', true)
 
-WebUI.selectOptionByValue(findTestObject('LIMS/Requests/Problemcases Resolution/drpdwn_gender0'),
-	'Male', true)
+WebUI.selectOptionByValue(findTestObject('LIMS/Requests/Problemcases Resolution/drpdwn_gender0'), 'Male', true)
 
-CustomKeywords.'com.gh.lims.ResOpsRequests.enterESign'('abcd1234', 'Added comment')
+CustomKeywords.'com.gh.lims.ResOpsRequests.enterESign2'('abcd1234', 'Added comment')
 
 WebUI.click(findTestObject('LIMS/Requests/Problemcases Resolution/btn_Close'))
 

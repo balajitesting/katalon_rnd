@@ -67,7 +67,7 @@ public class ResOpsRequests {
 	}
 
 	@Keyword
-	def enterESign(String pwd, String reason){
+	def enterESign2(String pwd, String reason){
 
 		WebDriver driver = DriverFactory.getWebDriver()
 
@@ -75,7 +75,7 @@ public class ResOpsRequests {
 
 		WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/img'))
 
-		WebUI.switchToFrame(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Frame'), 10)
+		WebUI.switchToFrame(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Frame2'), 10)
 
 		WebUI.waitForElementVisible(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_Password'), 10)
 
@@ -89,6 +89,6 @@ public class ResOpsRequests {
 
 		WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/eSign_OK'))
 
-		WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/img'))
+		//WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/img'))
 	}
 }
