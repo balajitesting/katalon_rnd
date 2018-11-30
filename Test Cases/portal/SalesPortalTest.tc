@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>SalesPortalTest</name>
+   <tag></tag>
+   <comment>ENTSW-TC-3461
+ENTSW-TC-3459
+ENTSW-TC-3460
+ENTSW-TC-3462
+ENTSW-TC-3463</comment>
+   <testCaseGuid>79d30d7c-c336-46df-b3f6-5aabb90b1743</testCaseGuid>
+</TestCaseEntity>
