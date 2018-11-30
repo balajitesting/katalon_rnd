@@ -101,6 +101,8 @@ public class ResOpsRequests {
 		WebUI.switchToDefaultContent()
 
 		WebUI.click(findTestObject('LIMS/Problem Resolution/Sub_eSign/img'))
+		
+		WebUI.delay(1)
 
 		WebUI.switchToFrame(findTestObject('LIMS/Problem Resolution/Sub_eSign/' + frame), 10)
 
