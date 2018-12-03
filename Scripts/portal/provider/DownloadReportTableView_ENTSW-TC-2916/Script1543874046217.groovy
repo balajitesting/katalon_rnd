@@ -13,11 +13,9 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.comment('Run: ENTSW-TC-2916')
+WebUI.comment('Run: ENTSW-TC-2916_2918')
 
 CustomKeywords.'com.gh.portal.Common.logon'('kimberly.schlesinger@rivhs.com', 'R9dwWsVuqf0RB1p2unfSZQ==')
-
-WebUI.click(findTestObject('Portal/tableview/button_SIGN IN'))
 
 WebUI.click(findTestObject('Portal/tableview/a_VIEW ALL REPORTS IN TABLE'))
 
@@ -34,6 +32,5 @@ WebUI.click(findTestObject('Portal/tableview/div_concat(Alabama Oncology-St'))
 WebUI.click(findTestObject('Portal/tableview/a_Report  Additional Informati'))
 
 CustomKeywords.'com.gh.portal.Common.logout'()
-
 
 WebUI.closeBrowser()
