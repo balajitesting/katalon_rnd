@@ -29,9 +29,9 @@ CustomKeywords.'com.gh.lims.Common.logon'('Cliacls', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
 CustomKeywords.'com.gh.lims.Requests.searchRequest'(A_Number)
 
-orEdit = 'LIMS/DCO/Request/div_Edit'
+WebUI.waitForElementPresent(findTestObject('LIMS/DCO/Request/div_Edit'), 15)
+WebUI.click(findTestObject('LIMS/DCO/Request/div_Edit'))
 
-CustomKeywords.'com.gh.lims.Common.setClick'(orEdit)
 
 WebUI.click(findTestObject('LIMS/DCO/Request/td_Save'))
 
@@ -43,10 +43,14 @@ WebUI.click(findTestObject('LIMS/DCO/Request/eSign/td_Added comment'))
 
 WebUI.click(findTestObject('LIMS/DCO/Request/eSign/td_OK'))
 
-CustomKeywords.'com.gh.core.JSHandler.J2Click'(findTestObject('LIMS/DCO/Request/Page_All_Requests/img'), 20)
+WebUI.click(findTestObject('LIMS/DCO/Request/Page_All_Requests/img'))
 
+Thread.sleep(1000)
 WebUI.acceptAlert()
 
-CustomKeywords.'com.gh.lims.Common.rtlLogout'()
+WebUI.waitForElementPresent(findTestObject('Object Repository/LIMS/logout/img'), 10)
+CustomKeywords.'com.gh.core.JSHandler.JClick'(findTestObject('LIMS/logout/img'), 10)
+
+//CustomKeywords.'com.gh.lims.Common.rtlLogout'()
 
 WebUI.closeBrowser()

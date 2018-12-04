@@ -114,12 +114,6 @@
       </testDataLink>
    </testCaseLink>
    <testCaseLink>
-      <guid>75e59248-fc6d-43da-a415-74d031d0c4c2</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/portal/DownloadReportAndViewInPortalTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>0bb2979e-e8b7-4860-89fe-a1bee19acda9</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
