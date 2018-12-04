@@ -35,7 +35,11 @@ String accessionId
 String shareButton
 
 String gmail='bridgesb@slhs.org'
-'Step 1: Should see reports for only their patients'
+
+WebUI.comment('Run: ENTSW-TC-6515')
+
+WebUI.comment('Step 1: Should see reports for only their patients')
+
 CustomKeywords.'com.gh.lims.Common.logon'('CLIAUserDagmar', '5Ed5CIkj9UQfaMZXAkDVaQ==')
 
 WebUI.waitForPageLoad(5)
@@ -66,7 +70,7 @@ WebUI.switchToDefaultContent()
 
 WebUI.click(findTestObject('Object Repository/Portal/page_limsaccession/logoff'))
 
-'Step 4: Should see reports table view'
+WebUI.comment('Step 4: Should see reports table view')
 CustomKeywords.'com.gh.portal.Common.logon'('yan.feng@uhhospitals.org', 'R9dwWsVuqf0RB1p2unfSZQ==')
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Portal/page_portalaccession/viewtablereport'), 20)
@@ -87,7 +91,7 @@ WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/dashbo
 
 WebUI.waitForPageLoad(5)
 
-'Step 5:Should be able to see the patients in patient search bar'
+WebUI.comment('Step 5:Should be able to see the patients in patient search bar')
 WebUI.setText(findTestObject('Object Repository/Portal/page_portalaccession/searchid'), aNumber)
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Portal/page_portalaccession/selectsearch'), 20)
@@ -104,15 +108,12 @@ accessionId = WebUI.getText(findTestObject('Object Repository/Portal/page_portal
 
 WebUI.verifyEqual(aNumber, accessionId)
 
-WebUI.waitForElementClickable(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'), 20)
-
-WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'))
-
-WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/signout'))
+CustomKeywords.'com.gh.portal.Common.logout'()
 
 WebUI.closeBrowser()
 
-'Step 6:Should be able to download the CSV for their patients'
+WebUI.comment('Step 6: Should be able to download the CSV for their patients')
+
 CustomKeywords.'com.gh.portal.Common.logon'('bridgesb@slhs.org', 'R9dwWsVuqf0RB1p2unfSZQ==')
 
 WebUI.waitForPageLoad(5)
@@ -125,13 +126,10 @@ Thread.sleep(2000)
 
 WebUI.switchToDefaultContent()
 
-WebUI.waitForElementClickable(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'), 20)
+CustomKeywords.'com.gh.portal.Common.logout'()
 
-WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'))
+WebUI.comment('Step 7:Should be able to release a patients report with a portal user email address')
 
-WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/signout'))
-
-'Step 7:Should be able to release a patients report with a portal user email address'
 CustomKeywords.'com.gh.portal.Common.logon'('yan.feng@uhhospitals.org', 'R9dwWsVuqf0RB1p2unfSZQ==')
 
 WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/selectpatient'))
@@ -162,11 +160,7 @@ msg = WebUI.getText(findTestObject('Object Repository/Portal/page_portalaccessio
 
 println(msg)
 
-WebUI.waitForElementClickable(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'), 20)
-
-WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'))
-
-WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/signout'))
+CustomKeywords.'com.gh.portal.Common.logout'()
 
 WebUI.closeBrowser()
 
@@ -191,15 +185,11 @@ WebUI.verifyElementClickable(findTestObject('Object Repository/Portal/page_porta
 
 WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/tooglepatientname'))
 
-WebUI.waitForElementClickable(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'), 20)
-
-WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'))
-
-WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/signout'))
+CustomKeywords.'com.gh.portal.Common.logout'()
 
 WebUI.closeBrowser()
 
-'Step 8:Should be able to release a patients report with a non-portal user email address.'
+WebUI.comment('Step 8:Should be able to release a patients report with a non-portal user email address.')
 CustomKeywords.'com.gh.portal.Common.logon'('yan.feng@uhhospitals.org', 'R9dwWsVuqf0RB1p2unfSZQ==')
 
 WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/selectpatient'))
@@ -222,15 +212,7 @@ WebUI.click(findTestObject('Portal/page_portalaccession/sendtinvitation'))
 
 WebUI.acceptAlert()
 
-Thread.sleep(2000)
-
-WebUI.getText(findTestObject('Object Repository/Portal/page_portalaccession/msgconfirm'))
-
-WebUI.waitForElementClickable(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'), 20)
-
-WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'))
-
-WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/signout'))
+CustomKeywords.'com.gh.portal.Common.logout'()
 
 WebUI.closeBrowser()
 
@@ -257,19 +239,11 @@ WebUI.waitForPageLoad(5)
 
 WebUI.waitForElementClickable(findTestObject('Object Repository/Portal/page_portalaccession/tooglepatientname'), 10)
 
-Thread.sleep(2000)
-
-WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/tooglepatientname'))
-
-WebUI.waitForElementClickable(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'), 20)
-
-WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'))
-
-WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/signout'))
+CustomKeywords.'com.gh.portal.Common.logout'()
 
 WebUI.closeBrowser()
 
-'Step 9:Should not be able to see release to patient option for an ineligible patient'
+WebUI.comment('Step 9:Should not be able to see release to patient option for an ineligible patient')
 CustomKeywords.'com.gh.portal.Common.logon'('yan.feng@uhhospitals.org', 'R9dwWsVuqf0RB1p2unfSZQ==')
 
 WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/selectpatient'))
@@ -294,13 +268,7 @@ WebUI.click(findTestObject('Portal/page_portalaccession/sendtinvitation'))
 
 WebUI.acceptAlert()
 
-Thread.sleep(2000)
-
-WebUI.waitForElementClickable(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'), 20)
-
-WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'))
-
-WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/signout'))
+CustomKeywords.'com.gh.portal.Common.logout'()
 
 WebUI.closeBrowser()
 
@@ -327,15 +295,11 @@ if (WebUI.verifyElementPresent(findTestObject('Object Repository/Portal/page_por
     println('patient is ineligible')
 }
 
-WebUI.waitForElementClickable(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'), 20)
-
-WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'))
-
-WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/signout'))
+CustomKeywords.'com.gh.portal.Common.logout'()
 
 WebUI.closeBrowser()
-
-'Step 11:Should see a notification on an auto-released patient report page indicating that the report has been auto-released'
+/**
+WebUI.comment('Step 11:Should see a notification on an auto-released patient report page indicating that the report has been auto-released')
 CustomKeywords.'com.gh.portal.Common.logon'('tvo@guardanthealth.com', 'R9dwWsVuqf0RB1p2unfSZQ==')
 
 WebUI.waitForPageLoad(5)
@@ -355,18 +319,11 @@ if (WebUI.verifyElementPresent(findTestObject('Object Repository/Portal/page_por
 
     println(strmsg)
 }
-
-Thread.sleep(2000)
-
-WebUI.waitForElementClickable(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'), 20)
-
-WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'))
-
-WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/signout'))
+CustomKeywords.'com.gh.portal.Common.logout'()
 
 WebUI.closeBrowser()
 
-'Step 10: Should be able to revoke access to a grantee'
+WebUI.comment('Step 10: Should be able to revoke access to a grantee')
 CustomKeywords.'com.gh.portal.Common.logon'('bejoysitemgr@gmail.com', 'R9dwWsVuqf0RB1p2unfSZQ==')
 
 WebUI.waitForPageLoad(5)
@@ -383,17 +340,11 @@ WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/revoke
 
 WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/revokeyes'))
 
-WebUI.waitForPageLoad(10)
-
-WebUI.waitForElementClickable(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'), 20)
-
-WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'))
-
-WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/signout'))
+CustomKeywords.'com.gh.portal.Common.logout'()
 
 WebUI.closeBrowser()
-
-'Step 2: Should see reports for only their patients and with recent accessioning date and for any previous dates.'
+*/
+WebUI.comment('Step 2: Should see reports for only their patients and with recent accessioning date and for any previous dates.')
 CustomKeywords.'com.gh.portal.Common.logon'('bridgesb@slhs.org', 'R9dwWsVuqf0RB1p2unfSZQ==')
 
 WebUI.setText(findTestObject('Object Repository/Portal/page_portalaccession/searchid'), aNumber)
@@ -410,17 +361,11 @@ String collectionDate = WebUI.getText(findTestObject('Object Repository/Portal/p
 
 println(collectionDate)
 
-WebUI.waitForPageLoad(10)
-
-WebUI.waitForElementClickable(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'), 20)
-
-WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'))
-
-WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/signout'))
+CustomKeywords.'com.gh.portal.Common.logout'()
 
 WebUI.closeBrowser()
 
-'Step 3:Should see only reports for all physicians that admin granted access'
+WebUI.comment('Step 3: Should see only reports for all physicians that admin granted access')
  CustomKeywords.'com.gh.portal.Common.logon'('gracesitemgr@gmail.com', 'R9dwWsVuqf0RB1p2unfSZQ==')
  
  WebUI.waitForPageLoad(5)
@@ -447,11 +392,7 @@ WebUI.closeBrowser()
  
  WebUI.waitForElementVisible(findTestObject('Object Repository/Portal/page_portalaccession/msgconfirm'), 20)
  
- WebUI.waitForElementClickable(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'), 20)
- 
- WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'))
- 
- WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/signout'))
+ CustomKeywords.'com.gh.portal.Common.logout'()
  
  WebUI.closeBrowser()
  
@@ -466,7 +407,7 @@ WebUI.closeBrowser()
 	 WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/acceptinvitation'))
  }
  
- WebUI.waitForPageLoad(2000)
+ WebUI.waitForPageLoad(20)
  
  Thread.sleep(2000)
  
@@ -508,15 +449,8 @@ WebUI.closeBrowser()
 		 }
 	 }
  }
-  WebUI.waitForPageLoad(10)
  
- Thread.sleep(2000)
- 
- WebUI.waitForElementClickable(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'), 20)
- 
- WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'))
- 
- WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/signout'))
+ CustomKeywords.'com.gh.portal.Common.logout'()
  
  WebUI.closeBrowser()
  
@@ -563,14 +497,8 @@ WebUI.closeBrowser()
 		 }
 		  break
 	 }
-	 
- WebUI.waitForPageLoad(10)
  
- WebUI.waitForElementClickable(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'), 20)
- 
- WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/profilemenu'))
- 
- WebUI.click(findTestObject('Object Repository/Portal/page_portalaccession/signout'))
+ CustomKeywords.'com.gh.portal.Common.logout'()
  
  WebUI.closeBrowser()
 

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>ActivatedPhysicianAccessTest_ENTSW-TC-2927-3282</name>
+   <tag></tag>
+   <comment>Run: ENTSW-TC‌-2927, ENTSW-TC-3282
+Run: ENTSW-TC-6515
+Step 1: Should see reports for only their patients
+Step 4: Should see reports table view
+Step 5:Should be able to see the patients in patient search bar
+Step 6: Should be able to download the CSV for their patients
+Step 7:Should be able to release a patients report with a portal user email address
+Step 8:Should be able to release a patients report with a non-portal user email address.
+Step 9:Should not be able to see release to patient option for an ineligible patient
+Step 11:Should see a notification on an auto-released patient report page indicating that the report has been auto-released
+Step 10: Should be able to revoke access to a grantee
+Step 2: Should see reports for only their patients and with recent accessioning date and for any previous dates.
+Step 3: Should see only reports for all physicians that admin granted access</comment>
+   <testCaseGuid>97e828a0-cdfc-4353-873c-42abd407306c</testCaseGuid>
+</TestCaseEntity>
