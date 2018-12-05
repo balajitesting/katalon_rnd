@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>DataVerificationWithOutProblemCaseTest_ENTSW-TC-2873</name>
+   <tag></tag>
+   <comment>Run: ENTSW-TC-2873</comment>
+   <testCaseGuid>4a396c23-a4fd-4d0f-81c6-198e5b8d98d5</testCaseGuid>
+</TestCaseEntity>

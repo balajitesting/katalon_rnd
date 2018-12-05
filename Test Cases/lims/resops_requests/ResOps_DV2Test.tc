@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>ResOps_DV2Test</name>
-   <tag></tag>
-   <comment>ENT-2932</comment>
-   <testCaseGuid>2fd3d824-e30b-4074-afdf-552f4ad1364d</testCaseGuid>
-</TestCaseEntity>

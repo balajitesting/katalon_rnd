@@ -15,7 +15,7 @@ import internal.GlobalVariable as GlobalVariable
 
 import org.testng.Assert
 
-def A_Number = WebUI.callTestCase(findTestCase('lims/report/CreateCancelReportTest'), [:], FailureHandling.STOP_ON_FAILURE)
+def A_Number = WebUI.callTestCase(findTestCase('lims/report/CreateCancelReportTest_ENTSW-TC-2899'), [:], FailureHandling.STOP_ON_FAILURE)
 
 //A_Number = 'A86684'
 ReportStatus = 'Cancelled'

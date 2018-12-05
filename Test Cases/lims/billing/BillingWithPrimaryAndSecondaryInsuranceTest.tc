@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>BillingWithPrimaryAndSecondaryInsuranceTest</name>
-   <tag></tag>
-   <comment>Run: ENT-6673</comment>
-   <testCaseGuid>c534a901-1dd4-40f0-b86b-aa95e450ea70</testCaseGuid>
-</TestCaseEntity>

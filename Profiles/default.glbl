@@ -47,17 +47,17 @@
    <GlobalVariableEntity>
       <description></description>
       <initValue>'ghdb-sqa.k8s.ghdna.io/ghdb'</initValue>
-      <name>postgreSql</name>
+      <name>bipPostgreSql</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'postgres'</initValue>
-      <name>postgreSqlDBuser</name>
+      <name>bipPostgreSqlDBuser</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'postgres'</initValue>
-      <name>postgreSqlDBpwd</name>
+      <name>bipPostgreSqlDBpwd</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
@@ -78,5 +78,20 @@
       <description></description>
       <initValue>'A0131145'</initValue>
       <name>requestID</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'gh-staging-ods.coljqkqsaq4h.us-west-2.rds.amazonaws.com'</initValue>
+      <name>portalDB</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'ghadmin'</initValue>
+      <name>portalDBusr</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Guardant360'</initValue>
+      <name>portalDBpwd</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

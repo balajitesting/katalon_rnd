@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>BIPManualQCTest</name>
-   <tag></tag>
-   <comment>ENT-6482</comment>
-   <testCaseGuid>ccbbb66a-fa2e-4cb6-b0ee-bb76b4219e9b</testCaseGuid>
-</TestCaseEntity>

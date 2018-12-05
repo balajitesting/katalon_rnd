@@ -16,7 +16,7 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.comment('Run: ENTSW-TC-2911 Addendum')
 
-def A_Number = WebUI.callTestCase(findTestCase('lims/report/CreateAddendumReportTest'), [:], FailureHandling.STOP_ON_FAILURE)
+def A_Number = WebUI.callTestCase(findTestCase('lims/report/CreateAddendumReportTest_ENTSW-TC-2998'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.delay(180)
 

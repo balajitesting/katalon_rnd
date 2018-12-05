@@ -16,7 +16,7 @@ import org.testng.Assert as Assert
 
 WebUI.comment('Run: ENTSW-TC-2911 Amended')
 
-def A_Number = WebUI.callTestCase(findTestCase('lims/report/CreateAmendedReportLdClsMsiReviewTest'), [:], FailureHandling.STOP_ON_FAILURE)
+def A_Number = WebUI.callTestCase(findTestCase('lims/report/CreateAmendedReportLdClsMsiReviewTest_ENTSW-TC-2996'), [:], FailureHandling.STOP_ON_FAILURE)
 
 String ReportStatus = 'AMENDED'
 

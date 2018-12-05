@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>MSI-HIGH NOT_Detected_ENTSW-TC-3405_3408</name>
+   <tag></tag>
+   <comment>ENTSW-TC-3404, ENTSW-TC-3407</comment>
+   <testCaseGuid>febb5229-48e4-4315-8dbc-50b4e1152c67</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>PreliminaryReportInProgressTest</name>
+   <tag></tag>
+   <comment>ENTSW-TC-2913</comment>
+   <testCaseGuid>e926f373-2871-4f90-a832-3861720f0909</testCaseGuid>
+</TestCaseEntity>

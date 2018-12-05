@@ -39,9 +39,10 @@ public class Report {
 		WebUI.setText(findTestObject('LIMS/DCO/Report/Page_Request List/input_searchtext'), requestId)
 
 		WebUI.click(findTestObject('LIMS/DCO/Report/Page_Request List/td_OK'))
-
-		def edit = 'LIMS/DCO/Report/Page_Request List/td_Edit'
-
-		Common.setClick(edit)
+		Thread.sleep(2000);
+		WebUI.waitForElementVisible(findTestObject('LIMS/DCO/Report/Page_Request List/td_Edit'), 60)
+		WebUI.click(findTestObject('LIMS/DCO/Report/Page_Request List/td_Edit'))
+		//def edit = 'LIMS/DCO/Report/Page_Request List/td_Edit'
+		//Common.setClick(edit)
 	}
 }

@@ -30,14 +30,14 @@ public class TestUtil {
 			}
 		}
 	}
-
-	public static void purgeFile(String filepath){
-		
-				File file = new File (filepath);
-				file.delete();
-
-			}
 	
+	@Keyword
+	public static void purgeFile(String filepath){
+
+		File file = new File (filepath);
+		file.delete();
+	}
+
 	public static File[] getFiles(File dir){
 
 		File[] files = dir.listFiles(new FileFilter() {

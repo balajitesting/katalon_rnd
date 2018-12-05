@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AddNewReagentLotTest_ENTSW-TC-3409</name>
+   <tag></tag>
+   <comment>ENTSW-TC-3409</comment>
+   <testCaseGuid>ab384c2c-f2da-4be0-9a2a-dc66e0db34c8</testCaseGuid>
+</TestCaseEntity>

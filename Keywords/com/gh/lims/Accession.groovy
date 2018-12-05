@@ -19,7 +19,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable
 
 public class Accession {
-	
+
 	/**
 	 * 
 	 * @param requestId
@@ -47,5 +47,4 @@ public class Accession {
 
 		Common.setClick(edit)
 	}
-	
 }

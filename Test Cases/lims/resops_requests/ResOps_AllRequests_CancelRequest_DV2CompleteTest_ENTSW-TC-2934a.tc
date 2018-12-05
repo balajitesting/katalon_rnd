@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>ResOps_AllRequests_CancelRequest_DV2CompleteTest_ENTSW-TC-2934a</name>
+   <tag></tag>
+   <comment>ENT-2932</comment>
+   <testCaseGuid>538025f0-d6e8-4fc2-9223-df363ce73c36</testCaseGuid>
+</TestCaseEntity>
