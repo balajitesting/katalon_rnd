@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>acceptalert</name>
+   <name>mrnnumber</name>
    <tag></tag>
-   <elementGuidId>242af0fe-5ea1-458c-879f-7dcb660316cd</elementGuidId>
+   <elementGuidId>57b6f971-a787-4600-85fe-8d663816318b</elementGuidId>
    <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@class='row']//child::div[text()='MRN']//following-sibling::div</value>
+      </entry>
       <entry>
          <key>BASIC</key>
          <value></value>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-         <value>//div[text()='I AGREE']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
