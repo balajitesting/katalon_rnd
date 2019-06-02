@@ -137,6 +137,7 @@ WebUI.waitForPageLoad(10)
 List<WebElement> options = DriverFactory.getWebDriver().findElements(By.xpath('//ul[@class=\'dropdown-menu admin-dropdown-menu\']//li'))
 
 for (i = 0; i < options.size(); i++) {
+	
     if (options.get(i).getText().contains('activate')) {
         println('Activate option is present')
     } else {

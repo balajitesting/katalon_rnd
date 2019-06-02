@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>ActivateAccountTest</name>
+   <tag></tag>
+   <comment>ENTSW-TC-3462</comment>
+   <testCaseGuid>efe9c3ea-10b7-4c76-bf18-182272b9d767</testCaseGuid>
+</TestCaseEntity>

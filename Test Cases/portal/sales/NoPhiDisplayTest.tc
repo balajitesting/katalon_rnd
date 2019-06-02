@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>NoPhiDisplayTest</name>
+   <tag></tag>
+   <comment>ENTSW-TC-3459</comment>
+   <testCaseGuid>dc3969f9-9ad1-4b27-ada8-f8d42ba7ba4b</testCaseGuid>
+</TestCaseEntity>

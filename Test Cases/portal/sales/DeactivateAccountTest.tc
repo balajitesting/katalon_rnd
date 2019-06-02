@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>DeactivateAccountTest</name>
+   <tag></tag>
+   <comment>ENTSW-TC-3463</comment>
+   <testCaseGuid>8bd0ed8b-7297-4f85-bb79-938af9108dca</testCaseGuid>
+</TestCaseEntity>

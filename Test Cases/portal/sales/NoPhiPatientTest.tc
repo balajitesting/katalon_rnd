@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>NoPhiPatientTest</name>
+   <tag></tag>
+   <comment>ENTSW-TC-3460</comment>
+   <testCaseGuid>bc3fbd13-c572-46b5-acc1-f6106f2232d8</testCaseGuid>
+</TestCaseEntity>

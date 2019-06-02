@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>UserAgreementTest</name>
+   <tag></tag>
+   <comment>ENTSW-TC-3461</comment>
+   <testCaseGuid>4fc136a1-45bf-4bea-98d6-e5cb9d3e0c6a</testCaseGuid>
+</TestCaseEntity>
